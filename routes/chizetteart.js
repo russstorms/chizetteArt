@@ -31,6 +31,7 @@ router.post('/', (req, res, next) => {
       .insert({
         "Title": req.body.Title,
         "Year": req.body.Year,
+        "Medium": req.body.Medium,
         "Description": req.body.Description
       })
       .returning('*')
@@ -53,6 +54,7 @@ router.put('/:id', (req, res, next) => {
     .update({
       "Title": req.body.Title,
       "Year": req.body.Year,
+      "Medium": req.body.Medium,
       "Description": req.body.Description
     })
     .returning('*')

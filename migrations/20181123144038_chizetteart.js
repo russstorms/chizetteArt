@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
       table.increments()
       table.string('Title').notNullable().defaultTo('')
       table.integer('Year').notNullable().defaultTo(2018)
+      table.string('Medium').notNullable().defaultTo('')
       table.string('Description').notNullable().defaultTo('')
       table.timestamps(true, true)
     })
