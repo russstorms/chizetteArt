@@ -2,7 +2,18 @@ const express = require('express')
 const router = express.Router()
 const knex = require('../knex')
 
-// READ ALL records for this table
+//// MIDDLEWARE TO CHECK ID \\\\
+const checkIdisNum = (req, res, next) => {
+  if (isNaN(req.params.id)) {
+    console.log(`log it out`)
+    let err = new Error(`Id not found`)
+    err.status = 400
+    throw err
+  }
+  next()
+}
+
+//// READ ALL RECORDS \\\\
 router.get('/', (req, res, next) => {
     knex('chizetteart')
       .then((rows) => {
@@ -13,8 +24,8 @@ router.get('/', (req, res, next) => {
       })
   })
 
-// READ ONE record for this table
-router.get('/:id', (req, res, next) => {
+//// GET ONE RECORD \\\\
+router.get('/:id', checkIdisNum, (req, res, next) => {
     knex('chizetteart')
       .where('id',req.params.id)
       .then((rows) => {
@@ -25,14 +36,14 @@ router.get('/:id', (req, res, next) => {
       })
   })
 
-// CREATE ONE record for this table
+//// CREATE ONE RECORD \\\\
 router.post('/', (req, res, next) => {
     knex('chizetteart')
       .insert({
-        "Title": req.body.Title,
-        "Year": req.body.Year,
-        "Medium": req.body.Medium,
-        "Description": req.body.Description
+        "title": req.body.title,
+        "year": req.body.year,
+        "medium": req.body.medium,
+        "description": req.body.description
       })
       .returning('*')
       .then((data) => {
@@ -43,8 +54,8 @@ router.post('/', (req, res, next) => {
       })
   })
 
-// UPDATE ONE record for this table
-router.put('/:id', (req, res, next) => {
+//// UPDATE ONE RECORD \\\\
+router.put('/:id', checkIdisNum, (req, res, next) => {
   knex('chizetteart')
   .where('id', req.params.id)
   .then((data) => {
@@ -52,10 +63,10 @@ router.put('/:id', (req, res, next) => {
     .where('id', req.params.id)
     .limit(1)
     .update({
-      "Title": req.body.Title,
-      "Year": req.body.Year,
-      "Medium": req.body.Medium,
-      "Description": req.body.Description
+      "title": req.body.title,
+      "year": req.body.year,
+      "medium": req.body.medium,
+      "description": req.body.description
     })
     .returning('*')
     .then((data) => {
@@ -67,8 +78,8 @@ router.put('/:id', (req, res, next) => {
   })
 })
 
-// DELETE ONE record for this table
-router.delete('/:id', function(req, res, next) {
+//// DELETE ONE RECORD \\\\
+router.delete('/:id', checkIdisNum, function(req, res, next) {
     knex('chizetteart')
       .where('id', req.params.id)
       .first()

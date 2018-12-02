@@ -1,5 +1,7 @@
 body {
-  padding: 50px;
+  background: url('https://images.unsplash.com/photo-1534592302589-d4f8f14c6f47?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8ee6f77b74567a403722d92b786a2609&auto=format&fit=crop&w=1656&q=80');
+  background-size: cover;
+  padding: 7%;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 

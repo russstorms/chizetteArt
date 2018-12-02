@@ -3,14 +3,62 @@ exports.seed = function(knex, Promise) {
   return knex('chizetteart').del()
     .then(function() {
       // Inserts seed entries
-      return knex('chizetteart').insert([
-        {id: 1, Title: 'Human Drawing', Year: 2018, Medium: 'Gouache', Description: 'Drawing of a human'},
-        {id: 2, Title: 'Gem Painting', Year: 2018, Medium: 'Acrylic Paint', Description: 'A gem I found!'},
-        {id: 3, Title: 'Animal Painting', Year: 2018, Medium: 'Oil Paint', Description: 'Wanted to cuddle with animals today :)'},
-        {id: 4, Title: 'Rough Sketch', Year: 2018, Medium: 'Charcoal', Description: 'No colors today, just sketches!' },
-        {id: 5, Title: 'Animal Drawing', Year: 2018, Medium: 'Graphite', Description: 'I love animals the most.'},
-        {id: 6, Title: 'Face', Year: 2018, Medium: 'Water Color', Description: 'Faces and hands are so tough!'},
-        {id: 7, Title: 'Gem and Body', Year: 2018, Medium: 'Gouache', Description: 'Love drawing these two together...'}
+      return knex('chizetteart').insert([{
+        id: 1,
+        title: 'Human Drawing',
+        year: 2018,
+        medium: 'Gouache',
+        description: 'Drawing of a human',
+        poster: 'https://placekitten.com/200/300'
+      },
+      {
+        id: 2,
+        title: 'Gem Painting',
+        year: 2018,
+        medium: 'Acrylic Paint',
+        description: 'A gem I found!',
+        poster: 'https://placekitten.com/200/300'
+      },
+      {
+        id: 3,
+        title: 'Animal Painting',
+        year: 2018,
+        medium: 'Oil Paint',
+        description: 'Wanted to cuddle with animals today :)',
+        poster: 'https://placekitten.com/200/300'
+      },
+      {
+        id: 4,
+        title: 'Rough Sketch',
+        year: 2018,
+        medium: 'Charcoal',
+        description: 'No colors today, just sketches!',
+        poster: 'https://placekitten.com/200/300'
+      },
+      {
+        id: 5,
+        title: 'Animal Drawing',
+        year: 2018,
+        medium: 'Graphite',
+        description: 'I love animals the most.',
+        poster: 'https://placekitten.com/200/300'
+      },
+      {
+        id: 6,
+        title: 'Face',
+        year: 2018,
+        medium: 'Water Color',
+        description: 'Faces and hands are so tough!',
+        poster: 'https://placekitten.com/200/300'
+      },
+      {
+        id: 7,
+        title: 'Gem and Body',
+        year: 2018,
+        medium: 'Gouache',
+        description: 'Love drawing these two together...',
+        poster: 'https://placekitten.com/200/300'
+      }
       ])
       .then(function() {
         // Moves id column (PK) auto-incrementer to correct value after inserts
