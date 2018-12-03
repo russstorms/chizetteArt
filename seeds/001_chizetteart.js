@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
         title: 'Human Drawing',
         year: 2018,
         medium: 'Gouache',
-        description: 'Drawing of a human',
+        description: 'Drawing of a human.',
         poster: 'https://placekitten.com/200/300'
       },
       {
