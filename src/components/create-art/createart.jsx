@@ -12,14 +12,14 @@ const ComposeArt = ({ sendArt }) => {
   }
 
   return (
-    <div id="modal1" className="modal">
+    <Modal id="modal1" className="modal">
       <div className="modal-content">
         <h4>Create a New Piece!</h4>
       </div>
       <div className="modal-footer">
         <button onSubmit={this.sendArt} className="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</button>
       </div>
-    </div>
+    </Modal>
   )
 }
 
