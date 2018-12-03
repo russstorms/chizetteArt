@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const knex = require('../knex')
+let middleware = require('../middleware')
+let jwt = require('jsonwebtoken')
 
 //// MIDDLEWARE TO CHECK ID \\\\
 const checkIdisNum = (req, res, next) => {
