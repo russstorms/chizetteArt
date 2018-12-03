@@ -6,7 +6,7 @@ var logger = require('morgan')
 
 //// ROUTERS \\\\
 var indexRouter = require('./routes/index')
-var usersRouter = require('./routes/users')
+var adminRouter = require('./routes/admin')
 var chizetteartRouter = require('./routes/chizetteart')
 
 //// EXPRESS \\\\
@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 
 //// ROUTES \\\\
 app.use('/', indexRouter)
-app.use('/users', usersRouter)
+app.use('/admin', adminRouter)
 app.use('/chizetteart', chizetteartRouter)
 
 // catch 404 and forward to error handler
