@@ -3,7 +3,7 @@ exports.up = function(knex, Promise) {
       // TABLE COLUMN DEFINITIONS HERE
       table.increments()
       table.string('admin').notNullable().defaultTo('')
-      table.string('pass').notNullable().defaultTo('')
+      table.string('password').notNullable().defaultTo('')
       table.timestamps(true, true)
     })
   }
