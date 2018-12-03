@@ -19,8 +19,6 @@ export default class App extends Component {
     //// GET ART \\\\
     const artListJson = await fetch(`http://localhost:3000/chizetteart`)
     let artList = await artListJson.json()
-    console.log(artList)
-
     this.setState({ artList })
   }
 
