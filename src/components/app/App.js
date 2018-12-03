@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import Header from '../header/header'
 import ArtList from '../art-list/artList'
+// import CreateArt from '../create-art/createart'
 
 export default class App extends Component {
   constructor(props) {
@@ -26,8 +27,8 @@ export default class App extends Component {
     return (
       <main className="App container">
         <Header />
-      <hr />
         <ArtList artList={this.state.artList} />
+        {/* <CreateArt /> */}
       </main>
     )
   }
