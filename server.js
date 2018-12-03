@@ -5,7 +5,7 @@ let config = require('./config')
 let middleware = require('./middleware')
 
 class HandlerGenerator {
-  login (req, res) {
+  admin (req, res) {
     let username = req.body.username
     let password = req.body.password
     // For the given username fetch user from DB
@@ -57,7 +57,7 @@ const main = () => {
   app.use(bodyParser.json())
 
   // Routes & Handlers
-  app.post('/login', handlers.login)
+  app.post('/admin', handlers.login)
   app.get('/', middleware.checkToken, handlers.index)
   app.listen(port, () => console.log(`Server is listening on port: ${port}`))
 }
