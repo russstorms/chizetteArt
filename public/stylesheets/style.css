@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt');
+
 body {
-  background: url('https://images.unsplash.com/photo-1512413209998-69dfe30bd487?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1100&q=80');
+  background: url('https://images.unsplash.com/photo-1486231328412-f20a348f9837?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');
   background-size: cover;
   text-align: center;
   padding: 7%;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-.form {
   color: white;
-  margin-top: 5%;
+  font-family: "Prompt";
 }
 
-a {
-  color: #00B7FF;
+.bg {
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 12% 35%;
+  padding: 3%;
+  border: 3px solid white;
+}
+
+h1 {
+  text-shadow: 1px 1px 15px;
+  letter-spacing: .2em;
 }

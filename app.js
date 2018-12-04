@@ -8,7 +8,6 @@ let logger = require('morgan')
 
 //// ROUTERS \\\\
 let indexRouter = require('./routes/index')
-let loginRouter = require('./routes/login')
 let adminRouter = require('./routes/admin')
 let chizetteartRouter = require('./routes/chizetteart')
 
@@ -39,7 +38,6 @@ app.use((req, res, next) => {
 
 //// ROUTES \\\\
 app.use('/', indexRouter)
-app.use('/login', loginRouter)
 app.use('/admin', adminRouter)
 app.use('/chizetteart', chizetteartRouter)
 
