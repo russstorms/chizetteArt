@@ -8,7 +8,8 @@ export default class LoginForm extends React.Component {
 		super(props)
 			this.state = {
 				username: '',
-				password: ''
+				password: '',
+				redirect: false
 			}
 	}
 
