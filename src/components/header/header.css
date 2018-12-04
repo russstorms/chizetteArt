@@ -2,10 +2,11 @@
     text-align: center;
     color: aquamarine;
     background-color: steelblue;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .chizetteArt {
     font-size: 3em;
     letter-spacing: .5em;
+    margin: 2%;
 }
