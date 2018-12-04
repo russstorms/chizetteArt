@@ -1,12 +1,10 @@
 .nav {
     text-align: center;
-    color: aquamarine;
-    background-color: steelblue;
-    /* overflow: hidden; */
 }
 
 .chizetteArt {
     font-size: 3em;
     letter-spacing: .5em;
     margin: 2%;
+    color: rgb(136, 127, 255);
 }
