@@ -1,50 +1,55 @@
 import React from 'react'
 import './loginForm.css'
-// import { Row, Col } from 'react-materialize'
+import { Row, Col } from 'react-materialize'
 
-const handleChange = (e) => {
-	this.setState({ value: e.target.value })
-}
+export default class LoginForm extends React.Component {
 
-const handleSubmit = ({ handleChange }) => {
-	alert('a name was submitted: ' + this.state.value)
-	e.preventDefault()
-}
+	constructor(props){
+		super(props)
+			this.state = {
+				username: '',
+				password: ''
+			}
+	}
 
-render() {
+	handleChange = (e) => {
+		e.preventDefault()
+		this.setState({
+			...this.state,
+			username: e.target.value,
+			password: e.target.value
+		})
+	}
+
+	onSubmit = (ev) => {
+			ev.preventDefault()
+			const username = ev.target.value
+			const password = ev.target.value
+
+			this.props.onSubmit({ username, password })
+			this.setState({
+					username: '',
+					password: ''
+			})
+	}
 	
+	render() {
+		return (
+			<Row className="loginForm">
+				<Col className="s6 push-s3">
+					<form onSubmit={this.handleSubmit} >
+						<label htmlFor="icon_prefix">
+						<i className="material-icons prefix"></i>
+						<input id="icon_prefix" onChange={this.handleChange} autoComplete="off" placeholder="Username" type="text" name="username" value={this.state.value} />
+						</label>
+						<label htmlFor="icon_lock">
+						<i className="material-icons prefix"></i>
+						<input id="icon_lock" onChange={this.handleChange} autoComplete="off" placeholder="Password" type="password" name="password" value={this.state.value} />
+						</label>
+						<button className="goButton">GO</button>
+					</form>
+				</Col>
+			</Row>
+		)
+	}
 }
-export default LoginForm
-
-// const onLogin = () => {
-// 	const onSubmit = (e) => {
-// 		e.preventDefault()
-// 		console.log(e.target.value)
-// 		// checkLogin({
-// 		// 	username: e.target.subject.value,
-// 		// 	pass: e.target.
-// 		// })
-// 	}
-// }
-// const onSubmit = (e) => {
-// 	e.preventDefault()
-// 	console.log(e.target)
-// }
-
-// return (
-// 	<Row className="loginForm">
-// 		<Col className="s6 push-s3">
-// 			<form>
-// 				<label htmlFor="icon_prefix">
-// 				<i className="material-icons prefix"></i>
-// 				<input id="icon_prefix" autoComplete="off" placeholder="Username" type="text" name="username" value={this.state.value} />
-// 				</label>
-// 				<label htmlFor="icon_lock">
-// 				<i className="material-icons prefix"></i>
-// 				<input id="icon_lock" autoComplete="off" placeholder="Password" type="password" name="password" value={this.state.value} />
-// 				</label>
-// 				<button className="goButton">GO</button>
-// 			</form>
-// 		</Col>
-// 	</Row>
-// )

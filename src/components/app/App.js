@@ -9,8 +9,7 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      artList: [],
-      login: false
+      artList: []
     }
   }
 
@@ -31,7 +30,6 @@ export default class App extends Component {
         <Header />
         <ArtList artList={this.state.artList} />
         <Login />
-        {/* <CreateArt /> */}
       </main>
     )
   }
