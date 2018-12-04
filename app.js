@@ -3,11 +3,12 @@ let express = require('express')
 let path = require('path')
 let cookieParser = require('cookie-parser')
 let logger = require('morgan')
-let jwt = require('jsonwebtoken')
-let middleware = require('./middleware')
+// let jwt = require('jsonwebtoken')
+// let middleware = require('./middleware')
 
 //// ROUTERS \\\\
 let indexRouter = require('./routes/index')
+let loginRouter = require('./routes/login')
 let adminRouter = require('./routes/admin')
 let chizetteartRouter = require('./routes/chizetteart')
 
@@ -38,6 +39,7 @@ app.use((req, res, next) => {
 
 //// ROUTES \\\\
 app.use('/', indexRouter)
+app.use('/login', loginRouter)
 app.use('/admin', adminRouter)
 app.use('/chizetteart', chizetteartRouter)
 

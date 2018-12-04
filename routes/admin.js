@@ -16,7 +16,7 @@ const checkIdisNum = (req, res, next) => {
 }
 
 //// READ ALL RECORDS \\\\
-router.get('/', middleware.checkToken, (req, res, next) => {
+router.get('/', (req, res, next) => {
     knex('chizetteart')
       .then((rows) => {
         res.json(rows)
@@ -27,7 +27,7 @@ router.get('/', middleware.checkToken, (req, res, next) => {
   })
 
 //// GET ONE RECORD \\\\
-router.get('/:id', checkIdisNum, middleware.checkToken, (req, res, next) => {
+router.get('/:id', checkIdisNum, (req, res, next) => {
     knex('chizetteart')
       .where('id',req.params.id)
       .then((rows) => {
@@ -39,7 +39,7 @@ router.get('/:id', checkIdisNum, middleware.checkToken, (req, res, next) => {
   })
 
 //// CREATE ONE RECORD \\\\
-router.post('/', middleware.checkToken, (req, res, next) => {
+router.post('/', (req, res, next) => {
     knex('chizetteart')
       .insert({
         "title": req.body.title,
@@ -57,7 +57,7 @@ router.post('/', middleware.checkToken, (req, res, next) => {
   })
 
 //// UPDATE ONE RECORD \\\\
-router.put('/:id', checkIdisNum, middleware.checkToken, (req, res, next) => {
+router.put('/:id', checkIdisNum, (req, res, next) => {
   knex('chizetteart')
   .where('id', req.params.id)
   .then((data) => {
@@ -81,7 +81,7 @@ router.put('/:id', checkIdisNum, middleware.checkToken, (req, res, next) => {
 })
 
 //// DELETE ONE RECORD \\\\
-router.delete('/:id', checkIdisNum, middleware.checkToken, (req, res, next) => {
+router.delete('/:id', checkIdisNum, (req, res, next) => {
     knex('chizetteart')
       .where('id', req.params.id)
       .first()
