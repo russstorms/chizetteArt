@@ -9,7 +9,8 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      artList: []
+      artList: [],
+      login: false
     }
   }
 
