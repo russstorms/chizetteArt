@@ -5,7 +5,7 @@ import { Row, Col } from 'react-materialize'
 
 const ArtList = (props) => {
   return (
-    <Row hidden>
+    <Row>
       <Col className="s4">
         <h1 className="artList">Art List</h1>
         <ul>
