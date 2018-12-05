@@ -22,7 +22,7 @@ router.get('/', (req, res, next) => {
       .catch((err) => {
         next(err)
       })
-  })
+})
 
 //// GET ONE RECORD \\\\
 router.get('/:id', checkIdisNum, (req, res, next) => {
@@ -34,6 +34,6 @@ router.get('/:id', checkIdisNum, (req, res, next) => {
       .catch((err) => {
         next(err)
       })
-  })
+})
 
 module.exports = router

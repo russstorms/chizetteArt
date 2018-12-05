@@ -22,7 +22,7 @@ router.get('/', (req, res, next) => {
       .catch((err) => {
         next(err)
       })
-  })
+})
 
 //// GET ONE RECORD \\\\
 router.get('/:id', checkIdisNum, (req, res, next) => {
@@ -34,7 +34,7 @@ router.get('/:id', checkIdisNum, (req, res, next) => {
       .catch((err) => {
         next(err)
       })
-  })
+})
 
 //// CREATE ONE RECORD \\\\
 router.post('/', (req, res, next) => {
@@ -52,7 +52,7 @@ router.post('/', (req, res, next) => {
       .catch((err) => {
         next(err)
       })
-  })
+})
 
 //// UPDATE ONE RECORD \\\\
 router.put('/:id', checkIdisNum, (req, res, next) => {
@@ -95,6 +95,6 @@ router.delete('/:id', checkIdisNum, (req, res, next) => {
       .catch((err) => {
         next(err)
       })
-  })
+})
 
 module.exports = router
