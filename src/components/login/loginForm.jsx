@@ -45,7 +45,7 @@ export default class LoginForm extends React.Component {
 						</label>
 						<label htmlFor="icon_lock">
 						<i className="material-icons prefix"></i>
-						<input id="icon_lock" onChange={this.handleChange} autoComplete="off" placeholder="Password" type="password" name="password" value={this.state.value} />
+						<input id="icon_lock" onChange={this.handleChange} autoComplete="off" placeholder="Secret Code" type="password" name="password" value={this.state.value} />
 						</label>
 						<button className="goButton">GO</button>
 					</form>
