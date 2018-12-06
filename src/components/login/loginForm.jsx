@@ -1,4 +1,10 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect
+} from '.react-router-dom'
 import './loginForm.css'
 import { Row, Col } from 'react-materialize'
 
@@ -8,8 +14,7 @@ export default class LoginForm extends React.Component {
 		super(props)
 			this.state = {
 				username: '',
-				password: '',
-				redirect: false
+				password: ''
 			}
 	}
 
