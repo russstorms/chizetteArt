@@ -6,7 +6,7 @@ const knex = require('../knex')
 //// MIDDLEWARE TO CHECK ID \\\\
 const checkIdisNum = (req, res, next) => {
   if (isNaN(req.params.id)) {
-    console.log(`log it out`)
+    // console.log(`log it out`)
     let err = new Error(`Id not found`)
     err.status = 400
     throw err
@@ -29,8 +29,6 @@ const isAdminAuthenticated = (req, res, next) => {
     if (token) {
       return verifyTokenAndGetUID(token)
         .then((userId) => {
-          ////WRITE LOGIC HERE\\\
-          ////----------------\\\
           res.locals.auth = {
             userId
           }
@@ -41,7 +39,7 @@ const isAdminAuthenticated = (req, res, next) => {
 
           return res.status(401).json({
             status: 401,
-            message: 'UNAUTHORIZED'
+            message: 'UNAUTHORIZED',
           })
         })
     } else {
