@@ -1,11 +1,13 @@
 const createError = require('http-errors')
 const express = require('express')
+// const jwt = require('jsonwebtoken')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
 //// ROUTERS \\\\
 const indexRouter = require('./routes/index')
+const loginRouter = require('./routes/login')
 const adminRouter = require('./routes/admin')
 const chizetteartRouter = require('./routes/chizetteart')
 
@@ -37,6 +39,7 @@ app.use((req, res, next) => {
 
 //// ROUTES \\\\
 app.use('/', indexRouter)
+app.use('/login', loginRouter)
 app.use('/admin', adminRouter)
 app.use('/chizetteart', chizetteartRouter)
 

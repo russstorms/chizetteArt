@@ -13,6 +13,14 @@ const checkIdisNum = (req, res, next) => {
   next()
 }
 
+const checkIfAdmin = (req, res, next) => {
+  
+}
+
+router.post('/api/login', (req, res) => {
+  jwt.sign()
+})
+
 //// READ ALL RECORDS \\\\
 router.get('/', (req, res, next) => {
     knex('chizetteart')
