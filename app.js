@@ -1,18 +1,17 @@
-let createError = require('http-errors')
-let express = require('express')
-let path = require('path')
-let cookieParser = require('cookie-parser')
-let logger = require('morgan')
-// let jwt = require('jsonwebtoken')
-// let middleware = require('./middleware')
+const createError = require('http-errors')
+const express = require('express')
+const path = require('path')
+const cookieParser = require('cookie-parser')
+const logger = require('morgan')
+
 
 //// ROUTERS \\\\
-let indexRouter = require('./routes/index')
-let adminRouter = require('./routes/admin')
-let chizetteartRouter = require('./routes/chizetteart')
+const indexRouter = require('./routes/index')
+const adminRouter = require('./routes/admin')
+const chizetteartRouter = require('./routes/chizetteart')
 
 //// EXPRESS \\\\
-let app = express()
+const app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
