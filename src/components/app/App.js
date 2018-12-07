@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
 import './App.css'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Redirect,
+  withRouter
+} from 'react-router-dom'
 import Header from '../header/header'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
