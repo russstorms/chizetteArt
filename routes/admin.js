@@ -1,139 +1,79 @@
-const express = require('express')
-const router = express.Router()
-const knex = require('../knex')
+// const express = require('express')
+// const router = express.Router()
+// const { jwtVerifyAsync } = require('../node_modules/jsonwebtoken')
+// const adminService = require('../auth/authServices')
+// /*
+//  * Database interactions for user information have been abstracted
+//  * into `adminService`, which defines methods needed for accessing
+//  * user information in Postgres via knex.
+// * */
 
+// const admin = new adminService()
 
-//// MIDDLEWARE TO CHECK ID \\\\
-const checkIdisNum = (req, res, next) => {
-  if (isNaN(req.params.id)) {
-    // console.log(`log it out`)
-    let err = new Error(`Id not found`)
-    err.status = 400
-    throw err
-  }
-  next()
-}
+// /*
+//  * This `TOKEN_SECRET` must be used to both sign and verify
+//  * any JWTs supplied by this API.
+// * */
 
-//// AUTHENTICATION FOR ADMIN \\\\
-const isAdminAuthenticated = (req, res, next) => {
-  const authHeader = req.headers.authorization
+// const { TOKEN_SECRET } = process.env
 
-  if (!authHeader) {
-    return res.json(403).json({
-      status: 403,
-      message: 'FORBIDDEN'
-    })
-  } else {
-    const token = getBearerToken(authHeader)
+// /*
+//  * Currently this route handler will send back all of the usernames
+//  * in the database for anyone who sends a request. Instead, it should
+//  * only send the usernames is the requester provides a valid JWT whose
+//  * payload indicates that the requester is logged in.
+// * */
 
-    if (token) {
-      return verifyTokenAndGetUID(token)
-        .then((userId) => {
-          res.locals.auth = {
-            userId
-          }
-          next()
-        })
-        .catch((err) => {
-          logger.logError(err)
+// router.get('/admin', (req, res) => {
+//   let token = req.headers.auth
+//   if (!token){
+//     return res.status(403).send(`No token`)
+//   }
+//   let splitToken = token.split(' ')
 
-          return res.status(401).json({
-            status: 401,
-            message: 'UNAUTHORIZED',
-          })
-        })
-    } else {
-      return res.status(403).json({
-        status: 403,
-        message: 'FORBIDDEN'
-      })
-    }
-  }
-}
+//   jwtVerifyAsync(splitToken[1], TOKEN_SECRET)
+//   .then(response => {
+//     if (response.loggedIn === true){
+//       admin.getNames()
+//       .then(names => {
+//         res.json(names)
+//       })
+//       .catch(err => {
+//         res.status(500).send(`There was an error getting user names: ${err}`)
+//       })
+//     }
+//   })
+//   .catch(err => {
+//     res.status(403).send({ message: `error`})
+//   })
+  
+// })
 
-//// READ ALL RECORDS \\\\
-router.get('/', isAdminAuthenticated, (req, res, next) => {
-  console.log(req)
-    knex('chizetteart')
-      .then((rows) => {
-        res.json(rows)
-      })
-      .catch((err) => {
-        next(err)
-      })
-})
+// router.get('/admin/:id', (req, res) => {
+//     let token = req.headers.auth
+//     if (!token){
+//       return res.status(403).send(`No token`)
+//     }
+//     let splitToken = token.split(' ')
+  
+//     jwtVerifyAsync(splitToken[1], TOKEN_SECRET)
+//     .then(response => {
 
-//// GET ONE RECORD \\\\
-router.get('/:id', isAdminAuthenticated, checkIdisNum, (req, res, next) => {
-    knex('chizetteart')
-      .where('id',req.params.id)
-      .then((rows) => {
-        res.json(rows)
-      })
-      .catch((err) => {
-        next(err)
-      })
-})
+//       if (req.params.id == response.sub.id){
+//         admin.getSecretFor(req.params.id)
+//         .then(secret => {
+//           res.json(secret)
+//         })
+//         .catch(err => {
+//           res.status(500).send(`There was an error getting the secret ${err}`)
+//         })
+//       } else {
+//         res.status(403).send(`error`)
+//       }
+//     })
+//     .catch(err => {
+//       res.status(403).send({ message: `error`})
+//     })
+// })
 
-//// CREATE ONE RECORD \\\\
-router.post('/', isAdminAuthenticated, (req, res, next) => {
-    knex('chizetteart')
-      .insert({
-        "title": req.body.title,
-        "year": req.body.year,
-        "medium": req.body.medium,
-        "description": req.body.description
-      })
-      .returning('*')
-      .then((data) => {
-        res.json(data[0])
-      })
-      .catch((err) => {
-        next(err)
-      })
-})
-
-//// UPDATE ONE RECORD \\\\
-router.put('/:id', isAdminAuthenticated, checkIdisNum, (req, res, next) => {
-  knex('chizetteart')
-  .where('id', req.params.id)
-  .then((data) => {
-    knex('chizetteart')
-    .where('id', req.params.id)
-    .limit(1)
-    .update({
-      "title": req.body.title,
-      "year": req.body.year,
-      "medium": req.body.medium,
-      "description": req.body.description
-    })
-    .returning('*')
-    .then((data) => {
-      res.json(data[0])
-    })
-  })
-  .catch((err) => {
-    next(err)
-  })
-})
-
-//// DELETE ONE RECORD \\\\
-router.delete('/:id', isAdminAuthenticated, checkIdisNum, (req, res, next) => {
-    knex('chizetteart')
-      .where('id', req.params.id)
-      .first()
-      .then((row) => {
-        if(!row) return next()
-        knex('chizetteart')
-          .del()
-          .where('id', req.params.id)
-          .then(() => {
-            res.send(`ID ${req.params.id} Deleted`)
-          })
-      })
-      .catch((err) => {
-        next(err)
-      })
-})
-
-module.exports = router
+// module.exports = router
