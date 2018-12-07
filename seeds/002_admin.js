@@ -7,7 +7,7 @@ exports.seed = function(knex) {
           username: 'Chizzy',
           secret: 'Are you me?',
           // plain text password is 'Hashedpassword'
-          password: ''
+          password: '$2a$10$.n6eOdpv6sPDPxZXAVGtDeIYoQFTt9aRL0gCLO0zWKTPfcjgrQEIO'
         }
       ])
     })
