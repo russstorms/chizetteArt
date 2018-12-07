@@ -6,7 +6,7 @@ const logger = require('morgan')
 
 //// ROUTERS \\\\
 const indexRouter = require('./routes/index')
-const loginRouter = require('./routes/login')
+// const loginRouter = require('./routes/login')
 const adminRouter = require('./routes/admincrud')
 const chizetteartRouter = require('./routes/chizetteart')
 
@@ -38,7 +38,7 @@ app.use((req, res, next) => {
 
 //// ROUTES \\\\
 app.use('/', indexRouter)
-app.use('/login', loginRouter)
+// app.use('/login', loginRouter)
 app.use('/admin', adminRouter)
 app.use('/chizetteart', chizetteartRouter)
 
@@ -56,6 +56,26 @@ app.use((err, req, res, next) => {
   // render the error page
   res.status(err.status || 500)
   res.render('error')
-});
+})
+
+// app.js
+
+const bcrypt = require("bcryptjs");
+const saltRounds = 10;
+const plainTextPassword1 = "DFGh5546*%^__90";
+
+bcrypt
+  .genSalt(saltRounds)
+  .then(salt => {
+    console.log(`Salt: ${salt}`);
+
+    return bcrypt.hash(plainTextPassword1, salt);
+  })
+  .then(hash => {
+    console.log(`Hash: ${hash}`);
+
+    // Store hash in your password DB.
+  })
+  .catch(err => console.error(err.message));
 
 module.exports = app
