@@ -58,24 +58,4 @@ app.use((err, req, res, next) => {
   res.render('error')
 })
 
-// app.js
-
-const bcrypt = require("bcryptjs");
-const saltRounds = 10;
-const plainTextPassword1 = "DFGh5546*%^__90";
-
-bcrypt
-  .genSalt(saltRounds)
-  .then(salt => {
-    console.log(`Salt: ${salt}`);
-
-    return bcrypt.hash(plainTextPassword1, salt);
-  })
-  .then(hash => {
-    console.log(`Hash: ${hash}`);
-
-    // Store hash in your password DB.
-  })
-  .catch(err => console.error(err.message));
-
 module.exports = app
