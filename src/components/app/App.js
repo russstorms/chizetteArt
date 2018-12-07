@@ -27,11 +27,20 @@ export default class App extends Component {
 
   render() {
     return (
-      <main className="App container">
-        <Header />
-        <ArtList artList={this.state.artList} />
-        <Login />
-      </main>
+      <Router>
+        <main className="App container">
+          <Header />
+          <ArtList artList={this.state.artList} />
+            <div>
+              <ul>
+                <li><Link to="/admin">Admin Page</Link></li>
+              </ul>
+              <Route path="/login" component={Login}/>
+              {/* <PrivateRoute path='/admin' component={Admin} /> */}
+            </div>
+          {/* <Login /> */}
+        </main>
+      </Router>
     )
   }
 }
