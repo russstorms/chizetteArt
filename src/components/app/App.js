@@ -40,9 +40,9 @@ export default class App extends Component {
           <ArtList artList={this.state.artList} />
             <div>
               <ul>
-                <li><Link to="/admin">Admin Page</Link></li>
+                <li><Link to="/login">Login Page</Link></li>
               </ul>
-              <Route path="/login" component={Login}/>
+              <Route path="/login" />
               {/* <PrivateRoute path='/admin' component={Admin} /> */}
             </div>
           {/* <Login /> */}
