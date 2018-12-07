@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const bodyParser = require('body-parser')
-const { jwtSignAsync } = require('../utils/jsonwebTokenAsync')
+const { jwtSignAsync } = require('../node_modules/jsonwebtoken')
 const adminService = require('../auth/authServices')
 /*
  * Database interactions for user information have been abstracted
