@@ -1,16 +1,18 @@
-const express = require('express')
-const router = express.Router()
-const knex = require('../knex')
-const bodyParser = require('body-parser')
+const bcrypt = require('bcryptjs')
+const plaintextPassword = process.env.PASS
+const someOtherPlaintextPassword = 'not_bacon'
 
-router.get('/', (req, res, next) => {
-    knex('admin')
-      .then((rows) => {
-        res.json(rows)
-      })
-      .catch((err) => {
-        next(err)
-      })
-})
+const hash = (password, saltRounds) => {
+  return bcrypt.hash(password, saltRounds).then((hash) => {
+    console.log(hash)
+    return hash
+  })
+}
 
-module.exports = router
+const compare = (plaintextPassword, digest) => {
+  return bcrypt.compare(plaintextPassword, digest).then(function(res) {
+    return res
+  })
+}
+
+module.exports = { hash, compare }
