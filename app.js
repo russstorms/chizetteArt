@@ -3,6 +3,7 @@ const express = require('express')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
+const admin = require('./models/admin')
 
 //// ROUTERS \\\\
 const indexRouter = require('./routes/index')
@@ -36,6 +37,7 @@ app.use((req, res, next) => {
   }
 })
 
+
 //// ROUTES \\\\
 app.use('/', indexRouter)
 // app.use('/login', loginRouter)
@@ -58,4 +60,6 @@ app.use((err, req, res, next) => {
   res.render('error')
 })
 
+//BCRYPT HASHING
+admin()
 module.exports = app
