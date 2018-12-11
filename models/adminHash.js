@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs')
-const saltRounds = 10
+const saltRounds = 12
 const pass = 'process.env.PASS'
 
 const admin = () => {
