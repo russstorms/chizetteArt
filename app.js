@@ -10,7 +10,7 @@ const logger = require('morgan')
 const authentication = require('./src/routes/authentication')
 const passport = require('passport')
 //// NEED THIS FILE FOR PASSPORT TO UNDERSTAND STRATEGY \\\\
-const passportService = require('./services/passport')
+const passportService = require('./src/services/passport')
 //// MIDDLEWARE FOR PROTECTED ROUTES \\\\
 const requireAuth = passport.authenticate('jwt', {session: false})
 

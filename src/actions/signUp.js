@@ -1,16 +1,15 @@
 const knex = require('../../knex')
 
-//// CREATE NEW USER IN USERS TABLE \\\\
-const createUser = (username, email, password) => {
+//// CREATE NEW USER IN ADMIN TABLE \\\\
+const createUser = (username, password) => {
   let newObj = {
     username: username,
-    email: email,
     password: password
   }
   
-  //// IF EMAIL ISN'T IN DB, ADD NEW USER \\\\
-  return knex('users')
-    .where('email', email)
+  //// IF ADMIN ISN'T IN DB, ADD ADMIN \\\\
+  return knex('admin')
+    .where('username', username)
     .insert(newObj)
     .returning('*')
     .then(user => user[0])

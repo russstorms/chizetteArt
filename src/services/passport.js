@@ -1,16 +1,16 @@
 const passport = require('passport')
-require('dotenv').config();
+require('dotenv').config()
 const JwtStrategy = require('passport-jwt').Strategy
 const ExtractJwt = require('passport-jwt').ExtractJwt
-const {findUserById, verifyUser} = require('../src/actions/signIn')
+const {findUserById, verifyUser} = require('../actions/signIn')
 const LocalStrategy = require('passport-local')
 const bcrypt = require('bcryptjs')
 
 //// CREATE LOCAL STRATEGY -- LOG USER IN ON SERVER \\\\
-const localOptions = {usernameField: 'email'}
+const localOptions = {usernameField: 'username'}
 
-const localLogin = new LocalStrategy(localOptions, (email, password, done) => {
-  return verifyUser(email)
+const localLogin = new LocalStrategy(localOptions, (username, password, done) => {
+  return verifyUser(username)
     .then((validUser) => {
       bcrypt.compare(password, validUser.password)
         .then((validPassword) => {
@@ -27,16 +27,16 @@ const localLogin = new LocalStrategy(localOptions, (email, password, done) => {
 
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromHeader('authorization'),
-  secretOrKey: process.env.SECRET
+  secretOrKey: process.env.PASSWORD
 }
 
 //// CREATE JWT STRATEGY \\\\
 
 const jwtLogin = new JwtStrategy(jwtOptions, (payload, done) => {
   return findUserById(payload.sub)
-    .then((foundUser) => {
-      if (foundUser) {
-        return done(null, foundUser)
+    .then((foundAdmin) => {
+      if (foundAdmin) {
+        return done(null, foundAdmin)
       }
       return done(null, false)
     })
