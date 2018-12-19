@@ -1,7 +1,7 @@
 const knex = require('../../knex')
 
 //// CREATE NEW USER IN ADMIN TABLE \\\\
-const createUser = (username, password) => {
+const createAdmin = (username, password) => {
   let newObj = {
     username: username,
     password: password
@@ -16,4 +16,4 @@ const createUser = (username, password) => {
     .catch(err => Promise.reject(err))
 }
 
-module.exports = {createUser}
+module.exports = {createAdmin}

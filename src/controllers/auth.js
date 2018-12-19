@@ -1,6 +1,6 @@
 const jwt = require('jwt-simple')
 require('dotenv').config()
-const {createUser} = require('../actions/signUp')
+const {createAdmin} = require('../actions/signUp')
 const bcrypt = require('bcryptjs')
 
 //// TAKES IN USER OBJECT, RETURNS ENCODED TOKEN \\\\
@@ -26,7 +26,8 @@ const signup = (req, res, next) => {
   //// SEE IF ADMIN WITH THE GIVEN USERNAME EXISTS \\\\
   bcrypt.hash(password, saltRounds)
     .then((hash) => {
-      return createUser(username, hash)
+      console.log(hash)
+      return createAdmin(username, hash)
         .then((newAdmin) => {
           res.json({token: tokenForAdmin(newAdmin)})
         })

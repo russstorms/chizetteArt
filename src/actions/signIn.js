@@ -2,7 +2,7 @@ const knex = require('../../knex')
 
 //// FIND USER IN DATABASE ON LOGIN \\\\
 const findUserById = (id) => {
-  return knex('users')
+  return knex('admin')
     .where('id', id)
     .then(user => {
       return user[0]
@@ -15,7 +15,7 @@ const findUserById = (id) => {
 
 //// CHECK USER IN DATABASE \\\\
 const verifyUser = (email) => {
-  return knex('users')
+  return knex('admin')
   .where('username', username)
   .then(username => {
     return username[0]
