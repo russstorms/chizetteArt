@@ -3,7 +3,6 @@ const express = require('express')
 const path = require('path')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
-const admin = require('./models/adminHash')
 
 //// ROUTERS \\\\
 const indexRouter = require('./routes/index')
@@ -59,8 +58,5 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500)
   res.render('error')
 })
-
-//// BCRYPT HASHING \\\\
-admin()
 
 module.exports = app
