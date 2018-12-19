@@ -16,9 +16,9 @@ const findUserById = (id) => {
 //// CHECK USER IN DATABASE \\\\
 const verifyUser = (email) => {
   return knex('users')
-  .where('email', email)
-  .then(email => {
-    return email[0]
+  .where('username', username)
+  .then(username => {
+    return username[0]
   })
   .catch(err => {
     console.log(`verifyUser error: ${err}`)
