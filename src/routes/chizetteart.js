@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const knex = require('../knex')
+const knex = require('../../knex')
 
 //// MIDDLEWARE TO CHECK ID \\\\
 const checkIdisNum = (req, res, next) => {

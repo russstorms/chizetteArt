@@ -5,10 +5,9 @@ const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
 //// ROUTERS \\\\
-const indexRouter = require('./routes/index')
-// const loginRouter = require('./routes/login')
-const adminRouter = require('./routes/admincrud')
-const chizetteartRouter = require('./routes/chizetteart')
+const indexRouter = require('./src/routes/index')
+const adminRouter = require('./src/routes/admincrud')
+const chizetteartRouter = require('./src/routes/chizetteart')
 
 //// EXPRESS \\\\
 const app = express()
@@ -39,7 +38,6 @@ app.use((req, res, next) => {
 
 //// ROUTES \\\\
 app.use('/', indexRouter)
-// app.use('/login', loginRouter)
 app.use('/admin', adminRouter)
 app.use('/chizetteart', chizetteartRouter)
 
