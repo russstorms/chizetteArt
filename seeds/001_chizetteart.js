@@ -8,7 +8,6 @@ exports.seed = function(knex, Promise) {
         title: 'Human Drawing',
         year: 2018,
         medium: 'Gouache',
-        description: 'Drawing of a human.',
         poster: 'https://placekitten.com/200/300'
       },
       {
@@ -16,7 +15,6 @@ exports.seed = function(knex, Promise) {
         title: 'Gem Painting',
         year: 2018,
         medium: 'Acrylic Paint',
-        description: 'A gem I found!',
         poster: 'https://placekitten.com/200/300'
       },
       {
@@ -24,7 +22,6 @@ exports.seed = function(knex, Promise) {
         title: 'Animal Painting',
         year: 2018,
         medium: 'Oil Paint',
-        description: 'Wanted to cuddle with animals today :)',
         poster: 'https://placekitten.com/200/300'
       },
       {
@@ -32,7 +29,6 @@ exports.seed = function(knex, Promise) {
         title: 'Rough Sketch',
         year: 2018,
         medium: 'Charcoal',
-        description: 'No colors today, just sketches!',
         poster: 'https://placekitten.com/200/300'
       },
       {
@@ -40,7 +36,6 @@ exports.seed = function(knex, Promise) {
         title: 'Animal Drawing',
         year: 2018,
         medium: 'Graphite',
-        description: 'I love animals the most.',
         poster: 'https://placekitten.com/200/300'
       },
       {
@@ -48,7 +43,6 @@ exports.seed = function(knex, Promise) {
         title: 'Face',
         year: 2018,
         medium: 'Water Color',
-        description: 'Faces and hands are so tough!',
         poster: 'https://placekitten.com/200/300'
       },
       {
@@ -56,7 +50,6 @@ exports.seed = function(knex, Promise) {
         title: 'Gem and Body',
         year: 2018,
         medium: 'Gouache',
-        description: 'Love drawing these two together...',
         poster: 'https://placekitten.com/200/300'
       }
       ])

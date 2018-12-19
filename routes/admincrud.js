@@ -2,6 +2,9 @@ const express = require('express')
 const router = express.Router()
 const knex = require('../knex')
 
+//// NOT PROTECTED. NEEDS MIDDLEWARE \\\\
+
+
 //// MIDDLEWARE TO CHECK ID \\\\
 const checkIdisNum = (req, res, next) => {
   if (isNaN(req.params.id)) {
@@ -13,45 +16,8 @@ const checkIdisNum = (req, res, next) => {
   next()
 }
 
-//// AUTHENTICATION FOR ADMIN \\\\
-const isAdminAuthenticated = (req, res, next) => {
-  const authHeader = req.headers.authorization
-
-  if (!authHeader) {
-    return res.json(403).json({
-      status: 403,
-      message: 'FORBIDDEN'
-    })
-  } else {
-    const token = getBearerToken(authHeader)
-
-    if (token) {
-      return verifyTokenAndGetUID(token)
-        .then((userId) => {
-          res.locals.auth = {
-            userId
-          }
-          next()
-        })
-        .catch((err) => {
-          logger.logError(err)
-
-          return res.status(401).json({
-            status: 401,
-            message: 'UNAUTHORIZED',
-          })
-        })
-    } else {
-      return res.status(403).json({
-        status: 403,
-        message: 'FORBIDDEN'
-      })
-    }
-  }
-}
-
 //// READ ALL RECORDS \\\\
-router.get('/', isAdminAuthenticated, (req, res, next) => {
+router.get('/', (req, res, next) => {
   console.log(req)
     knex('chizetteart')
       .then((rows) => {
@@ -63,7 +29,7 @@ router.get('/', isAdminAuthenticated, (req, res, next) => {
 })
 
 //// GET ONE RECORD \\\\
-router.get('/:id', isAdminAuthenticated, checkIdisNum, (req, res, next) => {
+router.get('/:id', checkIdisNum, (req, res, next) => {
     knex('chizetteart')
       .where('id',req.params.id)
       .then((rows) => {
@@ -75,7 +41,7 @@ router.get('/:id', isAdminAuthenticated, checkIdisNum, (req, res, next) => {
 })
 
 //// CREATE ONE RECORD \\\\
-router.post('/', isAdminAuthenticated, (req, res, next) => {
+router.post('/', (req, res, next) => {
     knex('chizetteart')
       .insert({
         "title": req.body.title,
@@ -93,7 +59,7 @@ router.post('/', isAdminAuthenticated, (req, res, next) => {
 })
 
 //// UPDATE ONE RECORD \\\\
-router.put('/:id', isAdminAuthenticated, checkIdisNum, (req, res, next) => {
+router.put('/:id', checkIdisNum, (req, res, next) => {
   knex('chizetteart')
   .where('id', req.params.id)
   .then((data) => {
@@ -117,7 +83,7 @@ router.put('/:id', isAdminAuthenticated, checkIdisNum, (req, res, next) => {
 })
 
 //// DELETE ONE RECORD \\\\
-router.delete('/:id', isAdminAuthenticated, checkIdisNum, (req, res, next) => {
+router.delete('/:id', checkIdisNum, (req, res, next) => {
     knex('chizetteart')
       .where('id', req.params.id)
       .first()
