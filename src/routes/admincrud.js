@@ -46,8 +46,7 @@ router.post('/', (req, res, next) => {
       .insert({
         "title": req.body.title,
         "year": req.body.year,
-        "medium": req.body.medium,
-        "description": req.body.description
+        "medium": req.body.medium
       })
       .returning('*')
       .then((data) => {
@@ -69,8 +68,7 @@ router.put('/:id', checkIdisNum, (req, res, next) => {
     .update({
       "title": req.body.title,
       "year": req.body.year,
-      "medium": req.body.medium,
-      "description": req.body.description
+      "medium": req.body.medium
     })
     .returning('*')
     .then((data) => {
