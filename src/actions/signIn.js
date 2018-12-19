@@ -14,7 +14,7 @@ const findUserById = (id) => {
 }
 
 //// CHECK USER IN DATABASE \\\\
-const verifyUser = (email) => {
+const verifyUser = (username) => {
   return knex('admin')
   .where('username', username)
   .then(username => {

@@ -2,7 +2,7 @@ const passport = require('passport')
 require('dotenv').config()
 const JwtStrategy = require('passport-jwt').Strategy
 const ExtractJwt = require('passport-jwt').ExtractJwt
-const {findUserById, verifyUser} = require('../actions/signIn')
+const {findUserById, verifyUser} = require('../src/actions/signIn')
 const LocalStrategy = require('passport-local')
 const bcrypt = require('bcryptjs')
 
