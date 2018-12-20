@@ -4,8 +4,8 @@ exports.seed = function(knex) {
       return knex('admin').insert([
         {
           id: 1,
-          username: '',
-          password: ''
+          username: 'Chazzy',
+          password: 'iamtheabsolutecutest'
         }
       ])
       .then(function() {

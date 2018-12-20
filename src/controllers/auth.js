@@ -1,6 +1,6 @@
 const jwt = require('jwt-simple')
 require('dotenv').config()
-const {createAdmin} = require('../actions/signUp')
+// const {createAdmin} = require('../actions/signUp')
 const bcrypt = require('bcryptjs')
 
 //// TAKES IN USER OBJECT, RETURNS ENCODED TOKEN \\\\
@@ -15,9 +15,9 @@ const signin = (req, res, next) => {
 }
 
 //// GRAB USER DATA FROM SIGN UP FORM \\\\
-const signup = (req, res, next) => {
+// const signup = (req, res, next) => {
 
-  const {username, password} = req.body
+//   const {username, password} = req.body
   const saltRounds = 12
 
   if (!username || !password) {
@@ -38,6 +38,6 @@ const signup = (req, res, next) => {
     .catch((err) => {
       return next(err)
     })
-}
+// }
 
 module.exports = {signup, signin}
