@@ -1,8 +1,23 @@
 const express = require('express')
 const router = express.Router()
 const knex = require('../../knex')
+// const jwt = require('jsonwebtoken')
+// require('dotenv').config()
 
 //// NOT PROTECTED. NEEDS MIDDLEWARE \\\\
+// const jwtVerify = (req, res, next) => {
+//   console.log(`REQ HEADERS HERE>>>>>>`, req.headers)
+// 	jwt.verify(req.headers.token, process.env.SECRET, (err, _payload) => {
+// 		if (err) {
+// 			err.status = 401
+// 			err.message = `Unauthorized - Bad JWT Token cookie`
+// 			return next(err);
+// 		} else {
+// 			req.payload = _payload
+// 			next()
+// 		}
+// 	})
+// }
 
 
 //// MIDDLEWARE TO CHECK ID \\\\
@@ -18,7 +33,7 @@ const checkIdisNum = (req, res, next) => {
 
 //// READ ALL RECORDS \\\\
 router.get('/', (req, res, next) => {
-  console.log(req)
+  // console.log(req)
     knex('chizetteart')
       .then((rows) => {
         res.json(rows)
