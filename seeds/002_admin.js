@@ -5,7 +5,7 @@ exports.seed = function(knex) {
         {
           id: 1,
           username: 'Chazzy',
-          password: 'iamtheabsolutecutest'
+          password: '$2a$12$uDWhEe0rlGwCV04XcjSzXuLnb2XowRk4y9F4TH7zLaXRcQ5gM2Ya6'
         }
       ])
       .then(function() {

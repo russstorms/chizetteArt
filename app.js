@@ -16,7 +16,6 @@ const requireAuth = passport.authenticate('jwt', {session: false})
 
 
 //// ROUTERS \\\\
-const indexRouter = require('./src/routes/index')
 const adminRouter = require('./src/routes/admincrud')
 const chizetteartRouter = require('./src/routes/chizetteart')
 
@@ -48,7 +47,7 @@ app.use((req, res, next) => {
 //// ROUTES \\\\
 app.get('/', requireAuth, (req, res) => res.redirect('/admin'))
 app.use('/admin', adminRouter)
-app.use('/', indexRouter)
+app.use('/', authentication)
 app.use('/admin', adminRouter)
 app.use('/chizetteart', chizetteartRouter)
 
