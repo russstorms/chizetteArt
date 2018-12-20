@@ -11,6 +11,7 @@ const tokenForAdmin = (user) => {
 //// TAKES IN LOGGED USER AND CALLS tokenForAdmin() TO SEND TOKEN ALONG TO FRONT END \\\\
 const signin = (req, res, next) => {
   let token = tokenForAdmin(req.user)
+  console.log(req.user)
   res.set('Auth', `Bearer: ${token}`).status(200).json( req.user )
 }
 
