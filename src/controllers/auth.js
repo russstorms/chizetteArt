@@ -4,14 +4,14 @@ const {createAdmin} = require('../actions/signUp')
 const bcrypt = require('bcryptjs')
 
 //// TAKES IN USER OBJECT, RETURNS ENCODED TOKEN \\\\
-const tokenForAdmin = (admin) => {
-  return jwt.encode({id: admin.id}, process.env.PASSWORD)
+const tokenForAdmin = (user) => {
+  return jwt.encode({id: user.id}, process.env.PASSWORD)
 }
 
 //// TAKES IN LOGGED USER AND CALLS tokenForAdmin() TO SEND TOKEN ALONG TO FRONT END \\\\
 const signin = (req, res, next) => {
-  let token = tokenForAdmin(req.admin)
-  res.set('Auth', `Bearer: ${token}`).status(200).json( req.admin )
+  let token = tokenForAdmin(req.user)
+  res.set('Auth', `Bearer: ${token}`).status(200).json( req.user )
 }
 
 //// GRAB USER DATA FROM SIGN UP FORM \\\\

@@ -19,7 +19,7 @@ const checkIdisNum = (req, res, next) => {
 //// READ ALL RECORDS \\\\
 router.get('/', (req, res, next) => {
   console.log(req)
-    knex('admin')
+    knex('chizetteart')
       .then((rows) => {
         res.json(rows)
       })
