@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, AsyncStorage } from 'react'
 import './App.css'
 import {
   BrowserRouter as Router,
@@ -48,6 +48,26 @@ export default class App extends Component {
       this.storeToken(json.id, auth)
     }
   }
+
+  async getToken() {
+    console.log('in getToken(), looking for TOKEN')
+    const token = await AsyncStorage.getItem('token')
+    const userId = await AsyncStorage.getItem('userId')
+    console.log(`in getToken()`, token, userId)
+    const parsed = JSON.parse(userId)
+    this.setState({
+      ...this.state,
+      token: parsed || "",
+      actualToken: token || ""
+    })
+  }
+
+  async storeToken(userId=this.state.token, token=this.state.actualToken) {
+    console.log(userId, token)
+    await AsyncStorage.setItem('token', token)
+    await AsyncStorage.setItem(userId, JSON.stringify(userId))
+  }
+    
 
   componentDidMount = async () => {
     await this.getArtList()
