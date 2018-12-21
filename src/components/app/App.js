@@ -4,8 +4,8 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
-  Redirect,
-  withRouter
+  // Redirect,
+  // withRouter
 } from 'react-router-dom'
 import Header from '../header/header'
 import ArtList from '../art-list/artList'
@@ -21,6 +21,7 @@ export default class App extends Component {
       filteredArt: [],
       singleView: false,
       token: '',
+      actualToken: '',
       logIn: false
     }
   }
@@ -28,6 +29,24 @@ export default class App extends Component {
   loginClick = async (loginInfo) => {
 
     console.log('before get call', this.state)
+    const response = await fetch(`http://localhost:3000/sign-in`, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      body: JSON.stringify(loginInfo)
+    })
+    if (response.status === 200) {
+      const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
+      const json = await response.json()
+      this.setState({
+        ...this.state,
+        token: json.id,
+        logIn: false,
+        actualToken: auth
+      })
+      this.storeToken(json.id, auth)
+    }
   }
 
   componentDidMount = async () => {
@@ -54,7 +73,7 @@ export default class App extends Component {
               <Route path="/admin" />
               {/* <PrivateRoute path='/admin' component={Admin} /> */}
             </div>
-          <Login />
+          <Login loginClick={this.state.loginClick} token={this.state.token} />
         </main>
       </Router>
     )
