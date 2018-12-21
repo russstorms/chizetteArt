@@ -1,12 +1,5 @@
 import React, { Component, AsyncStorage } from 'react'
 import './App.css'
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  // Redirect,
-  // withRouter
-} from 'react-router-dom'
 import Header from '../header/header'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
@@ -82,20 +75,11 @@ export default class App extends Component {
 
   render() {
     return (
-      <Router>
         <main className="App container">
           <Header />
           <ArtList artList={this.state.artList} />
-            <div>
-              <ul>
-                <li><Link to="/admin">Login Page</Link></li>
-              </ul>
-              <Route path="/admin" />
-              {/* <PrivateRoute path='/admin' component={Admin} /> */}
-            </div>
           <Login loginClick={this.state.loginClick} token={this.state.token} />
         </main>
-      </Router>
     )
   }
 }
