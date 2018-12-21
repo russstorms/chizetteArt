@@ -17,8 +17,17 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      artList: []
+      artList: [],
+      filteredArt: [],
+      singleView: false,
+      token: '',
+      logIn: false
     }
+  }
+
+  loginClick = async (loginInfo) => {
+
+    console.log('before get call', this.state)
   }
 
   componentDidMount = async () => {
@@ -40,12 +49,12 @@ export default class App extends Component {
           <ArtList artList={this.state.artList} />
             <div>
               <ul>
-                <li><Link to="/login">Login Page</Link></li>
+                <li><Link to="/admin">Login Page</Link></li>
               </ul>
-              <Route path="/login" />
+              <Route path="/admin" />
               {/* <PrivateRoute path='/admin' component={Admin} /> */}
             </div>
-          {/* <Login /> */}
+          <Login />
         </main>
       </Router>
     )

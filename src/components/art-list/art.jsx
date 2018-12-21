@@ -12,8 +12,6 @@ const Art = (props) => {
       <br />
       <div><b>Medium:</b> {props.art.medium}</div>
       <br />
-      <div>{props.art.description}</div>
-      <br />
     </div>
   )
 }
