@@ -1,4 +1,4 @@
-import React, { Component, AsyncStorage } from 'react'
+import React, { Component } from 'react'
 import './App.css'
 import Header from '../header/header'
 import ArtList from '../art-list/artList'
@@ -21,44 +21,44 @@ export default class App extends Component {
 
   loginClick = async (loginInfo) => {
     console.log('before get call', this.state)
-    const response = await fetch(`http://localhost:3000/sign-in`, {
-      method: 'POST',
-      headers: {
-        "Content-Type": "application/json; charset=utf-8"
-      },
-      body: JSON.stringify(loginInfo)
-    })
-    if (response.status === 200) {
-      const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
-      const json = await response.json()
-      this.setState({
-        ...this.state,
-        token: json.id,
-        logIn: false,
-        actualToken: auth
-      })
-      this.storeToken(json.id, auth)
-    }
+    // const response = await fetch(`http://localhost:3000/sign-in`, {
+    //   method: 'POST',
+    //   headers: {
+    //     "Content-Type": "application/json; charset=utf-8"
+    //   },
+    //   body: JSON.stringify(loginInfo)
+    // })
+    // if (response.status === 200) {
+    //   const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
+    //   const json = await response.json()
+    //   this.setState({
+    //     ...this.state,
+    //     token: json.id,
+    //     logIn: false,
+    //     actualToken: auth
+    //   })
+    //   this.storeToken(json.id, auth)
+    // }
   }
 
   async getToken() {
     console.log('in getToken(), looking for TOKEN')
-    const token = await AsyncStorage.getItem('token')
-    const userId = await AsyncStorage.getItem('userId')
-    console.log(`in getToken()`, token, userId)
-    const parsed = JSON.parse(userId)
-    this.setState({
-      ...this.state,
-      token: parsed || "",
-      actualToken: token || ""
-    })
+    // const token = await AsyncStorage.getItem('token')
+    // const userId = await AsyncStorage.getItem('userId')
+    // console.log(`in getToken()`, token, userId)
+    // const parsed = JSON.parse(userId)
+    // this.setState({
+    //   ...this.state,
+    //   token: parsed || "",
+    //   actualToken: token || ""
+    // })
   }
 
-  async storeToken(userId=this.state.token, token=this.state.actualToken) {
-    console.log(userId, token)
-    await AsyncStorage.setItem('token', token)
-    await AsyncStorage.setItem(userId, JSON.stringify(userId))
-  }
+  // async storeToken(userId=this.state.token, token=this.state.actualToken) {
+  //   console.log(userId, token)
+  //   await AsyncStorage.setItem('token', token)
+  //   await AsyncStorage.setItem(userId, JSON.stringify(userId))
+  // }
     
 
   componentDidMount = async () => {
@@ -74,11 +74,13 @@ export default class App extends Component {
 
   render() {
     return (
-        <main className="App container">
-          <Header />
-          <ArtList artList={this.state.artList} />
-          <Login loginClick={this.loginClick} token={this.state.token} />
-        </main>
+      <main className="App container">
+        <Header />
+        <ArtList artList={this.state.artList} />
+        <footer>
+        <Login loginClick={this.loginClick} />
+        </footer>
+      </main>
     )
   }
 }

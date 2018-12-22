@@ -1,6 +1,6 @@
 import React from 'react'
 import './loginForm.css'
-import { Row, Col, Button } from 'react-materialize'
+import { Button } from 'react-materialize'
 
 export default class LoginForm extends React.Component {
 
@@ -23,10 +23,11 @@ export default class LoginForm extends React.Component {
 
 	onSubmit = (ev) => {
 			ev.preventDefault()
+			console.log(`CLICKED THE BUTTON`)
 			const username = ev.target.value
 			const password = ev.target.value
 
-			this.props.onSubmit({ username, password })
+			this.onSubmit({ username, password })
 			this.setState({
 					username: '',
 					password: ''
@@ -35,21 +36,17 @@ export default class LoginForm extends React.Component {
 	
 	render() {
 		return (
-			<Row className="loginForm">
-				<Col className="s6 push-s3">
-					<form onSubmit={this.handleSubmit} >
-						<label htmlFor="icon_prefix">
-						<i className="material-icons prefix"></i>
-						<input id="icon_prefix" onChange={this.handleChange} autoComplete="off" placeholder="Username" type="text" name="username" value={this.state.value} />
-						</label>
-						<label htmlFor="icon_lock">
-						<i className="material-icons prefix"></i>
-						<input id="icon_lock" onChange={this.handleChange} autoComplete="off" placeholder="Secret Code" type="password" name="password" value={this.state.value} />
-						</label>
-						<Button onSubmit={this.onSubmit} className="goButton">GO</Button>
-					</form>
-				</Col>
-			</Row>
+			<form onSubmit={this.onSubmit} >
+				<label htmlFor="icon_prefix">
+				<i className="material-icons prefix"></i>
+				<input id="icon_prefix" onChange={this.handleChange} autoComplete="off" placeholder="Username" type="text" name="username" />
+				</label>
+				<label htmlFor="icon_lock">
+				<i className="material-icons prefix"></i>
+				<input id="icon_lock" onChange={this.handleChange} autoComplete="off" placeholder="Secret Code" type="password" name="password" />
+				</label>
+				<Button onSubmit={this.props.loginClick} className="goButton">GO</Button>
+			</form>
 		)
 	}
 }
