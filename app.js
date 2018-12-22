@@ -46,7 +46,7 @@ app.use((req, res, next) => {
 
 //// ROUTES \\\\
 app.get('/', requireAuth, (req, res) => res.redirect('/admin'))
-app.use('/admin', adminRouter)
+app.use('/admin', requireAuth, adminRouter)
 app.use('/', authentication)
 app.use('/admin', adminRouter)
 app.use('/chizetteart', chizetteartRouter)
