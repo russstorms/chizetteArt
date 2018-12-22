@@ -13,7 +13,6 @@ export default class LoginForm extends React.Component {
   }
 
 	handleChange = (e) => {
-		e.preventDefault()
 		this.setState({
 			...this.state,
 			username: e.target.value,
@@ -22,7 +21,6 @@ export default class LoginForm extends React.Component {
 	}
 
 	onSubmit = (ev) => {
-			ev.preventDefault()
 			console.log(`CLICKED THE BUTTON`)
 			const username = ev.target.value
 			const password = ev.target.value
