@@ -20,25 +20,25 @@ export default class App extends Component {
   }
 
   loginClick = async (loginInfo) => {
-  //   console.log('before get call', this.state)
-  //   const response = await fetch(`http://localhost:3000/sign-in`, {
-  //     method: 'POST',
-  //     headers: {
-  //       "Content-Type": "application/json; charset=utf-8"
-  //     },
-  //     body: JSON.stringify(loginInfo)
-  //   })
-    // if (response.status === 200) {
-    //   const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
-    //   const json = await response.json()
-    //   this.setState({
-    //     ...this.state,
-    //     token: json.id,
-    //     logIn: false,
-    //     actualToken: auth
-    //   })
-    //   this.storeToken(json.id, auth)
-    // }
+    console.log('before get call', this.state)
+    const response = await fetch(`http://localhost:3000/sign-in`, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      body: JSON.stringify(loginInfo)
+    })
+    if (response.status === 200) {
+      const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
+      const json = await response.json()
+      this.setState({
+        ...this.state,
+        token: json.id,
+        logIn: false,
+        actualToken: auth
+      })
+      this.storeToken(json.id, auth)
+    }
   }
 
   logIn(){
@@ -54,11 +54,10 @@ export default class App extends Component {
         logIn: true
       })
     }
-    setTimeout(()=>this.scrollView.scrollTo({x: 0, y: 0, animated: true}), 1)
   }
 
-  async getToken() {
-    console.log('in getToken(), looking for TOKEN')
+  // async getToken() {
+  //   console.log('in getToken(), looking for TOKEN')
     // const token = await AsyncStorage.getItem('token')
     // const userId = await AsyncStorage.getItem('userId')
     // console.log(`in getToken()`, token, userId)
@@ -68,7 +67,7 @@ export default class App extends Component {
     //   token: parsed || "",
     //   actualToken: token || ""
     // })
-  }
+  // }
 
   // async storeToken(userId=this.state.token, token=this.state.actualToken) {
   //   console.log(userId, token)
@@ -77,16 +76,16 @@ export default class App extends Component {
   // }
     
 
-  componentDidMount = async () => {
-    await this.getArtList()
-  }
+  // componentDidMount = async () => {
+  //   await this.getArtList()
+  // }
 
-  getArtList = async () => {
-    //// GET ART \\\\
-    const artListJson = await fetch(`http://localhost:3000/chizetteart`)
-    const artList = await artListJson.json()
-    this.setState({ artList })
-  }
+  // getArtList = async () => {
+  //   //// GET ART \\\\
+  //   const artListJson = await fetch(`http://localhost:3000/chizetteart`)
+  //   const artList = await artListJson.json()
+  //   this.setState({ artList })
+  // }
 
   render() {
     return (
