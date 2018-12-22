@@ -20,14 +20,14 @@ export default class App extends Component {
   }
 
   loginClick = async (loginInfo) => {
-    console.log('before get call', this.state)
-    // const response = await fetch(`http://localhost:3000/sign-in`, {
-    //   method: 'POST',
-    //   headers: {
-    //     "Content-Type": "application/json; charset=utf-8"
-    //   },
-    //   body: JSON.stringify(loginInfo)
-    // })
+  //   console.log('before get call', this.state)
+  //   const response = await fetch(`http://localhost:3000/sign-in`, {
+  //     method: 'POST',
+  //     headers: {
+  //       "Content-Type": "application/json; charset=utf-8"
+  //     },
+  //     body: JSON.stringify(loginInfo)
+  //   })
     // if (response.status === 200) {
     //   const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
     //   const json = await response.json()
@@ -39,6 +39,22 @@ export default class App extends Component {
     //   })
     //   this.storeToken(json.id, auth)
     // }
+  }
+
+  logIn(){
+    if(this.state.logIn){
+      this.setState({
+        ...this.state,
+        logIn: false
+      })
+    }
+    if(!this.state.logIn){
+      this.setState({
+        ...this.state,
+        logIn: true
+      })
+    }
+    setTimeout(()=>this.scrollView.scrollTo({x: 0, y: 0, animated: true}), 1)
   }
 
   async getToken() {
@@ -68,7 +84,7 @@ export default class App extends Component {
   getArtList = async () => {
     //// GET ART \\\\
     const artListJson = await fetch(`http://localhost:3000/chizetteart`)
-    let artList = await artListJson.json()
+    const artList = await artListJson.json()
     this.setState({ artList })
   }
 

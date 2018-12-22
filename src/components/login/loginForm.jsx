@@ -7,6 +7,7 @@ export default class LoginForm extends React.Component {
 	constructor(props){
 		super(props)
 			this.state = {
+				...this.state,
 				username: '',
 				password: ''
 			}
@@ -20,16 +21,16 @@ export default class LoginForm extends React.Component {
 		})
 	}
 
-	onSubmit = (ev) => {
+	onSubmit = (e) => {
 			console.log(`CLICKED THE BUTTON`)
-			const username = ev.target.value
-			const password = ev.target.value
+			// const username = e.target.value
+			// const password = e.target.value
 
-			this.onSubmit({ username, password })
-			this.setState({
-					username: '',
-					password: ''
-			})
+			// this.onSubmit({ username, password })
+			// this.setState({
+			// 		username: '',
+			// 		password: ''
+			// })
 	}
 	
 	render() {
@@ -43,7 +44,7 @@ export default class LoginForm extends React.Component {
 				<i className="material-icons prefix"></i>
 				<input id="icon_lock" onChange={this.handleChange} autoComplete="off" placeholder="Secret Code" type="password" name="password" />
 				</label>
-				<Button onSubmit={this.props.loginClick} className="goButton">GO</Button>
+				<Button onSubmit={this.onSubmit} className="goButton">GO</Button>
 			</form>
 		)
 	}
