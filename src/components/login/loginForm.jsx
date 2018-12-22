@@ -1,6 +1,6 @@
 import React from 'react'
 import './loginForm.css'
-import { Row, Col } from 'react-materialize'
+import { Row, Col, Button } from 'react-materialize'
 
 export default class LoginForm extends React.Component {
 
@@ -46,7 +46,7 @@ export default class LoginForm extends React.Component {
 						<i className="material-icons prefix"></i>
 						<input id="icon_lock" onChange={this.handleChange} autoComplete="off" placeholder="Secret Code" type="password" name="password" value={this.state.value} />
 						</label>
-						<button onSubmit={this.onSubmit} className="goButton">GO</button>
+						<Button onSubmit={this.onSubmit} className="goButton">GO</Button>
 					</form>
 				</Col>
 			</Row>

@@ -20,7 +20,6 @@ export default class App extends Component {
   }
 
   loginClick = async (loginInfo) => {
-
     console.log('before get call', this.state)
     const response = await fetch(`http://localhost:3000/sign-in`, {
       method: 'POST',
@@ -78,7 +77,7 @@ export default class App extends Component {
         <main className="App container">
           <Header />
           <ArtList artList={this.state.artList} />
-          <Login loginClick={this.state.loginClick} token={this.state.token} />
+          <Login loginClick={this.loginClick} token={this.state.token} />
         </main>
     )
   }
