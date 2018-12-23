@@ -6,6 +6,8 @@ import Login from '../login/loginForm'
 
 // import CreateArt from '../create-art/createart'
 
+const API = process.env.API || 'http://localhost:3000'
+
 export default class App extends Component {
   constructor(props) {
     super(props)
@@ -21,18 +23,18 @@ export default class App extends Component {
 
   loginClick = async (loginInfo) => {
     // console.log('before get call', this.state)
-    const response = await fetch(`http://localhost:3000/sign-in`, {
+    const response = await fetch(`${API}/sign-in`, {
       method: "POST",
       mode: "cors",
       headers: {
-        "Content-Type": "application/json; charset=utf-8"
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(loginInfo)
-
+    }).then((response) => {
+      console.log(response)
     })
     
-    if (response.status === 200) {
-      console.log(response)
+    // if (response.status === 200) {
       // const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
       // const json = await response.json()
       // this.setState({
@@ -42,7 +44,7 @@ export default class App extends Component {
       //   actualToken: auth
       // })
       // this.storeToken(json.id, auth)
-    }
+    // }
   }
 
   logIn(){
