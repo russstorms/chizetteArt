@@ -22,7 +22,8 @@ export default class App extends Component {
   loginClick = async (loginInfo) => {
     // console.log('before get call', this.state)
     const response = await fetch(`http://localhost:3000/sign-in`, {
-      method: 'POST',
+      method: "POST",
+      mode: "cors",
       headers: {
         "Content-Type": "application/json; charset=utf-8"
       },
@@ -31,7 +32,7 @@ export default class App extends Component {
     })
     
     if (response.status === 200) {
-      console.log(response.headers)
+      console.log(response)
       // const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
       // const json = await response.json()
       // this.setState({
