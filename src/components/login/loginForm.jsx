@@ -13,38 +13,38 @@ export default class LoginForm extends React.Component {
 			}
   }
 
-	handleChange = (e) => {
+	onUsernameChange = (e) => {
 		this.setState({
 			...this.state,
-			username: e.target.value,
-			password: e.target.value
+			[e.target.name]: e.target.value
 		})
 	}
 
 	onSubmit = (e) => {
+		e.preventDefault()
 			console.log(`CLICKED THE BUTTON`)
-			// const username = e.target.value
-			// const password = e.target.value
+			const username = this.state.username
+			const password = this.state.password
 
-			// this.onSubmit({ username, password })
-			// this.setState({
-			// 		username: '',
-			// 		password: ''
-			// })
+			this.props.loginClick({ username, password })
+			this.setState({
+					username: '',
+					password: ''
+			})
 	}
 	
 	render() {
 		return (
-			<form onSubmit={this.onSubmit} >
+			<form onSubmit={this.onSubmit}>
 				<label htmlFor="icon_prefix">
 				<i className="material-icons prefix"></i>
-				<input id="icon_prefix" onChange={this.handleChange} autoComplete="off" placeholder="Username" type="text" name="username" />
+				<input id="icon_prefix" onChange={this.onUsernameChange} name="username" autoComplete="off" placeholder="Username" type="text" name="username" />
 				</label>
 				<label htmlFor="icon_lock">
 				<i className="material-icons prefix"></i>
-				<input id="icon_lock" onChange={this.handleChange} autoComplete="off" placeholder="Secret Code" type="password" name="password" />
+				<input id="icon_lock" onChange={this.onUsernameChange} name="password" autoComplete="off" placeholder="Secret Code" type="password" name="password" />
 				</label>
-				<Button onSubmit={this.onSubmit} className="goButton">GO</Button>
+				<Button className="goButton">GO</Button>
 			</form>
 		)
 	}

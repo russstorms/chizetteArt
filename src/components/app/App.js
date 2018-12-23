@@ -20,24 +20,27 @@ export default class App extends Component {
   }
 
   loginClick = async (loginInfo) => {
-    console.log('before get call', this.state)
+    // console.log('before get call', this.state)
     const response = await fetch(`http://localhost:3000/sign-in`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json; charset=utf-8"
       },
       body: JSON.stringify(loginInfo)
+
     })
+    
     if (response.status === 200) {
-      const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
-      const json = await response.json()
-      this.setState({
-        ...this.state,
-        token: json.id,
-        logIn: false,
-        actualToken: auth
-      })
-      this.storeToken(json.id, auth)
+      console.log(response.headers)
+      // const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
+      // const json = await response.json()
+      // this.setState({
+      //   ...this.state,
+      //   token: json.id,
+      //   logIn: false,
+      //   actualToken: auth
+      // })
+      // this.storeToken(json.id, auth)
     }
   }
 
@@ -93,7 +96,7 @@ export default class App extends Component {
         <Header />
         <ArtList artList={this.state.artList} />
         <footer>
-        <Login loginClick={this.loginClick} />
+        <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} />
         </footer>
       </main>
     )
