@@ -35,15 +35,15 @@ export default class App extends Component {
     })
     
     // if (response.status === 200) {
-      // const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
-      // const json = await response.json()
-      // this.setState({
-      //   ...this.state,
-      //   token: json.id,
-      //   logIn: false,
-      //   actualToken: auth
-      // })
-      // this.storeToken(json.id, auth)
+    //   const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
+    //   const json = await response.json()
+    //   this.setState({
+    //     ...this.state,
+    //     token: json.id,
+    //     logIn: false,
+    //     actualToken: auth
+    //   })
+    //   this.storeToken(json.id, auth)
     // }
   }
 
@@ -82,16 +82,16 @@ export default class App extends Component {
   // }
     
 
-  // componentDidMount = async () => {
-  //   await this.getArtList()
-  // }
+  componentDidMount = async () => {
+    await this.getArtList()
+  }
 
-  // getArtList = async () => {
-  //   //// GET ART \\\\
-  //   const artListJson = await fetch(`http://localhost:3000/chizetteart`)
-  //   const artList = await artListJson.json()
-  //   this.setState({ artList })
-  // }
+  getArtList = async () => {
+    //// GET ART \\\\
+    const artListJson = await fetch(`http://localhost:3000/chizetteart`)
+    const artList = await artListJson.json()
+    this.setState({ artList })
+  }
 
   render() {
     return (
