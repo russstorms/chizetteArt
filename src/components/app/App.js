@@ -30,11 +30,10 @@ export default class App extends Component {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(loginInfo)
-    }).then((response) => {
-      console.log(response)
     })
     
-    // if (response.status === 200) {
+    if (response.status === 200) {
+      console.log(response)
     //   const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
     //   const json = await response.json()
     //   this.setState({
@@ -44,7 +43,7 @@ export default class App extends Component {
     //     actualToken: auth
     //   })
     //   this.storeToken(json.id, auth)
-    // }
+    }
   }
 
   logIn(){
