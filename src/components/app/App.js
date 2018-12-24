@@ -33,7 +33,7 @@ export default class App extends Component {
     })
     
     if (response.status === 200) {
-      console.log(response)
+      console.log(response.headers.get('Auth'))
     //   const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
     //   const json = await response.json()
     //   this.setState({
