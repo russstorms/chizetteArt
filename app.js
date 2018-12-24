@@ -32,8 +32,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 //// CORS HEADERS \\\\
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
-  res.header('Access-Control-Allow-Headers', '*')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PATCH, DELETE, PUT')
+  res.header('Access-Control-Expose-Headers', 'Auth')
   res.header('Referrer-Policy', 'no-referrer')
   if (req.method === 'OPTIONS') {
     return res.sendStatus(200)
@@ -46,9 +47,8 @@ app.use((req, res, next) => {
 
 //// ROUTES \\\\
 app.get('/', requireAuth, (req, res) => res.redirect('/admin'))
-app.use('/admin', requireAuth, adminRouter)
-app.use('/', authentication)
 app.use('/admin', adminRouter)
+app.use('/', authentication)
 app.use('/chizetteart', chizetteartRouter)
 
 // catch 404 and forward to error handler

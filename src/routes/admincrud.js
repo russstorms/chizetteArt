@@ -1,23 +1,23 @@
 const express = require('express')
 const router = express.Router()
 const knex = require('../../knex')
-// const jwt = require('jsonwebtoken')
-// require('dotenv').config()
+const jwt = require('jsonwebtoken')
+require('dotenv').config()
 
 //// NOT PROTECTED. NEEDS MIDDLEWARE \\\\
-// const jwtVerify = (req, res, next) => {
-//   console.log(`REQ HEADERS HERE>>>>>>`, req.headers)
-// 	jwt.verify(req.headers.token, process.env.SECRET, (err, _payload) => {
-// 		if (err) {
-// 			err.status = 401
-// 			err.message = `Unauthorized - Bad JWT Token cookie`
-// 			return next(err);
-// 		} else {
-// 			req.payload = _payload
-// 			next()
-// 		}
-// 	})
-// }
+const jwtVerify = (req, res, next) => {
+  console.log(`REQ HEADERS HERE>>>>>>`, req.headers)
+	jwt.verify(req.headers.token, process.env.PASSWORD, (err, _payload) => {
+		if (err) {
+			err.status = 401
+			err.message = `Unauthorized - Bad JWT Token cookie`
+			return next(err);
+		} else {
+			req.payload = _payload
+			next()
+		}
+	})
+}
 
 
 //// MIDDLEWARE TO CHECK ID \\\\
@@ -32,7 +32,7 @@ const checkIdisNum = (req, res, next) => {
 }
 
 //// READ ALL RECORDS \\\\
-router.get('/', (req, res, next) => {
+router.get('/', jwtVerify, (req, res, next) => {
   // console.log(req)
     knex('chizetteart')
       .then((rows) => {
@@ -44,7 +44,7 @@ router.get('/', (req, res, next) => {
 })
 
 //// GET ONE RECORD \\\\
-router.get('/:id', checkIdisNum, (req, res, next) => {
+router.get('/:id', jwtVerify, checkIdisNum, (req, res, next) => {
     knex('chizetteart')
       .where('id',req.params.id)
       .then((rows) => {
@@ -56,7 +56,7 @@ router.get('/:id', checkIdisNum, (req, res, next) => {
 })
 
 //// CREATE ONE RECORD \\\\
-router.post('/', (req, res, next) => {
+router.post('/', jwtVerify, (req, res, next) => {
     knex('chizetteart')
       .insert({
         "title": req.body.title,
@@ -73,7 +73,7 @@ router.post('/', (req, res, next) => {
 })
 
 //// UPDATE ONE RECORD \\\\
-router.put('/:id', checkIdisNum, (req, res, next) => {
+router.put('/:id', jwtVerify, checkIdisNum, (req, res, next) => {
   knex('chizetteart')
   .where('id', req.params.id)
   .then((data) => {
@@ -96,7 +96,7 @@ router.put('/:id', checkIdisNum, (req, res, next) => {
 })
 
 //// DELETE ONE RECORD \\\\
-router.delete('/:id', checkIdisNum, (req, res, next) => {
+router.delete('/:id', jwtVerify, checkIdisNum, (req, res, next) => {
     knex('chizetteart')
       .where('id', req.params.id)
       .first()
