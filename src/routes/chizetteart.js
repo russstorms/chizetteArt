@@ -33,7 +33,7 @@ const checkIdisNum = (req, res, next) => {
 }
 
 //// READ ALL RECORDS \\\\
-router.get('/', jwtVerify, (req, res, next) => {
+router.get('/', (req, res, next) => {
   // console.log(req)
     knex('chizetteart')
       .then((rows) => {
@@ -45,7 +45,7 @@ router.get('/', jwtVerify, (req, res, next) => {
 })
 
 //// GET ONE RECORD \\\\
-router.get('/:id', jwtVerify, checkIdisNum, (req, res, next) => {
+router.get('/:id', checkIdisNum, (req, res, next) => {
     knex('chizetteart')
       .where('id',req.params.id)
       .then((rows) => {
