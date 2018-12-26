@@ -5,20 +5,19 @@ const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
 
-//// GET TOKEN BACK AND STORE IN LOCAL STORAGE NOW PROTECT ROUTES \\\\
 //// NOT PROTECTED. NEEDS MIDDLEWARE \\\\
 const jwtVerify = (req, res, next) => {
-  console.log(`REQ HEADERS HERE>>>>>>`, req.headers)
-	jwt.verify(req.headers.token, process.env.PASSWORD, (err, _payload) => {
-		if (err) {
-			err.status = 401
-			err.message = `Unauthorized - Bad JWT Token cookie`
-			return next(err);
-		} else {
-			req.payload = _payload
-			next()
-		}
-	})
+  // console.log(`REQ HEADERS HERE>>>>>>`, req.headers)
+	// jwt.verify(req.headers.token, process.env.PASSWORD, (err, _payload) => {
+	// 	if (err) {
+	// 		err.status = 401
+	// 		err.message = `Unauthorized - Bad JWT Token cookie`
+	// 		return next(err);
+	// 	} else {
+	// 		req.payload = _payload
+	// 		next()
+	// 	}
+	// })
 }
 
 
