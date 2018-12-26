@@ -13,7 +13,7 @@ export default class App extends Component {
       artList: [],
       filteredArt: [],
       singleView: false,
-      token: '',
+      userId: '',
       actualToken: '',
       logIn: false
     }
@@ -37,7 +37,7 @@ export default class App extends Component {
       const json = await response.json()
       this.setState({
         ...this.state,
-        token: json.id,
+        userId: json.id,
         logIn: false,
         actualToken: auth
       })
@@ -48,7 +48,7 @@ export default class App extends Component {
   logoutClick = async () => {
     this.setState({
       ...this.state,
-      token: ''
+      userId: ''
     })
     this.storeToken("", "")
     }
@@ -72,41 +72,34 @@ export default class App extends Component {
     console.log('in getToken(), looking for TOKEN')
     const token = await localStorage.getItem('token')
     const userId = await localStorage.getItem('userId')
-    console.log(`in getToken()`, token, userId)
+    // console.log(`in getToken()`, userId, token)
     const parsed = JSON.parse(userId)
     this.setState({
       ...this.state,
-      token: parsed || "",
+      userId: parsed || "",
       actualToken: token || ""
     })
   }
 
-  async storeToken(userId=this.state.token, token=this.state.actualToken) {
-    console.log(userId, token)
-    await localStorage.setItem('token', token)
+  async storeToken(userId=this.state.userId, token=this.state.actualToken) {
+    // console.log(userId, token)
     await localStorage.setItem('userId', JSON.stringify(userId))
+    await localStorage.setItem('token', token)
   }
 
-  async componentDidMount() {
-    const response = await fetch(`${API}/chizetteart`)
-    const json = await response.json()
-    this.setState({
-      ...this.state,
-      recipes: json
-    })
+  componentDidMount = async () => {
+    await this.getArtList()
     this.getToken()
   }
 
-  // componentDidMount = async () => {
-  //   await this.getArtList()
-  // }
-
-  // getArtList = async () => {
-  //   //// GET ART \\\\
-  //   const artListJson = await fetch(`${API}/chizetteart`)
-  //   const artList = await artListJson.json()
-  //   this.setState({ artList })
-  // }
+  getArtList = async () => {
+    //// GET ART \\\\
+    const artListJson = await fetch(`${API}/chizetteart`)
+    const artList = await artListJson.json()
+    this.setState({ 
+      artList
+    })
+  }
 
   async postArt(art){
     const response = await fetch(`${API}/chizetteart`, {
@@ -123,6 +116,15 @@ export default class App extends Component {
     })
     setTimeout(()=>this.getArtList(), 100)
   }
+
+  newArt(art){
+    // TIES INTO STATE WHEN LOGGED IN
+    art.userId = this.state.userId
+    console.log(`IN newArt()>>>>`, art)
+    this.postArt(art)
+  }
+
+
 
 
 
@@ -141,7 +143,7 @@ export default class App extends Component {
         <Header />
         <ArtList artList={this.state.artList} />
         <footer>
-        <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} token={this.state.token} />
+        <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} userId={this.state.userId} />
         </footer>
       </main>
     )
