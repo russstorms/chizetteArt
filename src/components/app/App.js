@@ -3,6 +3,7 @@ import './App.css'
 import Header from '../header/header'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
+import {Button} from 'react-materialize'
 
 const API = process.env.API || 'http://localhost:3000'
 
@@ -69,7 +70,7 @@ export default class App extends Component {
   }
 
   async getToken() {
-    console.log('in getToken(), looking for TOKEN')
+    // console.log('in getToken(), looking for TOKEN')
     const token = await localStorage.getItem('token')
     const userId = await localStorage.getItem('userId')
     // console.log(`in getToken()`, userId, token)
@@ -89,14 +90,14 @@ export default class App extends Component {
 
   componentDidMount = async () => {
     await this.getArtList()
-    this.getToken()
+    await this.getToken()
   }
 
   getArtList = async () => {
     //// GET ART \\\\
     const artListJson = await fetch(`${API}/chizetteart`)
     const artList = await artListJson.json()
-    this.setState({ 
+    this.setState({
       artList
     })
   }
