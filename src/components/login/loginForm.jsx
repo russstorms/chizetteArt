@@ -22,7 +22,7 @@ export default class LoginForm extends React.Component {
 
 	onSubmit = (e) => {
 		e.preventDefault()
-			console.log(`CLICKED THE BUTTON`)
+			console.log(`CLICKED LOGIN`)
 			const username = this.state.username
 			const password = this.state.password
 

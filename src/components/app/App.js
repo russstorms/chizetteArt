@@ -33,16 +33,17 @@ export default class App extends Component {
     })
     
     if (response.status === 200) {
-      console.log(response.headers.get('Auth'))
-    //   const auth = response.headers.map.auth.slice(8, response.headers.map.auth.length)
-    //   const json = await response.json()
-    //   this.setState({
-    //     ...this.state,
-    //     token: json.id,
-    //     logIn: false,
-    //     actualToken: auth
-    //   })
-    //   this.storeToken(json.id, auth)
+      // console.log(response.headers.get('Auth'))
+      const auth = response.headers.get('Auth').slice(8, response.headers.get('Auth').length)
+      // console.log(auth)
+      const json = await response.json()
+      this.setState({
+        ...this.state,
+        token: json.id,
+        logIn: false,
+        actualToken: auth
+      })
+      this.storeToken(json.id, auth)
     }
   }
 
@@ -61,25 +62,24 @@ export default class App extends Component {
     }
   }
 
-  // async getToken() {
-  //   console.log('in getToken(), looking for TOKEN')
-    // const token = await AsyncStorage.getItem('token')
-    // const userId = await AsyncStorage.getItem('userId')
-    // console.log(`in getToken()`, token, userId)
-    // const parsed = JSON.parse(userId)
-    // this.setState({
-    //   ...this.state,
-    //   token: parsed || "",
-    //   actualToken: token || ""
-    // })
-  // }
+  async getToken() {
+    console.log('in getToken(), looking for TOKEN')
+    const token = await localStorage.getItem('token')
+    const userId = await localStorage.getItem('userId')
+    console.log(`in getToken()`, token, userId)
+    const parsed = JSON.parse(userId)
+    this.setState({
+      ...this.state,
+      token: parsed || "",
+      actualToken: token || ""
+    })
+  }
 
-  // async storeToken(userId=this.state.token, token=this.state.actualToken) {
-  //   console.log(userId, token)
-  //   await AsyncStorage.setItem('token', token)
-  //   await AsyncStorage.setItem(userId, JSON.stringify(userId))
-  // }
-    
+  async storeToken(userId=this.state.token, token=this.state.actualToken) {
+    console.log(userId, token)
+    await localStorage.setItem('token', token)
+    await localStorage.setItem(userId, JSON.stringify(userId))
+  }
 
   componentDidMount = async () => {
     await this.getArtList()
@@ -98,7 +98,7 @@ export default class App extends Component {
         <Header />
         <ArtList artList={this.state.artList} />
         <footer>
-        <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} />
+        <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} token={this.state.token} />
         </footer>
       </main>
     )
