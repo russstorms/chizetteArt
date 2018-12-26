@@ -4,8 +4,6 @@ import Header from '../header/header'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
 
-// import CreateArt from '../create-art/createart'
-
 const API = process.env.API || 'http://localhost:3000'
 
 export default class App extends Component {
@@ -86,7 +84,17 @@ export default class App extends Component {
   async storeToken(userId=this.state.token, token=this.state.actualToken) {
     console.log(userId, token)
     await localStorage.setItem('token', token)
-    await localStorage.setItem(userId, JSON.stringify(userId))
+    await localStorage.setItem('userId', JSON.stringify(userId))
+  }
+
+  async componentDidMount() {
+    const response = await fetch(`${API}/chizetteart`)
+    const json = await response.json()
+    this.setState({
+      ...this.state,
+      recipes: json
+    })
+    this.getToken()
   }
 
   // componentDidMount = async () => {
@@ -95,10 +103,37 @@ export default class App extends Component {
 
   // getArtList = async () => {
   //   //// GET ART \\\\
-  //   const artListJson = await fetch(`http://localhost:3000/chizetteart`)
+  //   const artListJson = await fetch(`${API}/chizetteart`)
   //   const artList = await artListJson.json()
   //   this.setState({ artList })
   // }
+
+  async postArt(art){
+    const response = await fetch(`${API}/chizetteart`, {
+      method: "POST",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        "Accept": "application/JSON",
+        "Content-Type": "application/json",
+        "token": this.state.actualToken
+      },
+      body: JSON.stringify(art)
+    })
+    setTimeout(()=>this.getArtList(), 100)
+  }
+
+
+
+
+
+
+
+
+
+
+
 
   render() {
     return (
