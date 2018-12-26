@@ -4,6 +4,8 @@ const knex = require('../../knex')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
+
+//// GET TOKEN BACK AND STORE IN LOCAL STORAGE NOW PROTECT ROUTES \\\\
 //// NOT PROTECTED. NEEDS MIDDLEWARE \\\\
 const jwtVerify = (req, res, next) => {
   console.log(`REQ HEADERS HERE>>>>>>`, req.headers)
