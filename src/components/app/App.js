@@ -47,6 +47,14 @@ export default class App extends Component {
     }
   }
 
+  logoutClick = async () => {
+    this.setState({
+      ...this.state,
+      token: ''
+    })
+    this.storeToken("", "")
+    }
+
   logIn(){
     if(this.state.logIn){
       this.setState({
@@ -81,16 +89,16 @@ export default class App extends Component {
     await localStorage.setItem(userId, JSON.stringify(userId))
   }
 
-  componentDidMount = async () => {
-    await this.getArtList()
-  }
+  // componentDidMount = async () => {
+  //   await this.getArtList()
+  // }
 
-  getArtList = async () => {
-    //// GET ART \\\\
-    const artListJson = await fetch(`http://localhost:3000/chizetteart`)
-    const artList = await artListJson.json()
-    this.setState({ artList })
-  }
+  // getArtList = async () => {
+  //   //// GET ART \\\\
+  //   const artListJson = await fetch(`http://localhost:3000/chizetteart`)
+  //   const artList = await artListJson.json()
+  //   this.setState({ artList })
+  // }
 
   render() {
     return (
