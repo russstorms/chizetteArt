@@ -16,7 +16,6 @@ const requireAuth = passport.authenticate('jwt', {session: false})
 
 
 //// ROUTERS \\\\
-const adminRouter = require('./src/routes/admincrud')
 const chizetteartRouter = require('./src/routes/chizetteart')
 
 
@@ -46,10 +45,9 @@ app.use((req, res, next) => {
 
 
 //// ROUTES \\\\
-app.get('/', requireAuth, (req, res) => res.redirect('/admin'))
-app.use('/admin', adminRouter)
-app.use('/', authentication)
+app.get('/', requireAuth, (req, res) => res.redirect('/chizetteart'))
 app.use('/chizetteart', chizetteartRouter)
+app.use('/', authentication)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
