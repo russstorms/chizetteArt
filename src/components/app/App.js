@@ -3,7 +3,8 @@ import './App.css'
 import Header from '../header/header'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
-import {Button} from 'react-materialize'
+import ComposeArt from '../create-art/createart'
+
 
 const API = process.env.API || 'http://localhost:3000'
 
@@ -102,7 +103,13 @@ export default class App extends Component {
     })
   }
 
-  async postArt(art){
+  postArt = async (title, year, medium) => {
+    const artBody = {
+      title: title,
+      year: year,
+      medium: medium
+    }
+
     const response = await fetch(`${API}/chizetteart`, {
       method: "POST",
       mode: "cors",
@@ -113,8 +120,11 @@ export default class App extends Component {
         "Content-Type": "application/json",
         "token": this.state.actualToken
       },
-      body: JSON.stringify(art)
+      body: JSON.stringify(artBody)
     })
+    if (response.status !== 200) {
+      alert(`Post Art: Invalid post`)
+    }
     setTimeout(()=>this.getArtList(), 100)
   }
 
@@ -143,6 +153,7 @@ export default class App extends Component {
       <main className="App container">
         <Header />
         <ArtList artList={this.state.artList} />
+        <ComposeArt postArt={this.postArt} />
         <footer>
         <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} userId={this.state.userId} />
         </footer>

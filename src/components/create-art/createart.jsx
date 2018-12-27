@@ -1,26 +1,31 @@
-// import React from 'react'
+import React from 'react'
+import { Modal, Button } from 'react-materialize'
 
-// const ComposeArt = ({ sendArt }) => {
-//   const onSubmit = (e) => {
-//     e.preventDefault()
-//     sendArt({
-//       title: e.target.title.value,
-//       year: e.target.year.value,
-//       medium: e.target.medium.value,
-//       description: e.target.description.value
-//     })
-//   }
+const ComposeArt = ({postArt}) => {
+  const createArt= (ev) => {
+    ev.preventDefault()
+    let title = ev.target[0].value
+    let year = ev.target[1].value
+    let medium = ev.target[2].value
 
-//   return (
-//     <Modal id="modal1" className="modal">
-//       <div className="modal-content">
-//         <h4>Create a New Piece!</h4>
-//       </div>
-//       <div className="modal-footer">
-//         <button onSubmit={this.sendArt} className="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</button>
-//       </div>
-//     </Modal>
-//   )
-// }
+    return postArt(title, year, medium)
+  }
+  return <div>
+  <br />
+    <Modal className="Modal"
+    header='Create Art!'
+    trigger={<Button className="waves-effect waves-red">Create Art</Button>}>
+    <form onSubmit={createArt}>
+      <label>Title</label>
+      <input type="text" name="Title" />
+      <label>Year</label>
+      <input type="text" name="Year" />
+      <label>Medium</label>
+      <input type="text" name="Medium" />
+      <Button className="waves-effect waves-red btn modal-close" name="submit">Add Art</Button>
+    </form>
+    </Modal>
+  </div>
+}
 
-// export default ComposeArt
+export default ComposeArt
