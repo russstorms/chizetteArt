@@ -7,7 +7,7 @@ const ArtList = (props) => {
   return (
     <Row>
       <Col className="s4">
-        <h1 className="artList">Art List</h1>
+        <h1 className="artList">Art</h1>
         <ul>
           {props.artList.map(
             (art, idx) => {

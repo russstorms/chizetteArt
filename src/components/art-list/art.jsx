@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Art = (props) => {
+  console.log(props.art)
   return (
     <div>
       <hr />

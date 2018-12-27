@@ -103,11 +103,12 @@ export default class App extends Component {
     })
   }
 
-  postArt = async (title, year, medium) => {
+  postArt = async (title, year, medium, url) => {
     const artBody = {
       title: title,
       year: year,
-      medium: medium
+      medium: medium,
+      poster: url
     }
 
     const response = await fetch(`${API}/chizetteart`, {
@@ -124,15 +125,10 @@ export default class App extends Component {
     })
     if (response.status !== 200) {
       alert(`Post Art: Invalid post`)
+    } else {
+      alert(`Art Created!`)
     }
     setTimeout(()=>this.getArtList(), 100)
-  }
-
-  newArt(art){
-    // TIES INTO STATE WHEN LOGGED IN
-    art.userId = this.state.userId
-    console.log(`IN newArt()>>>>`, art)
-    this.postArt(art)
   }
 
 
