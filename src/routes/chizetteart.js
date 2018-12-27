@@ -19,7 +19,6 @@ const jwtVerify = (req, res, next) => {
 	})
 }
 
-
 //// MIDDLEWARE TO CHECK ID \\\\
 const checkIdisNum = (req, res, next) => {
   if (isNaN(req.params.id)) {
@@ -32,7 +31,7 @@ const checkIdisNum = (req, res, next) => {
 }
 
 //// READ ALL RECORDS \\\\
-router.get('/', jwtVerify, (req, res, next) => {
+router.get('/', (req, res, next) => {
   // console.log(req)
     knex('chizetteart')
       .then((rows) => {
