@@ -7,17 +7,16 @@ require('dotenv').config()
 
 //// NOT PROTECTED. NEEDS MIDDLEWARE \\\\
 const jwtVerify = (req, res, next) => {
-  console.log(`REQ HEADERS HERE>>>>>>`, req.headers)
-	// jwt.verify(req.headers.token, process.env.PASSWORD, (err, _payload) => {
-	// 	if (err) {
-	// 		err.status = 401
-	// 		err.message = `Unauthorized - Bad JWT Token cookie`
-	// 		return next(err);
-	// 	} else {
-	// 		req.payload = _payload
-	// 		next()
-	// 	}
-	// })
+	jwt.verify(req.headers.token, process.env.PASSWORD, (err, _payload) => {
+		if (err) {
+			err.status = 401
+			err.message = `Unauthorized - Bad JWT Token cookie`
+			return next(err);
+		} else {
+			req.payload = _payload
+			next()
+		}
+	})
 }
 
 
@@ -33,7 +32,7 @@ const checkIdisNum = (req, res, next) => {
 }
 
 //// READ ALL RECORDS \\\\
-router.get('/', (req, res, next) => {
+router.get('/', jwtVerify, (req, res, next) => {
   // console.log(req)
     knex('chizetteart')
       .then((rows) => {

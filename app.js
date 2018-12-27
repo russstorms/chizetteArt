@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 //// CORS HEADERS \\\\
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*')
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Request-Headers, token')
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PATCH, DELETE, PUT')
   res.header('Access-Control-Expose-Headers', 'Auth')
   res.header('Referrer-Policy', 'no-referrer')
