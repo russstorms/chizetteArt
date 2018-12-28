@@ -1,10 +1,10 @@
 import React from 'react'
+import './art.css'
 
 const Art = (props) => {
   return (
     <div>
-      <hr />
-      <div><img src={props.art.poster} alt="https://placekitten.com/200/300"></img></div>
+      <div><img className="poster" src={props.art.poster} alt="https://placekitten.com/200/300"></img></div>
       <br />
       <div><b>Title:</b> <i>{props.art.title}</i></div>
       <br />
