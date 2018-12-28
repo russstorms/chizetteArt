@@ -60,7 +60,8 @@ router.post('/', jwtVerify, (req, res, next) => {
       .insert({
         "title": req.body.title,
         "year": req.body.year,
-        "medium": req.body.medium
+        "medium": req.body.medium,
+        "poster": req.body.poster
       })
       .returning('*')
       .then((data) => {
@@ -82,7 +83,8 @@ router.put('/:id', jwtVerify, checkIdisNum, (req, res, next) => {
     .update({
       "title": req.body.title,
       "year": req.body.year,
-      "medium": req.body.medium
+      "medium": req.body.medium,
+      "poster": req.body.poster
     })
     .returning('*')
     .then((data) => {
