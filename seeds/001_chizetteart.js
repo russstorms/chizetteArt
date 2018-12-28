@@ -5,52 +5,66 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('chizetteart').insert([{
         id: 1,
-        title: 'Human Drawing',
-        year: 2018,
+        title: 'Where the Heart Is',
+        year: 2020,
         medium: 'Gouache',
-        poster: 'https://placekitten.com/200/300'
+        poster: 'https://images.unsplash.com/photo-1533158388470-9a56699990c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
       },
       {
         id: 2,
         title: 'Gem Painting',
         year: 2018,
         medium: 'Acrylic Paint',
-        poster: 'https://placekitten.com/200/300'
+        poster: 'https://images.unsplash.com/photo-1529666759085-741eefcd3371?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80'
       },
       {
         id: 3,
-        title: 'Animal Painting',
-        year: 2018,
-        medium: 'Oil Paint',
-        poster: 'https://placekitten.com/200/300'
+        title: 'Rosé',
+        year: 2021,
+        medium: 'Water Color',
+        poster: 'https://images.unsplash.com/photo-1530903677198-7c9f3577a63e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1462&q=80'
       },
       {
         id: 4,
-        title: 'Rough Sketch',
+        title: 'We Are the Same',
         year: 2018,
         medium: 'Charcoal',
-        poster: 'https://placekitten.com/200/300'
+        poster: 'https://images.unsplash.com/photo-1504221507732-5246c045949b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
       },
       {
         id: 5,
-        title: 'Animal Drawing',
-        year: 2018,
-        medium: 'Graphite',
-        poster: 'https://placekitten.com/200/300'
+        title: 'In Paris',
+        year: 2020,
+        medium: 'Photography',
+        poster: 'https://images.unsplash.com/photo-1530800089-e0f33f51d5ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
       },
       {
         id: 6,
         title: 'Face',
-        year: 2018,
-        medium: 'Water Color',
-        poster: 'https://placekitten.com/200/300'
+        year: 2019,
+        medium: 'Spray Paint',
+        poster: 'https://images.unsplash.com/photo-1503416858304-41dc04946371?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1935&q=80'
       },
       {
         id: 7,
-        title: 'Gem and Body',
-        year: 2018,
-        medium: 'Gouache',
-        poster: 'https://placekitten.com/200/300'
+        title: 'Oops, I Did It Again',
+        year: 2021,
+        medium: 'Spray Paint',
+        poster: 'https://images.unsplash.com/photo-1463277261818-d24c3cdbe40e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
+      },
+      {
+        id: 8,
+        title: 'Buddha',
+        year: 2022,
+        medium: 'Photography',
+        poster: 'https://images.unsplash.com/photo-1539106490701-6fa3d7ce6f31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+      },
+      {
+        id: 9,
+        title: 'Testing Dimensions',
+        year: 2019,
+        medium: 'Digital',
+        poster: 'https://preview.redd.it/3nw6vqx4q0721.png?width=1024&auto=webp&s=1ab13c48a0443d0de0e5b547cc6d9f8effbe0fa6'
       }
       ])
       .then(function() {
