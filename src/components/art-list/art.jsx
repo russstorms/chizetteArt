@@ -4,7 +4,7 @@ import { Col } from 'react-materialize'
 
 const Art = (props) => {
   return (
-    <Col>
+    <Col className="s4">
       <div>
         <div><img className="poster" src={props.art.poster} alt="https://placekitten.com/200/300"></img></div>
         <br />
