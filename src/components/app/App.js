@@ -110,7 +110,7 @@ export default class App extends Component {
       medium: medium,
       poster: url
     }
-
+    // console.log(JSON.stringify(artBody))
     const response = await fetch(`${API}/chizetteart`, {
       method: "POST",
       mode: "cors",
