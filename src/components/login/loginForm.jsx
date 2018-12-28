@@ -37,11 +37,11 @@ export default class LoginForm extends React.Component {
 			<form onSubmit={this.onSubmit}>
 				<label htmlFor="icon_prefix">
 				<i className="material-icons prefix"></i>
-				<input id="icon_prefix" onChange={this.onUsernameChange} name="username" autoComplete="off" placeholder="Username" type="text" name="username" />
+				<input id="icon_prefix" onChange={this.onUsernameChange} name="username" autoComplete="off" placeholder="Username" type="text" />
 				</label>
 				<label htmlFor="icon_lock">
 				<i className="material-icons prefix"></i>
-				<input id="icon_lock" onChange={this.onUsernameChange} name="password" autoComplete="off" placeholder="Secret Code" type="password" name="password" />
+				<input id="icon_lock" onChange={this.onUsernameChange} name="password" autoComplete="off" placeholder="Secret Code" type="password" />
 				</label>
 				<Button className="goButton">GO</Button>
 			</form>

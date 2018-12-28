@@ -4,6 +4,11 @@ import './artList.css'
 import { Row, Col } from 'react-materialize'
 
 const ArtList = (props) => {
+
+  props.artList.map((art) => {
+    console.log(art)
+  })
+
   return (
     <Row>
       <Col className="s4">
