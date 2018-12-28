@@ -7,13 +7,11 @@ const ArtList = (props) => {
 
   return (
     <Row className="artList">
-      <ul>
-        {props.artList.map(
-          (art, idx) => {
-            return <Art key={idx} art={art} />
-          }
-        )}
-      </ul>
+      {props.artList.map(
+        (art, idx) => {
+          return <Art key={idx} art={art} />
+        }
+      )}
     </Row>
   )
 }
