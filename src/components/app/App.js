@@ -94,15 +94,18 @@ export default class App extends Component {
     await this.getToken()
   }
 
+
+  //// GET THE ART \\\\
   getArtList = async () => {
-    //// GET ART \\\\
     const artListJson = await fetch(`${API}/chizetteart`)
     const artList = await artListJson.json()
     this.setState({
+      ...this.state,
       artList
     })
   }
 
+  //// CREATE NEW ART \\\\
   postArt = async (title, year, medium, url) => {
     const artBody = {
       title: title,
@@ -132,6 +135,18 @@ export default class App extends Component {
   }
 
 
+  //// DELETE ART \\\\
+  deleteArt = async (id) => {
+    let response = await fetch(`${API}/chizetteart/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Accept": "application/JSON",
+        "Content-Type": "application/json",
+        "token": this.state.actualToken
+      },
+    })
+    return this.getArtList()
+  }
 
 
 
@@ -140,7 +155,7 @@ export default class App extends Component {
     return (
       <main className="App container">
         <Header />
-        <ArtList artList={this.state.artList} />
+        <ArtList artList={this.state.artList} deleteArt={this.deleteArt} />
         <ComposeArt postArt={this.postArt} />
         <footer>
         <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} userId={this.state.userId} />
