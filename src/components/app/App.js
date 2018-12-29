@@ -83,7 +83,7 @@ export default class App extends Component {
     })
   }
 
-  async storeToken(userId=this.state.userId, token=this.state.actualToken) {
+  async storeToken(userId = this.state.userId, token = this.state.actualToken) {
     // console.log(userId, token)
     await localStorage.setItem('userId', JSON.stringify(userId))
     await localStorage.setItem('token', token)

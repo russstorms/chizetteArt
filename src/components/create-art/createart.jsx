@@ -2,7 +2,7 @@ import React from 'react'
 import { Modal, Button } from 'react-materialize'
 
 const ComposeArt = ({postArt}) => {
-  const createArt= (ev) => {
+  const createArt = (ev) => {
     ev.preventDefault()
     let title = ev.target[0].value
     let year = ev.target[1].value
