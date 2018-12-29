@@ -3,6 +3,9 @@ import './art.css'
 import { Col } from 'react-materialize'
 
 const Art = (props) => {
+
+
+  
   return (
       <Col className="s4 artPiece">
         <div>
