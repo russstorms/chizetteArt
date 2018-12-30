@@ -1,7 +1,7 @@
 import React from 'react'
 import Art from './art'
 import './artList.css'
-import { Row } from 'react-materialize'
+import { Row, Button } from 'react-materialize'
 
 const ArtList = (props) => {
 
