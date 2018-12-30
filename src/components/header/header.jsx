@@ -4,9 +4,12 @@ import './header.css'
 export default class header extends Component {
   render() {
     return (
-      <div className="nav">
-        <h1 className="chizetteArt">chizetteArt</h1>
-      </div>
+      <main className="container">
+        <div className="nav">
+          <h1 className="chizetteArt">chizetteArt</h1>
+        </div>
+        <i className="small material-icons icon iconBack">reply</i>
+      </main>
     )
   }
 }

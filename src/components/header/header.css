@@ -5,8 +5,14 @@
 .chizetteArt {
     font-size: 4em;
     letter-spacing: .5em;
-    margin: 7%;
-    margin-bottom: 12%;
+    margin: 5%;
     color: rgb(136, 127, 255);
     text-shadow: 1px 1px 5px rgb(138, 222, 248);
+}
+
+.iconBack {
+    margin-top: -0%;
+    margin-bottom: 10%;
+    color: rgb(138, 222, 248);
+    /* text-shadow: 1px 1px 5px rgb(138, 222, 248); */
 }

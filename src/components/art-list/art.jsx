@@ -61,7 +61,6 @@ export default class Art extends React.Component {
             <label>Url</label>
             <input type="text" placeholder={artList.url} name="Url" />
             <Button className="waves-effect waves-red btn modal-close" name="submit">Touch Up!</Button>
-            <br />
           </form>
         </Modal>
         <span><Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="waves-effect waves-teal btn delButton"><i id={artList.id} className="large material-icons icon">delete</i></Button></span>
