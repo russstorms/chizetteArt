@@ -1,15 +1,14 @@
 import React from 'react'
 import Art from './art'
 import './artList.css'
-import { Row, Button } from 'react-materialize'
+import { Row } from 'react-materialize'
 
 const ArtList = (props) => {
-
   return (
     <Row className="artList">
       {props.artList.map(
         (art, idx) => {
-          return <Art key={idx} art={art} />
+          return <Art key={idx} art={art} deleteArt={props.deleteArt} />
         }
       )}
     </Row>

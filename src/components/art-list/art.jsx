@@ -7,7 +7,7 @@ export default class Art extends React.Component {
   deleteArt = (ev) => {
     ev.preventDefault()
     console.log(ev.target.id)
-    return this.deleteArt(ev.target.id)
+    return this.props.deleteArt(ev.target.id)
   }
 
   render () {
@@ -26,6 +26,6 @@ export default class Art extends React.Component {
           <span><Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="waves-effect waves-teal btn-small delButton"><i id={artList.id} className="material-icons icon">delete</i></Button></span>
         </div>
       </Col>
-  )
+    )
   }
 }
