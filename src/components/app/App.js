@@ -135,6 +135,31 @@ export default class App extends Component {
   }
 
 
+    //// EDIT ART \\\\
+    editArt = async (id, title, year, medium, url) => {
+      const artBody = {
+        title: title,
+        year: year,
+        medium: medium,
+        poster: url
+      }
+  
+      let response = await fetch(`${API}/chizetteart/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(artBody),
+        headers: {
+          "Accept": "application/JSON",
+          "Content-Type": "application/json",
+          "token": this.state.actualToken
+        },
+      })
+      if (response.status !== 200) {
+        alert(`Couldn't edit this masterpiece.`)
+      }
+      return this.getArtList()
+    }
+
+
   //// DELETE ART \\\\
   deleteArt = async (id) => {
     let response = await fetch(`${API}/chizetteart/${id}`, {
@@ -145,6 +170,9 @@ export default class App extends Component {
         "token": this.state.actualToken
       },
     })
+    if (response.status !== 200) {
+      alert(`Couldn't delete this masterpiece.`)
+    }
     return this.getArtList()
   }
 
@@ -155,7 +183,7 @@ export default class App extends Component {
     return (
       <main className="App container">
         <Header />
-        <ArtList artList={this.state.artList} deleteArt={this.deleteArt} />
+        <ArtList artList={this.state.artList} editArt={this.editArt} deleteArt={this.deleteArt} />
         <ComposeArt postArt={this.postArt} />
         <footer>
         <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} userId={this.state.userId} />

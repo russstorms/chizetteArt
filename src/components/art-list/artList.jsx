@@ -8,7 +8,7 @@ const ArtList = (props) => {
     <Row className="artList">
       {props.artList.map(
         (art, idx) => {
-          return <Art key={idx} art={art} deleteArt={props.deleteArt} />
+          return <Art key={idx} art={art} editArt={props.editArt} deleteArt={props.deleteArt} />
         }
       )}
     </Row>
