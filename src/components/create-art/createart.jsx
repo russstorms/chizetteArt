@@ -25,7 +25,7 @@ const ComposeArt = ({postArt}) => {
       <input type="text" name="Medium" />
       <label>Url</label>
       <input type="url" name="Url" />
-      <Button className="waves-effect waves-red btn modal-close" name="submit">Add Art</Button>
+      <Button className="waves-effect waves-red btn modal-close" name="submit"><i className="large material-icons icon">brush</i>Create Art!</Button>
     </form>
     </Modal>
   </div>

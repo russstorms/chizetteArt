@@ -36,6 +36,7 @@ export default class Art extends React.Component {
   render () {
     let artList = this.props.art
     return (
+      //// ART PIECE \\\\
       <Col className="s4 artPiece">
         <div>
           <div><img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img></div>
@@ -46,11 +47,10 @@ export default class Art extends React.Component {
           <br />
           <div><b>Medium:</b> {artList.medium}</div>
           <br /> */}
-          <span><Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="waves-effect waves-teal btn-small delButton"><i id={artList.id} className="material-icons icon">delete</i></Button></span>
 
           <Modal className="Modal"
-          header={`Edit Art ${artList.id}`}
-          trigger={<Button className="waves-effect waves-red"><i className="material-icons icon">edit</i></Button>}>
+          header={`Touch up on: ${artList.title}`}
+          trigger={<span><Button className="waves-effect waves-red"><i className="large material-icons icon">brush</i></Button></span>}>
           <form id={artList.id} onSubmit={this.editSubmit}>
             <label>Title</label>
             <input type="text" placeholder={artList.title} name="Title" />
@@ -60,10 +60,11 @@ export default class Art extends React.Component {
             <input type="text" placeholder={artList.medium} name="Medium" />
             <label>Url</label>
             <input type="text" placeholder={artList.url} name="Url" />
-            <Button className="waves-effect waves-red btn modal-close" name="submit">Edit</Button>
+            <Button className="waves-effect waves-red btn modal-close" name="submit">Touch Up!</Button>
             <br />
           </form>
         </Modal>
+        <span><Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="waves-effect waves-teal btn delButton"><i id={artList.id} className="large material-icons icon">delete</i></Button></span>
         </div>
       </Col>
     )

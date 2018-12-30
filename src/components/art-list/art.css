@@ -7,3 +7,8 @@
 .artPiece {
   margin-bottom: 10%;
 }
+
+
+Button {
+ background-color: rgb(136, 127, 255) !important;
+}
