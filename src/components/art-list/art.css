@@ -9,9 +9,28 @@
 }
 
 .editButton {
-  background-color: rgb(136, 127, 255) !important;
+  color: rgb(136, 127, 255);
+  font-size: 2em !important;
+  margin-left: -13%;
+}
+
+.editButton:hover {
+  color: rgb(138, 222, 248);
+  background-color: transparent;
 }
 
 .deleteButton {
-  background-color: rgb(136, 127, 255) !important;
+  color: rgb(136, 127, 255);
+  font-size: 2em !important;
+  margin-left: 30%;
+  margin-top: -16%;
+}
+
+.deleteButton:hover {
+  color: rgb(138, 222, 248);
+  background-color: transparent;
+}
+
+.brushIcon {
+  font-size: 1.5em !important;
 }

@@ -16,26 +16,34 @@
     color: rgb(99, 95, 84);
 }
 
-.iconBack {
-    color: rgb(136, 127, 255);
-    font-size: 2em !important;
+.menuIcon {
+   font-size: 1.5em !important;
+}
+
+.backIcon {
+   font-size: 2em !important;
 }
 
 .backButton {
-    margin-top: -0%;
-    margin-bottom: 10%;
-    margin-left: -5%;
+  color: rgb(136, 127, 255);
+  margin-top: -0%;
+  margin-bottom: 10%;
+  margin-left: -5%;
 }
 
 .backButton:hover {
-    background-color: rgb(138, 222, 248);
+   color: rgb(138, 222, 248);
+   background-color: transparent;
 }
 
 .menuButton {
-    margin-top: -0%;
-    margin-bottom: 10%;
+  color: rgb(136, 127, 255);
+  font-size: 1.5em !important;
+  margin-top: -0%;
+  margin-bottom: 10%;
 }
 
 .menuButton:hover {
-    background-color: rgb(138, 222, 248);
+   color: rgb(138, 222, 248);
+   background-color: transparent;
 }
