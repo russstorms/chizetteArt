@@ -10,7 +10,7 @@ const jwtVerify = (req, res, next) => {
 	jwt.verify(req.headers.token, process.env.PASSWORD, (err, _payload) => {
 		if (err) {
 			err.status = 401
-			err.message = `Unauthorized - Bad JWT Token cookie`
+			err.message = `Unauthorized - Get the heck up outta 'ere!`
 			return next(err);
 		} else {
 			req.payload = _payload
