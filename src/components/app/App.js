@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 import Header from '../header/header'
+import Footer from '../footer/footer'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
 import ComposeArt from '../create-art/createart'
@@ -185,9 +186,8 @@ export default class App extends Component {
         <Header />
         <ArtList artList={this.state.artList} editArt={this.editArt} deleteArt={this.deleteArt} />
         <ComposeArt postArt={this.postArt} />
-        <footer>
+        <Footer />
         <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} userId={this.state.userId} />
-        </footer>
       </main>
     )
   }
