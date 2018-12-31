@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Button } from 'react-materialize'
+import logo from './chizetteLogo.jpg'
 import './header.css'
 
 export default class header extends Component {
@@ -6,9 +8,10 @@ export default class header extends Component {
     return (
       <main className="container">
         <div className="nav">
-          <h1 className="chizetteArt">chizetteArt</h1>
+        <span><img className="logo" src={logo} alt="logo"></img><h1 className="chizetteArt">chizetteArt</h1></span>
         </div>
-        <i className="small material-icons icon iconBack">reply</i>
+        <Button className="backButton btn-flat"><i className="large material-icons icon iconBack">keyboard_arrow_left</i></Button>
+        <Button className="menuButton btn-flat"><i className="large material-icons icon iconBack">line_weight</i></Button>
       </main>
     )
   }

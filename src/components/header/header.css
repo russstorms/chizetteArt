@@ -1,18 +1,41 @@
 .nav {
-    text-align: center;
+    text-align: left;
+}
+
+.logo {
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
 }
 
 .chizetteArt {
     font-size: 4em;
-    letter-spacing: .5em;
-    margin: 5%;
-    color: rgb(136, 127, 255);
-    text-shadow: 1px 1px 5px rgb(138, 222, 248);
+    font-family: "Sacramento";
+    margin-top: -5%;
+    margin-left: 14%;
+    color: rgb(99, 95, 84);
 }
 
 .iconBack {
+    color: rgb(136, 127, 255);
+    font-size: 2em !important;
+}
+
+.backButton {
     margin-top: -0%;
     margin-bottom: 10%;
-    color: rgb(138, 222, 248);
-    /* text-shadow: 1px 1px 5px rgb(138, 222, 248); */
+    margin-left: -5%;
+}
+
+.backButton:hover {
+    background-color: rgb(138, 222, 248);
+}
+
+.menuButton {
+    margin-top: -0%;
+    margin-bottom: 10%;
+}
+
+.menuButton:hover {
+    background-color: rgb(138, 222, 248);
 }

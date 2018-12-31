@@ -50,7 +50,7 @@ export default class Art extends React.Component {
 
           <Modal className="Modal"
           header={`Touch up on: ${artList.title}`}
-          trigger={<span><Button className="waves-effect waves-red"><i className="large material-icons icon">brush</i></Button></span>}>
+          trigger={<span><Button className="editButton waves-effect waves-red"><i className="large material-icons icon">brush</i></Button></span>}>
           <form id={artList.id} onSubmit={this.editSubmit}>
             <label>Title</label>
             <input type="text" placeholder={artList.title} name="Title" />
@@ -63,7 +63,7 @@ export default class Art extends React.Component {
             <Button className="waves-effect waves-red btn modal-close" name="submit">Touch Up!</Button>
           </form>
         </Modal>
-        <span><Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="waves-effect waves-teal btn delButton"><i id={artList.id} className="large material-icons icon">delete</i></Button></span>
+        <span><Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-teal btn delButton"><i id={artList.id} className="large material-icons icon">delete</i></Button></span>
         </div>
       </Col>
     )

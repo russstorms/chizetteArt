@@ -8,7 +8,10 @@
   margin-bottom: 10%;
 }
 
+.editButton {
+  background-color: rgb(136, 127, 255) !important;
+}
 
-Button {
- background-color: rgb(136, 127, 255) !important;
+.deleteButton {
+  background-color: rgb(136, 127, 255) !important;
 }
