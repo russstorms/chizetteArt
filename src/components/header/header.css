@@ -3,17 +3,19 @@
 }
 
 .logo {
-    height: 125px;
-    width: 125px;
+    height: 15%;
+    width: 15%;
+    margin: 1%;
     border-radius: 50%;
 }
 
 .chizetteArt {
     font-size: 4em;
     font-family: "Sacramento";
-    margin-top: -5%;
-    margin-left: 14%;
+    margin-top: -8%;
+    margin-left: 12%;
     color: rgb(99, 95, 84);
+    text-shadow: 2px 2px 1px rgb(255, 255, 255);
 }
 
 .menuIcon {
