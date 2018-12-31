@@ -5,17 +5,17 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('chizetteart').insert([{
         id: 1,
-        title: 'Where the Heart Is',
-        year: 2020,
-        medium: 'Gouache',
-        poster: 'https://images.unsplash.com/photo-1533158388470-9a56699990c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
-      },
-      {
-        id: 2,
         title: 'Gem Painting',
         year: 2018,
         medium: 'Acrylic Paint',
         poster: 'https://images.unsplash.com/photo-1529666759085-741eefcd3371?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80'
+      },
+      {
+        id: 2,
+        title: 'Where the Heart Is',
+        year: 2020,
+        medium: 'Gouache',
+        poster: 'https://images.unsplash.com/photo-1533158388470-9a56699990c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
       },
       {
         id: 3,
