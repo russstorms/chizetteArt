@@ -11,7 +11,7 @@ const ComposeArt = ({postArt}) => {
 
     return postArt(title, year, medium, url)
   }
-  return <div hidden>
+  return <div>
   <br />
     <Modal className="Modal"
     header='Create Art!'

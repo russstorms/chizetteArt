@@ -1,6 +1,6 @@
 import React from 'react'
 import './art.css'
-import { Col, Button, Modal } from 'react-materialize'
+import { Button, Modal } from 'react-materialize'
 
 export default class Art extends React.Component {
 
@@ -37,8 +37,7 @@ export default class Art extends React.Component {
     let artList = this.props.art
     return (
       //// ART PIECE \\\\
-      <Col className="s4 artPiece">
-        <div>
+        <div className="artPiece">
           <div><img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img></div>
           <br />
           <div><b><i>{artList.title}</i></b></div>
@@ -65,7 +64,7 @@ export default class Art extends React.Component {
         </Modal>
         <Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-teal btn-flat delButton"><i id={artList.id} className="large material-icons icon deleteIcon">delete</i></Button></span>
         </div>
-      </Col>
+        
     )
   }
 }
