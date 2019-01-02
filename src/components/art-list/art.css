@@ -1,14 +1,14 @@
 .poster {
   border: 2px solid rgb(99, 95, 84);
-  max-width: 350px;
-  max-height: 260px;
+  max-width: 21.875em;
+  max-height: 16.250em;
   transition: .3s ease;
 }
 
 .poster:hover {
-  max-width: 420px;
-  max-height: 330px;
-  margin: -50px -50px -30px -50px;
+  max-width: 26.250em;
+  max-height: 20.625em;
+  margin: -3.125em -3.125em -1.875em -3.125em;
   transition: .3s ease;
 }
 
