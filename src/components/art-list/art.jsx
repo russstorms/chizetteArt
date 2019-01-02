@@ -39,7 +39,6 @@ export default class Art extends React.Component {
       //// ART PIECE \\\\
         <div className="artPiece">
           <div><img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img></div>
-          <br />
           <div><b><i>{artList.title}</i></b></div>
           
         <span hidden>
