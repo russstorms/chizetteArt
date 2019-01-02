@@ -40,10 +40,10 @@ exports.seed = function(knex, Promise) {
       },
       {
         id: 6,
-        title: 'Face',
+        title: 'Hand',
         year: 2019,
-        medium: 'Spray Paint',
-        poster: 'https://images.unsplash.com/photo-1503416858304-41dc04946371?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1935&q=80'
+        medium: 'Acrylic',
+        poster: 'https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
       },
       {
         id: 7,
