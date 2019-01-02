@@ -33,7 +33,7 @@ const checkIdisNum = (req, res, next) => {
 //// READ ALL RECORDS \\\\
 router.get('/', (req, res, next) => {
   // console.log(req)
-    knex('chizetteart')
+    knex('chizetteart').orderBy('created_at', 'desc')
       .then((rows) => {
         res.json(rows)
       })
