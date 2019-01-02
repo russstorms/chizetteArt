@@ -41,7 +41,7 @@ export default class Art extends React.Component {
           <div><img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img></div>
           <div><b><i>{artList.title}</i></b></div>
           
-        <span hidden>
+        <span>
           <Modal className="Modal"
           header={`Touch up on: ${artList.title}`}
           trigger={<span><Button className="editButton btn-flat waves-effect waves-red"><i className="large material-icons icon brushIcon">brush</i></Button></span>}>

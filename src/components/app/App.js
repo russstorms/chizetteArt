@@ -133,7 +133,10 @@ export default class App extends Component {
     } else {
       alert(`Art Created!`)
     }
-    setTimeout(()=>this.getArtList(), 100)
+    this.setState({
+      ...this.state,
+      artList: [artBody, ...this.state.artList]
+    })
   }
 
 
@@ -145,6 +148,9 @@ export default class App extends Component {
         medium: medium,
         poster: url
       }
+
+      let newList = this.state.artList.slice()
+      let indexToEdit = newList.findIndex(art => art.id === +id)
   
       let response = await fetch(`${API}/chizetteart/${id}`, {
         method: "PUT",
@@ -158,7 +164,11 @@ export default class App extends Component {
       if (response.status !== 200) {
         alert(`Couldn't edit this masterpiece.`)
       }
-      return this.getArtList()
+      newList.splice(indexToEdit, 1, { id, ...artBody})
+      this.setState({
+        ...this.state,
+        artList: newList
+      })
     }
 
 

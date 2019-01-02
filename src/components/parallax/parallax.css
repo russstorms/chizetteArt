@@ -21,4 +21,5 @@ img {
   color: rgb(99, 95, 84);
   font-size: 2em;
   font-family: "Megrim";
+  position: relative;
 }
