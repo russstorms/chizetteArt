@@ -1,15 +1,15 @@
 .chizetteArtFooter {
-  font-size: 2em;
+  font-size: 1em;
   letter-spacing: .25em;
-  font-family: "Pompiere";
+  font-family: "Megrim";
   margin-top: 10%;
   margin-left: 5%;
   color: rgb(99, 95, 84);
 }
 
 .copyRight {
-  font-size: .6em;
-  margin-top: -3%;
-  margin-left: 19%;
+  font-size: .5em;
+  margin-left: 14%;
+  margin-top: -2.5%;
   color: rgb(99, 95, 84);
 }

@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import './App.css'
 import Header from '../header/header'
-import Footer from '../footer/footer'
+import Parallax from '../parallax/parallax'
+import About from '../about/about'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
 import ComposeArt from '../create-art/createart'
+import Footer from '../footer/footer'
 
 
 const API = process.env.API || 'http://localhost:3000'
@@ -184,6 +186,8 @@ export default class App extends Component {
     return (
       <main className="App container">
         <Header />
+        <Parallax />
+        <About />
         <ArtList artList={this.state.artList} editArt={this.editArt} deleteArt={this.deleteArt} />
         <ComposeArt postArt={this.postArt} />
         <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} userId={this.state.userId} />
