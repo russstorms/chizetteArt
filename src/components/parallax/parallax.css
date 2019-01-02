@@ -1,3 +1,23 @@
-.parallax {
+img {
   width: 100%;
+  margin-bottom: 15%;
+}
+
+.parallax {
+  height: 70%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.firstLetter {
+  font-size: 4em;
+}
+
+.about {
+  text-align: center;
+  color: rgb(99, 95, 84);
+  font-size: 2em;
+  font-family: "Megrim";
 }

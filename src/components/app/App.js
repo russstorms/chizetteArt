@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import './App.css'
 import Header from '../header/header'
 import Parallax from '../parallax/parallax'
-import About from '../about/about'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
 import ComposeArt from '../create-art/createart'
@@ -187,7 +186,6 @@ export default class App extends Component {
       <main className="App container">
         <Header />
         <Parallax />
-        <About />
         <ArtList artList={this.state.artList} editArt={this.editArt} deleteArt={this.deleteArt} />
         <ComposeArt postArt={this.postArt} />
         <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} userId={this.state.userId} />
