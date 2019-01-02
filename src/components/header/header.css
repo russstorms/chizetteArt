@@ -1,19 +1,32 @@
 .nav {
     text-align: left;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.logoAndTitle {
+   margin-left: 4%;
 }
 
 .logo {
-    height: 15%;
-    width: 15%;
+    height: 10%;
+    width: 10%;
     margin: 1%;
     border-radius: 50%;
 }
 
 .chizetteArt {
-    font-size: 4em;
-    font-family: "Sacramento";
-    margin-top: -8%;
-    margin-left: 12%;
+    font-size: 2.5em;
+    letter-spacing: .25em;
+    font-family: "Pompiere";
+    margin-top: -6%;
+    margin-left: 8%;
     color: rgb(99, 95, 84);
     text-shadow: 2px 2px 1px rgb(255, 255, 255);
 }
@@ -41,9 +54,8 @@
 .menuButton {
   color: rgb(99, 95, 84);
   font-size: 1.5em !important;
-  margin-top: -0%;
-  margin-left: -2%;
-  margin-bottom: 10%;
+  margin-top: -7%;
+  margin-left: -5%;
 }
 
 .menuButton:hover {
