@@ -44,7 +44,7 @@ export default class Art extends React.Component {
         <span>
           <Modal className="Modal"
           header={`Touch up on: ${artList.title}`}
-          trigger={<span><Button className="editButton btn-flat waves-effect waves-red"><i className="large material-icons icon brushIcon">brush</i></Button></span>}>
+          trigger={<span><Button className="editButton btn-flat waves-effect waves-light"><i className="large material-icons icon brushIcon">brush</i></Button></span>}>
           <form id={artList.id} onSubmit={this.editSubmit}>
             <label>Title</label>
             <input type="text" placeholder={artList.title} name="Title" />
@@ -57,7 +57,7 @@ export default class Art extends React.Component {
             <Button className="waves-effect waves-red btn modal-close" name="submit">Touch Up!</Button>
           </form>
         </Modal>
-        <Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-teal btn-flat delButton"><i id={artList.id} className="large material-icons icon deleteIcon">delete</i></Button></span>
+        <Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={artList.id} className="large material-icons icon deleteIcon">delete</i></Button></span>
         </div>
         
     )

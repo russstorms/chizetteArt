@@ -15,7 +15,7 @@ const ComposeArt = ({postArt}) => {
   <br />
     <Modal className="Modal"
     header='Create Art!'
-    trigger={<Button className="waves-effect waves-red">Create Art</Button>}>
+    trigger={<Button className="waves-effect waves-light">Create Art</Button>}>
     <form onSubmit={createArt}>
       <label>Title</label>
       <input type="text" name="Title" />
@@ -25,7 +25,7 @@ const ComposeArt = ({postArt}) => {
       <input type="text" name="Medium" />
       <label>Url</label>
       <input type="url" name="Url" />
-      <Button className="waves-effect waves-red btn modal-close" name="submit"><i className="large material-icons icon">brush</i>Create Art!</Button>
+      <Button className="waves-effect waves-light btn modal-close" name="submit"><i className="large material-icons icon">brush</i>Create Art!</Button>
     </form>
     </Modal>
   </div>
