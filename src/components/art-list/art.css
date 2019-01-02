@@ -1,12 +1,20 @@
 .poster {
-  border: 2px solid black;
+  border: 2px solid rgb(99, 95, 84);
   max-width: 350px;
   max-height: 260px;
+}
+
+.poster:hover {
+  max-width: 400px;
+  max-height: 310px;
+  transition: .3s ease;
 }
 
 .artPiece {
   margin-bottom: 10%;
   text-align: center;
+  color: rgb(99, 95, 84);
+  letter-spacing: .1em;
 }
 
 .editButton {

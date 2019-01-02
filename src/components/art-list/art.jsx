@@ -46,7 +46,7 @@ export default class Art extends React.Component {
           <br />
           <div><b>Medium:</b> {artList.medium}</div>
           <br /> */}
-        <span>
+        <span hidden>
           <Modal className="Modal"
           header={`Touch up on: ${artList.title}`}
           trigger={<span><Button className="editButton btn-flat waves-effect waves-red"><i className="large material-icons icon brushIcon">brush</i></Button></span>}>
