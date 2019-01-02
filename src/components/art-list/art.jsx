@@ -41,11 +41,7 @@ export default class Art extends React.Component {
           <div><img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img></div>
           <br />
           <div><b><i>{artList.title}</i></b></div>
-          <br />
-          {/* <div><b>Year:</b> {artList.year}</div>
-          <br />
-          <div><b>Medium:</b> {artList.medium}</div>
-          <br /> */}
+          
         <span hidden>
           <Modal className="Modal"
           header={`Touch up on: ${artList.title}`}

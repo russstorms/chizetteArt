@@ -6,14 +6,14 @@
 }
 
 .poster:hover {
-  max-width: 400px;
-  max-height: 310px;
-  margin: -30px -30px -30px -30px;
+  max-width: 420px;
+  max-height: 330px;
+  margin: -50px -50px -30px -50px;
   transition: .3s ease;
 }
 
 .artPiece {
-  padding-bottom: 15%;
+  margin-bottom: 20%;
   text-align: center;
   color: rgb(99, 95, 84);
   letter-spacing: .1em;
