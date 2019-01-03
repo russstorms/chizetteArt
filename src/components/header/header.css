@@ -6,8 +6,6 @@
     left: 0;
     top: 0;
     z-index: 1030;
-    width: 90%;
-    margin-left: 5%;
 }
 
 .logoAndTitle {
@@ -48,19 +46,6 @@
    background-color: transparent;
 }
 
-.sidebarchizetteArt {
-   text-align: center;
-   font-family: 'Megrim';
-   color: rgb(99, 95, 84);
-   font-size: 1.5em;
-   text-shadow: 2px 2px 1px rgb(255, 255, 255);
-   margin-top: -30%;
-}
-
-.sidebarLogo {
-   height: 30%;
-   width: 30%;
-   margin-left: 8%;
-   margin-top: 2%;
-   border-radius: 50%;
+.menuButton:focus {
+    background-color: transparent;
 }

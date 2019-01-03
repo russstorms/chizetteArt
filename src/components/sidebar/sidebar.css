@@ -1,0 +1,22 @@
+.sidebarchizetteArt {
+  text-align: center;
+  font-family: 'Megrim';
+  color: rgb(99, 95, 84);
+  font-size: 1.5em;
+  text-shadow: 2px 2px 1px rgb(255, 255, 255);
+  margin-top: -30%;
+}
+
+.sidebarLogo {
+  height: 30%;
+  width: 30%;
+  margin-left: 8%;
+  margin-top: 2%;
+  border-radius: 50%;
+}
+
+.side-nav {
+  margin-top: 12%;
+  padding-top: 10%;
+  box-shadow: none;
+}
