@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
 import Header from '../header/header'
-import SideBar from '../sidebar/sidebar'
 import Parallax from '../parallax/parallax'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
@@ -194,7 +193,6 @@ export default class App extends Component {
     return (
       <main className="App container">
         <Header />
-        <SideBar />
         <Parallax />
         <ArtList artList={this.state.artList} editArt={this.editArt} deleteArt={this.deleteArt} />
         <ComposeArt postArt={this.postArt} />

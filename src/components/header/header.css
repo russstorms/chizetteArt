@@ -12,6 +12,7 @@
 
 .logoAndTitle {
    margin-left: 4%;
+   margin-bottom: 2%;
 }
 
 .logo {
@@ -35,7 +36,7 @@
    font-size: 1.5em !important;
 }
 
-.backIcon {
+/* .backIcon {
    font-size: 2em !important;
 }
 
@@ -49,16 +50,21 @@
 .backButton:hover {
    color: rgb(138, 222, 248);
    background-color: transparent;
-}
+} */
 
 .menuButton {
   color: rgb(99, 95, 84);
   font-size: 1.5em !important;
-  margin-top: -7%;
+  margin-top: -4%;
   margin-left: -5%;
 }
 
 .menuButton:hover {
    color: rgb(138, 222, 248);
    background-color: transparent;
+}
+
+.sidebarLogo {
+   height: 80%;
+   width: 80%;
 }

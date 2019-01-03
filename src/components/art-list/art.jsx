@@ -59,7 +59,6 @@ export default class Art extends React.Component {
         </Modal>
         <Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={artList.id} className="large material-icons icon deleteIcon">delete</i></Button></span>
         </div>
-        
     )
   }
 }
