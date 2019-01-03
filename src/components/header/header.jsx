@@ -21,8 +21,10 @@ export default class header extends Component {
       <SideNav
         trigger={<Button className="menuButton btn-flat"><i className="large material-icons icon menuIcon">sort</i></Button>}
         options={{ closeonClick: true }}>
-        <SideNavItem><img className="sidebarLogo" src={logo}></img></SideNavItem>
-        <br />
+        <div> 
+          <img className="sidebarLogo" src={logo} alt=''></img>
+          <h4 className="sidebarchizetteArt"><b>chizette</b>Art</h4>
+        </div>
         <br />
         <SideNavItem href='/chizetteart'>Paintings</SideNavItem>
         <SideNavItem href='/chizetteart'>Jewelry</SideNavItem>
