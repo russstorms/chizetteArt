@@ -31,10 +31,10 @@ export default class header extends Component {
         <SideNavItem href='/chizetteart'>Photography</SideNavItem>
         <SideNavItem divider />
         <SideNavItem href='#'>Contact Me</SideNavItem>
+        <br />
         <SideNavItem href='#'>Logout</SideNavItem>
         </SideNav>
         </div>
-        {/* <Button className="backButton btn-flat"><i className="large material-icons icon backIcon">keyboard_arrow_left</i></Button> */}
       </div>
     )
   }
