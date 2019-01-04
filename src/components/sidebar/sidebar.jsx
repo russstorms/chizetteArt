@@ -20,6 +20,7 @@ export default class Sidebar extends React.Component {
         <SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">redeem</i></span><span className="sideNavTitle">Jewelry</span></SideNavItem>
         <SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">camera_roll</i></span><span className="sideNavTitle">Photography</span></SideNavItem>
         <SideNavItem divider />
+        <br />
         <SideNavItem href='#'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">person_outline</i></span><span className="sideNavTitle">Contact Me</span></SideNavItem>
         <br />
         <SideNavItem href='#'>Logout</SideNavItem>

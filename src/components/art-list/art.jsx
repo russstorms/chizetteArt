@@ -33,32 +33,32 @@ export default class Art extends React.Component {
     return this.props.deleteArt(ev.target.id)
   }
 
-  render () {
+  render() {
     let artList = this.props.art
     return (
       //// ART PIECE \\\\
-        <div className="artPiece">
-          <div><img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img></div>
-          <div><b><i>{artList.title}</i></b></div>
-          
+      <div className="artPiece">
+        <div><img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img></div>
+        <div><b><i>{artList.title}</i></b></div>
+
         <span>
           <Modal className="Modal"
-          header={`Touch up on: ${artList.title}`}
-          trigger={<span><Button className="editButton btn-flat waves-effect waves-light"><i className="large material-icons icon brushIcon">brush</i></Button></span>}>
-          <form id={artList.id} onSubmit={this.editSubmit}>
-            <label>Title</label>
-            <input type="text" placeholder={artList.title} name="Title" />
-            <label>Year</label>
-            <input type="text" placeholder={artList.year} name="Year" />
-            <label>Medium</label>
-            <input type="text" placeholder={artList.medium} name="Medium" />
-            <label>Url</label>
-            <input type="text" placeholder={artList.url} name="Url" />
-            <Button className="waves-effect waves-red btn modal-close" name="submit">Touch Up!</Button>
-          </form>
-        </Modal>
-        <Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={artList.id} className="large material-icons icon deleteIcon">delete</i></Button></span>
-        </div>
+            header={`Touch up on: ${artList.title}`}
+            trigger={<span><Button className="editButton btn-flat waves-effect waves-light"><i className="large material-icons icon brushIcon">brush</i></Button></span>}>
+            <form id={artList.id} onSubmit={this.editSubmit}>
+              <label>Title</label>
+              <input type="text" placeholder={artList.title} name="Title" />
+              <label>Year</label>
+              <input type="text" placeholder={artList.year} name="Year" />
+              <label>Medium</label>
+              <input type="text" placeholder={artList.medium} name="Medium" />
+              <label>Url</label>
+              <input type="text" placeholder={artList.url} name="Url" />
+              <Button className="waves-effect waves-red btn modal-close" name="submit">Touch Up!</Button>
+            </form>
+          </Modal>
+          <Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={artList.id} className="large material-icons icon deleteIcon">delete</i></Button></span>
+      </div>
     )
   }
 }

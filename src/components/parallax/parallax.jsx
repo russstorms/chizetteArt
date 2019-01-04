@@ -12,3 +12,24 @@ const ParallaxImage = (props) => {
 }
 
 export default ParallaxImage
+
+// export default class ParallaxImage extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     // this.myTween = new TimelineLite({paused: true})
+//     // this.myArt = []
+//   }
+
+//   componentDidMount = () => {
+//     // this.myTween.staggerTo(this.myArt, 0.5, {})
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <Parallax className="parallax" imageSrc={`${this.setInterval}`} />
+//         <h5 className="about"><span className="firstLetter">H</span>i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!</h5>
+//       </div>
+//     )
+//   }
+// }
