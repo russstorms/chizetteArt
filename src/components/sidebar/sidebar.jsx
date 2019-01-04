@@ -16,11 +16,11 @@ export default class Sidebar extends React.Component {
           <h4 className="sidebarchizetteArt"><b>chizette</b>Art</h4>
         </div>
         <br />
-        <SideNavItem href='/chizetteart'>Paintings</SideNavItem>
-        <SideNavItem href='/chizetteart'>Jewelry</SideNavItem>
-        <SideNavItem href='/chizetteart'>Photography</SideNavItem>
+        <SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">palette</i></span><span className="sideNavTitle">Paintings</span></SideNavItem>
+        <SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">redeem</i></span><span className="sideNavTitle">Jewelry</span></SideNavItem>
+        <SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">camera_roll</i></span><span className="sideNavTitle">Photography</span></SideNavItem>
         <SideNavItem divider />
-        <SideNavItem href='#'>Contact Me</SideNavItem>
+        <SideNavItem href='#'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">person_outline</i></span><span className="sideNavTitle">Contact Me</span></SideNavItem>
         <br />
         <SideNavItem href='#'>Logout</SideNavItem>
       </SideNav>

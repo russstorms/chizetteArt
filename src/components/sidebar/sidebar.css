@@ -5,6 +5,7 @@
   font-size: 1.5em;
   text-shadow: 2px 2px 1px rgb(255, 255, 255);
   margin-top: -30%;
+  letter-spacing: .25em;
 }
 
 .sidebarLogo {
@@ -27,9 +28,11 @@
 
 .side-nav li>a {
   color: rgb(99, 95, 84);
+  letter-spacing: .25em;
 }
 
 .side-nav li>a:hover {
   color: rgb(138, 222, 248);
   background-color: transparent;
+  letter-spacing: .25em;
 }
