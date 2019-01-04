@@ -1,15 +1,10 @@
-img {
-  margin-bottom: 15%;
+.parallax {
+  height: 100vh;
+  margin: auto -6% auto -6%;
 }
 
-.parallax {
-  background-image: url("https://images.unsplash.com/photo-1524215358253-2a0988a55a68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80");
-  height: 100vh;
-  margin: auto -10% auto -10%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.parallax img {
+  width: 100%;
 }
 
 .firstLetter {
@@ -19,7 +14,7 @@ img {
 .about {
   margin: 0% 10% 0% 10%;
   text-align: center;
-  padding-top: 60%;
+  padding-top: 20%;
   color: rgb(99, 95, 84);
   font-size: 2em;
   font-family: "Megrim";
