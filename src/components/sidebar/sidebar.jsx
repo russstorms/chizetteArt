@@ -9,7 +9,7 @@ export default class Sidebar extends React.Component {
 
   render() {
     return (
-      <SideNav
+      <SideNav className="sideNav"
         trigger={<Button className="menuButton btn-flat"><i className="large material-icons icon menuIcon">sort</i></Button>}
         options={{ closeonClick: true }}>
         <div>

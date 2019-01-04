@@ -15,8 +15,21 @@
   border-radius: 50%;
 }
 
+.sideNav {
+  height: 55%;
+}
+
 .side-nav {
   margin-top: 11%;
   padding-top: 10%;
   box-shadow: none;
+}
+
+.side-nav li>a {
+  color: rgb(99, 95, 84);
+}
+
+.side-nav li>a:hover {
+  color: rgb(138, 222, 248);
+  background-color: transparent;
 }
