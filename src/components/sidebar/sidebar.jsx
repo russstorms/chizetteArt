@@ -6,8 +6,15 @@ import './sidebar.css'
 
 
 export default class Sidebar extends React.Component {
-
+  constructor(props) {
+    super(props)
+    this.state = {
+      logIn: false
+    }
+  }
+  
   render() {
+    const { loginClick } = this.props
     return (
       <SideNav className="sideNav"
         trigger={<Button className="menuButton btn-flat"><i className="large material-icons icon menuIcon">sort</i></Button>}
@@ -23,7 +30,7 @@ export default class Sidebar extends React.Component {
         <br />
         <SideNavItem href='#'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">person_outline</i></span><span className="sideNavTitle">Contact Me</span></SideNavItem>
         <br />
-        <SideNavItem href='#'>Logout</SideNavItem>
+        <SideNavItem href='#'>{this.state.logIn ? <SideNavItem href='#'>Logout</SideNavItem>: null}</SideNavItem>
       </SideNav>
     )
   }

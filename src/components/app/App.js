@@ -192,7 +192,7 @@ export default class App extends Component {
   render() {
     return (
       <main className="App container">
-        <Header />
+        <Header loginClick={this.loginClick} />
         <Parallax artList={this.state.artList} />
         <ArtList artList={this.state.artList} editArt={this.editArt} deleteArt={this.deleteArt} />
         <ComposeArt postArt={this.postArt} />
