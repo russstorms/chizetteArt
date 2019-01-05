@@ -18,6 +18,7 @@
 
 .sideNav {
   height: 55%;
+  overflow: hidden;
 }
 
 .side-nav {
@@ -35,4 +36,13 @@
   color: rgb(138, 222, 248);
   background-color: transparent;
   letter-spacing: .25em;
+}
+
+.footer {
+  font-size: .8em;
+  margin-left: 2%;
+  margin-top: -.1%;
+  letter-spacing: .25em;
+  font-family: "Megrim";
+  color: rgb(99, 95, 84);
 }
