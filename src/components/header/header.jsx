@@ -12,12 +12,11 @@ export default class header extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="nav">
         <div className="logoAndTitle">
         <img className="logo" src={logo} alt="logo"></img><h1 className="chizetteArt"><b>chizette</b><span onClick={(ev) => this.secretLogin(ev)}>A</span>rt</h1>
-        <Sidebar logoutClick={this.props.logoutClick} />
+        <Sidebar logoutClick={this.props.logoutClick} token={this.props.actualToken} />
         </div>
       </div>
     )

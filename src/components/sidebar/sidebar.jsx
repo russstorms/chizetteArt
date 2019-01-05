@@ -24,7 +24,7 @@ export default class Sidebar extends React.Component {
         <br />
         <SideNavItem href='#'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">person_outline</i></span><span className="sideNavTitle">Contact Me</span></SideNavItem>
         <br />
-        <SideNavItem href='#'>{this.props.token ? <SideNavItem href='#' onPress={ logoutClick }>Logout</SideNavItem>: <h3>HI not logged in</h3>}</SideNavItem>
+        {/* {this.props.actualToken ? <SideNavItem href='#' onPress={ logoutClick }>Logout</SideNavItem>: null} */}
       </SideNav>
     )
   }
