@@ -34,7 +34,7 @@ export default class LoginForm extends React.Component {
 	
 	render() {
 		return (
-			<form onSubmit={this.onSubmit} action="/chizetteart" method="get">
+			<form onSubmit={this.onSubmit}>
 				<label htmlFor="icon_prefix">
 				<i className="material-icons prefix"></i>
 				<input id="icon_prefix" onChange={this.onUsernameChange} name="username" autoComplete="off" placeholder="Username" type="text" />

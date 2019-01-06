@@ -23,6 +23,7 @@ export default class App extends Component {
     }
   }
 
+  //// POST TO LOGIN \\\\
   loginClick = async (loginInfo) => {
     // console.log('before get call', this.state)
     const response = await fetch(`${API}/sign-in`, {
