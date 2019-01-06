@@ -5,10 +5,23 @@ import './header.css'
 
 
 export default class header extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      ...this.state,
+      secretLogIn: false
+    }
+  }
 
   secretLogin = (ev) => {
     ev.preventDefault()
     console.log(`Secret Login clicked!`)
+    this.setState = ({
+      ...this.state,
+      secretLogIn: true
+    })
+    console.log(this.state)
+    return this.props.getLoginForm
   }
 
   render() {

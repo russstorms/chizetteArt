@@ -19,7 +19,8 @@ export default class App extends Component {
       singleView: false,
       userId: '',
       actualToken: '',
-      logIn: false
+      logIn: false,
+      secretLogIn: false
     }
   }
 
@@ -189,15 +190,28 @@ export default class App extends Component {
     return this.getArtList()
   }
 
+  getLoginForm = async () => {
+    if (this.state.secretLogIn){
+      this.setState({
+        ...this.state,
+        secretLogIn: false
+      })
+    } else {
+      this.setState({
+        ...this.state,
+        secretLogIn: true
+      })
+    }
+  }
 
   render() {
     return (
       <main className="App container">
-        <Header logoutClick={this.logoutClick} token={this.state.actualToken} />
+        <Header logoutClick={this.logoutClick} token={this.state.actualToken} getLoginForm={this.getLoginForm} />
         <Parallax artList={this.state.artList} />
         <ArtList artList={this.state.artList} editArt={this.editArt} deleteArt={this.deleteArt} />
         <ComposeArt postArt={this.postArt} />
-        <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} userId={this.state.userId} />
+        <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} userId={this.state.userId}/>
         <Footer />
       </main>
     )
