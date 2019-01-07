@@ -192,7 +192,7 @@ export default class App extends Component {
     return (
       <main className="App container">
         <Header logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
-        <Parallax artList={this.state.artList} />
+        <Parallax artList={this.state.artList.map((art) => art.poster)} />
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <ArtList artList={this.state.artList} token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
         <Footer />

@@ -40,6 +40,7 @@ export default class Art extends React.Component {
       <div className="artPiece">
         <div><img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img></div>
         <div><b><i>{artList.title}</i></b></div>
+        
       {this.props.token ?
         <span>
           <Modal className="Modal"
