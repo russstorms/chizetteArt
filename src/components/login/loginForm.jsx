@@ -1,6 +1,5 @@
 import React from 'react'
 import './loginForm.css'
-import { Button } from 'react-materialize'
 
 export default class LoginForm extends React.Component {
 
@@ -34,16 +33,16 @@ export default class LoginForm extends React.Component {
 	
 	render() {
 		return (
-			<form onSubmit={this.onSubmit}>
+			<form className="loginForm" onSubmit={this.onSubmit}>
 				<label htmlFor="icon_prefix">
 				<i className="material-icons prefix"></i>
-				<input id="icon_prefix" onChange={this.onUsernameChange} name="username" autoComplete="off" placeholder="Username" type="text" />
+				<input id="icon_prefix" className="inputs" onChange={this.onUsernameChange} name="username" autoComplete="off" placeholder="Username" type="text" />
 				</label>
 				<label htmlFor="icon_lock">
 				<i className="material-icons prefix"></i>
-				<input id="icon_lock" onChange={this.onUsernameChange} name="password" autoComplete="off" placeholder="Secret Code" type="password" />
+				<input id="icon_lock" className="inputs" onChange={this.onUsernameChange} name="password" autoComplete="off" placeholder="Secret Code" type="password" />
 				</label>
-				<Button className="goButton">GO</Button>
+				<div className="goButton">GO</div>
 			</form>
 		)
 	}

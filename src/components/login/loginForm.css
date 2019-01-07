@@ -1,3 +1,27 @@
+.loginForm {
+  margin: 10% auto 0% auto;
+  width: 25%;
+}
+
+.loginForm>label {
+  color: rgb(138, 222, 248);
+}
+
+.loginForm>input {
+  color: rgb(138, 222, 248);
+}
+
 .goButton {
   backface-visibility: hidden;
+  background-color: transparent;
+  border: none !important;
+  color: rgb(99, 95, 84);
+  font-size: 1.5em;
+  margin-left: 100%;
+}
+
+.goButton:hover {
+  color: rgb(138, 222, 248);
+  background-color: transparent;
+  cursor: pointer;
 }
