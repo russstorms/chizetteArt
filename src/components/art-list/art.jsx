@@ -40,7 +40,7 @@ export default class Art extends React.Component {
       <div className="artPiece">
         <div><img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img></div>
         <div><b><i>{artList.title}</i></b></div>
-
+      {this.props.token ?
         <span>
           <Modal className="Modal"
             header={`Touch up on: ${artList.title}`}
@@ -57,7 +57,8 @@ export default class Art extends React.Component {
               <Button className="waves-effect waves-red btn modal-close" name="submit">Touch Up!</Button>
             </form>
           </Modal>
-          <Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={artList.id} className="large material-icons icon deleteIcon">delete</i></Button></span>
+          {this.props.token ? <Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={artList.id} className="large material-icons icon deleteIcon">delete</i></Button> : null}
+        </span> : null}
       </div>
     )
   }
