@@ -4,7 +4,6 @@ import Header from '../header/header'
 import Parallax from '../parallax/parallax'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
-import ComposeArt from '../create-art/createart'
 import Footer from '../footer/footer'
 
 
@@ -192,11 +191,10 @@ export default class App extends Component {
   render() {
     return (
       <main className="App container">
-        <Header logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} />
+        <Header logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
         <Parallax artList={this.state.artList} />
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <ArtList artList={this.state.artList} editArt={this.editArt} deleteArt={this.deleteArt} />
-        <ComposeArt postArt={this.postArt} />
         <Footer />
       </main>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Modal, Button } from 'react-materialize'
+import './createart.css'
 
 const ComposeArt = ({postArt}) => {
   const createArt = (ev) => {
@@ -13,9 +14,9 @@ const ComposeArt = ({postArt}) => {
   }
   return <div>
   <br />
-    <Modal className="Modal"
+    <Modal className="Modal createModal"
     header='Create Art!'
-    trigger={<Button className="waves-effect waves-light">Create Art</Button>}>
+    trigger={<button className="createArtButton">Create Art</button>}>
     <form onSubmit={createArt}>
       <label>Title</label>
       <input type="text" name="Title" />

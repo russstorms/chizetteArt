@@ -23,7 +23,6 @@ export default class Sidebar extends React.Component {
         <SideNavItem divider />
         <br />
         <SideNavItem href='#'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">person_outline</i></span><span className="sideNavTitle">Contact Me</span></SideNavItem>
-        <br />
         {this.props.token ? <SideNavItem href='/chizetteart' onClick={logoutClick} >Logout</SideNavItem>: <h1 className="footer">chizetteArt</h1>}
       </SideNav>
     )
