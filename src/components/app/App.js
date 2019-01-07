@@ -175,23 +175,28 @@ export default class App extends Component {
   }
 
 
-
-
-  getLoginForm = async () => {
+  toggleLoginForm = async () => {
+    if (this.state.secretLogIn) {
     this.setState({
       ...this.state,
-      secretLogIn: true
+      secretLogIn: false
     })
+    } else {
+      this.setState({
+        ...this.state,
+        secretLogIn: true
+      })
+    }
   }
 
   render() {
     return (
       <main className="App container">
-        <Header logoutClick={this.logoutClick} token={this.state.actualToken} getLoginForm={this.getLoginForm} />
+        <Header logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} />
         <Parallax artList={this.state.artList} />
+        {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <ArtList artList={this.state.artList} editArt={this.editArt} deleteArt={this.deleteArt} />
         <ComposeArt postArt={this.postArt} />
-        {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : <h2>sorry not clicked</h2>}
         <Footer />
       </main>
     )

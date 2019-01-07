@@ -5,23 +5,14 @@ import './header.css'
 
 
 export default class header extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      ...this.state,
-      secretLogIn: false
-    }
-  }
-
 
   secretLogin = (ev) => {
     ev.preventDefault()
     console.log(`Secret`)
-    return this.props.getLoginForm()
+    return this.props.toggleLoginForm()
   }
 
   render() {
-    console.log(this.state.secretLogIn)
     return (
       <div className="nav">
         <div className="logoAndTitle">
