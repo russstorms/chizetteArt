@@ -13,18 +13,15 @@ export default class header extends Component {
     }
   }
 
+
   secretLogin = (ev) => {
     ev.preventDefault()
-    console.log(`Secret Login clicked!`)
-    this.setState = ({
-      ...this.state,
-      secretLogIn: true
-    })
-    console.log(this.state)
-    return this.props.getLoginForm
+    console.log(`Secret`)
+    return this.props.getLoginForm()
   }
 
   render() {
+    console.log(this.state.secretLogIn)
     return (
       <div className="nav">
         <div className="logoAndTitle">

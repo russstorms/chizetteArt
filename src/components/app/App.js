@@ -19,7 +19,6 @@ export default class App extends Component {
       singleView: false,
       userId: '',
       actualToken: '',
-      logIn: false,
       secretLogIn: false
     }
   }
@@ -44,7 +43,6 @@ export default class App extends Component {
       this.setState({
         ...this.state,
         userId: json.id,
-        logIn: false,
         actualToken: auth
       })
       this.storeToken(json.id, auth)
@@ -59,20 +57,6 @@ export default class App extends Component {
     this.storeToken("", "")
     }
 
-  logIn(){
-    if(this.state.logIn){
-      this.setState({
-        ...this.state,
-        logIn: false
-      })
-    }
-    if(!this.state.logIn){
-      this.setState({
-        ...this.state,
-        logIn: true
-      })
-    }
-  }
 
   async getToken() {
     // console.log('in getToken(), looking for TOKEN')
@@ -190,18 +174,14 @@ export default class App extends Component {
     return this.getArtList()
   }
 
+
+
+
   getLoginForm = async () => {
-    if (this.state.secretLogIn){
-      this.setState({
-        ...this.state,
-        secretLogIn: false
-      })
-    } else {
-      this.setState({
-        ...this.state,
-        secretLogIn: true
-      })
-    }
+    this.setState({
+      ...this.state,
+      secretLogIn: true
+    })
   }
 
   render() {
@@ -211,7 +191,7 @@ export default class App extends Component {
         <Parallax artList={this.state.artList} />
         <ArtList artList={this.state.artList} editArt={this.editArt} deleteArt={this.deleteArt} />
         <ComposeArt postArt={this.postArt} />
-        <Login loginClick={this.loginClick} logIn={this.logIn.bind(this)} userId={this.state.userId}/>
+        {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : <h2>sorry not clicked</h2>}
         <Footer />
       </main>
     )
