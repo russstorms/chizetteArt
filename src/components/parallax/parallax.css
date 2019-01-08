@@ -1,12 +1,7 @@
 .parallax{
   height: 100vh;
-  perspective: 1px;
   animation: fadeinout 5s infinite;
-}
-
-.section {
-  position: relative;
-  height: 100vh;
+  margin: auto -2.5% auto -2.5%;
 }
 
 .firstLetter {
