@@ -1,75 +1,13 @@
-.para-container {
-  overflow-x: hidden;
-  overflow-y: auto;
+.parallax{
   height: 100vh;
   perspective: 1px;
   animation: fadeinout 5s infinite;
-}
-
-.para {
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  height: 100%;
-  /* transform: translate3d(-50% 0px 0px); */
 }
 
 .section {
   position: relative;
   height: 100vh;
 }
-
-.para::after {
-  content: " ";
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: translateZ(-1px) scale(1.5);
-  background-size: 100%;
-  z-index: -1;
-}
-
-
-
-
-
-
-
-
-/* .parallax-container {
-  overflow-x: hidden;
-  overflow-y: auto;
-  height: 100vh;
-  perspective: 1px;
-  margin: 80% auto auto auto;
-}
-
-.parallax {
-  position: relative;
-  height: 100vh;
-  display: block;
-  text-align: center;
-  animation: fadeinout 5s infinite;
-}
-
-.parallax::after {
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: translateZ(-1px) scale(2);
-  background-size: 100%;
-  z-index: -1;
-}
-
-.img {
-  max-width: 100%;
-  max-height: 100%;
-} */
 
 .firstLetter {
   font-size: 4em;
