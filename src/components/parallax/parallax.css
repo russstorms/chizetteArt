@@ -1,16 +1,22 @@
+.parallax-container {
+  position: position;
+  z-index: -1;
+}
+
 .parallax {
   height: 100vh;
   width: 100vw;
-  position: relative;
   overflow: hidden;
-  margin: auto -5.55% auto -5.55%;
+  margin: auto -8% -10% -4%;
   text-align: center;
   animation: fadeinout 5s infinite;
 }
 
 .parallax img {
-  max-width: 150%;
+  max-width: 200%;
   max-height: 150%;
+  z-index: -1;
+  transform: translateY(-50% 0px 0px)
 }
 
 .firstLetter {
