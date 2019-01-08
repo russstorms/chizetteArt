@@ -4,6 +4,11 @@
   margin: auto -2.5% auto -2.5%;
 }
 
+.parallax img {
+  max-height: 130%;
+  max-width: 120%;
+}
+
 .firstLetter {
   font-size: 4em;
 }
