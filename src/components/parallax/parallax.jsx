@@ -22,13 +22,13 @@ export default class ParallaxImage extends React.Component {
   render () {
     return (
       <div>
-        <div className="parallax-container">
-          <img className="section parallax" src={this.props.artList[this.state.counter]} alt="" />
+        <div className="para-container">
+          <section className="section">
+            <img className="para section" src={this.props.artList[this.state.counter]} alt="" />
+          </section>
         </div>
-          <div className="about"><h5><span className="firstLetter">H</span>i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!</h5></div>
+          <h5 className="about"><span className="firstLetter">H</span>i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!</h5>
       </div>
     )
   }
 }
-
-{/* <img className="img" src={this.props.artList[this.state.counter]} alt="" /> */}
