@@ -1,10 +1,7 @@
 .parallax {
   height: 100vh;
   animation: fadeinout 5s infinite;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin: auto 10% auto 10%;
 }
 
 @keyframes fadeinout {
@@ -13,12 +10,10 @@
 }
 
 .img {
-  max-width: 180%;
-  max-height: 160%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  transform: translate3d(-50%, 0px, 0px)
 }
 
 .firstLetter {
