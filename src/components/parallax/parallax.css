@@ -15,8 +15,7 @@
 .parallax img {
   max-width: 200%;
   max-height: 150%;
-  z-index: -1;
-  transform: translateY(-50% 0px 0px)
+  /* transform: translate3d(-50%, 0px, 0px) */
 }
 
 .firstLetter {
