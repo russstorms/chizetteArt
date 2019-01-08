@@ -1,5 +1,5 @@
 .parallax{
-  height: 100vh;
+  height: 110vh;
   animation: fadeinout 4.5s infinite;
   margin: auto -5.55% auto -5.55%;
 }
@@ -8,6 +8,30 @@
   max-height: 150%;
   max-width: 120%;
   animation: imgMove 4.5s infinite;
+}
+
+.shape1 {
+	border-bottom: 50px solid white;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 50vw;
+  margin-left: 55%;
+  margin-top: -3%;
+  z-index: 1029;
+  position: absolute;
+}
+
+.shape2 {
+	border-bottom: 50px solid white;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 50vw;
+  margin-left: -30%;
+  margin-top: -3%;
+  z-index: 1029;
+  position: absolute;
 }
 
 .firstLetter {
