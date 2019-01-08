@@ -1,5 +1,39 @@
 .parallax-container {
   overflow-x: hidden;
+  /* overflow-y: auto; */
+  height: 100vh;
+  perspective: 1px;
+}
+
+.section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  width: 120%;
+  height: 120%;
+}
+
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(2);
+  background-size: 100%;
+  z-index: -1;
+}
+
+
+
+
+
+
+
+
+/* .parallax-container {
+  overflow-x: hidden;
   overflow-y: auto;
   height: 100vh;
   perspective: 1px;
@@ -11,7 +45,7 @@
   height: 100vh;
   display: block;
   text-align: center;
-  /* animation: fadeinout 5s infinite; */
+  animation: fadeinout 5s infinite;
 }
 
 .parallax::after {
@@ -35,6 +69,11 @@
   font-size: 4em;
 }
 
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+} */
+
 .about {
   margin: 0% 10% 0% 10%;
   text-align: center;
@@ -42,9 +81,4 @@
   color: rgb(99, 95, 84);
   font-size: 2em;
   font-family: "Megrim";
-}
-
-@keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  50% { opacity: 1; }
 }

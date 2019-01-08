@@ -23,13 +23,9 @@ export default class ParallaxImage extends React.Component {
     return (
       <div>
         <div className="parallax-container">
-          <div className="parallax">
-            <img className="img" src="https://placekitten.com/500/800" alt="" />
-          </div>
-          <div className="about">
-            <h5><span className="firstLetter">H</span>i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!</h5>
-          </div>
+          <img className="section parallax" src={this.props.artList[this.state.counter]} alt="" />
         </div>
+          <div className="about"><h5><span className="firstLetter">H</span>i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!</h5></div>
       </div>
     )
   }
