@@ -1,12 +1,9 @@
-.parallax-container {
-  position: relative;
-  overflow: hidden;
-}
-
 .parallax {
   height: 100vh;
   animation: fadeinout 5s infinite;
-  margin: auto -5.55% auto -5.55%;
+  margin: auto auto auto auto;
+  width: 100vw;
+  align-content: center;
 }
 
 @keyframes fadeinout {
@@ -15,10 +12,10 @@
 }
 
 .img {
-  max-width: 100%;
+  max-width: 200%;
   max-height: 100%;
   display: block;
-  transform: translate3d(-50%, 0px, 0px)
+  transform: translate3d(-50%, 0px, 0px);
 }
 
 .firstLetter {
