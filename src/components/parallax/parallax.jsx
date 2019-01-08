@@ -5,21 +5,31 @@ import './parallax.css'
 export default class ParallaxImage extends React.Component {
   constructor(props) {
     super(props)
+    const imgNotOpaque = {
+      opacity: 1,
+      transition: '1.5s ease-out'
+    }
+
+    const imgOpaque = {
+      opacity: 0,
+      transition: '1.5s ease-in'
+    }
+    
     this.state = {
       counter: 0,
-      style: null
+      style: imgNotOpaque ? imgOpaque: imgNotOpaque
     }
   }
 
   componentDidMount() {
     const imgOpaque = {
       opacity: 0,
-      transition: 'opacity 1 .3s ease-in-out'
+      transition: '2s ease-out'
     }
 
     const imgNotOpaque = {
       opacity: 1,
-      transition: 'opacity 0 .3s ease-in-out'
+      transition: '1.5s ease-in-out'
     }
 
     setInterval(() => {
@@ -36,14 +46,14 @@ export default class ParallaxImage extends React.Component {
           style: imgNotOpaque
         })
       }
-    }, 3000)
+    }, 2000)
   }
 
   render () {
     console.log(this.state)
     return (
-      <div style={this.state.style}>
-        <Parallax className="parallax" imageSrc={this.props.artList[this.state.counter]} />
+      <div>
+        <img className="parallax" style={this.state.style} src={this.props.artList[this.state.counter]} />
         <h5 className="about"><span className="firstLetter">H</span>i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!</h5>
       </div>
     )
