@@ -15,8 +15,8 @@
 	border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
 	height: 0;
-	width: 50vw;
-  margin-left: 55%;
+	width: 25vw;
+  margin-left: 70%;
   margin-top: -3%;
   z-index: 1029;
   position: absolute;
@@ -32,6 +32,7 @@
   margin-top: -3%;
   z-index: 1029;
   position: absolute;
+  overflow: hidden;
 }
 
 .firstLetter {
