@@ -1,12 +1,13 @@
 .parallax{
   height: 100vh;
-  animation: fadeinout 5s infinite;
+  animation: fadeinout 4.5s infinite;
   margin: auto -5.55% auto -5.55%;
 }
 
 .parallax img {
-  max-height: 130%;
-  max-width: 120%;
+  max-height: 170%;
+  max-width: 160%;
+  animation: imgMove 4.5s infinite;
 }
 
 .firstLetter {
@@ -14,8 +15,17 @@
 }
 
 @keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  50% { opacity: 1; }
+  0%,100% { 
+    opacity: 0; 
+  }
+  50% {
+    opacity: 1; 
+  }
+}
+
+@keyframes imgMove {
+  0% {bottom: 0px;}
+  100% {bottom: 50px;}
 }
 
 .about {

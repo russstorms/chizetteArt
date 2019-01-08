@@ -16,7 +16,7 @@ export default class ParallaxImage extends React.Component {
         ...this.state,
         counter: this.state.counter === this.props.artList.length - 1 ? 0 : this.state.counter + 1,
       })
-    }, 5000)
+    }, 4500)
   }
 
   render () {
