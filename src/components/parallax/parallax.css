@@ -5,8 +5,8 @@
 }
 
 .parallax img {
-  max-height: 170%;
-  max-width: 160%;
+  max-height: 150%;
+  max-width: 120%;
   animation: imgMove 4.5s infinite;
 }
 
