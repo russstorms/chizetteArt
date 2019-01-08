@@ -1,21 +1,16 @@
 .parallax {
   height: 100vh;
-  animation: fadeinout 5s infinite;
-  margin: auto auto auto auto;
   width: 100vw;
-  align-content: center;
+  position: relative;
+  overflow: hidden;
+  margin: auto -5.55% auto -5.55%;
+  text-align: center;
+  animation: fadeinout 5s infinite;
 }
 
-@keyframes fadeinout {
-  0%,100% { opacity: 0; }
-  50% { opacity: 1; }
-}
-
-.img {
-  max-width: 200%;
-  max-height: 100%;
-  display: block;
-  transform: translate3d(-50%, 0px, 0px);
+.parallax img {
+  max-width: 150%;
+  max-height: 150%;
 }
 
 .firstLetter {
@@ -30,4 +25,9 @@
   font-size: 2em;
   font-family: "Megrim";
   position: relative;
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
 }
