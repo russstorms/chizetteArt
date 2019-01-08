@@ -5,26 +5,21 @@ import './parallax.css'
 export default class ParallaxImage extends React.Component {
   constructor(props) {
     super(props)
-    const imgNotOpaque = {
-      opacity: 1,
-      transition: '1.5s ease-out'
-    }
-
     const imgOpaque = {
-      opacity: 0,
-      transition: '1.5s ease-in'
+      opacity: 1,
+      transition: '.5s ease-out-in'
     }
     
     this.state = {
       counter: 0,
-      style: imgNotOpaque ? imgOpaque: imgNotOpaque
+      style: imgOpaque
     }
   }
 
   componentDidMount() {
     const imgOpaque = {
       opacity: 0,
-      transition: '2s ease-out'
+      transition: '1.5s ease-in-out'
     }
 
     const imgNotOpaque = {
@@ -33,24 +28,24 @@ export default class ParallaxImage extends React.Component {
     }
 
     setInterval(() => {
-      if (this.state.style === imgNotOpaque) {
-        this.setState({
-          ...this.state,
-          counter: this.state.counter === this.props.artList.length - 1 ? 0 : this.state.counter + 1,
-          style: imgOpaque
-        })
-      } else {
+      if (this.state.style === imgOpaque) {
         this.setState({
           ...this.state,
           counter: this.state.counter === this.props.artList.length - 1 ? 0 : this.state.counter + 1,
           style: imgNotOpaque
         })
+      } else {
+        this.setState({
+          ...this.state,
+          counter: this.state.counter === this.props.artList.length - 1 ? 0 : this.state.counter + 1,
+          style: imgOpaque
+        })
       }
-    }, 2000)
+    }, 3000)
   }
 
   render () {
-    console.log(this.state)
+    console.log(this.state.style)
     return (
       <div>
         <img className="parallax" style={this.state.style} src={this.props.artList[this.state.counter]} />
