@@ -1,7 +1,12 @@
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
 .parallax {
   height: 100vh;
   animation: fadeinout 5s infinite;
-  margin: auto 10% auto 10%;
+  margin: auto -5.55% auto -5.55%;
 }
 
 @keyframes fadeinout {
