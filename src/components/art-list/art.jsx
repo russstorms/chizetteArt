@@ -40,9 +40,14 @@ export default class Art extends React.Component {
       <div className="artPiece">
         <span>
           <Modal className="modal"
-            header='Single View'
+            header=''
             trigger={<img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img>}>
             <img className="posterSingleView" src={artList.poster} alt="https://placekitten.com/200/300"></img>
+            <div className="artInfoContainer">
+              <h1 className="singleViewTitle"><i>{artList.title}</i></h1>
+              <h5 className="singleViewMedium">{artList.medium}</h5>
+              <h6 className="singleViewYear">{artList.year}</h6>
+            </div>
           </Modal>
         </span>
         <div><b><i>{artList.title}</i></b></div>

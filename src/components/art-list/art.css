@@ -16,16 +16,41 @@
 .posterSingleView {
   max-width: 800px;
   max-height: 600px;
-  margin: auto auto auto auto;
+  margin: -1% auto auto auto;
+  display: flex;
+  justify-content: center;
 }
+
+.artInfoContainer {
+  margin-left: 30%;
+}
+
+.singleViewTitle {
+  font-size: 3em;
+}
+
+.singleViewMedium {
+  font-size: 1em;
+  margin-top: -2%;
+}
+
+.singleViewYear {
+  font-size: 1em;
+  margin-top: -3.5%;
+  margin-left: 12%;
+}
+
 
 .modal {
   margin-top: -6%;
   overflow: hidden;
   max-height: 100%;
   width: 100vw;
-  text-align: center;
   z-index: 1031 !important;
+}
+
+.modal-close {
+  margin-top: -90% !important;
 }
 
 .artPiece {
