@@ -3,6 +3,12 @@ import './art.css'
 import { Button, Modal } from 'react-materialize'
 
 export default class Art extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      counter: 0
+    }
+  }
 
   editSubmit = (ev) => {
     ev.preventDefault()
@@ -33,6 +39,7 @@ export default class Art extends React.Component {
     return this.props.deleteArt(ev.target.id)
   }
 
+
   render() {
     let artList = this.props.art
     return (
@@ -42,12 +49,14 @@ export default class Art extends React.Component {
           <Modal className="modal"
             header=''
             trigger={<img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img>}>
-            <img className="posterSingleView" src={artList.poster} alt="https://placekitten.com/200/300"></img>
-            <div className="artInfoContainer">
-              <h1 className="singleViewTitle"><i>{artList.title}</i></h1>
-              <h5 className="singleViewMedium">{artList.medium}</h5>
-              <h6 className="singleViewYear">{artList.year}</h6>
-            </div>
+              <img className="posterSingleView carousel-item" src={artList.poster} alt="https://placekitten.com/200/300"></img>
+              <br />
+              <Button>Prev</Button>
+              <Button>Next</Button>
+
+            {/* <div className="artInfoContainer">
+
+            </div> */}
           </Modal>
         </span>
         <div><b><i>{artList.title}</i></b></div>

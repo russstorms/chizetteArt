@@ -15,6 +15,7 @@ export default class App extends Component {
     this.state = {
       artList: [],
       filteredArt: [],
+      artPosters: [],
       userId: '',
       actualToken: '',
       secretLogIn: false
@@ -193,7 +194,7 @@ export default class App extends Component {
         <Header logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
         <Parallax artList={this.state.artList.map((art) => art.poster)} />
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
-        <ArtList artList={this.state.artList} token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
+        <ArtList artList={this.state.artList} artPosters={this.state.artList} token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
         <Footer />
       </main>
     )

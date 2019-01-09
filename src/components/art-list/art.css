@@ -21,7 +21,7 @@
   justify-content: center;
 }
 
-.artInfoContainer {
+/* .artInfoContainer {
   margin-left: 30%;
 }
 
@@ -38,20 +38,21 @@
   font-size: 1em;
   margin-top: -3.5%;
   margin-left: 12%;
-}
-
+} */
 
 .modal {
   margin-top: -6%;
   overflow: hidden;
   max-height: 100%;
   width: 100vw;
+  height: 100vh;
   z-index: 1031 !important;
 }
 
-.modal-close {
+/* .modal-close {
   margin-top: -90% !important;
-}
+  z-index: 1031 !important;
+} */
 
 .artPiece {
   margin-bottom: 15%;
