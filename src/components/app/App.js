@@ -15,7 +15,6 @@ export default class App extends Component {
     this.state = {
       artList: [],
       filteredArt: [],
-      singleView: false,
       userId: '',
       actualToken: '',
       secretLogIn: false
