@@ -41,14 +41,14 @@
 } */
 
 .modalFullView {
-  margin-top: -6%;
+  margin-top: -4%;
   /* overflow: hidden; */
   max-height: 100%;
   width: 80vw;
   height: 80vh;
   z-index: 9999 !important;
   background: transparent !important;
-  /* border: none !important; */
+  box-shadow: none !important;
 }
 
 .modal-overlay {
