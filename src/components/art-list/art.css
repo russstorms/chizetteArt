@@ -40,13 +40,22 @@
   margin-left: 12%;
 } */
 
-.modal {
+.modalFullView {
   margin-top: -6%;
   overflow: hidden;
   max-height: 100%;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1031 !important;
+  width: 90vw;
+  height: 90vh;
+  z-index: 9999 !important;
+  background: transparent !important;
+}
+
+.modal-overlay {
+  z-index: 1030 !important;
+}
+
+.modal-footer {
+  background: transparent !important;
 }
 
 /* .modal-close {

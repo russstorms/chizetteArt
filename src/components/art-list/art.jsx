@@ -39,6 +39,14 @@ export default class Art extends React.Component {
     return this.props.deleteArt(ev.target.id)
   }
 
+  nextClick = () => {
+    console.log(`next clicked`)
+    this.setState({
+      ...this.state,
+      counter: this.state.counter === this.props.artPosters.length - 1 ? 0 : this.state.counter + 1
+    })
+    console.log(this.state.counter)
+  }
 
   render() {
     let artList = this.props.art
@@ -46,21 +54,21 @@ export default class Art extends React.Component {
       //// ART PIECE \\\\
       <div className="artPiece">
         <span>
-          <Modal className="modal"
+          <Modal className="modalFullView"
             header=''
             trigger={<img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img>}>
               <img className="posterSingleView carousel-item" src={artList.poster} alt="https://placekitten.com/200/300"></img>
               <br />
               <Button>Prev</Button>
-              <Button>Next</Button>
+              <Button onClick={this.nextClick}>Next</Button>
 
             {/* <div className="artInfoContainer">
 
             </div> */}
           </Modal>
         </span>
-        <div><b><i>{artList.title}</i></b></div>
 
+        <div><b><i>{artList.title}</i></b></div>
         {this.props.token ?
           <span>
             <Modal className="Modal"
