@@ -71,14 +71,14 @@ export default class Art extends React.Component {
           <Modal className="modalFullView"
             header=''
             trigger={<img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img>}>
-              <img className="posterSingleView" src={artPosters[this.state.counter]} alt="https://placekitten.com/200/300"></img>
-              <br />
-              <div onClick={this.prevClick} className="prevButton">Prev</div>
-              <div onClick={this.nextClick} className="nextButton">Next</div>
-
-            {/* <div className="artInfoContainer">
-
-            </div> */}
+            <img className="posterSingleView" src={artPosters[this.state.counter]} alt="https://placekitten.com/200/300"></img>
+            <br />
+            <div onClick={this.prevClick} className="prevButton"><i className="large material-icons icon">chevron_left</i></div>
+            <div onClick={this.nextClick} className="nextButton"><i className="large material-icons icon">chevron_right</i></div>
+            <div className="artInfoContainer">
+              <div className="singleViewTitle"><i>{artList.title}</i><span className="singleViewYear">{artList.year}</span></div>
+              <div className="singleViewMedium">{artList.medium}</div>
+            </div>
           </Modal>
         </span>
 
