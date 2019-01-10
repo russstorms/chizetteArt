@@ -58,6 +58,13 @@ export default class Art extends React.Component {
       counter: this.state.counter === 0 ? artPosters.length - 1 : this.state.counter - 1
     })
   }
+  
+  modalClick = (ev) => {
+    this.setState({
+      ...this.state,
+      counter: this.props.id
+    })
+  }
 
   render() {
     //// LIST OF ART \\\\
@@ -70,14 +77,14 @@ export default class Art extends React.Component {
         <span>
           <Modal className="modalFullView"
             header=''
-            trigger={<img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img>}>
-            <img className="posterSingleView" src={artPosters[this.state.counter]} alt="https://placekitten.com/200/300"></img>
+            trigger={<a href=""><img className="poster" onClick={this.modalClick} src={artList.poster} alt="https://placekitten.com/200/300"></img></a>}>
+            <img className="posterSingleView" src={artPosters[this.state.counter].poster} alt="https://placekitten.com/200/300"></img>
             <br />
             <div onClick={this.prevClick} className="prevButton"><i className="large material-icons icon">chevron_left</i></div>
             <div onClick={this.nextClick} className="nextButton"><i className="large material-icons icon">chevron_right</i></div>
             <div className="artInfoContainer">
-              <div className="singleViewTitle"><i>{artList.title}</i><span className="singleViewYear">{artList.year}</span></div>
-              <div className="singleViewMedium">{artList.medium}</div>
+              <div className="singleViewTitle"><i>{artPosters[this.state.counter].title}</i><span className="singleViewYear">{artPosters[this.state.counter].year}</span></div>
+              <div className="singleViewMedium">{artPosters[this.state.counter].medium}</div>
             </div>
           </Modal>
         </span>
