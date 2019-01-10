@@ -6,7 +6,7 @@ export default class Art extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      counter: 0
+      counter: this.props.id
     }
   }
 
@@ -43,15 +43,26 @@ export default class Art extends React.Component {
     console.log(`next`)
     const artPosters = this.props.artPosters
 
-
     this.setState({
       ...this.state,
       counter: this.state.counter === artPosters.length - 1 ? 0 : this.state.counter + 1
     })
   }
 
+  prevClick = (ev) => {
+    console.log(`prev`)
+    const artPosters = this.props.artPosters
+
+    this.setState({
+      ...this.state,
+      counter: this.state.counter === 0 ? artPosters.length - 1 : this.state.counter - 1
+    })
+  }
+
   render() {
+    //// LIST OF ART \\\\
     let artList = this.props.art
+    //// LIST OF URLS \\\\
     let artPosters = this.props.artPosters
     return (
       //// ART PIECE \\\\
@@ -60,9 +71,9 @@ export default class Art extends React.Component {
           <Modal className="modalFullView"
             header=''
             trigger={<img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img>}>
-              <img className="posterSingleView" id={`BLANKSTRING`} src={artPosters[this.state.counter]} alt="https://placekitten.com/200/300"></img>
+              <img className="posterSingleView" src={artPosters[this.state.counter]} alt="https://placekitten.com/200/300"></img>
               <br />
-              <span className="prevButton">Prev</span>
+              <span onClick={this.prevClick} className="prevButton">Prev</span>
               <span onClick={this.nextClick} className="nextButton">Next</span>
 
             {/* <div className="artInfoContainer">

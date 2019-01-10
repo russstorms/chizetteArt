@@ -7,7 +7,7 @@ const ArtList = (props) => {
     <div className="wrapper">
       {props.artList.map(
         (art, idx) => {
-          return <Art key={idx} art={art} artPosters={props.artPosters} token={props.token} editArt={props.editArt} deleteArt={props.deleteArt} />
+          return <Art key={idx} art={art} id={idx} artPosters={props.artPosters} token={props.token} editArt={props.editArt} deleteArt={props.deleteArt} />
         }
       )}
     </div>
