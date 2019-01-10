@@ -14,9 +14,9 @@
 }
 
 .posterSingleView {
-  max-width: 800px;
-  max-height: 600px;
-  margin: -1% auto auto auto;
+  max-width: 900px;
+  max-height: 680px;
+  margin: -2% auto auto auto;
   display: flex;
   justify-content: center;
 }
@@ -44,8 +44,8 @@
   margin-top: -6%;
   overflow: hidden;
   max-height: 100%;
-  width: 90vw;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   z-index: 9999 !important;
   background: transparent !important;
 }
@@ -56,6 +56,19 @@
 
 .modal-footer {
   background: transparent !important;
+}
+
+.nextButton {
+  margin-left: 95%;
+  cursor: pointer;
+  color: white;
+  font-weight: bolder;
+}
+
+.prevButton {
+  cursor: pointer;
+  color: white;
+  font-weight: bolder;
 }
 
 /* .modal-close {

@@ -40,16 +40,19 @@ export default class Art extends React.Component {
   }
 
   nextClick = () => {
-    console.log(`next clicked`)
+    console.log(`next`)
+    const artPosters = this.props.artPosters
     this.setState({
       ...this.state,
-      counter: this.state.counter === this.props.artPosters.length - 1 ? 0 : this.state.counter + 1
+      counter: this.state.counter === artPosters.length - 1 ? 0 : this.state.counter + 1
     })
-    console.log(this.state.counter)
+    console.log(`Counter`, this.state.counter)
+    console.log(`artPosters`, artPosters)
   }
 
   render() {
     let artList = this.props.art
+    let artPosters = this.props.artPosters
     return (
       //// ART PIECE \\\\
       <div className="artPiece">
@@ -57,10 +60,10 @@ export default class Art extends React.Component {
           <Modal className="modalFullView"
             header=''
             trigger={<img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img>}>
-              <img className="posterSingleView carousel-item" src={artList.poster} alt="https://placekitten.com/200/300"></img>
+              <img className="posterSingleView" src={artPosters[this.state.counter]} alt="https://placekitten.com/200/300"></img>
               <br />
-              <Button>Prev</Button>
-              <Button onClick={this.nextClick}>Next</Button>
+              <span className="prevButton">Prev</span>
+              <span onClick={this.nextClick} className="nextButton">Next</span>
 
             {/* <div className="artInfoContainer">
 
