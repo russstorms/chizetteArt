@@ -56,7 +56,6 @@
   overflow: hidden;
   max-height: 110%;
   width: 100vw;
-  /* height: 100vh; */
   z-index: 9999 !important;
   background: transparent !important;
   box-shadow: none !important;
@@ -81,10 +80,6 @@
 
 .nextButton:hover {
   color: rgb(138, 222, 248);
-}
-
-.nextButton:selected {
-  background-color: none;
 }
 
 .prevButton {
