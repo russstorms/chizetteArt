@@ -73,8 +73,8 @@ export default class Art extends React.Component {
             trigger={<img className="poster" src={artList.poster} alt="https://placekitten.com/200/300"></img>}>
               <img className="posterSingleView" src={artPosters[this.state.counter]} alt="https://placekitten.com/200/300"></img>
               <br />
-              <span onClick={this.prevClick} className="prevButton">Prev</span>
-              <span onClick={this.nextClick} className="nextButton">Next</span>
+              <div onClick={this.prevClick} className="prevButton">Prev</div>
+              <div onClick={this.nextClick} className="nextButton">Next</div>
 
             {/* <div className="artInfoContainer">
 
