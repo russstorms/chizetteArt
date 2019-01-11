@@ -14,7 +14,7 @@ export default class App extends Component {
     super(props)
     this.state = {
       artList: [],
-      filteredArt: [],
+      filteredTerm: '',
       artPosters: [],
       userId: '',
       actualToken: '',
@@ -174,7 +174,7 @@ export default class App extends Component {
   }
 
 
-  toggleLoginForm = async () => {
+  toggleLoginForm = () => {
     if (this.state.secretLogIn) {
     this.setState({
       ...this.state,
@@ -188,10 +188,15 @@ export default class App extends Component {
     }
   }
 
+  filterArt = (ev) => {
+    ev.preventDefault()
+    console.log(ev.target)
+  }
+
   render() {
     return (
       <main className="App container">
-        <Header logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
+        <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
         <Parallax artList={this.state.artList.map((art) => art.poster)} />
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <ArtList artList={this.state.artList} artPosters={this.state.artList} token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />

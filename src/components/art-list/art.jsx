@@ -6,7 +6,8 @@ export default class Art extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      counter: this.props.id
+      ...this.state,
+      counter: 0
     }
   }
 
@@ -50,6 +51,7 @@ export default class Art extends React.Component {
   }
 
   prevClick = (ev) => {
+    
     console.log(`prev`)
     const artPosters = this.props.artPosters
 
@@ -77,7 +79,7 @@ export default class Art extends React.Component {
         <span>
           <Modal className="modalFullView"
             header=''
-            trigger={<a href=""><img className="poster" onClick={this.modalClick} src={artList.poster} alt="https://placekitten.com/200/300"></img></a>}>
+            trigger={<a href="/"><img className="poster" onClick={this.modalClick} src={artList.poster} alt="https://placekitten.com/200/300"></img></a>}>
             <img className="posterSingleView" src={artPosters[this.state.counter].poster} alt="https://placekitten.com/200/300"></img>
             <br />
             <div onClick={this.prevClick} className="prevButton"><i className="large material-icons icon">chevron_left</i></div>

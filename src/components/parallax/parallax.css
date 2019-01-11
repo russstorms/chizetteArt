@@ -1,5 +1,6 @@
 .parallax{
   height: 100vh;
+  margin: 30% 30% 30% 30%;
   animation: fadeinout 4.5s infinite;
   margin: auto -5.55% auto -5.55%;
 }

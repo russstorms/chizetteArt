@@ -17,9 +17,11 @@ export default class Sidebar extends React.Component {
           <h4 className="sidebarchizetteArt"><b>chizette</b>Art</h4>
         </div>
         <br />
-        <SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">palette</i></span><span className="sideNavTitle">Paintings</span></SideNavItem>
-        <SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">redeem</i></span><span className="sideNavTitle">Jewelry</span></SideNavItem>
-        <SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">camera_roll</i></span><span className="sideNavTitle">Photography</span></SideNavItem>
+        <div onClick={this.props.filterArt}>
+          <span data-medium="Art" ><SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">palette</i></span><span className="sideNavTitle">Art</span></SideNavItem></span>
+          <span data-medium="Jewelry" ><SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">redeem</i></span><span className="sideNavTitle">Jewelry</span></SideNavItem></span>
+          <span data-medium="Photography" ><SideNavItem href='/chizetteart'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">camera_roll</i></span><span className="sideNavTitle">Photography</span></SideNavItem></span>
+        </div>
         <SideNavItem divider />
         <br />
         <SideNavItem href='#'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">person_outline</i></span><span className="sideNavTitle">Contact Me</span></SideNavItem>

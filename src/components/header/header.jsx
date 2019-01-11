@@ -19,7 +19,7 @@ export default class header extends Component {
           <a href="/chizetteart">
             <img className="logo" src={logo} alt="logo"></img><h1 className="chizetteArt"><b>chizette</b><span onClick={(ev) => this.secretLogin(ev)}>A</span>rt</h1>
           </a>
-            <Sidebar logoutClick={this.props.logoutClick} token={this.props.token} postArt={this.props.postArt} />
+            <Sidebar filterArt={this.props.filterArt} logoutClick={this.props.logoutClick} token={this.props.token} postArt={this.props.postArt} />
             {this.props.token ? <ComposeArt postArt={this.props.postArt} /> : null}
         </div>
       </div>
