@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
       table.integer('year').notNullable().defaultTo(2018)
       table.string('medium').notNullable().defaultTo('')
       table.string('poster').notNullable().defaultTo('https://placekitten.com/200/300')
+      //// ADD PRICE \\\\
       table.timestamps(true, true)
     })
   }
