@@ -51,7 +51,6 @@ export default class Art extends React.Component {
   }
 
   prevClick = (ev) => {
-    
     console.log(`prev`)
     const artPosters = this.props.artPosters
 
@@ -70,7 +69,7 @@ export default class Art extends React.Component {
 
   render() {
     //// LIST OF ART \\\\
-    let artList = this.props.art
+    let art = this.props.art
     //// LIST OF URLS \\\\
     let artPosters = this.props.artPosters
     return (
@@ -79,7 +78,7 @@ export default class Art extends React.Component {
         <span>
           <Modal className="modalFullView"
             header=''
-            trigger={<a href="/"><img className="poster" onClick={this.modalClick} src={artList.poster} alt="https://placekitten.com/200/300"></img></a>}>
+            trigger={<a href="/"><img className="poster" onClick={this.modalClick} src={art.poster} alt="https://placekitten.com/200/300"></img></a>}>
             <img className="posterSingleView" src={artPosters[this.state.counter].poster} alt="https://placekitten.com/200/300"></img>
             <br />
             <div onClick={this.prevClick} className="prevButton"><i className="large material-icons icon">chevron_left</i></div>
@@ -91,25 +90,25 @@ export default class Art extends React.Component {
           </Modal>
         </span>
 
-        <div><b><i>{artList.title}</i></b></div>
+        <div><b><i>{art.title}</i></b></div>
         {this.props.token ?
           <span>
             <Modal className="Modal"
-              header={`Touch up on: ${artList.title}`}
+              header={`Touch up on: ${art.title}`}
               trigger={<span><Button className="editButton btn-flat waves-effect waves-light"><i className="large material-icons icon brushIcon">brush</i></Button></span>}>
-              <form id={artList.id} onSubmit={this.editSubmit}>
+              <form id={art.id} onSubmit={this.editSubmit}>
                 <label>Title</label>
-                <input type="text" placeholder={artList.title} name="Title" />
+                <input type="text" placeholder={art.title} name="Title" />
                 <label>Year</label>
-                <input type="text" placeholder={artList.year} name="Year" />
+                <input type="text" placeholder={art.year} name="Year" />
                 <label>Medium</label>
-                <input type="text" placeholder={artList.medium} name="Medium" />
+                <input type="text" placeholder={art.medium} name="Medium" />
                 <label>Url</label>
-                <input type="text" placeholder={artList.url} name="Url" />
+                <input type="text" placeholder={art.url} name="Url" />
                 <Button className="waves-effect waves-red btn modal-close" name="submit">Touch Up!</Button>
               </form>
             </Modal>
-            {this.props.token ? <Button id={artList.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={artList.id} className="large material-icons icon deleteIcon">delete</i></Button> : null}
+            {this.props.token ? <Button id={art.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={art.id} className="large material-icons icon deleteIcon">delete</i></Button> : null}
           </span> : null}
       </div>
     )

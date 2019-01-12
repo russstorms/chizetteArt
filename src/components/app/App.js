@@ -190,22 +190,29 @@ export default class App extends Component {
 
   filterArt = (ev) => {
     ev.preventDefault()
-    let searchTerm = ev.currentTarget.children[0].children[0].dataset.medium.toLowerCase()
-    if (searchTerm === 'photography') {
-      this.setState = {
+    let searchTerm = ev.currentTarget.children[0].children[0].dataset.medium
+
+    if (searchTerm === 'Photography') {
+      this.setState({
         ...this.state,
-        filteredTerm: 'photography'
-      }
+        filteredTerm: 'Photography'
+      })
     }
-    if (searchTerm === 'jewelry')
-    this.setState = {
-      ...this.state,
-      filteredTerm: 'jewelry'
+    if (searchTerm === 'Jewelry') {
+      this.setState({
+        ...this.state,
+        filteredTerm: 'Jewelry'
+      })
+    }
+    if (searchTerm === 'Art') {
+      this.setState({
+        ...this.state,
+        filteredTerm: 'Art'
+      })
     }
   }
 
   render() {
-    console.log(this.state.artList)
     return (
       <main className="App container">
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />

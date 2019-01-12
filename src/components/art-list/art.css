@@ -11,6 +11,7 @@
 	max-height: 330px;
 	margin: -50px -50px 0px -50px;
   transition: .3s ease;
+  box-shadow: 5px 3px 15px rgba(205, 200, 193, 0.8);
 }
 
 .posterSingleView {
