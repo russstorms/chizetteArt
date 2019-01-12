@@ -190,9 +190,14 @@ export default class App extends Component {
 
   filterArt = (ev) => {
     ev.preventDefault()
-    let searchTerm = ev.currentTarget.children[0].children[0].dataset.medium
+    let searchTerm = ev.currentTarget.children[0].children[0].dataset.medium.toLowerCase()
+    if (searchTerm === 'photography') {
+      this.setState = {
+        ...this.state,
+        filteredTerm: 'photography'
+      }
+    }
 
-    console.log(searchTerm)
     this.setState = {
       ...this.state,
       filteredTerm: searchTerm
@@ -205,9 +210,11 @@ export default class App extends Component {
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
         <Parallax artList={this.state.artList.map((art) => art.poster)} />
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
-        <ArtList artList={this.state.artList.filter((art) => {art.medium.includes(this.state.filteredTerm)})} artPosters={this.state.artList} token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
+        <ArtList artList={this.state.artList} artPosters={this.state.artList} token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
         <Footer />
       </main>
     )
   }
 }
+
+{/* <ArtList artList={this.state.artList.filter((art) => {art.medium.includes(this.state.filteredTerm)})} */}
