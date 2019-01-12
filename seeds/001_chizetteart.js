@@ -7,14 +7,14 @@ exports.seed = function(knex, Promise) {
         id: 1,
         title: 'Gem Painting',
         year: 2018,
-        medium: 'Acrylic Paint',
+        medium: 'Art',
         poster: 'https://images.unsplash.com/photo-1529666759085-741eefcd3371?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80'
       },
       {
         id: 2,
         title: 'Where the Heart Is',
         year: 2020,
-        medium: 'Gouache',
+        medium: 'Jewelry',
         poster: 'https://images.unsplash.com/photo-1533158388470-9a56699990c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60'
       },
       {
@@ -42,14 +42,14 @@ exports.seed = function(knex, Promise) {
         id: 6,
         title: 'Hand',
         year: 2019,
-        medium: 'Acrylic',
+        medium: 'Art',
         poster: 'https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
       },
       {
         id: 7,
         title: 'Oops, I Did It Again',
         year: 2021,
-        medium: 'Spray Paint',
+        medium: 'Art',
         poster: 'https://images.unsplash.com/photo-1463277261818-d24c3cdbe40e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
       },
       {
