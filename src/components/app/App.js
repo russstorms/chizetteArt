@@ -197,14 +197,15 @@ export default class App extends Component {
         filteredTerm: 'photography'
       }
     }
-
+    if (searchTerm === 'jewelry')
     this.setState = {
       ...this.state,
-      filteredTerm: searchTerm
+      filteredTerm: 'jewelry'
     }
   }
 
   render() {
+    console.log(this.state.artList)
     return (
       <main className="App container">
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
