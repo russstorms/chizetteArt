@@ -17,9 +17,9 @@ export default class Sidebar extends React.Component {
           <h4 className="sidebarchizetteArt"><b>chizette</b>Art</h4>
         </div>
         <br />
-          <SideNavItem onClick={this.props.filterArt} href='/chizetteart'><span data-medium="Art" className="iconContainer"><i className="small material-icons icon sidebarIcon">palette</i></span><span className="sideNavTitle">Art</span></SideNavItem>
-          <SideNavItem onClick={this.props.filterArt} href='/chizetteart'><span data-medium="Jewelry" className="iconContainer"><i className="small material-icons icon sidebarIcon">redeem</i></span><span className="sideNavTitle">Jewelry</span></SideNavItem>
-          <SideNavItem onClick={this.props.filterArt} href='/chizetteart'><span data-medium="Photography" className="iconContainer"><i className="small material-icons icon sidebarIcon">camera_roll</i></span><span className="sideNavTitle">Photography</span></SideNavItem>
+          <SideNavItem onClick={this.props.filterArt}><span data-medium="Art" className="iconContainer"><i className="small material-icons icon sidebarIcon">palette</i></span><span className="sideNavTitle">Art</span></SideNavItem>
+          <SideNavItem onClick={this.props.filterArt}><span data-medium="Jewelry" className="iconContainer"><i className="small material-icons icon sidebarIcon">redeem</i></span><span className="sideNavTitle">Jewelry</span></SideNavItem>
+          <SideNavItem onClick={this.props.filterArt}><span data-medium="Photography" className="iconContainer"><i className="small material-icons icon sidebarIcon">camera_roll</i></span><span className="sideNavTitle">Photography</span></SideNavItem>
         <SideNavItem divider />
         <br />
         <SideNavItem href='#'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">person_outline</i></span><span className="sideNavTitle">Contact Me</span></SideNavItem>

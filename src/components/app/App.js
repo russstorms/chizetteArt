@@ -216,6 +216,7 @@ export default class App extends Component {
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
         <Parallax artList={this.state.artList.map((art) => art.poster)} />
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
+        <div id="anchorToList"></div>
         <ArtList artList={this.state.artList.filter((art) => 
           {
             if (this.state.filteredTerm === 'Art') {
