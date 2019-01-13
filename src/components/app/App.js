@@ -216,7 +216,17 @@ export default class App extends Component {
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
         <Parallax artList={this.state.artList.map((art) => art.poster)} />
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
-        <ArtList artList={this.state.artList.filter((art) => art.medium.includes(this.state.filteredTerm))} filteredTerm={this.state.filteredTerm} artPosters={this.state.artList} token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
+        <ArtList artList={this.state.artList.filter((art) => 
+          {
+            if (this.state.filteredTerm === 'Art') {
+              return !art.medium.includes('Photography') && !art.medium.includes('Jewelry')
+            }
+            else {
+              return art.medium.includes(this.state.filteredTerm)
+            }
+          })
+        } 
+        artPosters={this.state.artList} token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
         <Footer />
       </main>
     )
