@@ -214,8 +214,11 @@ export default class App extends Component {
     return (
       <main className="App container">
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
-        <Parallax artList={this.state.artList.map((art) => art.poster)} />
+        
+        {!this.state.filteredTerm ? <Parallax artList={this.state.artList.map((art) => art.poster)} /> : null}
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
+        <br />
+        <br />
         <ArtList artList={this.state.artList.filter((art) => {
           if (this.state.filteredTerm === 'Art') {
             return !art.medium.includes('Photography') && !art.medium.includes('Jewelry')

@@ -3,7 +3,6 @@ import Art from './art'
 import './artList.css'
 
 const ArtList = (props) => {
-  console.log(props)
   return (
     <div className="wrapper">
       {props.artList.map(
