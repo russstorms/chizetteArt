@@ -197,14 +197,12 @@ export default class App extends Component {
         ...this.state,
         filteredTerm: 'Photography'
       })
-    }
-    if (searchTerm === 'Jewelry') {
+    } else if (searchTerm === 'Jewelry') {
       this.setState({
         ...this.state,
         filteredTerm: 'Jewelry'
       })
-    }
-    if (searchTerm === 'Art') {
+    } else {
       this.setState({
         ...this.state,
         filteredTerm: 'Art'
@@ -218,11 +216,9 @@ export default class App extends Component {
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
         <Parallax artList={this.state.artList.map((art) => art.poster)} />
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
-        <ArtList artList={this.state.artList} artPosters={this.state.artList} token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
+        <ArtList artList={this.state.artList.filter((art) => art.medium.includes(this.state.filteredTerm))} filteredTerm={this.state.filteredTerm} artPosters={this.state.artList} token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
         <Footer />
       </main>
     )
   }
 }
-
-{/* <ArtList artList={this.state.artList.filter((art) => {art.medium.includes(this.state.filteredTerm)})} */}

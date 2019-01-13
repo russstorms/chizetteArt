@@ -41,7 +41,6 @@ export default class Art extends React.Component {
   }
 
   nextClick = (ev) => {
-    console.log(`next`)
     const artPosters = this.props.artPosters
 
     this.setState({
@@ -51,7 +50,6 @@ export default class Art extends React.Component {
   }
 
   prevClick = (ev) => {
-    console.log(`prev`)
     const artPosters = this.props.artPosters
 
     this.setState({
