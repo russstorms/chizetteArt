@@ -2,16 +2,21 @@ import React from 'react'
 import Art from './art'
 import './artList.css'
 
-const ArtList = (props) => {
-  return (
-    <div className="wrapper">
-      {props.artList.map(
-        (art, idx) => {
-          return <Art key={idx} art={art} id={idx} artPosters={props.artPosters} token={props.token} editArt={props.editArt} deleteArt={props.deleteArt} />
-        }
-      )}
-    </div>
-  )
-}
+export default class ArtList extends React.Component {
 
-export default ArtList
+  componentDidUpdate() {
+    window.scrollTo(0, 0)
+  }
+
+  render () {
+    return (
+      <div className="wrapper">
+        {this.props.artList.map(
+          (art, idx) => {
+            return <Art key={idx} art={art} id={idx} artPosters={this.props.artPosters} token={this.props.token} editArt={this.props.editArt} deleteArt={this.props.deleteArt} />
+          }
+        )}
+      </div>
+    )
+  }
+}
