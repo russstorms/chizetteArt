@@ -1,14 +1,14 @@
 .parallax{
   height: 100vh;
   margin: 30% 30% 30% 30%;
-  animation: fadeinout 4.5s infinite;
+  animation: fadeinout 4s infinite;
   margin: auto -5.55% auto -5.55%;
 }
 
 .parallax img {
   max-height: 150%;
   max-width: 120%;
-  animation: imgMove 4.5s infinite;
+  animation: imgMove 4s infinite;
 }
 
 .firstLetter {
