@@ -66,6 +66,15 @@
   display: inline-block;
 }
 
+.singleViewPrice {
+  color: white;
+  font-size: 2em;
+  left: 90%;
+  top: 83%;
+  position: fixed;
+  text-shadow: 1px 3px 3px rgba(99, 95, 84, .8);
+}
+
 .modalFullView {
   margin-top: -6%;
   margin-bottom: -5%;
