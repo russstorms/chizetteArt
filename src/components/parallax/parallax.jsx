@@ -11,12 +11,16 @@ export default class ParallaxImage extends React.Component {
   }
 
   componentDidMount() {
-    setInterval(() => {
+    this.intervalID = setInterval(() => {
       this.setState({
         ...this.state,
         counter: this.state.counter === this.props.artList.length - 1 ? 0 : this.state.counter + 1,
       })
     }, 4000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalID)
   }
 
   render () {
