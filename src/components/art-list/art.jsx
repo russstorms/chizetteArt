@@ -81,10 +81,10 @@ export default class Art extends React.Component {
             <br />
             <div onClick={this.prevClick} className="prevButton"><i className="large material-icons icon">chevron_left</i></div>
             <div onClick={this.nextClick} className="nextButton"><i className="large material-icons icon">chevron_right</i></div>
-            <div className="singleViewPrice">${artPosters[this.state.counter].price} USD</div>
             <div className="artInfoContainer">
               <div className="singleViewTitle"><i>{artPosters[this.state.counter].title}</i><span className="singleViewYear">{artPosters[this.state.counter].year}</span></div>
               <div className="singleViewMedium">{artPosters[this.state.counter].medium}</div>
+              <div className="singleViewPrice">${artPosters[this.state.counter].price} USD</div>
             </div>
           </Modal>
         </span>

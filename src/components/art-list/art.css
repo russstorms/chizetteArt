@@ -68,11 +68,10 @@
 
 .singleViewPrice {
   color: white;
-  font-size: 2em;
-  left: 90%;
-  top: 83%;
-  position: fixed;
+  font-size: .9em;
   text-shadow: 1px 3px 3px rgba(99, 95, 84, .8);
+  margin-top: -13%;
+  margin-left: 85%;
 }
 
 .modalFullView {
