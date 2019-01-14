@@ -215,7 +215,7 @@ export default class App extends Component {
       <main className="App container">
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
         
-        {!this.state.filteredTerm ? <Parallax artList={this.state.artList.map((art) => art.poster)} /> : null}
+        {!this.state.filteredTerm ? <Parallax artList={this.state.artList.map((art) => art.poster)} /> : <i><h4 className="filteredTitle">{this.state.filteredTerm}</h4></i>}
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <br />
         <br />
