@@ -75,34 +75,27 @@ exports.seed = function(knex, Promise) {
       },
       {
         id: 11,
-        title: 'Earrings',
-        year: 2020,
-        medium: 'Jewelry',
-        poster: 'https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
-      },
-      {
-        id: 12,
         title: 'Testing Dimensions',
         year: 2019,
         medium: 'Digital',
         poster: 'https://preview.redd.it/3nw6vqx4q0721.png?width=1024&auto=webp&s=1ab13c48a0443d0de0e5b547cc6d9f8effbe0fa6'
       },
       {
-        id: 13,
+        id: 12,
         title: 'Heart Necklace',
         year: 2019,
         medium: 'Jewelry',
         poster: 'https://images.unsplash.com/photo-1521694139475-da661702d635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
       },
       {
-        id: 14,
+        id: 13,
         title: 'Cathedral',
         year: 2021,
         medium: 'Photography',
         poster: 'https://images.unsplash.com/photo-1534465376363-af999395106e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80'
       },
       {
-        id: 15,
+        id: 14,
         title: 'Sea Turtle',
         year: 2022,
         medium: 'Photography',
