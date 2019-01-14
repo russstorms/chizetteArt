@@ -6,9 +6,8 @@
 }
 
 .parallax img {
-  max-height: 150%;
-  max-width: 120%;
   animation: imgMove 4s infinite;
+  object-fit: cover;
 }
 
 .firstLetter {

@@ -14,7 +14,7 @@ export default class Sidebar extends React.Component {
         trigger={<Button className="menuButton btn-flat"><i className="large material-icons icon menuIcon">sort</i></Button>}
         options={{ closeonClick: true }}>
         <div>
-          <h4 className="sidebarchizetteArt"><b>chizette</b>Art</h4>
+          <a href="/chizetteart"><h4 className="sidebarchizetteArt"><b>chizette</b>Art</h4></a>
         </div>
         <br />
           <SideNavItem onClick={this.props.filterArt}><span data-medium="Art" className="iconContainer"><i className="small material-icons icon sidebarIcon">palette</i></span><span className="sideNavTitle">Art</span></SideNavItem>
