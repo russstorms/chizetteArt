@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
         title: 'Gem Painting',
         year: 2018,
         medium: 'Acrylic',
-        poster: 'https://images.unsplash.com/photo-1529666759085-741eefcd3371?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1525&q=80'
+        poster: 'https://images.unsplash.com/photo-1485254767195-60704c46702e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80'
       },
       {
         id: 2,
