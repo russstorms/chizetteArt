@@ -195,17 +195,20 @@ export default class App extends Component {
     if (searchTerm === 'Photography') {
       this.setState({
         ...this.state,
-        filteredTerm: 'Photography'
+        filteredTerm: 'Photography',
+        counter: 0
       })
     } else if (searchTerm === 'Jewelry') {
       this.setState({
         ...this.state,
-        filteredTerm: 'Jewelry'
+        filteredTerm: 'Jewelry',
+        counter: 0
       })
     } else {
       this.setState({
         ...this.state,
-        filteredTerm: 'Art'
+        filteredTerm: 'Art',
+        counter: 0
       })
     }
   }
