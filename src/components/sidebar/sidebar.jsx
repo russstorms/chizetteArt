@@ -4,9 +4,8 @@ import SideNavItem from 'react-materialize/lib/SideNavItem'
 import { Button } from 'react-materialize'
 import './sidebar.css'
 
-
 export default class Sidebar extends React.Component {
-  
+
   render() {
     const { logoutClick } = this.props
     return (
