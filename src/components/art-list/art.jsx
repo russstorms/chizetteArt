@@ -71,6 +71,7 @@ export default class Art extends React.Component {
     //// LIST OF URLS \\\\
     let artPosters = this.props.artPosters
 
+    //// CHECK COUNTER TO MAKE SURE IT ISN'T LONGER THAN ARRAY \\\\
     let counter = this.state.counter > artPosters.length ? 0 : this.state.counter
 
     return (
