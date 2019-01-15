@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
         year: 2018,
         medium: 'Acrylic',
         poster: 'https://images.unsplash.com/photo-1485254767195-60704c46702e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
-        price: 35
+        price: 45
       },
       {
         id: 2,
@@ -25,7 +25,7 @@ exports.seed = function(knex, Promise) {
         year: 2021,
         medium: 'Water Color',
         poster: 'https://images.unsplash.com/photo-1530903677198-7c9f3577a63e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1462&q=80',
-        price: 35
+        price: 30
       },
       {
         id: 4,
@@ -33,7 +33,7 @@ exports.seed = function(knex, Promise) {
         year: 2021,
         medium: 'Jewelry',
         poster: 'https://images.unsplash.com/photo-1486821416551-68a65ef4d618?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-        price: 35
+        price: 40
       },
       {
         id: 5,
@@ -41,7 +41,7 @@ exports.seed = function(knex, Promise) {
         year: 2018,
         medium: 'Charcoal',
         poster: 'https://images.unsplash.com/photo-1504221507732-5246c045949b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-        price: 35
+        price: 50
       },
       {
         id: 6,
@@ -49,7 +49,7 @@ exports.seed = function(knex, Promise) {
         year: 2020,
         medium: 'Photography',
         poster: 'https://images.unsplash.com/photo-1530800089-e0f33f51d5ff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-        price: 35
+        price: 30
       },
       {
         id: 7,
@@ -57,7 +57,7 @@ exports.seed = function(knex, Promise) {
         year: 2019,
         medium: 'Water Color',
         poster: 'https://images.unsplash.com/photo-1526304760382-3591d3840148?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-        price: 35
+        price: 30
       },
       {
         id: 8,
@@ -65,7 +65,7 @@ exports.seed = function(knex, Promise) {
         year: 2018,
         medium: 'Jewelry',
         poster: 'https://images.unsplash.com/photo-1433979933652-5e766d98ebb4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80',
-        price: 35
+        price: 45
       },
       {
         id: 9,
@@ -73,7 +73,7 @@ exports.seed = function(knex, Promise) {
         year: 2021,
         medium: 'Digital',
         poster: 'https://images.unsplash.com/photo-1463277261818-d24c3cdbe40e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
-        price: 35
+        price: 25
       },
       {
         id: 10,
@@ -81,7 +81,7 @@ exports.seed = function(knex, Promise) {
         year: 2022,
         medium: 'Photography',
         poster: 'https://images.unsplash.com/photo-1539106490701-6fa3d7ce6f31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-        price: 35
+        price: 30
       },
       {
         id: 11,
@@ -89,7 +89,7 @@ exports.seed = function(knex, Promise) {
         year: 2019,
         medium: 'Digital',
         poster: 'https://preview.redd.it/3nw6vqx4q0721.png?width=1024&auto=webp&s=1ab13c48a0443d0de0e5b547cc6d9f8effbe0fa6',
-        price: 35
+        price: 40
       },
       {
         id: 12,
@@ -97,7 +97,7 @@ exports.seed = function(knex, Promise) {
         year: 2019,
         medium: 'Jewelry',
         poster: 'https://images.unsplash.com/photo-1521694139475-da661702d635?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
-        price: 35
+        price: 50
       },
       {
         id: 13,
@@ -105,7 +105,7 @@ exports.seed = function(knex, Promise) {
         year: 2021,
         medium: 'Photography',
         poster: 'https://images.unsplash.com/photo-1534465376363-af999395106e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80',
-        price: 35
+        price: 30
       },
       {
         id: 14,
