@@ -1,0 +1,25 @@
+.contactContainer {
+  text-align: center;
+}
+
+.contact {
+  color: rgba(99, 95, 84, .8);
+}
+
+.quote {
+  font-size: 1em;
+  color: rgba(99, 95, 84, .8);
+}
+
+.instagram {
+  color: rgba(99, 95, 84, .8);
+}
+
+.bigLetter {
+  font-size: 3em;
+}
+
+.instaIcon {
+  margin-top: 2%;
+  font-size: 1.5em;
+}

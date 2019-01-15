@@ -254,7 +254,7 @@ export default class App extends Component {
         })
         } 
         token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
-        {this.state.contactMe ? <Contact /> : null}
+        {this.state.contactMe ? <Contact contactMe={this.state.contactMe} /> : null}
         <Footer />
       </main>
     )
