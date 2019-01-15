@@ -21,7 +21,7 @@ export default class Sidebar extends React.Component {
           <SideNavItem onClick={this.props.filterArt}><span data-medium="Photography" className="iconContainer"><i className="small material-icons icon sidebarIcon">camera_roll</i></span><span className="sideNavTitle">Photography</span></SideNavItem>
         <SideNavItem divider />
         <br />
-        <SideNavItem href='#'><span className="iconContainer"><i className="small material-icons icon sidebarIcon">person_outline</i></span><span className="sideNavTitle">Contact Me</span></SideNavItem>
+        <SideNavItem onClick={this.props.toggleContactMe} ><span className="iconContainer"><i className="small material-icons icon sidebarIcon">person_outline</i></span><span className="sideNavTitle">Contact Me</span></SideNavItem>
         {this.props.token ? <SideNavItem href='/chizetteart' onClick={logoutClick} >Logout</SideNavItem>: <h1 className="footer">chizetteArt</h1>}
       </SideNav>
     )

@@ -4,6 +4,7 @@ import Header from '../header/header'
 import Parallax from '../parallax/parallax'
 import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
+import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 
 
@@ -18,7 +19,8 @@ export default class App extends Component {
       artPosters: [],
       userId: '',
       actualToken: '',
-      secretLogIn: false
+      secretLogIn: false,
+      contactMe: false
     }
   }
 
@@ -213,11 +215,24 @@ export default class App extends Component {
     }
   }
 
+  toggleContactMe = () => {
+    if (this.state.contactMe) {
+    this.setState({
+      ...this.state,
+      contactMe: false
+    })
+    } else {
+      this.setState({
+        ...this.state,
+        contactMe: true
+      })
+    }
+  }
+
   render() {
     return (
       <main className="App container">
-        <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} postArt={this.postArt} />
-        
+        <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} toggleContactMe={this.toggleContactMe} postArt={this.postArt} />
         {!this.state.filteredTerm ? <Parallax artList={this.state.artList.map((art) => art.poster)} /> : <i><h4 className="filteredTitle">{this.state.filteredTerm}</h4></i>}
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <br />
@@ -239,6 +254,7 @@ export default class App extends Component {
         })
         } 
         token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
+        {this.state.contactMe ? <Contact /> : null}
         <Footer />
       </main>
     )
