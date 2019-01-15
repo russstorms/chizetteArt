@@ -17,11 +17,11 @@ export default class Sidebar extends React.Component {
         </div>
         <br />
           <SideNavItem onClick={this.props.filterArt}><span data-medium="Art" className="iconContainer"><i className="small material-icons icon sidebarIcon">palette</i></span><span className="sideNavTitle">Art</span></SideNavItem>
-          <SideNavItem onClick={this.props.filterArt}><span data-medium="Jewelry" className="iconContainer"><i className="small material-icons icon sidebarIcon">redeem</i></span><span className="sideNavTitle">Jewelry</span></SideNavItem>
-          <SideNavItem onClick={this.props.filterArt}><span data-medium="Photography" className="iconContainer"><i className="small material-icons icon sidebarIcon">camera_roll</i></span><span className="sideNavTitle">Photography</span></SideNavItem>
+          <SideNavItem onClick={this.props.filterArt}><span data-medium="Jewelry" className="iconContainer"><span className="ringContainer"><i className="fas fa-ring"></i></span></span><span className="sideNavTitle">Jewelry</span></SideNavItem>
+          <SideNavItem onClick={this.props.filterArt}><span data-medium="Photography" className="iconContainer"><span className="cameraContainer"><i className="fas fa-camera-retro"></i></span></span><span className="sideNavTitle">Photography</span></SideNavItem>
         <SideNavItem divider />
         <br />
-        <SideNavItem onClick={this.props.toggleContactMe} ><span className="iconContainer"><i className="small material-icons icon sidebarIcon">person_outline</i></span><span className="sideNavTitle">Contact Me</span></SideNavItem>
+        <SideNavItem onClick={this.props.toggleContactMe} ><span className="iconContainer"><span className="personContainer"><i className="far fa-user"></i></span></span><span className="sideNavTitle">Contact Me</span></SideNavItem>
         {this.props.token ? <SideNavItem href='/chizetteart' onClick={logoutClick} >Logout</SideNavItem>: <h1 className="footer">chizetteArt</h1>}
       </SideNav>
     )

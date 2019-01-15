@@ -16,6 +16,18 @@
   border-radius: 50%;
 }
 
+.ringContainer {
+  font-size: 2em;
+}
+
+.cameraContainer {
+  font-size: 2em;
+}
+
+.personContainer {
+  font-size: 2em;
+}
+
 .sideNav {
   height: 55%;
   overflow: hidden;

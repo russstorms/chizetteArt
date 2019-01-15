@@ -13,13 +13,19 @@
 
 .instagram {
   color: rgba(99, 95, 84, .8);
+  margin-top: 5%;
+  margin-left: -20%;
+}
+
+.instagram:hover {
+  color: rgb(138, 222, 248);
 }
 
 .bigLetter {
   font-size: 3em;
 }
 
-.instaIcon {
+.instagramIcon {
   margin-top: 2%;
-  font-size: 1.5em;
+  font-size: 3em;
 }
