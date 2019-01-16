@@ -42,10 +42,29 @@
   letter-spacing: .25em;
 }
 
+#toTop {
+  transform: translateY(3%);
+  animation: bounce .5s infinite
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -2%;
+  }
+}
+
 .footer {
   font-size: .8em;
   margin-left: 2%;
   letter-spacing: .25em;
   font-family: "Megrim";
   color: rgb(99, 95, 84);
+  position: fixed;
+  top: 85%;
 }

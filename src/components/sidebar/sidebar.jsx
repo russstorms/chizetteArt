@@ -21,7 +21,7 @@ export default class Sidebar extends React.Component {
           <SideNavItem onClick={this.props.filterArt}><span data-medium="Photography" className="iconContainer"><span className="sidebarIconContainer"><i className="fas fa-camera-retro"></i></span></span><span className="sideNavTitle">Photography</span></SideNavItem>
         <SideNavItem divider />
         <br />
-        {!this.props.contactMe ? <SideNavItem onClick={this.props.toggleContactMe} ><span className="iconContainer"><span className="sidebarIconContainer"><i className="far fa-user"></i></span></span><span className="sideNavTitle">Contact Me</span></SideNavItem> : <SideNavItem onClick={this.props.toggleContactMe}><span className="iconContainer"><span className="sidebarIconContainer"><i className="fas fa-angle-up"></i></span></span>To Top</SideNavItem>}
+        {!this.props.contactMe ? <SideNavItem onClick={this.props.toggleContactMe} ><span className="iconContainer"><span className="sidebarIconContainer"><i className="far fa-user"></i></span></span><span className="sideNavTitle">Contact Me</span></SideNavItem> : <SideNavItem onClick={this.props.toggleContactMe}><div id="toTop"><span className="iconContainer"><span className="sidebarIconContainer"><i className="fas fa-angle-up"></i></span></span>To Top</div></SideNavItem>}
         {this.props.token ? <SideNavItem href='/chizetteart' onClick={logoutClick} >Logout</SideNavItem>: <h1 className="footer">chizetteArt</h1>}
       </SideNav>
     )
