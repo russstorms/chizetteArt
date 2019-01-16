@@ -87,6 +87,7 @@
 
 .modal-overlay {
   z-index: 1030 !important;
+  opacity: 0.4 !important;
 }
 
 .modal-footer {
