@@ -14,7 +14,7 @@
 .instagram {
   color: rgba(99, 95, 84, .8);
   margin-top: 5%;
-  margin-left: -20%;
+  margin-left: -25%;
 }
 
 .instagram:hover {
@@ -39,7 +39,6 @@
 .emailIcon {
   font-size: 3em;
 }
-
 
 .bigLetter {
   font-size: 3em;
