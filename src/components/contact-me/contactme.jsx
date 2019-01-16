@@ -27,6 +27,7 @@ export default class Contact extends React.Component {
         <br />
         <br />
         <h5 className="quote"><i>"Great art picks up where nature ends."</i> ~Chagall</h5>
+        <br />
       </div>
     )
   }
