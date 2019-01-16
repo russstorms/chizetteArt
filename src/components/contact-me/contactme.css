@@ -21,11 +21,26 @@
   color: rgb(138, 222, 248);
 }
 
-.bigLetter {
+.instagramIcon {
+  margin-top: 2%;
   font-size: 3em;
 }
 
-.instagramIcon {
-  margin-top: 2%;
+.email {
+  color: rgba(99, 95, 84, .8);
+  margin-top: 5%;
+  margin-left: -20%;
+}
+
+.email:hover {
+  color: rgb(138, 222, 248);
+}
+
+.emailIcon {
+  font-size: 3em;
+}
+
+
+.bigLetter {
   font-size: 3em;
 }
