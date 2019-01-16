@@ -44,7 +44,7 @@
 
 #toTop {
   transform: translateY(3%);
-  animation: bounce .5s infinite
+  animation: bounce .7s infinite
 }
 
 @keyframes bounce {
