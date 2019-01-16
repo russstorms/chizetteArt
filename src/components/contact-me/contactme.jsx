@@ -20,7 +20,7 @@ export default class Contact extends React.Component {
         <a href="/chizetteart" target="blank" className="email"><span className="emailIcon"><i className="far fa-envelope"></i></span></a>
         <br />
         <br />
-        <h5 className="quote">"Great art picks up where nature ends." ~Chagall</h5>
+        <h5 className="quote"><i>"Great art picks up where nature ends."</i> ~Chagall</h5>
       </div>
     )
   }
