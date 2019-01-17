@@ -8,7 +8,7 @@ import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 
 
-const API = process.env.API || 'http://localhost:3000'
+const API = process.env.REACT_APP_API
 
 export default class App extends Component {
   constructor(props) {
@@ -24,6 +24,7 @@ export default class App extends Component {
     }
   }
 
+  
   //// POST TO LOGIN \\\\
   loginClick = async (loginInfo) => {
     // console.log('before get call', this.state)
@@ -93,6 +94,7 @@ export default class App extends Component {
       artList
     })
   }
+
 
   //// CREATE NEW ART \\\\
   postArt = async (title, year, medium, url) => {
