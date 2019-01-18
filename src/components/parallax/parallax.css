@@ -8,7 +8,6 @@
 .parallax img {
   max-width: 150%;
   max-height: 150%;
-  animation: imgMove 4s infinite;
   object-fit: cover;
 }
 
@@ -17,17 +16,17 @@
 }
 
 @keyframes fadeinout {
-  0%,100% { 
-    opacity: 0; 
+  0% { 
+    opacity: 0;
+    bottom: 0px;
   }
-  50% {
-    opacity: 1; 
+  70%, 20% {
+    opacity: 1;
   }
-}
-
-@keyframes imgMove {
-  0% {bottom: 0px;}
-  100% {bottom: -50px;}
+  100% { 
+    opacity: 0;
+    bottom: -50px;
+  }
 }
 
 .about {
