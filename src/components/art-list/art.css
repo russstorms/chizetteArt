@@ -101,6 +101,7 @@
   right: 170px;
   top: 345px;
   text-shadow: 2px 2px 2px rgb(99, 95, 84);
+  user-select: none;
 }
 
 .nextButton:hover {
@@ -114,6 +115,7 @@
   left: 170px;
   top: 350px;
   text-shadow: 2px 2px 2px rgb(99, 95, 84);
+  user-select: none;
 }
 
 .prevButton:hover {

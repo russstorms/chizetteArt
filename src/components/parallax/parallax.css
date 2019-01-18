@@ -1,13 +1,18 @@
+.parallaxContainer {
+  overflow: hidden;
+  margin: auto -5.55% auto -5.55%;
+}
+
 .parallax{
   height: 100vh;
   margin: 30% 30% 30% 30%;
   animation: fadeinout 4s infinite;
-  margin: auto -5.55% auto -5.55%;
+  margin: auto -5% auto -5%;
 }
 
 .parallax img {
-  max-width: 150%;
-  max-height: 150%;
+  max-width: 140%;
+  max-height: 140%;
   object-fit: cover;
 }
 
@@ -16,16 +21,16 @@
 }
 
 @keyframes fadeinout {
-  0% { 
+  0% {
+    transform: translateX(0px);
     opacity: 0;
-    bottom: 0px;
   }
-  70%, 20% {
+  70%, 15% {
     opacity: 1;
   }
-  100% { 
+  100% {
     opacity: 0;
-    bottom: -50px;
+    transform: translateX(20px);
   }
 }
 

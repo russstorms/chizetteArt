@@ -6,8 +6,7 @@ export default class ParallaxImage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      counter: 0,
-      loaded: false
+      counter: 0
     }
   }
 
@@ -15,21 +14,19 @@ export default class ParallaxImage extends React.Component {
     this.intervalID = setInterval(() => {
       this.setState({
         ...this.state,
-        counter: this.state.counter === this.props.artList.length - 1 ? 0 : this.state.counter + 1,
+        counter: this.state.counter === this.props.artList.length - 1 ? 0 : this.state.counter + 1
       })
     }, 4000)
   }
-
-  componentWillUnmount() {
-    clearInterval(this.intervalID)
-  }
-
   render () {
     return (
-      <div>
+      <div className="parallaxContainer">
         <Parallax className="parallax" imageSrc={this.props.artList[this.state.counter]} />
         <h5 className="about"><span className="firstLetter">H</span>i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!</h5>
       </div>
     )
+  }
+  componentWillUnmount() {
+    clearInterval(this.intervalID)
   }
 }
