@@ -1,15 +1,14 @@
 .parallaxContainer {
-  height: 100vh;
+  margin-left: -10%;
 }
 
 .parallax{
   animation: fadeinout 4s infinite;
-  margin-top: 10%;
 }
 
 .parallax img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .firstLetter {
