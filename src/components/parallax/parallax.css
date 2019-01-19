@@ -10,6 +10,7 @@
 
 .firstLetter {
   font-size: 4em;
+  color: rgb(138, 222, 248);
 }
 
 @keyframes fadeinout {
