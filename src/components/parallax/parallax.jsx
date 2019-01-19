@@ -26,7 +26,7 @@ export default class ParallaxImage extends React.Component {
           layers={[
             {
               image: `${this.props.artList[this.state.counter]}`,
-              amount: 0.1,
+              amount: 0.5,
               slowerScrollRate: false,
             },
               

@@ -8,12 +8,6 @@
   animation: fadeinout 4s infinite;
 }
 
-.parallax img {
-  max-width: 80%;
-  max-height: 80%;
-  object-fit: cover;
-}
-
 .firstLetter {
   font-size: 4em;
 }
@@ -22,16 +16,13 @@
   0% {
     transform: translateX(0px);
     opacity: 0;
-    /* margin-top: .5%; */
   }
-  50% {
+  60% {
     opacity: 1;
-    /* margin-top: 0%; */
   }
   100% {
     opacity: 0;
     transform: translateX(45px);
-    /* margin-top: .5%; */
   }
 }
 
