@@ -5,14 +5,12 @@
 
 .parallax{
   height: 100vh;
-  margin: 30% 30% 30% 30%;
+  margin: 10% 10% 10% 10%;
   animation: fadeinout 4s infinite ease-out;
   margin: auto -5% auto -5%;
 }
 
 .parallax img {
-  max-width: 50%;
-  max-height: 50%;
   object-fit: cover;
 }
 
