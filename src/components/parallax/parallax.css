@@ -11,8 +11,8 @@
 }
 
 .parallax img {
-  max-width: 140%;
-  max-height: 140%;
+  max-width: 50%;
+  max-height: 50%;
   object-fit: cover;
 }
 
