@@ -6,6 +6,7 @@ import ArtList from '../art-list/artList'
 import Login from '../login/loginForm'
 import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
+import { ParallaxProvider } from 'react-scroll-parallax'
 
 
 const API = process.env.REACT_APP_API
@@ -233,7 +234,8 @@ export default class App extends Component {
 
   render() {
     return (
-      <main className="App container">
+      
+      <ParallaxProvider className="App container">
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} toggleContactMe={this.toggleContactMe} contactMe={this.state.contactMe} postArt={this.postArt} />
         {!this.state.filteredTerm ? <Parallax artList={this.state.artList.map((art) => art.poster)} /> : <i><h4 className="filteredTitle">{this.state.filteredTerm}</h4></i>}
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
@@ -258,7 +260,7 @@ export default class App extends Component {
         token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
         {this.state.contactMe ? <Contact contactMe={this.state.contactMe} /> : null}
         <Footer />
-      </main>
+      </ParallaxProvider>
     )
   }
 }
