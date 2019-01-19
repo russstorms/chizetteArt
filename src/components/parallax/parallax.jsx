@@ -32,10 +32,10 @@ export default class ParallaxImage extends React.Component {
               
           ]}
           style={{
-        height: '100vh',
+        height: '85vh',
         }}>
       </ParallaxBanner>
-      <Parallax offsetYMax={20} offsetYMin={-20} tag="figure"><h5 className="about"><span className="firstLetter">H</span>i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!</h5></Parallax>
+      <Parallax offsetYMax={300} offsetYMin={-300} tag="figure"><h5 className="about"><span className="firstLetter">H</span>i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!</h5></Parallax>
       </div>
     )
   }
