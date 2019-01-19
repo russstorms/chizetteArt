@@ -12,6 +12,12 @@
 
 .parallax img {
   object-fit: cover;
+  max-width: 50%;
+}
+
+.parallax img::after {
+  display: block;
+  transform: translate3d(-50%, 0px, 0px);
 }
 
 .firstLetter {
