@@ -4,6 +4,7 @@
 
 .container {
   width: 90%;
+  /* overflow: hidden; */
 }
 
 .filteredTitle {
