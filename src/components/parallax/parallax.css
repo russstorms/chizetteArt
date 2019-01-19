@@ -1,16 +1,18 @@
 .parallaxContainer {
   margin-left: -21%;
-  width: 115vw;
+  width: 114vw;
   overflow: hidden;
 }
 
 .parallax{
   height: 100vh;
   animation: fadeinout 4s infinite ease-out;
+  overflow: hidden;
 }
 
 .parallax img {
   max-width: 90%;
+  overflow: hidden;
 }
 
 .firstLetter {
@@ -21,13 +23,16 @@
   0% {
     transform: translateX(45px);
     opacity: 0;
+    /* margin-top: .5%; */
   }
   20%, 70% {
     opacity: 1;
+    /* margin-top: 0%; */
   }
   100% {
     opacity: 0;
     transform: translateX(90px);
+    /* margin-top: .5%; */
   }
 }
 
