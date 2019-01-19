@@ -1,18 +1,17 @@
 .parallaxContainer {
   overflow: hidden;
-  margin: auto -5.55% auto -5.55%;
+  margin: auto -10% auto -5%;
 }
 
 .parallax{
   height: 100vh;
-  margin: 10% 10% 10% 10%;
+  width: 100vw;
   animation: fadeinout 4s infinite ease-out;
-  margin: auto -5% auto -5%;
+  margin: auto -30% auto -3%;
 }
 
 .parallax img {
-  object-fit: cover;
-  max-width: 50%;
+  max-width: 10%;
 }
 
 .parallax img::after {
