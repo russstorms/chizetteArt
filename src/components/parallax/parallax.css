@@ -1,6 +1,7 @@
 .parallaxContainer {
   margin-left: -21%;
-  width: 110vw;
+  width: 115vw;
+  overflow: hidden;
 }
 
 .parallax{
