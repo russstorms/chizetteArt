@@ -178,7 +178,7 @@ export default class App extends Component {
     return this.getArtList()
   }
 
-
+  //// TOGGLE SECRET LOGIN FORM \\\\
   toggleLoginForm = () => {
     if (this.state.secretLogIn) {
     this.setState({
@@ -193,6 +193,7 @@ export default class App extends Component {
     }
   }
 
+  //// FILTER BY MEDIUM \\\\
   filterArt = (ev) => {
     ev.preventDefault()
     let searchTerm = ev.currentTarget.children[0].children[0].dataset.medium
@@ -218,6 +219,7 @@ export default class App extends Component {
     }
   }
 
+  //// TOGGLE CONTACT FORM \\\\
   toggleContactMe = () => {
     if (this.state.contactMe) {
     this.setState({

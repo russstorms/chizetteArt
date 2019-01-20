@@ -11,6 +11,7 @@ export default class Art extends React.Component {
     }
   }
 
+  //// EDIT ART \\\\
   editSubmit = (ev) => {
     ev.preventDefault()
     let editArtID = ev.target.id
@@ -34,12 +35,14 @@ export default class Art extends React.Component {
     this.props.editArt(editArtID, editArtTitle, editArtYear, editArtMedium, editArtPoster)
   }
 
+  //// DELETE ART \\\\
   deleteArt = (ev) => {
     ev.preventDefault()
     console.log(ev.target.id)
     return this.props.deleteArt(ev.target.id)
   }
 
+  //// SINGLE VIEW NEXT BUTTON \\\\
   nextClick = (ev) => {
     const artPosters = this.props.artPosters
 
@@ -49,6 +52,7 @@ export default class Art extends React.Component {
     })
   }
 
+  //// SINGLE VIEW PREV BUTTON \\\\
   prevClick = (ev) => {
     const artPosters = this.props.artPosters
 
@@ -58,18 +62,12 @@ export default class Art extends React.Component {
     })
   }
   
+  //// OPEN SINGLE VIEW \\\\
   modalClick = (ev) => {
     this.setState({
       ...this.state,
       counter: this.props.id
     })
-  }
-
-  componentDidUpdate = () => {
-    // this.setState({
-    //   ...this.state,
-    //   counter: this.state.counter === 0
-    // })
   }
 
   render() {
