@@ -3,6 +3,10 @@
   width: 25%;
 }
 
+.loginIcons {
+  font-size: 3em;
+}
+
 .loginForm>label {
   color: rgb(138, 222, 248);
 }

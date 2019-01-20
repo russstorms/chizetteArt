@@ -18,7 +18,10 @@
     transform: translateX(0px);
     opacity: 0;
   }
-  50% {
+  2% {
+    opacity: 0;
+  }
+  60% {
     opacity: 1;
   }
   100% {

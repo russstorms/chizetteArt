@@ -65,6 +65,13 @@ export default class Art extends React.Component {
     })
   }
 
+  componentDidUpdate = () => {
+    // this.setState({
+    //   ...this.state,
+    //   counter: this.state.counter === 0
+    // })
+  }
+
   render() {
     //// LIST OF ART \\\\
     let art = this.props.art
