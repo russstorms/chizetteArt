@@ -10,22 +10,34 @@ export default class ParallaxImage extends React.Component {
     }
   }
 
+  parallaxPosters = () => [
+    `https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg`,
+    `https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_necklace.JPG`,
+    `https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/citrine_amethyst.JPG`,
+    `https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/geode.jpeg`,
+    `https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/north_shore.jpeg`,
+    `https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/rainbow_man.jpeg`,
+    `https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/self_portrait.jpeg`,
+    `https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/sunset_beach.jpeg`
+  ]
+
   componentWillMount() {
     this.intervalID = setInterval(() => {
       this.setState({
         ...this.state,
-        counter: this.state.counter === this.props.artList.length - 1 ? 0 : this.state.counter + 1
+        counter: this.state.counter === this.parallaxPosters.length - 1 ? 0 : this.state.counter + 1
       })
     }, 4000)
   }
 
   render () {
+    console.log(this.parallaxPosters)
     return (
       <div className="parallaxContainer">
         <ParallaxBanner className="parallax"
           layers={[
             {
-              image: `${this.props.artList[this.state.counter]}`,
+              image: `${this.parallaxPosters[this.state.counter]}`,
               amount: 0.5,
               slowerScrollRate: false,
             },
