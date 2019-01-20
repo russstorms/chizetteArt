@@ -8,6 +8,28 @@ export default class ParallaxImage extends React.Component {
     this.state = {
       counter: 0
     }
+  }
+
+  componentWillMount() {
+    this.intervalID = setInterval(() => {
+      const parallaxPosters = [
+        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg",
+        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_necklace.JPG",
+        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/citrine_amethyst.JPG",
+        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/geode.jpeg",
+        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/north_shore.jpeg",
+        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/rainbow_man.jpeg",
+        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/self_portrait.jpeg",
+        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/sunset_beach.jpeg"
+      ]
+      this.setState({
+        ...this.state,
+        counter: this.state.counter === parallaxPosters.length - 1 ? 0 : this.state.counter + 1
+      })
+    }, 4000)
+  }
+
+  render () {
     const parallaxPosters = [
       "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg",
       "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_necklace.JPG",
@@ -18,25 +40,12 @@ export default class ParallaxImage extends React.Component {
       "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/self_portrait.jpeg",
       "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/sunset_beach.jpeg"
     ]
-  }
-  
-
-  componentWillMount() {
-    this.intervalID = setInterval(() => {
-      this.setState({
-        ...this.state,
-        counter: this.state.counter === this.props.artList.length - 1 ? 0 : this.state.counter + 1
-      })
-    }, 4000)
-  }
-
-  render () {
     return (
       <div className="parallaxContainer">
         <ParallaxBanner className="parallax"
           layers={[
             {
-              image: `${this.props.artList[this.state.counter]}`,
+              image: `${parallaxPosters[this.state.counter]}`,
               amount: 0.5,
               slowerScrollRate: false,
             },
