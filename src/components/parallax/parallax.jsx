@@ -19,6 +19,7 @@ export default class ParallaxImage extends React.Component {
       "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/sunset_beach.jpeg"
     ]
   }
+  
 
   componentWillMount() {
     this.intervalID = setInterval(() => {
