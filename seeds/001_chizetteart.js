@@ -5,90 +5,210 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('chizetteart').insert([{
         id: 1,
-        title: 'Gem Painting',
+        title: 'Amethyst',
         year: 2018,
-        medium: 'Acrylic',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file-1.jpeg',
+        medium: 'Gouache',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg',
         price: 45
       },
       {
         id: 2,
-        title: 'Where the Heart Is',
+        title: 'Aqua Gems',
         year: 2020,
         medium: 'Gouache',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file-2.jpeg',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aqua_gems.jpeg',
         price: 35
       },
       {
         id: 3,
-        title: 'Rosé',
+        title: 'Aquarelle Lady',
         year: 2021,
-        medium: 'Water Color',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file-3.jpeg',
+        medium: 'Aquarelle Pencil',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aquarelle_lady.jpeg',
         price: 30
       },
       {
         id: 4,
-        title: 'Heart Pendant',
+        title: 'Aragonite Lady',
         year: 2021,
-        medium: 'Jewelry',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file-4.jpeg',
+        medium: 'Gouache',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_lady.jpeg',
         price: 40
       },
       {
         id: 5,
-        title: 'We Are the Same',
+        title: 'Aragonite Necklace',
         year: 2018,
-        medium: 'Charcoal',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file.jpeg',
+        medium: 'Jewelry',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_necklace.JPG',
         price: 50
       },
       {
         id: 6,
-        title: 'In Paris',
+        title: 'Citrine Amethyst',
         year: 2020,
-        medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file1-1.jpeg',
+        medium: 'Jewelry',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/citrine_amethyst.JPG',
         price: 30
       },
       {
         id: 7,
-        title: 'Hand',
+        title: 'Flourite',
         year: 2019,
-        medium: 'Water Color',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file1-2.jpeg',
+        medium: 'Jewelry',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/flourite.jpeg',
         price: 30
       },
       {
         id: 8,
-        title: 'Gem Pendant',
+        title: 'Flourite Necklace',
         year: 2018,
         medium: 'Jewelry',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file1-3.jpeg',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/flourite2.JPG',
         price: 45
       },
       {
         id: 9,
-        title: 'Oops, I Did It Again',
+        title: 'Gem Outlines',
         year: 2021,
-        medium: 'Digital',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file1-4.jpeg',
+        medium: 'Gouache',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/gem_outlines.jpeg',
         price: 25
       },
       {
         id: 10,
-        title: 'Buddha',
+        title: 'Gem Outlines Man',
         year: 2022,
-        medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file1.jpeg',
+        medium: 'Gouache',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/gem_outlines_man.jpeg',
         price: 30
       },
       {
         id: 11,
-        title: 'Testing Dimensions',
+        title: 'Geode',
         year: 2019,
-        medium: 'Digital',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/file2.jpeg',
+        medium: 'Gouache',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/geode.jpeg',
+        price: 40
+      },
+      {
+        id: 12,
+        title: 'Jimmie',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/jimmie.jpeg',
+        price: 40
+      },
+      {
+        id: 13,
+        title: 'Lobster',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/lobster.jpeg',
+        price: 40
+      },
+      {
+        id: 14,
+        title: 'Maui',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/maui_plate.jpeg',
+        price: 40
+      },
+      {
+        id: 15,
+        title: 'Negril Horse',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/negril_horse.JPG',
+        price: 40
+      },
+      {
+        id: 16,
+        title: 'Newspaper',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/newspaper.JPG',
+        price: 40
+      },
+      {
+        id: 17,
+        title: 'North Shore',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/north_shore.jpeg',
+        price: 40
+      },
+      {
+        id: 18,
+        title: 'Rainbow Man',
+        year: 2019,
+        medium: 'Gouache',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/rainbow_man.jpeg',
+        price: 40
+      },
+      {
+        id: 19,
+        title: 'Road to Hana',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/road_to_hana.jpeg',
+        price: 40
+      },
+      {
+        id: 20,
+        title: 'Roots',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/roots.jpeg',
+        price: 40
+      },
+      {
+        id: 21,
+        title: 'Self Portrait',
+        year: 2019,
+        medium: 'Gouache',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/self_portrait.jpeg',
+        price: 40
+      },
+      {
+        id: 22,
+        title: 'Shi',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/shi.jpeg',
+        price: 40
+      },
+      {
+        id: 23,
+        title: 'Smoky Quartz',
+        year: 2019,
+        medium: 'Aquarelle Pencil',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/smoky_quartz.jpeg',
+        price: 40
+      },
+      {
+        id: 24,
+        title: 'Smoky Quartz Lady',
+        year: 2019,
+        medium: 'Gouache',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/smoky_quartz_lady.jpeg',
+        price: 40
+      },
+      {
+        id: 25,
+        title: 'Sunset Beach',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/sunset_beach.jpeg',
+        price: 40
+      },
+      {
+        id: 26,
+        title: 'Waikiki',
+        year: 2019,
+        medium: 'Photography',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/waikiki.jpeg',
         price: 40
       }
       ])
