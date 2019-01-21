@@ -88,12 +88,19 @@ export default class App extends Component {
     // await this.getPrintfulAPI()
   }
 
-  //// CONNECT TO PRINTFUL \\\\
-  // getPrintfulAPI = async () => {
-  //   const ordersJson = await fetch(`${PRINTFULAPI}/orders`)
-  //   const orders = await ordersJson.json()
-  //   console.log(orders)
-  // }
+  // CONNECT TO PRINTFUL \\\\
+  getPrintfulAPI = async () => {
+    const orders = await fetch(`${PRINTFULAPI}/orders`, {
+      method: "GET",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        // "Authorization": 'Base64 encoded API key'
+      }
+    })
+    
+  }
 
   //// GET THE ART \\\\
   getArtList = async () => {
