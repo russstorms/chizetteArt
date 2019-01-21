@@ -10,6 +10,8 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 
 
 const API = process.env.REACT_APP_API
+const PRINTFULAPI = process.env.REACT_APP_PRINTFULAPI
+// const PRINTFULAPIKEY = process.env.REACT_APP_PRINTFULAPIKEY
 
 export default class App extends Component {
   constructor(props) {
@@ -83,8 +85,15 @@ export default class App extends Component {
   componentDidMount = async () => {
     await this.getArtList()
     await this.getToken()
+    // await this.getPrintfulAPI()
   }
 
+  //// CONNECT TO PRINTFUL \\\\
+  // getPrintfulAPI = async () => {
+  //   const ordersJson = await fetch(`${PRINTFULAPI}/orders`)
+  //   const orders = await ordersJson.json()
+  //   console.log(orders)
+  // }
 
   //// GET THE ART \\\\
   getArtList = async () => {
