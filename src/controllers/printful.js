@@ -1,9 +1,9 @@
-let PrintfulClient = require('./printfulclient.js');
+let PrintfulClient = require('./printfulclient.js')
 
     //
     // Replace this with your API key
     //
-    let key = 'YOUR_API_KEY';
+    let key = process.env.PRINTFULAPIKEY
 
     /**
      * Callback for success
@@ -11,11 +11,11 @@ let PrintfulClient = require('./printfulclient.js');
      * info - additional data about the request and response
      */
     let ok_callback = function(data, info){
-        console.log('SUCCESS');
-        console.log(data);
+        console.log('SUCCESS')
+        console.log(data)
         //If response includes paging information, show total number available
         if(info.total_items){
-            console.log('Total items available: '+info.total_items);
+            console.log('Total items available: '+info.total_items)
         }
     }
 
@@ -25,44 +25,44 @@ let PrintfulClient = require('./printfulclient.js');
      * info - additional data about the request
      */
     let error_callback = function(message, info){
-        console.log('ERROR ' + message);
+        console.log('ERROR ' + message)
         //Dump raw response
-        console.log(info.response_raw);
+        console.log(info.response_raw)
     }
 
     ///Construct client
-    let pf = new PrintfulClient(key);
+    let pf = new PrintfulClient(key)
 
     //
     //Uncomment any of the following examples to test it
     //
 
     //Get information about the store
-    //pf.get('store').success(ok_callback).error(error_callback);
+    //pf.get('store').success(ok_callback).error(error_callback)
 
     //Get product list
-    //pf.get('products').success(ok_callback).error(error_callback);
+    //pf.get('products').success(ok_callback).error(error_callback)
 
     //Get variants for product 10
-    //pf.get('products/10').success(ok_callback).error(error_callback);
+    //pf.get('products/10').success(ok_callback).error(error_callback)
 
     //Get information about Variant 1007
-    //pf.get('products/variant/1007').success(ok_callback).error(error_callback);
+    //pf.get('products/variant/1007').success(ok_callback).error(error_callback)
 
     //Select 10 latest orders and get the total number of orders
-    //pf.get('orders',{limit: 10}).success(ok_callback).error(error_callback);
+    //pf.get('orders',{limit: 10}).success(ok_callback).error(error_callback)
 
     //Select order with ID 12345 (Replace with your order's ID)
-    //pf.get('orders/12345').success(ok_callback).error(error_callback);
+    //pf.get('orders/12345').success(ok_callback).error(error_callback)
 
     //Select order with External ID 9900999 (Replace with your order's External ID)
-    //pf.get('orders/@9900999').success(ok_callback).error(error_callback);
+    //pf.get('orders/@9900999').success(ok_callback).error(error_callback)
 
     //Confirm order with ID 12345 (Replace with your order's ID)
-    //pf.post('orders/12345/confirm').success(ok_callback).error(error_callback);
+    //pf.post('orders/12345/confirm').success(ok_callback).error(error_callback)
 
     //Cancel order with ID 12345 (Replace with your order's ID)
-    //pf.delete('orders/23479').success(ok_callback).error(error_callback);
+    //pf.delete('orders/23479').success(ok_callback).error(error_callback)
 
     //Create an order
 /*
@@ -102,7 +102,7 @@ let PrintfulClient = require('./printfulclient.js');
                 }
             ]
          }
-    ).success(ok_callback).error(error_callback);
+    ).success(ok_callback).error(error_callback)
 */
 
     //Create an order and confirm immediately
@@ -130,7 +130,7 @@ let PrintfulClient = require('./printfulclient.js');
             ]
         },
         {confirm: 1}
-    ).success(ok_callback).error(error_callback);
+    ).success(ok_callback).error(error_callback)
 */
 
     //Calculate shipping rates for an order
@@ -144,5 +144,5 @@ let PrintfulClient = require('./printfulclient.js');
            {variant_id: 1,  quantity: 1}, //Small poster
            {variant_id: 1118, quantity: 2} //Alternative T-Shirt
         ]
-    }).success(ok_callback).error(error_callback);
+    }).success(ok_callback).error(error_callback)
 */
