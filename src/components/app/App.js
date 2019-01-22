@@ -10,7 +10,7 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 
 
 const API = process.env.REACT_APP_API
-const PRINTFULAPI = process.env.REACT_APP_PRINTFULAPI
+// const PRINTFULAPI = process.env.REACT_APP_PRINTFULAPI
 // const PRINTFULAPIKEY = process.env.REACT_APP_PRINTFULAPIKEY
 
 export default class App extends Component {
@@ -89,18 +89,17 @@ export default class App extends Component {
   }
 
   // CONNECT TO PRINTFUL \\\\
-  getPrintfulAPI = async () => {
-    const orders = await fetch(`${PRINTFULAPI}/orders`, {
-      method: "GET",
-      mode: "cors",
-      cache: "no-cache",
-      credentials: "same-origin",
-      headers: {
-        // "Authorization": 'Base64 encoded API key'
-      }
-    })
-    
-  }
+  // getPrintfulAPI = async () => {
+    // const orders = await fetch(`${PRINTFULAPI}/orders`, {
+    //   method: "GET",
+    //   mode: "cors",
+    //   cache: "no-cache",
+    //   credentials: "same-origin",
+    //   headers: {
+    //     "Authorization": 'Base64 encoded API key'
+    //   }
+    // })
+  // }
 
   //// GET THE ART \\\\
   getArtList = async () => {
