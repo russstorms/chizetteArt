@@ -70,15 +70,22 @@ export default class Art extends React.Component {
     })
   }
 
+  componentWillUnmount() {
+    let artPosters = this.props.artPosters
+    this.setState({
+      ...this.state,
+      counter: this.state.counter > artPosters.length ? 0 : 0
+    })
+  }
+
   render() {
     //// LIST OF ART \\\\
     let art = this.props.art
     //// LIST OF URLS \\\\
     let artPosters = this.props.artPosters
-
     //// CHECK COUNTER TO MAKE SURE IT ISN'T LONGER THAN ARRAY \\\\
-    let counter = this.state.counter > artPosters.length ? 0 : this.state.counter
-
+    let counter = this.state.counter >= artPosters.length ? 0 : this.state.counter
+    console.log(artPosters[counter].poster, this.state.counter)
     return (
       //// ART PIECE \\\\
       <div className="artPiece">
