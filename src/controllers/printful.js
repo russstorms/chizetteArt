@@ -1,9 +1,9 @@
-let PrintfulClient = require('./printfulclient.js')
+let PrintfulClient = require('../routes/printfulClient.js')
 
     //
     // Replace this with your API key
     //
-    let key = process.env.PRINTFULAPIKEY
+    let key = process.env.PRINTFULAPIHEADER
 
     /**
      * Callback for success
@@ -38,7 +38,7 @@ let PrintfulClient = require('./printfulclient.js')
     //
 
     //Get information about the store
-    //pf.get('store').success(ok_callback).error(error_callback)
+    pf.get('store').success(ok_callback).error(error_callback)
 
     //Get product list
     //pf.get('products').success(ok_callback).error(error_callback)
@@ -50,7 +50,7 @@ let PrintfulClient = require('./printfulclient.js')
     //pf.get('products/variant/1007').success(ok_callback).error(error_callback)
 
     //Select 10 latest orders and get the total number of orders
-    //pf.get('orders',{limit: 10}).success(ok_callback).error(error_callback)
+    // pf.get('orders',{limit: 10}).success(ok_callback).error(error_callback)
 
     //Select order with ID 12345 (Replace with your order's ID)
     //pf.get('orders/12345').success(ok_callback).error(error_callback)
