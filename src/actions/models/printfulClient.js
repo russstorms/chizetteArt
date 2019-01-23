@@ -102,8 +102,9 @@ let PrintfulClient = function(API){
           res.on('end', function() {
               info.response_raw = body
               console.log(body)
+              let json
               try{
-                  var json = JSON.parse(body)
+                json = JSON.parse(body)
               }
               catch(e){
                   if(_error){

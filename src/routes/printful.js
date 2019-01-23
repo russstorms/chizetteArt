@@ -51,7 +51,7 @@ const jwt = require('jsonwebtoken')
     // pf.get('products/10').success(ok_callback).error(error_callback)
 
     //Get information about Variant 1007
-    //pf.get('products/variant/1007').success(ok_callback).error(error_callback)
+    // pf.get('products/variant/1007').success(ok_callback).error(error_callback)
 
     //Select 10 latest orders and get the total number of orders
     //pf.get('orders',{limit: 10}).success(ok_callback).error(error_callback)
