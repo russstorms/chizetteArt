@@ -37,11 +37,8 @@ const router = express.Router()
     ///Construct client
     let pf = new PrintfulClient(key)
 
-    //
-    //Uncomment any of the following examples to test it
-    //
 
-    pf.get('store/products?status=synced')
+    pf.get('store/products')
         .success(ok_callback)
         .error(error_callback)
 
