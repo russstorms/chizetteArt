@@ -97,7 +97,8 @@ let PrintfulClient = function(key){
           auth: key,
           headers: {
               'User-Agent': USER_AGENT,
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              'Authorization': `Basic ${process.env.PRINTFULAPIHEADER}`
           }
       }
       let req = https.request(options, function(res) {

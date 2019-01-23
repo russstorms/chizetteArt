@@ -2,7 +2,7 @@ let PrintfulClient = require('../routes/printfulClient.js')
     //
     // Replace this with your API key
     //
-    let key = process.env.PRINTFULAPIKEY
+    let key = process.env.PRINTFULAPIHEADER
 
     /**
      * Callback for success
