@@ -1,9 +1,8 @@
 require('dotenv').config()
-const PrintfulClient = require('../actions/models/printfulClient.js')
+const PrintfulClient = require('../models/printfulClient.js')
 const express = require('express')
 const router = express.Router()
 const knex = require('../../knex')
-const jwt = require('jsonwebtoken')
     //
     // Replace this with your API key
     //
@@ -14,6 +13,7 @@ const jwt = require('jsonwebtoken')
      * data - result element from the API response
      * info - additional data about the request and response
      */
+
     let ok_callback = function(data, info){
         console.log('SUCCESS')
         console.log(data)
@@ -28,6 +28,7 @@ const jwt = require('jsonwebtoken')
      * data - error message
      * info - additional data about the request
      */
+
     let error_callback = function(message, info){
         console.log('ERROR ' + message)
         //Dump raw response
@@ -41,8 +42,12 @@ const jwt = require('jsonwebtoken')
     //Uncomment any of the following examples to test it
     //
 
-    //Get information about the store
-    pf.get('store').success(ok_callback).error(error_callback)
+    pf.get('store')
+        .success(ok_callback)
+        .error(error_callback)
+
+    // Get information about the store
+    // pf.get('store').success(ok_callback).error(error_callback)
 
     //Get product list
     // pf.get('products').success(ok_callback).error(error_callback)
@@ -54,10 +59,10 @@ const jwt = require('jsonwebtoken')
     // pf.get('products/variant/1007').success(ok_callback).error(error_callback)
 
     //Select 10 latest orders and get the total number of orders
-    //pf.get('orders',{limit: 10}).success(ok_callback).error(error_callback)
+    // pf.get('orders',{limit: 10}).success(ok_callback).error(error_callback)
 
     //Select order with ID 12345 (Replace with your order's ID)
-    //pf.get('orders/12345').success(ok_callback).error(error_callback)
+    // pf.get('orders/12345').success(ok_callback).error(error_callback)
 
     //Select order with External ID 9900999 (Replace with your order's External ID)
     //pf.get('orders/@9900999').success(ok_callback).error(error_callback)
@@ -66,7 +71,7 @@ const jwt = require('jsonwebtoken')
     //pf.post('orders/12345/confirm').success(ok_callback).error(error_callback)
 
     //Cancel order with ID 12345 (Replace with your order's ID)
-    //pf.delete('orders/23479').success(ok_callback).error(error_callback)
+    // pf.delete('orders/23479').success(ok_callback).error(error_callback)
 
     //Create an order
 /*
