@@ -1,15 +1,8 @@
-/**
- * This class helps to use the Printful API
- * version 1.1
- * copyright 2014 Idea Bits LLC
- */
-
-
-let PrintfulClient = function(key){
+let PrintfulClient = function(API){
 
   //API key
-  let key = key
-
+  let key = API
+  
   let https = require('https')
   let querystring = require('querystring')
   let USER_AGENT = 'Printful API Node.js Library 1.1'
@@ -109,6 +102,7 @@ let PrintfulClient = function(key){
           })
           res.on('end', function() {
               info.response_raw = body
+              console.log(body)
               try{
                   let json = JSON.parse(body)
               }

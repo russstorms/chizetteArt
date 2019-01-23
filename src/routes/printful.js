@@ -1,8 +1,13 @@
-let PrintfulClient = require('../routes/printfulClient.js')
+require('dotenv').config()
+const PrintfulClient = require('../actions/models/printfulClient.js')
+const express = require('express')
+const router = express.Router()
+const knex = require('../../knex')
+const jwt = require('jsonwebtoken')
     //
     // Replace this with your API key
     //
-    let key = process.env.PRINTFULAPIHEADER
+    let key = process.env.PRINTFULAPIKEY
 
     /**
      * Callback for success
@@ -32,18 +37,21 @@ let PrintfulClient = require('../routes/printfulClient.js')
     ///Construct client
     let pf = new PrintfulClient(key)
 
+    router.get('/', (req, res, next) => {
+        res.json({ok: 'yay'})
+    })
     //
     //Uncomment any of the following examples to test it
     //
 
     //Get information about the store
-    // pf.get('store').success(ok_callback).error(error_callback)
+    pf.get('store').success(ok_callback).error(error_callback)
 
     //Get product list
-    //pf.get('products').success(ok_callback).error(error_callback)
+    // pf.get('products').success(ok_callback).error(error_callback)
 
     //Get variants for product 10
-    //pf.get('products/10').success(ok_callback).error(error_callback)
+    // pf.get('products/10').success(ok_callback).error(error_callback)
 
     //Get information about Variant 1007
     //pf.get('products/variant/1007').success(ok_callback).error(error_callback)
@@ -145,3 +153,5 @@ let PrintfulClient = require('../routes/printfulClient.js')
         ]
     }).success(ok_callback).error(error_callback)
 */
+
+module.exports = router

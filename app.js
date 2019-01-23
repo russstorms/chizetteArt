@@ -17,6 +17,7 @@ const requireAuth = passport.authenticate('jwt', {session: false})
 
 //// ROUTERS \\\\
 const chizetteartRouter = require('./src/routes/chizetteart')
+const printfulRouter = require('./src/routes/printful')
 
 
 // view engine setup
@@ -48,6 +49,7 @@ app.use((req, res, next) => {
 app.get('/', requireAuth, (req, res) => res.redirect('/chizetteart'))
 app.use('/chizetteart', chizetteartRouter)
 app.use('/', authentication)
+app.use('/printful', printfulRouter)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
