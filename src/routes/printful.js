@@ -2,74 +2,80 @@ require('dotenv').config()
 const PrintfulClient = require('../models/printfulClient.js')
 const express = require('express')
 const router = express.Router()
-    
-    // Replace this with your API key
-    
-    let key = process.env.PRINTFULAPIKEY
 
-    /**
-     * Callback for success
-     * data - result element from the API response
-     * info - additional data about the request and response
-     */
+// Replace this with your API key
 
-    let ok_callback = function(data, info){
-        console.log('SUCCESS')
-        console.log(data)
-        //If response includes paging information, show total number available
-        if(info.total_items){
-            console.log('Total items available: '+info.total_items)
-        }
-    }
+let key = process.env.PRINTFULAPIKEY
 
-    /**
-     * Callback for failure
-     * data - error message
-     * info - additional data about the request
-     */
+/**
+ * Callback for success
+ * data - result element from the API response
+ * info - additional data about the request and response
+ */
 
-    let error_callback = function(message, info){
-        console.log('ERROR ' + message)
-        //Dump raw response
-        console.log(info.response_raw)
-    }
+let ok_callback = function (data, info) {
+  console.log('SUCCESS')
+  console.log(data)
+  //If response includes paging information, show total number available
+  if (info.total_items) {
+    console.log('Total items available: ' + info.total_items)
+  }
+}
 
-    ///Construct client
-    let pf = new PrintfulClient(key)
+/**
+ * Callback for failure
+ * data - error message
+ * info - additional data about the request
+ */
 
+let error_callback = function (message, info) {
+  console.log('ERROR ' + message)
+  //Dump raw response
+  console.log(info.response_raw)
+}
 
-    pf.get('store/products')
-        .success(ok_callback)
-        .error(error_callback)
+///Construct client
+let pf = new PrintfulClient(key)
 
-    // Get information about the store
-    // pf.get('store').success(ok_callback).error(error_callback)
+//// GET ALL SYNCED PRODUCTS \\\\
+pf.get('store/products')
+  .success(ok_callback)
+  .error(error_callback)
 
-    //Get product list
-    // pf.get('products').success(ok_callback).error(error_callback)
+  // let id = data[0].external_id
+//// GET ORDERS \\\\
+  pf.get('orders/')
+  .success(ok_callback)
+  .error(error_callback)
 
-    //Get variants for product 10
-    // pf.get('products/10').success(ok_callback).error(error_callback)
+// Get information about the store
+// pf.get('store').success(ok_callback).error(error_callback)
 
-    //Get information about Variant 1007
-    // pf.get('products/variant/1007').success(ok_callback).error(error_callback)
+//Get product list
+// pf.get('products').success(ok_callback).error(error_callback)
 
-    //Select 10 latest orders and get the total number of orders
-    // pf.get('orders',{limit: 10}).success(ok_callback).error(error_callback)
+//Get variants for product 10
+// pf.get('products/10').success(ok_callback).error(error_callback)
 
-    //Select order with ID 12345 (Replace with your order's ID)
-    // pf.get('orders/12345').success(ok_callback).error(error_callback)
+//Get information about Variant 1007
+// pf.get('products/variant/1007').success(ok_callback).error(error_callback)
 
-    //Select order with External ID 9900999 (Replace with your order's External ID)
-    //pf.get('orders/@9900999').success(ok_callback).error(error_callback)
+//Select 10 latest orders and get the total number of orders
+// pf.get('orders',{limit: 10}).success(ok_callback).error(error_callback)
 
-    //Confirm order with ID 12345 (Replace with your order's ID)
-    //pf.post('orders/12345/confirm').success(ok_callback).error(error_callback)
+//Select order with ID 12345 (Replace with your order's ID)
+// pf.get('orders/12345').success(ok_callback).error(error_callback)
 
-    //Cancel order with ID 12345 (Replace with your order's ID)
-    // pf.delete('orders/23479').success(ok_callback).error(error_callback)
+//Select order with External ID 9900999 (Replace with your order's External ID)
+//pf.get('orders/@9900999').success(ok_callback).error(error_callback)
 
-    //Create an order
+//Confirm order with ID 12345 (Replace with your order's ID)
+//pf.post('orders/12345/confirm').success(ok_callback).error(error_callback)
+
+//Cancel order with ID 12345 (Replace with your order's ID)
+// pf.delete('orders/23479').success(ok_callback).error(error_callback)
+
+//Create an order
 /*
     pf.post('orders',
         {
@@ -110,7 +116,7 @@ const router = express.Router()
     ).success(ok_callback).error(error_callback)
 */
 
-    //Create an order and confirm immediately
+//Create an order and confirm immediately
 /*
     pf.post('orders',
         {
@@ -138,7 +144,7 @@ const router = express.Router()
     ).success(ok_callback).error(error_callback)
 */
 
-    //Calculate shipping rates for an order
+//Calculate shipping rates for an order
 /*
     pf.post('shipping/rates',{
         recipient: {
