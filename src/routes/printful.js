@@ -2,10 +2,9 @@ require('dotenv').config()
 const PrintfulClient = require('../models/printfulClient.js')
 const express = require('express')
 const router = express.Router()
-const knex = require('../../knex')
-    //
+    
     // Replace this with your API key
-    //
+    
     let key = process.env.PRINTFULAPIKEY
 
     /**
@@ -42,7 +41,7 @@ const knex = require('../../knex')
     //Uncomment any of the following examples to test it
     //
 
-    pf.get('store')
+    pf.get('store/products?status=synced')
         .success(ok_callback)
         .error(error_callback)
 
