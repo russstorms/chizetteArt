@@ -90,8 +90,7 @@ let PrintfulClient = function(API){
           auth: key,
           headers: {
               'User-Agent': USER_AGENT,
-              'Content-Type': 'application/json',
-              'Authorization': `Basic ${process.env.PRINTFULAPIHEADER}`
+              'Content-Type': 'application/json'
           }
       }
       let req = https.request(options, function(res) {
@@ -104,7 +103,7 @@ let PrintfulClient = function(API){
               info.response_raw = body
               console.log(body)
               try{
-                  let json = JSON.parse(body)
+                  var json = JSON.parse(body)
               }
               catch(e){
                   if(_error){

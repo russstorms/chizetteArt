@@ -37,9 +37,6 @@ const jwt = require('jsonwebtoken')
     ///Construct client
     let pf = new PrintfulClient(key)
 
-    router.get('/', (req, res, next) => {
-        res.json({ok: 'yay'})
-    })
     //
     //Uncomment any of the following examples to test it
     //
