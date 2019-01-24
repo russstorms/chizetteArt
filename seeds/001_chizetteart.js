@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
         year: 2018,
         medium: 'Gouache',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg',
-        price: 45
+        price: 26
       },
       {
         id: 2,
@@ -17,7 +17,7 @@ exports.seed = function(knex, Promise) {
         year: 2020,
         medium: 'Gouache',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aqua_gems.jpeg',
-        price: 35
+        price: 26
       },
       {
         id: 3,
@@ -25,7 +25,7 @@ exports.seed = function(knex, Promise) {
         year: 2021,
         medium: 'Aquarelle Pencil',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aquarelle_lady.jpeg',
-        price: 30
+        price: 26
       },
       {
         id: 4,
@@ -33,7 +33,7 @@ exports.seed = function(knex, Promise) {
         year: 2021,
         medium: 'Gouache',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_lady.jpeg',
-        price: 40
+        price: 26
       },
       {
         id: 5,
@@ -73,7 +73,7 @@ exports.seed = function(knex, Promise) {
         year: 2021,
         medium: 'Gouache',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/gem_outlines.jpeg',
-        price: 25
+        price: 26
       },
       {
         id: 10,
@@ -81,7 +81,7 @@ exports.seed = function(knex, Promise) {
         year: 2022,
         medium: 'Gouache',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/gem_outlines_man.jpeg',
-        price: 30
+        price: 26
       },
       {
         id: 11,
@@ -89,7 +89,7 @@ exports.seed = function(knex, Promise) {
         year: 2019,
         medium: 'Gouache',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/geode.jpeg',
-        price: 40
+        price: 27
       },
       {
         id: 12,
@@ -145,7 +145,7 @@ exports.seed = function(knex, Promise) {
         year: 2019,
         medium: 'Gouache',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/rainbow_man.jpeg',
-        price: 40
+        price: 27
       },
       {
         id: 19,
@@ -169,7 +169,7 @@ exports.seed = function(knex, Promise) {
         year: 2019,
         medium: 'Gouache',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/self_portrait.jpeg',
-        price: 40
+        price: 32
       },
       {
         id: 22,
@@ -185,7 +185,7 @@ exports.seed = function(knex, Promise) {
         year: 2019,
         medium: 'Aquarelle Pencil',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/smoky_quartz.jpeg',
-        price: 40
+        price: 32
       },
       {
         id: 24,
@@ -193,7 +193,7 @@ exports.seed = function(knex, Promise) {
         year: 2019,
         medium: 'Gouache',
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/smoky_quartz_lady.jpeg',
-        price: 40
+        price: 32
       },
       {
         id: 25,
