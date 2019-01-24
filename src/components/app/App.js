@@ -8,10 +8,8 @@ import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
-
-const API = process.env.REACT_APP_API
-// const PRINTFULAPI = process.env.REACT_APP_PRINTFULAPI
-// const PRINTFULAPIKEY = process.env.REACT_APP_PRINTFULAPIKEY
+// process.env.REACT_APP_API ||
+const API = "http://localhost:3000"
 
 export default class App extends Component {
   constructor(props) {
