@@ -15,7 +15,10 @@ let key = process.env.PRINTFULAPIKEY
 
 let ok_callback = function (data, info) {
   console.log('SUCCESS')
-  console.log(data)
+  if (data) {
+    console.log(data)
+  }
+
   //If response includes paging information, show total number available
   if (info.total_items) {
     console.log('Total items available: ' + info.total_items)
@@ -42,11 +45,26 @@ pf.get('store/products')
   .success(ok_callback)
   .error(error_callback)
 
-  // let id = data[0].external_id
-//// GET ORDERS \\\\
-  pf.get('orders/')
-  .success(ok_callback)
-  .error(error_callback)
+// pf.post('orders', {
+//   recipient: {
+//     name: 'Russ',
+//     address1: 'my address',
+//     city: 'Boulder',
+//     state_code: 'CO',
+//     country_code: 'US',
+//     zip: '80301'
+//   },
+//   items: [{
+//       variant_id: 1, //Small poster
+//       name: 'Niagara Falls poster', //Display name
+//       retail_price: '19.99', //Retail price for packing slip
+//       quantity: 1,
+//       files: [{
+//         url: 'http://example.com/files/posters/poster_1.jpg'
+//       }]
+//     }
+//   ]
+// }).success(ok_callback).error(error_callback)
 
 // Get information about the store
 // pf.get('store').success(ok_callback).error(error_callback)
@@ -70,79 +88,79 @@ pf.get('store/products')
 //pf.get('orders/@9900999').success(ok_callback).error(error_callback)
 
 //Confirm order with ID 12345 (Replace with your order's ID)
-//pf.post('orders/12345/confirm').success(ok_callback).error(error_callback)
+// pf.post('orders/97600919/confirm').success(ok_callback).error(error_callback)
 
 //Cancel order with ID 12345 (Replace with your order's ID)
-// pf.delete('orders/23479').success(ok_callback).error(error_callback)
+// pf.delete('orders/15238110').success(ok_callback).error(error_callback)
 
 //Create an order
-/*
-    pf.post('orders',
-        {
-            recipient:  {
-                name: 'John Doe',
-                address1: '19749 Dearborn St',
-                city: 'Chatsworth',
-                state_code: 'CA',
-                country_code: 'US',
-                zip: '91311'
-            },
-            items: [
-                {
-                    variant_id: 1, //Small poster
-                    name: 'Niagara Falls poster', //Display name
-                    retail_price: '19.99', //Retail price for packing slip
-                    quantity: 1,
-                    files: [
-                        {url: 'http://example.com/files/posters/poster_1.jpg'}
-                    ]
-                },
-                {
-                   variant_id: 1118,
-                   quantity: 2,
-                   name: 'Grand Canyon T-Shirt', //Display name
-                   retail_price: '29.99', //Retail price for packing slip
-                   files: [
-                        {url: 'http://example.com/files/tshirts/shirt_front.ai'}, //Front print
-                        {type: 'back', url: 'http://example.com/files/tshirts/shirt_back.ai'}, //Back print
-                        {type: 'preview', url: 'http://example.com/files/tshirts/shirt_mockup.jpg'} //Mockup image
-                   ],
-                   options: [ //Additional options
-                        {id: 'remove_labels', value: true}
-                   ]
-                }
-            ]
-         }
-    ).success(ok_callback).error(error_callback)
-*/
+
+// pf.post('orders',
+//     {
+//         recipient:  {
+//             name: 'John Doe',
+//             address1: '19749 Dearborn St',
+//             city: 'Chatsworth',
+//             state_code: 'CA',
+//             country_code: 'US',
+//             zip: '91311'
+//         },
+//         items: [
+//             {
+//                 variant_id: 1, //Small poster
+//                 name: 'Niagara Falls poster', //Display name
+//                 retail_price: '19.99', //Retail price for packing slip
+//                 quantity: 1,
+//                 files: [
+//                     {url: 'http://example.com/files/posters/poster_1.jpg'}
+//                 ]
+//             },
+//             {
+//                variant_id: 1118,
+//                quantity: 2,
+//                name: 'Grand Canyon T-Shirt', //Display name
+//                retail_price: '29.99', //Retail price for packing slip
+//                files: [
+//                     {url: 'http://example.com/files/tshirts/shirt_front.ai'}, //Front print
+//                     {type: 'back', url: 'http://example.com/files/tshirts/shirt_back.ai'}, //Back print
+//                     {type: 'preview', url: 'http://example.com/files/tshirts/shirt_mockup.jpg'} //Mockup image
+//                ],
+//                options: [ //Additional options
+//                     {id: 'remove_labels', value: true}
+//                ]
+//             }
+//         ]
+//      }
+// ).success(ok_callback).error(error_callback)
+
 
 //Create an order and confirm immediately
-/*
-    pf.post('orders',
-        {
-            recipient:  {
-                name: 'John Doe',
-                address1: '19749 Dearborn St',
-                city: 'Chatsworth',
-                state_code: 'CA',
-                country_code: 'US',
-                zip: '91311'
-            },
-            items: [
-                {
-                    variant_id: 1, //Small poster
-                    name: 'Niagara Falls poster', //Display name
-                    retail_price: '19.99', //Retail price for packing slip
-                    quantity: 1,
-                    files: [
-                        {url: 'http://example.com/files/posters/poster_1.jpg'}
-                    ]
-                }
-            ]
-        },
-        {confirm: 1}
-    ).success(ok_callback).error(error_callback)
-*/
+
+// pf.post('orders',
+//     {
+//         recipient:  {
+//             name: 'John Doe',
+//             address1: '19749 Dearborn St',
+//             city: 'Chatsworth',
+//             state_code: 'CA',
+//             country_code: 'US',
+//             zip: '91311'
+//         },
+//         items: [
+//             {
+//                 variant_id: 1, //Small poster
+//                 name: 'Niagara Falls poster', //Display name
+//                 retail_price: '19.99', //Retail price for packing slip
+//                 quantity: 1,
+//                 files: [
+//                     {url: 'http://example.com/files/posters/poster_1.jpg'}
+//                 ]
+//             }
+//         ]
+//     },
+//     {confirm: 1}
+// ).success(ok_callback).error(error_callback)
+
 
 //Calculate shipping rates for an order
 /*
