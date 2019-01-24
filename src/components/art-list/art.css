@@ -18,7 +18,7 @@
   margin: -2% auto auto auto;
   display: flex;
   justify-content: center;
-  box-shadow: 2px 5px 5px rgba(99, 95, 84, .8);
+  box-shadow: 5px 5px 10px rgba(99, 95, 84, .8);
 }
 
 .artInfoContainer {

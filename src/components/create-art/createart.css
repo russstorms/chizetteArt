@@ -1,3 +1,8 @@
+label {
+  color: rgb(138, 222, 248);
+  font-size: 1.5em;
+}
+
 .createArtButton {
   color: rgb(99, 95, 84);
   font-size: 1.5em;
@@ -20,6 +25,9 @@
   margin-top: -5%;
   z-index: 1200 !important;
   max-height: 110%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
 }
 
 .createClose {
@@ -31,11 +39,16 @@
   top: 15px;
 }
 
+.createClose:hover {
+  transform: scale(1.4);
+  transition-duration: .5s;
+}
+
 .createArt {
   display: initial !important;
   color: rgb(138, 222, 248);
   font-size: 1em;
-  background-color: transparent;
+  background-color: white;
   border: none;
   margin-left: 80%;
 }
@@ -52,4 +65,7 @@
 .modal-content h4 {
   text-align: center;
   font-family: "Megrim";
+  letter-spacing: .1em;
+  font-weight: bolder;
+  color: rgb(138, 222, 248);
 }
