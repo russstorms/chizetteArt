@@ -18,15 +18,16 @@ const ComposeArt = ({postArt}) => {
     <Modal className="Modal createModal"
     header='Create Art!'
     trigger={<i className="medium material-icons icon createArtButton">add_circle</i>}>
+    <i className="fas fa-times modal-close createClose"></i>
     <form onSubmit={createArt} autoComplete="off">
       <label>Title</label>
-      <input type="text" name="Title" required/>
+      <input type="text" name="Title"/>
       <label>Year</label>
-      <input type="text" name="Year" required/>
+      <input type="text" name="Year"/>
       <label>Medium</label>
-      <input type="text" name="Medium" required/>
+      <input type="text" name="Medium"/>
       <label>Url</label>
-      <input type="url" name="Url" required/>
+      <input type="url" name="Url"/>
       <label>Price</label>
       <input type="number" name="Price" />
       <Button className="createArt waves-effect waves-light btn modal-close" name="submit"><i className="large material-icons icon">brush</i>Create Art!</Button>

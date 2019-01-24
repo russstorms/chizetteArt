@@ -17,10 +17,39 @@
 }
 
 .createModal {
+  margin-top: -5%;
   z-index: 1200 !important;
-  height: 120%;
+  max-height: 110%;
+}
+
+.createClose {
+  cursor: pointer;
+  color: rgb(138, 222, 248);
+  font-size: 3em;
+  position: fixed;
+  right: 50px;
+  top: 15px;
 }
 
 .createArt {
-  margin-top: 20%;
+  display: initial !important;
+  color: rgb(138, 222, 248);
+  font-size: 1em;
+  background-color: transparent;
+  border: none;
+  margin-left: 80%;
+}
+
+.createArt:hover {
+  display: initial !important;
+  color: white;
+  font-size: 1em;
+  background-color: rgb(138, 222, 248);
+  border: none;
+  margin-left: 80%;
+}
+
+.modal-content h4 {
+  text-align: center;
+  font-family: "Megrim";
 }
