@@ -54,7 +54,7 @@
 }
 
 @keyframes scope2 {
-  0% {margin-left: 500px; opacity: 0;}
+  0% {margin-left: 300px; opacity: 0;}
   100% {margin-left: 0px; opacity: 1;}
 }
 
@@ -198,4 +198,12 @@ button.modal-close {
 
 .brushIcon {
   font-size: 1.5em !important;
+}
+
+.editModal {
+  margin-top: -5%;
+  z-index: 1200 !important;
+  max-height: 110%;
+  background-image: url("https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg");
+  background-repeat: no-repeat;
 }

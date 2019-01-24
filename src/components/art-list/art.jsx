@@ -86,6 +86,7 @@ export default class Art extends React.Component {
     //// CHECK COUNTER TO MAKE SURE IT ISN'T LONGER THAN ARRAY \\\\
     let counter = this.state.counter >= artPosters.length ? 0 : this.state.counter
     // console.log(artPosters[counter].poster, this.state.counter)
+    
     return (
       //// ART PIECE \\\\
       <div className="artPiece">
@@ -110,10 +111,10 @@ export default class Art extends React.Component {
         <div><b><i>{art.title}</i></b></div>
         {this.props.token ?
           <span>
-            <Modal className="Modal"
-              header={`Touch up on: ${art.title}`}
+            <Modal className="Modal editModal"
+              header={`Edit: ${art.title}`}
               trigger={<span><Button className="editButton btn-flat waves-effect waves-light"><i className="large material-icons icon brushIcon">brush</i></Button></span>}>
-              <form id={art.id} onSubmit={this.editSubmit}>
+              <form autoComplete="off" id={art.id} onSubmit={this.editSubmit}>
                 <label>Title</label>
                 <input type="text" placeholder={art.title} name="Title" />
                 <label>Year</label>
@@ -125,7 +126,7 @@ export default class Art extends React.Component {
                 <Button className="waves-effect waves-red btn modal-close" name="submit">Touch Up!</Button>
               </form>
             </Modal>
-            {this.props.token ? <Button id={art.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={art.id} className="large material-icons icon deleteIcon">delete</i></Button> : null}
+            {this.props.token ? <span><Button id={art.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={art.id} className="large material-icons icon deleteIcon">delete</i></Button></span> : null}
           </span> : null}
       </div>
     )
