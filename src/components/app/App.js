@@ -111,12 +111,13 @@ export default class App extends Component {
 
 
   //// CREATE NEW ART \\\\
-  postArt = async (title, year, medium, url) => {
+  postArt = async (title, year, medium, url, price) => {
     const artBody = {
       title: title,
       year: year,
       medium: medium,
-      poster: url
+      poster: url,
+      price: price
     }
     // console.log(JSON.stringify(artBody))
     const response = await fetch(`${API}/chizetteart`, {

@@ -140,16 +140,20 @@
   color: rgb(138, 222, 248);
 }
 
-.modal-close {
+button.modal-close {
+  display: none;
+}
+
+.close {
   cursor: pointer;
   color: white;
-  font-weight: bolder;
+  font-size: 3em;
   position: fixed;
   right: 50px;
   top: 15px;
 }
 
-.modal-close:hover {
+.close:hover {
   color: rgb(138, 222, 248);
   background-color: transparent;
 }

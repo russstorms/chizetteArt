@@ -18,4 +18,9 @@
 
 .createModal {
   z-index: 1200 !important;
+  height: 120%;
+}
+
+.createArt {
+  margin-top: 20%;
 }

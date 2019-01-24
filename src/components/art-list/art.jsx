@@ -86,7 +86,6 @@ export default class Art extends React.Component {
     //// CHECK COUNTER TO MAKE SURE IT ISN'T LONGER THAN ARRAY \\\\
     let counter = this.state.counter >= artPosters.length ? 0 : this.state.counter
     // console.log(artPosters[counter].poster, this.state.counter)
-    console.log(artPosters[counter].medium)
     return (
       //// ART PIECE \\\\
       <div className="artPiece">
@@ -94,6 +93,7 @@ export default class Art extends React.Component {
           <Modal className="modalFullView"
             header=''
             trigger={<a href="/"><img className="poster" onClick={this.modalClick} src={art.poster} alt="https://placekitten.com/200/300"></img></a>}>
+            <i className="fas fa-times modal-close close"></i>
             <img className="posterSingleView" src={artPosters[counter].poster} alt="https://placekitten.com/200/300"></img>
             <br />
             <div onClick={this.prevClick} className="prevButton"><i className="large material-icons icon">chevron_left</i></div>
