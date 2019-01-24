@@ -98,6 +98,7 @@ export default class Art extends React.Component {
             <br />
             <div onClick={this.prevClick} className="prevButton"><i className="large material-icons icon">chevron_left</i></div>
             <div onClick={this.nextClick} className="nextButton"><i className="large material-icons icon">chevron_right</i></div>
+            {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photography') ? <a href="https://www.printful.com" target="blank" className="singleViewPriceButton">Purchase Print</a> : null}
             <div className="artInfoContainer">
               <div className="singleViewTitle"><i>{artPosters[counter].title}</i><span className="singleViewYear">{artPosters[counter].year}</span></div>
               <div className="singleViewMedium">{artPosters[counter].medium}</div>
