@@ -90,6 +90,7 @@
   color: rgb(138, 222, 248);
   background-color: white;
   border: 2px solid rgb(138, 222, 248);
+  transition-duration: 1s;
 }
 
 .modalFullView {
@@ -124,6 +125,8 @@
 
 .nextButton:hover {
   color: rgb(138, 222, 248);
+  transform: scale(1.4);
+  transition-duration: .5s;
 }
 
 .prevButton {
@@ -138,6 +141,8 @@
 
 .prevButton:hover {
   color: rgb(138, 222, 248);
+  transform: scale(1.4);
+  transition-duration: .5s;
 }
 
 button.modal-close {
@@ -156,6 +161,8 @@ button.modal-close {
 .close:hover {
   color: rgb(138, 222, 248);
   background-color: transparent;
+  transform: scale(1.4);
+  transition-duration: .5s;
 }
 
 .artPiece {
