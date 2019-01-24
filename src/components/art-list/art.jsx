@@ -85,7 +85,8 @@ export default class Art extends React.Component {
     let artPosters = this.props.artPosters
     //// CHECK COUNTER TO MAKE SURE IT ISN'T LONGER THAN ARRAY \\\\
     let counter = this.state.counter >= artPosters.length ? 0 : this.state.counter
-    console.log(artPosters[counter].poster, this.state.counter)
+    // console.log(artPosters[counter].poster, this.state.counter)
+    console.log(artPosters[counter].medium)
     return (
       //// ART PIECE \\\\
       <div className="artPiece">
@@ -100,7 +101,7 @@ export default class Art extends React.Component {
             <div className="artInfoContainer">
               <div className="singleViewTitle"><i>{artPosters[counter].title}</i><span className="singleViewYear">{artPosters[counter].year}</span></div>
               <div className="singleViewMedium">{artPosters[counter].medium}</div>
-              <div className="singleViewPrice">${artPosters[counter].price} USD</div>
+              {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photography') ? <div className="singleViewPrice">${artPosters[counter].price} USD</div> : null}
             </div>
           </Modal>
         </span>
