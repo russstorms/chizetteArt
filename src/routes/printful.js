@@ -2,6 +2,7 @@ require('dotenv').config()
 const PrintfulClient = require('../models/printfulClient.js')
 const express = require('express')
 const router = express.Router()
+const knex = require('../../knex')
 
 // Replace this with your API key
 
@@ -42,6 +43,26 @@ let pf = new PrintfulClient(key)
 
 //// GET ALL SYNCED PRODUCTS \\\\
 pf.get('store/products')
+  .success(ok_callback)
+  .error(error_callback)
+
+pf.post('orders', {
+  recipient: {
+    name: 'Russ',
+    address1: 'my address',
+    city: 'Boulder',
+    state_code: 'CO',
+    country_code: 'US',
+    zip: '80301'
+  },
+  // "items": [{
+  //   "variant_id": 1,
+  //   "quantity": 1,
+  //   "files": [{
+  //     "url": "http://example.com/files/posters/poster_1.jpg"
+  //   }]
+  // }]
+})
   .success(ok_callback)
   .error(error_callback)
 
