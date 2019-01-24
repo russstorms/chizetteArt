@@ -39,7 +39,7 @@
 .side-nav li>a:hover {
   color: rgb(138, 222, 248);
   background-color: transparent;
-  letter-spacing: .35em;
+  letter-spacing: .30em;
   transition-duration: .5s;
 }
 
