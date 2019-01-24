@@ -207,3 +207,21 @@ button.modal-close {
   background-image: url("https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg");
   background-repeat: no-repeat;
 }
+
+.editArt {
+  display: initial !important;
+  color: rgb(138, 222, 248);
+  font-size: 1em;
+  background-color: white;
+  border: none;
+  margin-left: 80%;
+}
+
+.editArt:hover {
+  display: initial !important;
+  color: white;
+  font-size: 1em;
+  background-color: rgb(138, 222, 248);
+  border: none;
+  margin-left: 80%;
+}

@@ -114,6 +114,7 @@ export default class Art extends React.Component {
             <Modal className="Modal editModal"
               header={`Edit: ${art.title}`}
               trigger={<span><Button className="editButton btn-flat waves-effect waves-light"><i className="large material-icons icon brushIcon">brush</i></Button></span>}>
+              <i className="fas fa-times modal-close createClose"></i>
               <form autoComplete="off" id={art.id} onSubmit={this.editSubmit}>
                 <label>Title</label>
                 <input type="text" placeholder={art.title} name="Title" />
@@ -123,7 +124,7 @@ export default class Art extends React.Component {
                 <input type="text" placeholder={art.medium} name="Medium" />
                 <label>Url</label>
                 <input type="text" placeholder={art.url} name="Url" />
-                <Button className="waves-effect waves-red btn modal-close" name="submit">Touch Up!</Button>
+                <Button className="editArt waves-effect waves-red btn modal-close" name="submit">Edit!</Button>
               </form>
             </Modal>
             {this.props.token ? <span><Button id={art.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={art.id} className="large material-icons icon deleteIcon">delete</i></Button></span> : null}
