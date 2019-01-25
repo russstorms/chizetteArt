@@ -22,10 +22,6 @@
   animation: fadeIn .7s linear;
 }
 
-.posterSingleView:active {
-  animation: fadeIn .7s linear;
-}
-
 .artInfoContainer {
   margin-left: 30%;
   margin-top: -2.5%;
@@ -162,7 +158,6 @@ button.modal-close {
 }
 
 .artPiece {
-  margin-bottom: 15%;
   text-align: center;
   color: rgb(99, 95, 84);
   letter-spacing: .1em;

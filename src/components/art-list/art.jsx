@@ -93,7 +93,7 @@ export default class Art extends React.Component {
 
     return (
       //// ART PIECE \\\\
-    <ScrollAnimation animateIn="fadeInUp" animateOut="fadeOut">
+    <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
       <div className="artPiece">
         <span>
           <Modal className="modalFullView"
