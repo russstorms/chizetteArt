@@ -1,7 +1,7 @@
 import React from 'react'
 import SideNav from 'react-materialize/lib/SideNav'
 import SideNavItem from 'react-materialize/lib/SideNavItem'
-import { Button } from 'react-materialize'
+import { Button, Badge } from 'react-materialize'
 import './sidebar.css'
 
 export default class Sidebar extends React.Component {
@@ -17,6 +17,7 @@ export default class Sidebar extends React.Component {
           <a href="/"><h4 className="sidebarchizetteArt"><b>chizette</b>Art</h4></a>
         </div>
         <br />
+          <Badge className="new badge" data-badge-caption="Prints Coming Soon!"></Badge>
           <SideNavItem onClick={this.props.filterArt}><span data-medium="Art" className="iconContainer"><i className="small material-icons icon sidebarIcon">palette</i></span><span className="sideNavTitle">Art</span></SideNavItem>
           <SideNavItem onClick={this.props.filterArt}><span data-medium="Jewelry" className="iconContainer"><span className="sidebarIconContainer"><i className="fas fa-ring"></i></span></span><span className="sideNavTitle">Jewelry</span></SideNavItem>
           <SideNavItem onClick={this.props.filterArt}><span data-medium="Photography" className="iconContainer"><span className="sidebarIconContainer"><i className="fas fa-camera-retro"></i></span></span><span className="sideNavTitle">Photography</span></SideNavItem>

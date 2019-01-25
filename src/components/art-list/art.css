@@ -162,6 +162,7 @@ button.modal-close {
   color: rgb(138, 222, 248);
   background-color: transparent;
   transform: scale(1.4);
+  transform: rotate(90deg);
   transition-duration: .5s;
 }
 

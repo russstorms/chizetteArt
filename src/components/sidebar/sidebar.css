@@ -16,6 +16,11 @@
   border-radius: 50%;
 }
 
+.badge {
+  background-color: yellow !important;
+  color: black !important;
+}
+
 .sidebarIconContainer {
   font-size: 2em;
 }
