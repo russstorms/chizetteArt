@@ -1,6 +1,8 @@
 import React from 'react'
 import './art.css'
 import { Button, Modal } from 'react-materialize'
+import ScrollAnimation from 'react-animate-on-scroll'
+import "animate.css/animate.min.css"
 
 export default class Art extends React.Component {
   constructor(props) {
@@ -89,6 +91,7 @@ export default class Art extends React.Component {
     
     return (
       //// ART PIECE \\\\
+    <ScrollAnimation animateIn="fadeIn">
       <div className="artPiece">
         <span>
           <Modal className="modalFullView"
@@ -130,6 +133,7 @@ export default class Art extends React.Component {
             {this.props.token ? <span><Button id={art.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={art.id} className="large material-icons icon deleteIcon">delete</i></Button></span> : null}
           </span> : null}
       </div>
+    </ScrollAnimation>
     )
   }
 }
