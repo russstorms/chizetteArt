@@ -93,17 +93,17 @@ export default class Art extends React.Component {
 
     return (
       //// ART PIECE \\\\
-    <ScrollAnimation animateIn="fadeInUp" animateOnce={true}>
+    <ScrollAnimation animateIn="zoomInDown" animateOut="fadeOut">
       <div className="artPiece">
         <span>
-          <Modal className="modalFullView"
+          <Modal className="modalFullView animated fadeIn"
             header=''
             trigger={<a href="/"><img className="poster" onClick={this.modalClick} src={art.poster} alt="https://placekitten.com/200/300"></img></a>}>
             <i className="fas fa-times modal-close close"></i>
             <img className="posterSingleView" src={artPosters[counter].poster} alt="https://placekitten.com/200/300"></img>
             <br />
-            <div onClick={this.prevClick} className="prevButton"><i className="large material-icons icon">chevron_left</i></div>
-            <div onClick={this.nextClick} className="nextButton"><i className="large material-icons icon">chevron_right</i></div>
+            <div onClick={this.prevClick} className="prevButton"><i className="large material-icons icon animated fadeInLeft delay-1s">chevron_left</i></div>
+            <div onClick={this.nextClick} className="nextButton"><i className="large material-icons icon animated fadeInRight delay-1s">chevron_right</i></div>
             {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photography') ? <a href="https://www.printful.com" target="blank" className="singleViewPriceButton">Purchase Print</a> : null}
             <div className="artInfoContainer">
               <div className="singleViewTitle"><i>{artPosters[counter].title}</i><span className="singleViewYear">{artPosters[counter].year}</span></div>
