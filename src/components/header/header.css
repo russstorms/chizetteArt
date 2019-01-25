@@ -1,37 +1,37 @@
 .nav {
-    text-align: left;
-    background-color: white;
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 1030;
+  text-align: left;
+  background-color: white;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1030;
 }
 
 .logoAndTitle {
-   margin-left: 4%;
-   margin-bottom: 2%;
+  margin-left: 4%;
+  margin-bottom: 2%;
 }
 
 .logo {
-    height: 10%;
-    width: 10%;
-    margin: 1%;
-    border-radius: 50%;
+  height: 10%;
+  width: 10%;
+  margin: 1%;
+  border-radius: 50%;
 }
 
 .chizetteArt {
-    font-size: 2.5em;
-    letter-spacing: .25em;
-    font-family: "Megrim";
-    margin-top: -6%;
-    margin-left: 9%;
-    color: rgb(99, 95, 84);
-    text-shadow: 2px 2px 1px rgb(255, 255, 255);
+  font-size: 2.5em;
+  letter-spacing: .25em;
+  font-family: "Megrim";
+  margin-top: -6%;
+  margin-left: 9%;
+  color: rgb(99, 95, 84);
+  text-shadow: 2px 2px 1px rgb(255, 255, 255);
 }
 
 .menuIcon {
-   font-size: 1.5em !important;
+  font-size: 1.5em !important;
 }
 
 .menuButton {
@@ -42,10 +42,91 @@
 }
 
 .menuButton:hover {
-   color: rgb(138, 222, 248);
-   background-color: transparent;
+  color: rgb(138, 222, 248);
+  background-color: transparent;
 }
 
 .menuButton:focus {
-    background-color: transparent;
+  background-color: transparent;
+}
+
+.c {
+  animation: shinyName .1s infinite;
+  animation-delay: 1s;
+  animation-duration: 6s;
+}
+
+.h {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.1s;
+  animation-duration: 6s;
+}
+
+.i {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.2s;
+  animation-duration: 6s;
+}
+
+.z {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.3s;
+  animation-duration: 6s;
+}
+
+.e {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.4s;
+  animation-duration: 6s;
+}
+
+.t {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.5s;
+  animation-duration: 6s;
+}
+
+.t2 {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.6s;
+  animation-duration: 6s;
+}
+
+.e2 {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.7s;
+  animation-duration: 6s;
+}
+
+.A {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.8s;
+  animation-duration: 6s;
+}
+
+.r {
+  animation: shinyName .1s infinite;
+  animation-delay: 1.9s;
+  animation-duration: 6s;
+}
+
+.t3 {
+  animation: shinyName .1s infinite;
+  animation-delay: 2s;
+  animation-duration: 6s;
+}
+
+
+@keyframes shinyName {
+  0% {
+    opacity: .2;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
