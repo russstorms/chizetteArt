@@ -47,19 +47,8 @@
 
 #toTop {
   transform: translateY(3%);
-  animation: bounce .7s infinite
-}
-
-@keyframes bounce {
-
-  0%,
-  100% {
-    margin-top: 0;
-  }
-
-  50% {
-    margin-top: -2%;
-  }
+  animation: bounce .7s infinite;
+  animation-duration: 2s;
 }
 
 .footerSidebar {

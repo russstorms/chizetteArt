@@ -106,7 +106,7 @@ export default class Art extends React.Component {
             {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photography') ? <a href="https://www.printful.com" target="blank" className="singleViewPriceButton">Purchase Print</a> : null}
             <div className="artInfoContainer">
               <div className="singleViewTitle"><i>{artPosters[counter].title}</i><span className="singleViewYear">{artPosters[counter].year}</span></div>
-              <div className="singleViewMedium">{artPosters[counter].medium}</div>
+              <div className="singleViewMedium animated fadeInRight delay-1s">{artPosters[counter].medium}</div>
               {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photography') ? <div className="singleViewPrice">${artPosters[counter].price} USD</div> : null}
             </div>
           </Modal>
