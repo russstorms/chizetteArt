@@ -92,6 +92,10 @@
   box-shadow: none !important;
 }
 
+.modal-close {
+  animation: zoomOut .2s linear;
+}
+
 .modal-overlay {
   z-index: 1030 !important;
   opacity: 0.4 !important;

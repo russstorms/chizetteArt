@@ -10,8 +10,7 @@ export default class Art extends React.Component {
     super(props)
     this.state = {
       ...this.state,
-      counter: 0,
-      columnCheck: 1
+      counter: 0
     }
   }
 
