@@ -21,10 +21,6 @@
   color: black !important;
 }
 
-.sidebarIconContainer {
-  font-size: 2em;
-}
-
 .sideNav {
   height: 55%;
   overflow: hidden;
@@ -39,6 +35,7 @@
 .side-nav li>a {
   color: rgb(99, 95, 84);
   letter-spacing: .25em;
+  font-size: 1.1em;
 }
 
 .side-nav li>a:hover {
