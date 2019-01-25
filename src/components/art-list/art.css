@@ -22,6 +22,10 @@
   animation: fadeIn .7s linear;
 }
 
+.posterSingleView:active {
+  animation: fadeIn .7s linear;
+}
+
 .artInfoContainer {
   margin-left: 30%;
   margin-top: -2.5%;

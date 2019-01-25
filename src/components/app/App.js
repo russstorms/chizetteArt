@@ -250,7 +250,6 @@ export default class App extends Component {
 
   render() {
     return (
-      
       <ParallaxProvider className="App container">
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} toggleContactMe={this.toggleContactMe} contactMe={this.state.contactMe} postArt={this.postArt} />
         {!this.state.filteredTerm ? <Parallax /> : <i><h4 className="filteredTitle">{this.state.filteredTerm}</h4></i>}
