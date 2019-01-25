@@ -2,7 +2,8 @@ import React from 'react'
 import './art.css'
 import { Button, Modal } from 'react-materialize'
 import ScrollAnimation from 'react-animate-on-scroll'
-import "animate.css/animate.min.css"
+import 'animate.css/animate.min.css'
+
 
 export default class Art extends React.Component {
   constructor(props) {
@@ -88,10 +89,10 @@ export default class Art extends React.Component {
     //// CHECK COUNTER TO MAKE SURE IT ISN'T LONGER THAN ARRAY \\\\
     let counter = this.state.counter >= artPosters.length ? 0 : this.state.counter
     // console.log(artPosters[counter].poster, this.state.counter)
-    
+
     return (
       //// ART PIECE \\\\
-    <ScrollAnimation animateIn="fadeIn" duration=".5s" animatePreScroll="false">
+    <ScrollAnimation animateIn="fadeIn">
       <div className="artPiece">
         <span>
           <Modal className="modalFullView"

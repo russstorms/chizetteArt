@@ -127,6 +127,7 @@
   color: rgb(138, 222, 248);
   transform: scale(1.4);
   transition-duration: .5s;
+  margin-right: -1%;
 }
 
 .prevButton {
@@ -143,6 +144,7 @@
   color: rgb(138, 222, 248);
   transform: scale(1.4);
   transition-duration: .5s;
+  margin-left: -1%;
 }
 
 button.modal-close {
