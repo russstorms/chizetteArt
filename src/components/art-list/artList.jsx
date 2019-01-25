@@ -5,7 +5,7 @@ import './artList.css'
 export default class ArtList extends React.Component {
 
   componentDidUpdate() {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 1)
   }
 
   render () {
