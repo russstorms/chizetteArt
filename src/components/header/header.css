@@ -7,7 +7,8 @@
   top: 0;
   z-index: 1030;
 }
-
+  /* background-image: url("https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg");
+  background-position: -6% 4%; */
 .logoAndTitle {
   margin-left: 4%;
   margin-bottom: 2%;
