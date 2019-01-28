@@ -212,7 +212,13 @@ export default class App extends Component {
     ev.preventDefault()
     let searchTerm = ev.currentTarget.children[0].children[0].dataset.medium
 
-    if (searchTerm === 'Photography') {
+    if (searchTerm === 'All') {
+      this.setState({
+        ...this.state,
+        filteredTerm: 'All',
+        counter: 0
+      })
+    } else if (searchTerm === 'Photography') {
       this.setState({
         ...this.state,
         filteredTerm: 'Photography',
@@ -258,6 +264,9 @@ export default class App extends Component {
         <br />
         <ArtList artList={this.state.artList.filter((art) => {
           //// FILTER BY MEDIUM \\\\
+          if (this.state.filteredTerm === 'All') {
+            return art.medium
+          }
           if (this.state.filteredTerm === 'Art') {
             return !art.medium.includes('Photography') && !art.medium.includes('Jewelry')
           } else {
@@ -266,6 +275,9 @@ export default class App extends Component {
         })
         } 
         artPosters={this.state.artList.filter((art) => {
+          if (this.state.filteredTerm === 'All') {
+            return art.medium
+          }
           if (this.state.filteredTerm === 'Art') {
             return !art.medium.includes('Photography') && !art.medium.includes('Jewelry')
           } else {
@@ -280,3 +292,33 @@ export default class App extends Component {
     )
   }
 }
+
+
+{/* <ArtList artList={this.state.artList.filter((art) => {
+  if (!this.state.filteredTerm) {
+    if (!art.medium.includes('Jewelry') && !art.medium.includes('Photography') && artCounter < 3){
+      artArr.push(art)
+      artCounter++
+      return artArr
+    }
+    if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
+      jewelryArr.push(art)
+      jewelryCounter++
+      combinedList = artArr.concat(jewelryArr)
+      return combinedList
+    }
+    if (art.medium.includes('Photography') && photographyCounter < 3) {
+      photoArr.push(art)
+      photographyCounter++
+      splashList = combinedList.concat(photoArr)
+      console.log(splashList)
+      return splashList
+    }
+    
+  } else if (this.state.filteredTerm === 'Art') {
+    return !art.medium.includes('Photography') && !art.medium.includes('Jewelry')
+  } else {
+    return art.medium.includes(this.state.filteredTerm)
+  }
+  })
+}  */}
