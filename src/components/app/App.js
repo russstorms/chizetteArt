@@ -257,6 +257,7 @@ export default class App extends Component {
         <br />
         <br />
         <ArtList artList={this.state.artList.filter((art) => {
+          //// FILTER BY MEDIUM \\\\
           if (this.state.filteredTerm === 'Art') {
             return !art.medium.includes('Photography') && !art.medium.includes('Jewelry')
           } else {
