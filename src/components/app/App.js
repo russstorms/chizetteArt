@@ -262,28 +262,29 @@ export default class App extends Component {
     let jewelryArr = []
     let photoArr = []
     let splashList = []
-    for (let art of this.state.artList) {
+    if (!this.state.filteredTerm) {
+      // return splashList
+      for (let art of this.state.artList) {
+        //// ART \\\\
+        if (!art.medium.includes('Jewelry') && !art.medium.includes('Photography') && artCounter < 3) {
+          artCounter++
+          artArr.push(art)
+        }
 
-      //// ART \\\\
-      if (!art.medium.includes('Jewelry') && !art.medium.includes('Photography') && artCounter < 3) {
-        artCounter++
-        artArr.push(art.medium)
-      }
+        //// JEWELRY \\\\
+        if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
+          jewelryCounter++
+          jewelryArr.push(art)
+        }
 
-      //// JEWELRY \\\\
-      if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
-        jewelryCounter++
-        jewelryArr.push(art.medium)
+        //// PHOTOGRAPHY \\\\
+        if (art.medium.includes('Photography') && photoCounter < 3) {
+          photoCounter++
+          photoArr.push(art)
+        }
+        splashList = artArr.concat(jewelryArr, photoArr)
       }
-
-      //// PHOTOGRAPHY \\\\
-      if (art.medium.includes('Photography') && photoCounter < 3) {
-        photoCounter++
-        photoArr.push(art.medium)
-      }
-      splashList = artArr.concat(jewelryArr, photoArr)
     }
-
 
     return (
       <ParallaxProvider className="App container">
@@ -292,12 +293,11 @@ export default class App extends Component {
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <br />
         <br />
-        <ArtList artList={this.state.artList.filter((art) => {
-          //// FILTER BY MEDIUM \\\\
-          
+        <ArtList filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {
           if (!this.state.filteredTerm) {
-            console.log(splashList)
+
           }
+
           if (this.state.filteredTerm === 'All') {
             return art.medium
           }
