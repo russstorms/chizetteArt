@@ -255,6 +255,13 @@ export default class App extends Component {
   }
 
   render() {
+    let artCounter = 0
+    let jewelryCounter = 0
+    let photoCounter = 0
+    let artArr = []
+    let jewelryArr = []
+    let photoArr = []
+    let splashList = []
     return (
       <ParallaxProvider className="App container">
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} toggleContactMe={this.toggleContactMe} contactMe={this.state.contactMe} postArt={this.postArt} />
@@ -264,6 +271,29 @@ export default class App extends Component {
         <br />
         <ArtList artList={this.state.artList.filter((art) => {
           //// FILTER BY MEDIUM \\\\
+          if (!this.state.filteredTerm) {
+
+            if (!art.medium.includes('Jewelry') && !art.medium.includes('Photography') && artCounter < 3){
+              artArr.push(art)
+              artCounter++
+              return artArr
+            }
+
+            if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
+              jewelryArr.push(art)
+              jewelryCounter++
+              return jewelryArr
+            }
+
+            if (art.medium.includes('Photography') && photoCounter < 3) {
+              photoArr.push(art)
+              photoCounter++
+              return photoArr
+            }
+            splashList = artArr.concat(jewelryArr, photoArr)
+            return splashList[art.medium]
+          }
+
           if (this.state.filteredTerm === 'All') {
             return art.medium
           }
@@ -292,33 +322,3 @@ export default class App extends Component {
     )
   }
 }
-
-
-{/* <ArtList artList={this.state.artList.filter((art) => {
-  if (!this.state.filteredTerm) {
-    if (!art.medium.includes('Jewelry') && !art.medium.includes('Photography') && artCounter < 3){
-      artArr.push(art)
-      artCounter++
-      return artArr
-    }
-    if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
-      jewelryArr.push(art)
-      jewelryCounter++
-      combinedList = artArr.concat(jewelryArr)
-      return combinedList
-    }
-    if (art.medium.includes('Photography') && photographyCounter < 3) {
-      photoArr.push(art)
-      photographyCounter++
-      splashList = combinedList.concat(photoArr)
-      console.log(splashList)
-      return splashList
-    }
-    
-  } else if (this.state.filteredTerm === 'Art') {
-    return !art.medium.includes('Photography') && !art.medium.includes('Jewelry')
-  } else {
-    return art.medium.includes(this.state.filteredTerm)
-  }
-  })
-}  */}
