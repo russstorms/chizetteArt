@@ -254,37 +254,37 @@ export default class App extends Component {
     }
   }
 
-  splashList = () => {
-    console.log(this.state.ArtList)
-    // let artCounter = 0
-    // let jewelryCounter = 0
-    // let photoCounter = 0
-    // let artArr = []
-    // let jewelryArr = []
-    // let photoArr = []
-    // let splashList = []
-    // if (!art.medium.includes('Jewelry') && !art.medium.includes('Photography') && artCounter < 3){
-    //   artArr.push(art)
-    //   artCounter++
-    //   return artArr
-    // }
-
-    // if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
-    //   jewelryArr.push(art)
-    //   jewelryCounter++
-    //   return jewelryArr
-    // }
-
-    // if (art.medium.includes('Photography') && photoCounter < 3) {
-    //   photoArr.push(art)
-    //   photoCounter++
-    //   return photoArr
-    // }
-    // splashList = artArr.concat(jewelryArr, photoArr)
-    // console.log(splashList)
-  }
-
   render() {
+    let artCounter = 0
+    let jewelryCounter = 0
+    let photoCounter = 0
+    let artArr = []
+    let jewelryArr = []
+    let photoArr = []
+    let splashList = []
+    for (let art of this.state.artList) {
+
+      //// ART \\\\
+      if (!art.medium.includes('Jewelry') && !art.medium.includes('Photography') && artCounter < 3) {
+        artCounter++
+        artArr.push(art.medium)
+      }
+
+      //// JEWELRY \\\\
+      if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
+        jewelryCounter++
+        jewelryArr.push(art.medium)
+      }
+
+      //// PHOTOGRAPHY \\\\
+      if (art.medium.includes('Photography') && photoCounter < 3) {
+        photoCounter++
+        photoArr.push(art.medium)
+      }
+      splashList = artArr.concat(jewelryArr, photoArr)
+    }
+
+
     return (
       <ParallaxProvider className="App container">
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} toggleContactMe={this.toggleContactMe} contactMe={this.state.contactMe} postArt={this.postArt} />
@@ -294,8 +294,9 @@ export default class App extends Component {
         <br />
         <ArtList artList={this.state.artList.filter((art) => {
           //// FILTER BY MEDIUM \\\\
+          
           if (!this.state.filteredTerm) {
-            this.splashList()
+            console.log(splashList)
           }
           if (this.state.filteredTerm === 'All') {
             return art.medium
