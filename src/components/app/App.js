@@ -294,7 +294,6 @@ export default class App extends Component {
         <br />
         <br />
         <ArtList filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {
-
           if (this.state.filteredTerm === 'All') {
             return art.medium
           }
@@ -304,8 +303,9 @@ export default class App extends Component {
             return art.medium.includes(this.state.filteredTerm)
           }
         })
-        } 
+        }
         artPosters={this.state.artList.filter((art) => {
+
           if (this.state.filteredTerm === 'All') {
             return art.medium
           }

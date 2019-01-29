@@ -58,7 +58,7 @@ export default class Art extends React.Component {
   //// SINGLE VIEW PREV BUTTON \\\\
   prevClick = (ev) => {
     const artPosters = this.props.artPosters
-
+    
     this.setState({
       ...this.state,
       counter: this.state.counter === 0 ? artPosters.length - 1 : this.state.counter - 1
