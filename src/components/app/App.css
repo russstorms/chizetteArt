@@ -16,3 +16,38 @@
   font-family: "Megrim";
   font-weight: bolder;
 }
+
+.mediumTitles {
+ height: 100vh;
+ margin-left: 10%;
+ margin-bottom: -60%;
+}
+
+.art {
+  text-align: left;
+  color: rgb(99, 95, 84);
+  font-size: 1.4em;
+  letter-spacing: .4em;
+  font-family: "Megrim";
+  font-weight: bolder;
+  margin-bottom: 35%;
+}
+
+.jewelry {
+  text-align: left;
+  color: rgb(99, 95, 84);
+  font-size: 1.4em;
+  letter-spacing: .4em;
+  font-family: "Megrim";
+  font-weight: bolder;
+  margin-bottom: 35%;
+}
+
+.photography {
+  text-align: left;
+  color: rgb(99, 95, 84);
+  font-size: 1.4em;
+  letter-spacing: .4em;
+  font-family: "Megrim";
+  font-weight: bolder;
+}

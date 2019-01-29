@@ -7,6 +7,8 @@ import Login from '../login/loginForm'
 import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
+import ScrollAnimation from 'react-animate-on-scroll'
+import 'animate.css/animate.min.css'
 
 // process.env.REACT_APP_API ||
 const API = "http://localhost:3000"
@@ -292,6 +294,14 @@ export default class App extends Component {
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <br />
         <br />
+        
+        {!this.state.filteredTerm ?
+          <div className="mediumTitles">
+          <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut"><div className="art">Art</div></ScrollAnimation>
+          <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut"><div className="jewelry">Jewelry</div></ScrollAnimation>
+          <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut"><div className="photography">Photography</div></ScrollAnimation>
+          </div>
+        : null}
         <ArtList filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {
           if (this.state.filteredTerm === 'All') {
             return art.medium
