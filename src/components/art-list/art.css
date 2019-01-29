@@ -1,3 +1,7 @@
+.anchor {
+  cursor: default;
+}
+
 .poster {
   border: 2px solid rgb(99, 95, 84);
   max-width: 300px;
@@ -7,6 +11,7 @@
 }
 
 .poster:hover {
+  cursor: pointer;
   transform: scale(1.3);
   transition: .3s ease;
   box-shadow: 10px 7px 15px rgba(0, 0, 0, 0.6);

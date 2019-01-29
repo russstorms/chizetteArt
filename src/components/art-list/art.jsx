@@ -96,7 +96,7 @@ export default class Art extends React.Component {
         <span>
           <Modal className="modalFullView animated fadeIn"
             header=''
-            trigger={<a href="/"><img className="poster" onClick={this.modalClick} src={art.poster} alt="https://placekitten.com/200/300"></img></a>}>
+            trigger={<a className="anchor" href="/"><img className="poster" onClick={this.modalClick} src={art.poster} alt="https://placekitten.com/200/300"></img></a>}>
             <i className="fas fa-times modal-close close"></i>
             <img className="posterSingleView" src={artPosters[counter].poster} alt="https://placekitten.com/200/300"></img>
             <br />
