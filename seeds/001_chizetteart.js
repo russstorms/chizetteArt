@@ -21,12 +21,13 @@ exports.seed = function(knex, Promise) {
       },
       {
         id: 3,
-        title: 'Aquarelle Lady',
-        year: 2021,
-        medium: 'Aquarelle Pencil',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aquarelle_lady.jpeg',
-        price: 26
+        title: 'Aragonite Necklace',
+        year: 2018,
+        medium: 'Jewelry',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_necklace.JPG',
+        price: 50
       },
+
       {
         id: 4,
         title: 'Aragonite Lady',
@@ -37,11 +38,11 @@ exports.seed = function(knex, Promise) {
       },
       {
         id: 5,
-        title: 'Aragonite Necklace',
-        year: 2018,
-        medium: 'Jewelry',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_necklace.JPG',
-        price: 50
+        title: 'Aquarelle Lady',
+        year: 2021,
+        medium: 'Aquarelle Pencil',
+        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aquarelle_lady.jpeg',
+        price: 26
       },
       {
         id: 6,

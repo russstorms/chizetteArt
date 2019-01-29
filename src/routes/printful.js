@@ -46,15 +46,15 @@ pf.get('store/products')
   .success(ok_callback)
   .error(error_callback)
 
-pf.post('orders', {
-  recipient: {
-    name: 'Russ',
-    address1: 'my address',
-    city: 'Boulder',
-    state_code: 'CO',
-    country_code: 'US',
-    zip: '80301'
-  },
+// pf.post('orders', {
+//   recipient: {
+//     name: 'Russ',
+//     address1: 'my address',
+//     city: 'Boulder',
+//     state_code: 'CO',
+//     country_code: 'US',
+//     zip: '80301'
+//   },
   // "items": [{
   //   "variant_id": 1,
   //   "quantity": 1,
@@ -62,9 +62,9 @@ pf.post('orders', {
   //     "url": "http://example.com/files/posters/poster_1.jpg"
   //   }]
   // }]
-})
-  .success(ok_callback)
-  .error(error_callback)
+// })
+  // .success(ok_callback)
+  // .error(error_callback)
 
 // pf.post('orders', {
 //   recipient: {
