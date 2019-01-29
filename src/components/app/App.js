@@ -294,9 +294,6 @@ export default class App extends Component {
         <br />
         <br />
         <ArtList filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {
-          if (!this.state.filteredTerm) {
-
-          }
 
           if (this.state.filteredTerm === 'All') {
             return art.medium
