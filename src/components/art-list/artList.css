@@ -17,3 +17,34 @@
 .third {
   margin-top: 25%;
 }
+
+.mediumTitles {
+  margin-left: 10%;
+}
+
+.art {
+  text-align: left;
+  color: rgb(99, 95, 84);
+  font-size: 1.4em;
+  letter-spacing: .4em;
+  font-family: "Megrim";
+  font-weight: bolder;
+}
+
+.jewelry {
+  text-align: left;
+  color: rgb(99, 95, 84);
+  font-size: 1.4em;
+  letter-spacing: .4em;
+  font-family: "Megrim";
+  font-weight: bolder;
+}
+
+.photography {
+  text-align: left;
+  color: rgb(99, 95, 84);
+  font-size: 1.4em;
+  letter-spacing: .4em;
+  font-family: "Megrim";
+  font-weight: bolder;
+}

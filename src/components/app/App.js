@@ -285,7 +285,6 @@ export default class App extends Component {
         splashList = artArr.concat(jewelryArr, photoArr)
       }
     }
-
     return (
       <ParallaxProvider className="App container">
         <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} toggleContactMe={this.toggleContactMe} contactMe={this.state.contactMe} postArt={this.postArt} />
