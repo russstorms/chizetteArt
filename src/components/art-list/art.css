@@ -2,6 +2,11 @@
   cursor: default;
 }
 
+.artTitle {
+  font-family: 'Montserrat';
+  letter-spacing: .3em;
+}
+
 .poster {
   border: 2px solid rgb(99, 95, 84);
   max-width: 300px;

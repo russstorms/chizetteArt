@@ -15,7 +15,7 @@ export default class Contact extends React.Component {
     return (
       <div className="contactContainer">
         <img ref={this.myRef} className="contactPic" src="https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/13118936_10153529995520205_5034489750183110230_n.jpg?_nc_cat=106&_nc_ht=scontent.fapa1-1.fna&oh=8ed13a459ab6ae86f3f78dc6fffb5672&oe=5CC35C40" alt="#"></img>
-        <i><h5 className="contact"><span className="bigLetter">C</span>hizette grew up in a pink house on a little island with two artist parents who taught her to draw and paint. She works primarily with gouache and crayon, and with gemstones, natural fibers, seashells, glass, clay, & photography. Currently, she lives in the mountains.</h5></i>
+        <h5 className="contact"><span className="bigLetter">C</span>hizette grew up in a pink house on a little island with two artist parents who taught her to draw and paint. She works primarily with gouache and crayon, and with gemstones, natural fibers, seashells, glass, clay, & photography. Currently, she lives in the mountains.</h5>
         <br />
         <br />
         <i><h5 className="contact">Please email for commissions, collaboration, or questions.</h5></i>

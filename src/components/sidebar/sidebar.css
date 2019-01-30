@@ -34,6 +34,7 @@
 
 .side-nav li>a {
   color: rgb(99, 95, 84);
+  font-family: 'Montserrat';
   letter-spacing: .25em;
   font-size: 1.1em;
 }

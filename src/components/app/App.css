@@ -45,7 +45,8 @@
   margin-top: -4%;
   margin-right: 3%;
   font-size: 1em;
-  font-family: "Megrim";
+  font-family: "Montserrat";
+  font-weight: bolder;
   animation: pulse 5s infinite;
   cursor: pointer;
 }
@@ -56,7 +57,8 @@
   margin-top: -8%;
   margin-right: 3%;
   font-size: 1em;
-  font-family: "Megrim";
+  font-family: "Montserrat";
+  font-weight: bolder;
   animation: pulse 5s infinite;
   cursor: pointer;
 }
@@ -67,7 +69,8 @@
   margin-top: 28%;
   margin-right: 3%;
   font-size: 1em;
-  font-family: "Megrim";
+  font-family: "Montserrat";
+  font-weight: bolder;
   animation: pulse 5s infinite;
   cursor: pointer;
 }
@@ -81,7 +84,7 @@
   color: rgb(99, 95, 84);
   font-size: 1.4em;
   letter-spacing: .4em;
-  font-family: "Megrim";
+  font-family: "Montserrat";
   font-weight: bolder;
   margin-bottom: 35%;
 }
