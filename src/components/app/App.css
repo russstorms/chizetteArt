@@ -44,9 +44,10 @@
   color: rgb(138, 222, 248);
   margin-top: -4%;
   margin-right: 3%;
-  font-size: 1.3em;
+  font-size: 1em;
   font-family: "Megrim";
   animation: pulse 5s infinite;
+  cursor: pointer;
 }
 
 .viewAll2 {
@@ -54,9 +55,10 @@
   color: rgb(138, 222, 248);
   margin-top: -8%;
   margin-right: 3%;
-  font-size: 1.3em;
+  font-size: 1em;
   font-family: "Megrim";
   animation: pulse 5s infinite;
+  cursor: pointer;
 }
 
 .viewAll3 {
@@ -64,9 +66,10 @@
   color: rgb(138, 222, 248);
   margin-top: 28%;
   margin-right: 3%;
-  font-size: 1.3em;
+  font-size: 1em;
   font-family: "Megrim";
   animation: pulse 5s infinite;
+  cursor: pointer;
 }
 
 .viewAllIcons {
