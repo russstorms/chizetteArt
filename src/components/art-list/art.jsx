@@ -111,7 +111,7 @@ export default class Art extends React.Component {
           </Modal>
         </span>
 
-        <div className="artTitle"><b><i>{art.title}</i></b></div>
+        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut"><div className="artTitle"><b><i>{art.title}</i></b></div></ScrollAnimation>
         {this.props.token ?
           <span>
             <Modal className="Modal editModal"
