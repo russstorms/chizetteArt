@@ -23,8 +23,9 @@ export default class Sidebar extends React.Component {
           <SideNavItem onClick={this.props.filterArt}><span data-medium="Photography" className="iconContainer"><span className="sidebarIconContainer"></span></span><span className="sideNavTitle">Photography</span></SideNavItem>
           <SideNavItem onClick={this.props.filterArt}><span data-medium="All" className="iconContainer"><span className="sidebarIconContainer"></span></span><span className="sideNavTitle">View All</span></SideNavItem>
         <SideNavItem divider />
+          <SideNavItem href="/"><span className="sideNavTitle">Home</span></SideNavItem>
         <br />
-        {!this.props.contactMe ? <SideNavItem onClick={this.props.toggleContactMe} ><span className="iconContainer"><span className="sidebarIconContainer"></span></span><span className="sideNavTitle">Contact Me</span></SideNavItem> : <SideNavItem onClick={this.props.toggleContactMe}><div id="toTop"><span className="iconContainer"><span className="sidebarIconContainer"><i className="fas fa-angle-up"></i></span></span>To Top</div></SideNavItem>}
+        {!this.props.contactMe ? <SideNavItem onClick={this.props.toggleContactMe} ><span className="iconContainer"><span className="sidebarIconContainer"></span></span><span>Contact Me</span></SideNavItem> : <SideNavItem onClick={this.props.toggleContactMe}><div id="toTop"><span className="iconContainer"><span className="sidebarIconContainer"><i className="fas fa-angle-up"></i></span></span>To Top</div></SideNavItem>}
         {this.props.token ? <SideNavItem href='/' onClick={logoutClick} >Logout</SideNavItem>: <h1 className="footerSidebar">chizetteArt</h1>}
       </SideNav>
     )
