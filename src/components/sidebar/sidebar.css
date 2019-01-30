@@ -50,10 +50,13 @@
 @keyframes sideNavColors {
   0% {
   }
-  50% {
+  20% {
+    color: rgb(138, 222, 248);
+  }
+  30% {
     color: rgb(196, 107, 193);
   }
-  70% {
+  50% {
     color: rgb(138, 222, 248);
   }
   100% {

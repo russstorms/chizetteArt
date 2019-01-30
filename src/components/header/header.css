@@ -45,6 +45,7 @@
 .menuButton:hover {
   color: rgb(138, 222, 248);
   background-color: transparent;
+  animation: sideNavColors 5s infinite;
 }
 
 .menuButton:focus {
