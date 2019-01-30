@@ -296,10 +296,12 @@ export default class App extends Component {
         <br />
         
         {!this.state.filteredTerm ?
-          <div className="mediumTitles">
-          <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut"><div className="art"><span className="artA">A</span><span className="artR">r</span><span className="artT">t</span></div></ScrollAnimation>
-          <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut"><div className="jewelry"><span className="jewelryJ">J</span><span className="jewelryE">e</span><span className="jewelryW">w</span><span className="jewelryE2">e</span><span className="jewelryL">l</span><span className="jewelryR">r</span><span className="jewelryY">y</span></div></ScrollAnimation>
-          <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut"><div className="photography"><span className="photographyP">P</span><span className="photographyH">h</span><span className="photographyO">o</span><span className="photographyT">t</span><span className="photographyO2">o</span><span className="photographyG">g</span><span className="photographyR">r</span><span className="photographyA">a</span><span className="photographyP2">p</span><span className="photographyH2">h</span><span className="photographyY">y</span></div></ScrollAnimation>
+          <div className="splashDirections">
+            <div className="mediumTitles">
+            <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut"><div className="art"><span className="artA">A</span><span className="artR">r</span><span className="artT">t</span></div></ScrollAnimation>
+            <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut"><div className="jewelry"><span className="jewelryJ">J</span><span className="jewelryE">e</span><span className="jewelryW">w</span><span className="jewelryE2">e</span><span className="jewelryL">l</span><span className="jewelryR">r</span><span className="jewelryY">y</span></div></ScrollAnimation>
+            <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut"><div className="photography"><span className="photographyP">P</span><span className="photographyH">h</span><span className="photographyO">o</span><span className="photographyT">t</span><span className="photographyO2">o</span><span className="photographyG">g</span><span className="photographyR">r</span><span className="photographyA">a</span><span className="photographyP2">p</span><span className="photographyH2">h</span><span className="photographyY">y</span></div></ScrollAnimation>
+            </div>
           </div>
         : null}
         <ArtList filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {

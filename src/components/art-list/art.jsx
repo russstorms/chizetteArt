@@ -111,7 +111,7 @@ export default class Art extends React.Component {
           </Modal>
         </span>
 
-        <div><b><i>{art.title}</i></b></div>
+        <div className="artTitle"><b><i>{art.title}</i></b></div>
         {this.props.token ?
           <span>
             <Modal className="Modal editModal"
