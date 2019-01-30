@@ -54,7 +54,7 @@
   font-size: 1em;
   font-family: "Montserrat";
   font-weight: bolder;
-  animation: pulse 5s infinite;
+  animation: viewAll 5s infinite;
   cursor: pointer;
   width: 20%;
 }
@@ -68,7 +68,7 @@
   font-size: 1em;
   font-family: "Montserrat";
   font-weight: bolder;
-  animation: pulse 5s infinite;
+  animation: viewAll 5s infinite;
   cursor: pointer;
   width: 20%;
 }
@@ -82,9 +82,22 @@
   font-size: 1em;
   font-family: "Montserrat";
   font-weight: bolder;
-  animation: pulse 5s infinite;
+  animation: viewAll 5s infinite;
   cursor: pointer;
   width: 20%;
+}
+
+@keyframes viewAll {
+  0% {
+    margin-right: 2%;
+  }
+  50% {
+    margin-right: 5%;
+    color: rgb(196, 107, 193);
+  }
+  100% {
+    margin-right: 2%;
+  }
 }
 
 .viewAllIcons {
