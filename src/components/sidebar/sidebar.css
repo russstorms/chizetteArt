@@ -44,12 +44,10 @@
   background-color: transparent;
   letter-spacing: .30em;
   transition-duration: .5s;
-  animation: sideNavColors 5s infinite;
+  animation: sideNavColors 4s infinite;
 }
 
 @keyframes sideNavColors {
-  0% {
-  }
   20% {
     color: rgb(138, 222, 248);
   }
@@ -58,8 +56,6 @@
   }
   50% {
     color: rgb(138, 222, 248);
-  }
-  100% {
   }
 }
 
