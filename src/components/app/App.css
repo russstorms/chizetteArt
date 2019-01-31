@@ -273,10 +273,39 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -60%;
-  }
+.mediumTitles {
+  margin-left: 10%;
+  margin-bottom: -67%;
+}
+
+.jewelry {
+  margin-bottom: 33.5%;
+}
+
+.photography {
+  margin-top: 6%;
+}
+
+.viewAll1 {
+  margin-top: -.5%;
+  margin-right: 4%;
+}
+
+.viewAll2 {
+  margin-top: -5%;
+  margin-right: 4%;
+}
+
+.viewAll3 {
+  margin-top: 30%;
+  margin-right: 4%;
+}
+
+.arrowIcons {
+  margin-right: -9%;
+  margin-top: -12%;
+}
+
 }
 
 /* Medium Devices, Desktops */

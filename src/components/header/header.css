@@ -138,8 +138,22 @@
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
 
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .logo {
+    height: 10%;
+    width: 10%;
+    margin: 1%;
+  }
+  .chizetteArt {
+    font-size: 2.5em;
+    margin-top: -6%;
+    margin-left: 9%;
+  }
+}
 
-@media only screen and (max-width: 1320px) {
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
   .logo {
     height: 9%;
     width: 9%;
@@ -150,4 +164,19 @@
     margin-top: -6%;
     margin-left: 8%;
   }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }
