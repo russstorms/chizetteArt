@@ -145,6 +145,7 @@
     width: 10%;
     margin: 1%;
   }
+
   .chizetteArt {
     font-size: 2.5em;
     margin-top: -6%;
@@ -155,14 +156,28 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   .logo {
-    height: 9%;
-    width: 9%;
+    height: 13%;
+    width: 13%;
     margin: 1%;
   }
+
   .chizetteArt {
-    font-size: 2em;
-    margin-top: -6%;
-    margin-left: 8%;
+    font-size: 2.4em;
+    margin-top: -8%;
+    margin-left: 11%;
+  }
+
+  .menuButton {
+    margin-top: -10%;
+    margin-left: -6%;
+  }
+
+  .nav {
+    height: 20%;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
   }
 }
 

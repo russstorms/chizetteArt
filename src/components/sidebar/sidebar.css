@@ -73,3 +73,35 @@
   position: fixed;
   top: 85%;
 }
+
+/* *****************************************************************
+***************************  MEDIA QUERIES  ***********************
+******************************************************************/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .parallaxContainer {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
