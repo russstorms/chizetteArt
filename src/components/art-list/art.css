@@ -25,7 +25,7 @@
 .posterSingleView {
   max-width: 860px;
   max-height: 640px;
-  margin: -2% auto auto auto;
+  margin: -1.25% auto auto auto;
   display: flex;
   justify-content: center;
   box-shadow: 5px 5px 10px rgba(99, 95, 84, .8);
@@ -33,7 +33,7 @@
 
 .artInfoContainer {
   margin-left: 30%;
-  margin-top: -2.5%;
+  margin-top: -2%;
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: 0px 20px 25px 25px rgba(0, 0, 0, .3);
   width: 40%;
@@ -44,6 +44,7 @@
   font-size: 2.5em;
   text-shadow: 1px 3px 3px rgba(99, 95, 84, .8);
   letter-spacing: .1em;
+  margin-top: -.5%;
   animation: fadeInLeft 1.2s linear;
 }
 
@@ -52,7 +53,7 @@
   font-family: "Megrim";
   font-weight: bold;
   font-size: 1.1em;
-  margin-top: -2%;
+  margin-top: -2.5%;
   margin-left: 5%;
 }
 
@@ -66,7 +67,7 @@
   color: white;
   font-size: .9em;
   text-shadow: 1px 3px 3px rgba(99, 95, 84, .8);
-  margin-top: -11%;
+  margin-top: -10%;
   margin-left: 85%;
 }
 
@@ -225,3 +226,39 @@ button.modal-close {
   border: none;
   margin-left: 80%;
 }
+
+
+/* *****************************************************************
+***************************  MEDIA QUERIES  ***********************
+******************************************************************/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .posterSingleView {
+    max-width: 860px;
+    max-height: 640px;
+    margin: -1.25% auto auto auto;
+    display: flex;
+    justify-content: center;
+  }
+  }
+  
+  /* Medium Devices, Desktops */
+  @media only screen and (max-width : 992px) {
+
+  }
+  
+  /* Small Devices, Tablets */
+  @media only screen and (max-width : 768px) {
+  
+  }
+  
+  /* Extra Small Devices, Phones */
+  @media only screen and (max-width : 480px) {
+  
+  }
+  
+  /* Custom, iPhone Retina */
+  @media only screen and (max-width : 320px) {
+  
+  }
