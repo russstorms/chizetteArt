@@ -252,7 +252,7 @@ button.modal-close {
     right: 90px;
     top: 345px;
   }
-  
+
   .prevButton {
     position: fixed;
     left: 90px;
@@ -270,24 +270,59 @@ button.modal-close {
     right: 10px;
     bottom: 50px;
   }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .poster {
+    max-width: 280px;
+    max-height: 240px;
+  }
+
+  .poster:hover {
+    transform: scale(1.2);
+  }
+
+  .posterSingleView {
+    max-width: 840px;
+    max-height: 620px;
+    margin: -4% auto auto auto;
+  }
+
+  .nextButton {
+    position: fixed;
+    right: 10px;
+    top: 350px;
   }
   
-  /* Medium Devices, Desktops */
-  @media only screen and (max-width : 992px) {
-    
+  .prevButton {
+    position: fixed;
+    left: 10px;
+    top: 350px;
+  }
+
+  .artInfoContainer {
+    margin-left: 30%;
+    margin-top: -2%;
+    width: 50%;
   }
   
-  /* Small Devices, Tablets */
-  @media only screen and (max-width : 768px) {
-  
+  .singleViewPrice {
+    margin-top: -11%;
+    margin-left: 85%;
   }
-  
-  /* Extra Small Devices, Phones */
-  @media only screen and (max-width : 480px) {
-  
+
+  .close {
+    right: 30px;
+    top: 25px;
   }
-  
-  /* Custom, iPhone Retina */
-  @media only screen and (max-width : 320px) {
-  
-  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {}
