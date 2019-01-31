@@ -22,21 +22,24 @@
   0% {
     color: rgb(99, 95, 84);
   }
+
   25% {
     color: rgb(138, 222, 248);
   }
+
   75% {
     color: rgb(196, 107, 193);
   }
+
   100% {
     color: rgb(99, 95, 84);
   }
 }
 
 .mediumTitles {
- height: 100vh;
- margin-left: 10%;
- margin-bottom: -60%;
+  height: 100vh;
+  margin-left: 10%;
+  margin-bottom: -57.5%;
 }
 
 .arrowIcons {
@@ -49,7 +52,7 @@
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
-  margin-top: -3%;
+  margin-top: -4%;
   margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
@@ -91,10 +94,12 @@
   0% {
     margin-right: 2%;
   }
+
   50% {
     margin-right: 5%;
     color: rgb(196, 107, 193);
   }
+
   100% {
     margin-right: 2%;
   }
@@ -133,7 +138,7 @@
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
-  margin-top: 4.5%;
+  margin-top: 3.5%;
 }
 
 .artA {
@@ -260,4 +265,36 @@
   animation: shinyName .1s infinite;
   animation-delay: 2s;
   animation-duration: 7s;
+}
+
+/* *****************************************************************
+***************************  MEDIA QUERIES  ***********************
+******************************************************************/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -60%;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }
