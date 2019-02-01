@@ -330,13 +330,13 @@ button.modal-close {
   }
 
   .artTitle {
-    font-size: .8em;
+    font-size: 1em;
   }
 
   .posterSingleView {
     max-width: 840px;
     max-height: 620px;
-    margin: -4% auto auto auto;
+    margin: -6% auto auto auto;
   }
 
   .nextButton {
