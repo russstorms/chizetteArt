@@ -351,6 +351,10 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+  .container {
+    width: 80%;
+  }
+
   .mediumTitles {
     margin-left: 10%;
     margin-top: 14%;
