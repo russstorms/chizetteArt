@@ -464,7 +464,7 @@
 @media only screen and (max-width: 1150px) {
   .mediumTitles {
     margin-left: 10%;
-    margin-bottom: -69.5%;
+    margin-bottom: -70%;
     margin-top: 4%;
   }
 
@@ -489,6 +489,83 @@
 
   .viewAll3 {
     margin-top: 31%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -12%;
+  }
+
+}
+
+@media only screen and (max-width: 1130px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -70.5%;
+    margin-top: 6%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+  }
+
+  .photography {
+    margin-top: 5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 36%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -3%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 32%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -12%;
+  }
+
+}
+
+@media only screen and (max-width: 1120px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -71%;
+    margin-top: 5%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: -1%;
+  }
+
+  .photography {
+    margin-top: 5.5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 37%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -3%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 32%;
     margin-right: 4%;
   }
 
