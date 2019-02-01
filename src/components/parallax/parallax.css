@@ -48,7 +48,7 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  
+
 }
 
 /* Medium Devices, Desktops */
@@ -60,7 +60,15 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {}
+@media only screen and (max-width : 768px) {
+  .parallaxContainer {
+    width: 110%;
+    margin-left: -10%;
+    margin-top: 14%;
+    margin-bottom: 5%;
+    object-fit: contain;
+  }
+}
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {}
