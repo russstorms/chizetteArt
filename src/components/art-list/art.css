@@ -326,7 +326,11 @@ button.modal-close {
   }
 
   .poster:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+  }
+
+  .artTitle {
+    font-size: .8em;
   }
 
   .posterSingleView {
