@@ -334,8 +334,13 @@ button.modal-close {
   }
 
   .posterSingleView {
+<<<<<<< HEAD
     max-width: 840px;
     max-height: 620px;
+=======
+    max-width: 720px;
+    max-height: 550px;
+>>>>>>> mediaQueries
     margin: -6% auto auto auto;
   }
 
@@ -352,13 +357,13 @@ button.modal-close {
   }
 
   .artInfoContainer {
-    margin-left: 30%;
+    margin-left: 15%;
     margin-top: -2%;
-    width: 50%;
+    width: 60%;
   }
   
   .singleViewPrice {
-    margin-top: -11%;
+    margin-top: -14%;
     margin-left: 85%;
   }
 
