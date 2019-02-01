@@ -29,13 +29,20 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   .wrapper {
+    display: grid;
     grid-gap: 15px;
     margin-top: 8%;
   }
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {}
+@media only screen and (max-width : 768px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 6%;
+  }
+}
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {}

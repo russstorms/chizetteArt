@@ -68,6 +68,11 @@
     margin-bottom: 5%;
     object-fit: contain;
   }
+
+  .about {
+    padding-top: 18%;
+    margin: auto 10% 0% 20%;
+  }
 }
 
 /* Extra Small Devices, Phones */

@@ -350,7 +350,43 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {}
+@media only screen and (max-width : 768px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-top: 14%;
+    margin-bottom: -100%;
+  }
+
+  .jewelry {
+    margin-top: -1.5%;
+    margin-bottom: 35%;
+  }
+
+  .photography {
+    margin-top: 4.5%;
+    margin-left: -5%;
+  }
+
+  .viewAll1 {
+    margin-top: 38%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -3%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 33%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -10%;
+    margin-top: -14%;
+  }
+}
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {}

@@ -319,7 +319,50 @@ button.modal-close {
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {}
+@media only screen and (max-width : 768px) {
+  .poster {
+    max-width: 230px;
+    max-height: 190px;
+  }
+
+  .poster:hover {
+    transform: scale(1.2);
+  }
+
+  .posterSingleView {
+    max-width: 840px;
+    max-height: 620px;
+    margin: -4% auto auto auto;
+  }
+
+  .nextButton {
+    position: fixed;
+    right: 10px;
+    top: 350px;
+  }
+  
+  .prevButton {
+    position: fixed;
+    left: 10px;
+    top: 350px;
+  }
+
+  .artInfoContainer {
+    margin-left: 30%;
+    margin-top: -2%;
+    width: 50%;
+  }
+  
+  .singleViewPrice {
+    margin-top: -11%;
+    margin-left: 85%;
+  }
+
+  .close {
+    right: 30px;
+    top: 25px;
+  }
+}
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {}
