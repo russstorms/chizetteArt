@@ -1033,6 +1033,82 @@
   }
 }
 
+@media only screen and (max-width: 1010px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -78%;
+    margin-top: 7%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: -1.5%;
+  }
+
+  .photography {
+    margin-top: 5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 40%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -1%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 35%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -13.5%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -78%;
+    margin-top: 7%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: -1%;
+  }
+
+  .photography {
+    margin-top: 5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 40.5%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: .5%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 35%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -14%;
+  }
+}
+
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
