@@ -805,6 +805,158 @@
   }
 }
 
+@media only screen and (max-width: 1070px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -74%;
+    margin-top: 7%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: -.5%;
+  }
+
+  .photography {
+    margin-top: 5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 38%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -2.5%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 33.5%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -12.5%;
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -74.5%;
+    margin-top: 7%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: -1%;
+  }
+
+  .photography {
+    margin-top: 5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 38.5%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -2%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 33.5%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -12.5%;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -75%;
+    margin-top: 7%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: -1%;
+  }
+
+  .photography {
+    margin-top: 5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 39%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -2%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 33.5%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -13.5%;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -76%;
+    margin-top: 8%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: .5%;
+  }
+
+  .photography {
+    margin-top: 4%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 39%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -2%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 34%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -13.5%;
+  }
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   .mediumTitles {
