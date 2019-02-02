@@ -153,6 +153,19 @@
   }
 }
 
+@media only screen and (max-width: 1110px) {
+  .logo {
+    height: 11%;
+    width: 11%;
+  }
+  
+  .chizetteArt {
+    font-size: 2.5em;
+    margin-top: -7%;
+    margin-left: 9.5%;
+  }
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   .logo {
