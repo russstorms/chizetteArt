@@ -272,6 +272,60 @@
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
 
+/* ----------- Non-Retina Screens ----------- */
+/* @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+} */
+
+/* ----------- Retina Screens ----------- */
+/* @media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) {
+    
+} */
+
+@media only screen and (max-width: 1366px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -64%;
+  }
+
+  .jewelry {
+    margin-bottom: 33.5%;
+    margin-top: .5%;
+  }
+
+  .photography {
+    margin-top: 4%;
+  }
+
+  .viewAll1 {
+    margin-top: -3%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -6%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 29%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -11%;
+  }
+
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
   .mediumTitles {
@@ -309,6 +363,98 @@
   }
 
 }
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-top: 9%;
+    margin-bottom: -80.5%;
+  }
+
+  .jewelry {
+    margin-top: -1.5%;
+    margin-bottom: 35%;
+  }
+
+  .photography {
+    margin-top: 4.5%;
+    margin-left: -5%;
+  }
+
+  .viewAll1 {
+    margin-top: 38%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -3%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 33%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -10%;
+    margin-top: -14%;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .mediumTitles {
+    margin-left: 10%;
+    margin-top: 14%;
+    margin-bottom: -125%;
+  }
+
+  .jewelry {
+    margin-top: -2%;
+    margin-bottom: 36%;
+  }
+
+  .photography {
+    margin-top: 2%;
+    margin-left: -6%;
+  }
+
+  .viewAll1 {
+    margin-top: 39%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -1%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 35%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -13%;
+    margin-top: -17.5%;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {}
+
+
+
 
 @media only screen and (max-width: 1190px) {
   .mediumTitles {
@@ -1107,93 +1253,4 @@
     margin-right: -9%;
     margin-top: -14%;
   }
-}
-
-
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-top: 9%;
-    margin-bottom: -80.5%;
-  }
-
-  .jewelry {
-    margin-top: -1.5%;
-    margin-bottom: 35%;
-  }
-
-  .photography {
-    margin-top: 4.5%;
-    margin-left: -5%;
-  }
-
-  .viewAll1 {
-    margin-top: 38%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 33%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -10%;
-    margin-top: -14%;
-  }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-  .container {
-    width: 80%;
-  }
-
-  .mediumTitles {
-    margin-left: 10%;
-    margin-top: 14%;
-    margin-bottom: -99%;
-  }
-
-  .jewelry {
-    margin-top: -2%;
-    margin-bottom: 36%;
-  }
-
-  .photography {
-    margin-top: 2%;
-    margin-left: -6%;
-  }
-
-  .viewAll1 {
-    margin-top: 39%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -1%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 35%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -13%;
-    margin-top: -17.5%;
-  }
-}
-
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {}
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {}
+} 
