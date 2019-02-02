@@ -691,6 +691,120 @@
   }
 }
 
+@media only screen and (max-width: 1100px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -73%;
+    margin-top: 6%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: -1%;
+  }
+
+  .photography {
+    margin-top: 5.5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 37.5%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -2.5%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 32.5%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -12.5%;
+  }
+}
+
+@media only screen and (max-width: 1090px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -73%;
+    margin-top: 6%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: -1%;
+  }
+
+  .photography {
+    margin-top: 5.5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 37.5%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -2.5%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 32.5%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -12.5%;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -73.5%;
+    margin-top: 7%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: .5%;
+  }
+
+  .photography {
+    margin-top: 4.5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 37.5%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -2.5%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 32.5%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -12.5%;
+  }
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   .mediumTitles {
