@@ -957,6 +957,44 @@
   }
 }
 
+@media only screen and (max-width: 1030px) {
+  .mediumTitles {
+    margin-left: 10%;
+    margin-bottom: -76%;
+    margin-top: 7%;
+  }
+
+  .jewelry {
+    margin-bottom: 34%;
+    margin-top: -.5%;
+  }
+
+  .photography {
+    margin-top: 4.5%;
+    margin-left: -2%;
+  }
+
+  .viewAll1 {
+    margin-top: 39.5%;
+    margin-right: 4%;
+  }
+
+  .viewAll2 {
+    margin-top: -1%;
+    margin-right: 4%;
+  }
+
+  .viewAll3 {
+    margin-top: 34%;
+    margin-right: 4%;
+  }
+
+  .arrowIcons {
+    margin-right: -9%;
+    margin-top: -13.5%;
+  }
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   .mediumTitles {
