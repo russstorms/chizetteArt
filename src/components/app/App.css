@@ -304,9 +304,34 @@
   }
 }
 
+@media only screen and (max-width: 1080px) {
+  .wrapper2 {
+    grid-gap: 195%;
+    margin-bottom: -24%;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .wrapper2 {
+    grid-gap: 190%;
+    margin-bottom: -24%;
+  }
+}
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+  .wrapper2 {
+    grid-gap: 177%;
+    margin-bottom: -27.5%;
+  }
 
+  .arrowIcons {
+    margin-top: -14.5%;
+  }
+
+  .photography {
+    margin-left: -5%;
+  }
 }
 
 /* Small Devices, Tablets */
