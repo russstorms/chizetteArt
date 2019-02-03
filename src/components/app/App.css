@@ -38,9 +38,8 @@
 
 .wrapper2 {
   display: grid;
-  grid-gap: 218%;
+  grid-gap: 217.5%;
   grid-template-columns: 1fr;
-  margin-top: 0%;
   margin-left: 10%;
   margin-right: 4%;
   margin-bottom: -21.5%;
