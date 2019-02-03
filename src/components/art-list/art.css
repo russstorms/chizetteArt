@@ -377,3 +377,10 @@ button.modal-close {
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {}
+
+/* iPhone 8 */
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
+    and (-webkit-device-pixel-ratio : 2) {
+    }
