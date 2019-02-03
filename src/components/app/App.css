@@ -38,38 +38,47 @@
 
 .wrapper2 {
   display: grid;
-  grid-template-columns: repeat(1fr 150px);
+  grid-gap: 217.5%;
+  grid-template-columns: 1fr;
   margin-left: 10%;
-  margin-bottom: -73%;
-  width: 90%;
+  margin-right: 4%;
+  margin-bottom: -21.5%;
 }
 
-.arrowIcons {
-  display: block;
-  margin-right: -8%;
-  margin-top: -11%;
+.art {
+  text-align: left;
+  color: rgb(99, 95, 84);
+  font-size: 1.4em;
+  letter-spacing: .4em;
+  font-family: "Megrim";
+  font-weight: bolder;
 }
 
 .viewAll1 {
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
-  margin-top: 31%;
-  margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
   font-weight: bolder;
   animation: viewAll 5s infinite;
   cursor: pointer;
   width: 20%;
+}
+
+.jewelry {
+  text-align: left;
+  color: rgb(99, 95, 84);
+  font-size: 1.4em;
+  letter-spacing: .4em;
+  font-family: "Megrim";
+  font-weight: bolder;
 }
 
 .viewAll2 {
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
-  margin-top: 27%;
-  margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
   font-weight: bolder;
@@ -78,17 +87,36 @@
   width: 20%;
 }
 
+.photography {
+  text-align: left;
+  color: rgb(99, 95, 84);
+  font-size: 1.4em;
+  letter-spacing: .4em;
+  font-family: "Megrim";
+  font-weight: bolder;
+}
+
 .viewAll3 {
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
-  margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
   font-weight: bolder;
   animation: viewAll 5s infinite;
   cursor: pointer;
   width: 20%;
+}
+
+.viewAllIcons {
+  margin-bottom: -2%;
+  margin-right: -1%;
+}
+
+.arrowIcons {
+  display: block;
+  margin-right: -8%;
+  margin-top: -11%;
 }
 
 @keyframes viewAll {
@@ -104,39 +132,6 @@
   100% {
     margin-right: 2%;
   }
-}
-
-.viewAllIcons {
-  margin-bottom: -2%;
-  margin-right: -1%;
-}
-
-.art {
-  text-align: left;
-  color: rgb(99, 95, 84);
-  font-size: 1.4em;
-  letter-spacing: .4em;
-  font-family: "Megrim";
-  font-weight: bolder;
-}
-
-.jewelry {
-  text-align: left;
-  color: rgb(99, 95, 84);
-  font-size: 1.4em;
-  letter-spacing: .4em;
-  font-family: "Megrim";
-  font-weight: bolder;
-}
-
-.photography {
-  text-align: left;
-  margin-bottom: -5%;
-  color: rgb(99, 95, 84);
-  font-size: 1.4em;
-  letter-spacing: .4em;
-  font-family: "Megrim";
-  font-weight: bolder;
 }
 
 .artA {
@@ -269,48 +264,74 @@
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
 
-
 @media only screen and (max-width: 1366px) {
-  .art {
-    margin-bottom: 36.7%;
-  }
-  
-  .jewelry {
-    margin-top: -1%;
-    margin-bottom: 35%;
-  }
-  
-  .photography {
-    margin-top: 3.5%;
-    margin-bottom: 29.5%;
-  }
-  
-  .viewAll1 {
-    margin-top: -4%;
-    margin-right: 4%;
-    width: 20%;
-  }
-  
-  .viewAll2 {
-    margin-top: -6%;
-    margin-right: 4%;
-    width: 20%;
-  }
-  
-  .viewAll3 {
-    margin-left: auto;
-    margin-top: 28%;
-    margin-right: 4%;
-    width: 20%;
-  }
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+  /* .wrapper2 {
+    grid-gap: 217.5%;
+    margin-bottom: -21.5%;
+  } */
+  .wrapper2 {
+    grid-gap: 203%;
+    margin-bottom: -23.5%;
+  }
+  /* .arrowIcons {
+    margin-top: -11%;
+  } */
+  .arrowIcons {
+    margin-top: -12%;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .wrapper2 {
+    grid-gap: 202%;
+    margin-bottom: -22%;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .wrapper2 {
+    grid-gap: 198%;
+    margin-bottom: -24%;
+  }
+
+  .arrowIcons {
+    margin-top: -13%;
+    margin-right: -11%;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .wrapper2 {
+    grid-gap: 195%;
+    margin-bottom: -24%;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .wrapper2 {
+    grid-gap: 190%;
+    margin-bottom: -24%;
+  }
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+  .wrapper2 {
+    grid-gap: 177%;
+    margin-bottom: -27.5%;
+  }
 
+  .arrowIcons {
+    margin-top: -14.5%;
+  }
+
+  .photography {
+    margin-left: -5%;
+  }
 }
 
 /* Small Devices, Tablets */
