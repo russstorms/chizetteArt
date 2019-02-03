@@ -38,6 +38,7 @@
 
 .wrapper2 {
   display: grid;
+  grid-gap: 10px;
   grid-template-columns: 1fr;
   margin-left: 10%;
   margin-bottom: -106%;
@@ -67,7 +68,6 @@
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
-  margin-top: -7%;
   margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
@@ -81,7 +81,6 @@
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
-  margin-top: 28%;
   margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
@@ -118,7 +117,7 @@
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
-  margin-bottom: 35%;
+  margin-bottom: 34.5%;
 }
 
 .jewelry {
@@ -129,7 +128,7 @@
   font-family: "Megrim";
   font-weight: bolder;
   margin-top: .5%;
-  margin-bottom: 34.5%;
+  margin-bottom: 38%;
 }
 
 .photography {
@@ -139,7 +138,7 @@
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
-  margin-top: 3.5%;
+  margin-bottom: 31.5%;
 }
 
 .artA {
@@ -309,36 +308,7 @@
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-  .art {
-    /* margin-bottom: -5%; */
-  }
-  
-  .jewelry {
-    
-  }
-  
-  .photography {
-
-  }
-  
-  .viewAll1 {
-    margin-top: 35%;
-    margin-right: 4%;
-    width: 20%;
-  }
-  
-  .viewAll2 {
-    margin-right: 4%;
-    width: 20%;
-  }
-  
-  .viewAll3 {
-    margin-left: auto;
-    margin-right: 4%;
-    width: 20%;
-  }
-}
+@media only screen and (max-width: 1200px) {}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
