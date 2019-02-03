@@ -38,10 +38,10 @@
 
 .wrapper2 {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(1fr 150px);
   margin-left: 10%;
-  margin-bottom: -106%;
+  margin-bottom: -73%;
+  width: 90%;
 }
 
 .arrowIcons {
@@ -54,7 +54,7 @@
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
-  margin-top: -4%;
+  margin-top: 31%;
   margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
@@ -68,6 +68,7 @@
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
+  margin-top: 27%;
   margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
@@ -117,7 +118,6 @@
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
-  margin-bottom: 34.5%;
 }
 
 .jewelry {
@@ -127,18 +127,16 @@
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
-  margin-top: .5%;
-  margin-bottom: 38%;
 }
 
 .photography {
   text-align: left;
+  margin-bottom: -5%;
   color: rgb(99, 95, 84);
   font-size: 1.4em;
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
-  margin-bottom: 31.5%;
 }
 
 .artA {
