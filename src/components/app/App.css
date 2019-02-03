@@ -264,44 +264,40 @@
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
 
-
 @media only screen and (max-width: 1366px) {
-  .art {
-    margin-bottom: 36.7%;
-  }
-  
-  .jewelry {
-    margin-top: -1%;
-    margin-bottom: 35%;
-  }
-  
-  .photography {
-    margin-top: 3.5%;
-    margin-bottom: 29.5%;
-  }
-  
-  .viewAll1 {
-    margin-top: -4%;
-    margin-right: 4%;
-    width: 20%;
-  }
-  
-  .viewAll2 {
-    margin-top: -6%;
-    margin-right: 4%;
-    width: 20%;
-  }
-  
-  .viewAll3 {
-    margin-left: auto;
-    margin-top: 28%;
-    margin-right: 4%;
-    width: 20%;
-  }
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+  /* .wrapper2 {
+    grid-gap: 217.5%;
+    margin-bottom: -21.5%;
+  } */
+  .wrapper2 {
+    grid-gap: 203%;
+    margin-bottom: -23.5%;
+  }
+  /* .arrowIcons {
+    margin-top: -11%;
+  } */
+  .arrowIcons {
+    margin-top: -12%;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .wrapper2 {
+    grid-gap: 202%;
+    margin-bottom: -22%;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .wrapper2 {
+    grid-gap: 195%;
+    margin-bottom: -24%;
+  }
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
