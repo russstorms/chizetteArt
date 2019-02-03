@@ -36,11 +36,12 @@
   }
 }
 
-.mediumTitles {
-  max-height: 100vh;
-  max-width: 100vw;
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(1fr 150px);
   margin-left: 10%;
-  margin-bottom: -57.5%;
+  margin-bottom: -73%;
+  width: 90%;
 }
 
 .arrowIcons {
@@ -53,7 +54,7 @@
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
-  margin-top: -4%;
+  margin-top: 31%;
   margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
@@ -67,7 +68,7 @@
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
-  margin-top: -7%;
+  margin-top: 27%;
   margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
@@ -81,7 +82,6 @@
   margin-left: auto;
   text-align: right;
   color: rgb(138, 222, 248);
-  margin-top: 28%;
   margin-right: 4%;
   font-size: 1em;
   font-family: "Montserrat";
@@ -118,7 +118,6 @@
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
-  margin-bottom: 35%;
 }
 
 .jewelry {
@@ -128,18 +127,16 @@
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
-  margin-top: .5%;
-  margin-bottom: 34.5%;
 }
 
 .photography {
   text-align: left;
+  margin-bottom: -5%;
   color: rgb(99, 95, 84);
   font-size: 1.4em;
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
-  margin-top: 3.5%;
 }
 
 .artA {
@@ -272,924 +269,52 @@
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
 
+
+@media only screen and (max-width: 1366px) {
+  .art {
+    margin-bottom: 36.7%;
+  }
+  
+  .jewelry {
+    margin-top: -1%;
+    margin-bottom: 35%;
+  }
+  
+  .photography {
+    margin-top: 3.5%;
+    margin-bottom: 29.5%;
+  }
+  
+  .viewAll1 {
+    margin-top: -4%;
+    margin-right: 4%;
+    width: 20%;
+  }
+  
+  .viewAll2 {
+    margin-top: -6%;
+    margin-right: 4%;
+    width: 20%;
+  }
+  
+  .viewAll3 {
+    margin-left: auto;
+    margin-top: 28%;
+    margin-right: 4%;
+    width: 20%;
+  }
+}
+
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -67%;
-  }
-
-  .jewelry {
-    margin-bottom: 33.5%;
-    margin-top: -.5%;
-  }
-
-  .photography {
-    margin-top: 4.5%;
-  }
-
-  .viewAll1 {
-    margin-top: 1%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 31%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12%;
-  }
-
-}
-
-@media only screen and (max-width: 1190px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -67.5%;
-  }
-
-  .jewelry {
-    margin-bottom: 33.5%;
-    margin-top: -.25%;
-  }
-
-  .photography {
-    margin-top: 4.5%;
-  }
-
-  .viewAll1 {
-    margin-top: 1%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 31%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12%;
-  }
-
-}
-
-@media only screen and (max-width: 1180px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -68%;
-    margin-top: 4%;
-  }
-
-  .jewelry {
-    margin-bottom: 33.5%;
-    margin-top: -.25%;
-  }
-
-  .photography {
-    margin-top: 5%;
-  }
-
-  .viewAll1 {
-    margin-top: 1%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 31%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12%;
-  }
-
-}
-
-@media only screen and (max-width: 1170px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -69%;
-    margin-top: 4%;
-  }
-
-  .jewelry {
-    margin-bottom: 33.5%;
-    margin-top: -.25%;
-  }
-
-  .photography {
-    margin-top: 5%;
-  }
-
-  .viewAll1 {
-    margin-top: 1%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 31%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12%;
-  }
-
-}
-
-@media only screen and (max-width: 1160px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -69%;
-    margin-top: 4%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-  }
-
-  .photography {
-    margin-top: 5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 35.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 31%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12%;
-  }
-
-}
-
-@media only screen and (max-width: 1150px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -70%;
-    margin-top: 4%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-  }
-
-  .photography {
-    margin-top: 4.5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 36%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 31%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12%;
-  }
-
-}
-
-@media only screen and (max-width: 1140px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -70%;
-    margin-top: 4%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-  }
-
-  .photography {
-    margin-top: 5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 36%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 32%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12%;
-  }
-
-}
-
-@media only screen and (max-width: 1130px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -70.5%;
-    margin-top: 6%;
-  }
-
-  .jewelry {
-    margin-bottom: 33%;
-  }
-
-  .photography {
-    margin-top: 6%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 36.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 32%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12%;
-  }
-
-}
-
-@media only screen and (max-width: 1120px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -71%;
-    margin-top: 5%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1%;
-  }
-
-  .photography {
-    margin-top: 5.5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 37%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 32%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12.5%;
-  }
-
-}
-
-@media only screen and (max-width: 1110px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -71.5%;
-    margin-top: 5%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1%;
-  }
-
-  .photography {
-    margin-top: 5.5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 37.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 32%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12.5%;
-  }
-
-}
-
-@media only screen and (max-width: 1110px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -72%;
-    margin-top: 5%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1%;
-  }
-
-  .photography {
-    margin-top: 5.5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 37.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -2.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 32.5%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12.5%;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -73%;
-    margin-top: 6%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1%;
-  }
-
-  .photography {
-    margin-top: 5.5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 37.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -2.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 32.5%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12.5%;
-  }
-}
-
-@media only screen and (max-width: 1090px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -73%;
-    margin-top: 6%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1%;
-  }
-
-  .photography {
-    margin-top: 5.5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 37.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -2.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 32.5%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12.5%;
-  }
-}
-
-@media only screen and (max-width: 1080px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -73.5%;
-    margin-top: 7%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1%;
-  }
-
-  .photography {
-    margin-top: 5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 37.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -2%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 33%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12.5%;
-  }
-}
-
-@media only screen and (max-width: 1070px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -74%;
-    margin-top: 7%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -.5%;
-  }
-
-  .photography {
-    margin-top: 5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 38%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -2.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 33.5%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12.5%;
-  }
-}
-
-@media only screen and (max-width: 1060px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -74.5%;
-    margin-top: 7%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1%;
-  }
-
-  .photography {
-    margin-top: 5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 38.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -2%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 33.5%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -12.5%;
-  }
-}
-
-@media only screen and (max-width: 1050px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -75%;
-    margin-top: 7%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1%;
-  }
-
-  .photography {
-    margin-top: 5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 39%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -2%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 33.5%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -13.5%;
-  }
-}
-
-@media only screen and (max-width: 1040px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -76%;
-    margin-top: 8%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: .5%;
-  }
-
-  .photography {
-    margin-top: 4%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 39%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -2%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 34%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -13.5%;
-  }
-}
-
-@media only screen and (max-width: 1030px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -76%;
-    margin-top: 7%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -.5%;
-  }
-
-  .photography {
-    margin-top: 4.5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 39.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -1%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 34%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -13.5%;
-  }
-}
-
-@media only screen and (max-width: 1020px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -77%;
-    margin-top: 8%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1.5%;
-  }
-
-  .photography {
-    margin-top: 5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 40%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -1%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 35%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -13.5%;
-  }
-}
-
-@media only screen and (max-width: 1010px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -78%;
-    margin-top: 7%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1.5%;
-  }
-
-  .photography {
-    margin-top: 5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 40%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -1%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 35%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -13.5%;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-bottom: -78%;
-    margin-top: 7%;
-  }
-
-  .jewelry {
-    margin-bottom: 34%;
-    margin-top: -1%;
-  }
-
-  .photography {
-    margin-top: 5%;
-    margin-left: -2%;
-  }
-
-  .viewAll1 {
-    margin-top: 40.5%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: .5%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 35%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -9%;
-    margin-top: -14%;
-  }
-}
-
+@media only screen and (max-width: 1200px) {}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-  .mediumTitles {
-    margin-left: 10%;
-    margin-top: 9%;
-    margin-bottom: -80.5%;
-  }
 
-  .jewelry {
-    margin-top: -1.5%;
-    margin-bottom: 35%;
-  }
-
-  .photography {
-    margin-top: 4.5%;
-    margin-left: -5%;
-  }
-
-  .viewAll1 {
-    margin-top: 38%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -3%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 33%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -10%;
-    margin-top: -14%;
-  }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-  .container {
-    width: 80%;
-  }
-
-  .mediumTitles {
-    margin-left: 10%;
-    margin-top: 14%;
-    margin-bottom: -99%;
-  }
-
-  .jewelry {
-    margin-top: -2%;
-    margin-bottom: 36%;
-  }
-
-  .photography {
-    margin-top: 2%;
-    margin-left: -6%;
-  }
-
-  .viewAll1 {
-    margin-top: 39%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -1%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 35%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -13%;
-    margin-top: -17.5%;
-  }
 }
 
 /* Extra Small Devices, Phones */

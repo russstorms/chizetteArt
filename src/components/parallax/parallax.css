@@ -62,9 +62,9 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
   .parallaxContainer {
-    width: 110%;
+    height: 100vh;
     margin-left: -10%;
-    margin-top: 14%;
+    margin-top: 16%;
     margin-bottom: 5%;
     object-fit: contain;
   }
