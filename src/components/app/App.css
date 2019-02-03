@@ -40,7 +40,7 @@
   display: grid;
   grid-template-columns: 1fr;
   margin-left: 10%;
-  margin-bottom: -102.5%;
+  margin-bottom: -106%;
 }
 
 .arrowIcons {
@@ -273,6 +273,38 @@
 ******************************************************************/
 
 @media only screen and (max-width: 1366px) {
+  .art {
+    margin-bottom: 36.7%;
+  }
+  
+  .jewelry {
+    margin-top: -1%;
+    margin-bottom: 35%;
+  }
+  
+  .photography {
+    margin-top: 3.5%;
+    margin-bottom: 29.5%;
+  }
+  
+  .viewAll1 {
+    margin-top: -4%;
+    margin-right: 4%;
+    width: 20%;
+  }
+  
+  .viewAll2 {
+    margin-top: -6%;
+    margin-right: 4%;
+    width: 20%;
+  }
+  
+  .viewAll3 {
+    margin-left: auto;
+    margin-top: 28%;
+    margin-right: 4%;
+    width: 20%;
+  }
 }
 
 /* Large Devices, Wide Screens */
@@ -287,45 +319,6 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-  .container {
-    width: 80%;
-  }
-
-  .mediumTitles {
-    margin-left: 10%;
-    margin-top: 14%;
-    margin-bottom: -125%;
-  }
-
-  .jewelry {
-    margin-top: -2%;
-    margin-bottom: 36%;
-  }
-
-  .photography {
-    margin-top: 2%;
-    margin-left: -6%;
-  }
-
-  .viewAll1 {
-    margin-top: 39%;
-    margin-right: 4%;
-  }
-
-  .viewAll2 {
-    margin-top: -1%;
-    margin-right: 4%;
-  }
-
-  .viewAll3 {
-    margin-top: 35%;
-    margin-right: 4%;
-  }
-
-  .arrowIcons {
-    margin-right: -13%;
-    margin-top: -17.5%;
-  }
 }
 
 /* Extra Small Devices, Phones */
