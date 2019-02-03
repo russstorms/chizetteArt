@@ -294,8 +294,13 @@
 
 @media only screen and (max-width: 1120px) {
   .wrapper2 {
-    grid-gap: 195%;
+    grid-gap: 198%;
     margin-bottom: -24%;
+  }
+
+  .arrowIcons {
+    margin-top: -13%;
+    margin-right: -11%;
   }
 }
 
