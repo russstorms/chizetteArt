@@ -10,7 +10,7 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
 
-const API = process.env.REACT_APP_API
+const API = process.env.REACT_APP_API || "https://localhost:3000"
 
 export default class App extends Component {
   constructor(props) {

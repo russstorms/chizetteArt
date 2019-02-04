@@ -267,6 +267,17 @@
 @media only screen and (max-width: 1366px) {
 }
 
+@media only screen and (max-width: 1280px) {
+  .wrapper2 {
+    grid-gap: 204%;
+    margin-bottom: -23%;
+  }
+  
+  .arrowIcons {
+    margin-top: -12%;
+  }
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
   /* .wrapper2 {
