@@ -342,10 +342,56 @@
 @media only screen and (max-width : 480px) {}
 
 /* iPhone 8 */
-@media only screen 
-    and (max-width : 375px) 
+@media only screen and (max-width : 375px) 
     and (-webkit-device-pixel-ratio : 2) {
       body {
         overflow-x: hidden;
+      }
+
+      .wrapper2 {
+        grid-gap: 0%;
+        margin-bottom: 20%;
+        margin-top: 26%;
+        width: 80%;
+      }
+
+      .art {
+        text-align: left;
+        font-size: 1.2em;
+      }
+      
+      .viewAll1 {
+        margin-left: auto;
+        width: 80%;
+      }
+      
+      .jewelry {
+        text-align: left;
+        font-size: 1.2em;
+      }
+      
+      .viewAll2 {
+        margin-left: auto;
+        width: 80%;
+      }
+      
+      .photography {
+        text-align: left;
+        font-size: 1.2em;
+      }
+      
+      .viewAll3 {
+        margin-left: auto;
+        width: 80%;
+      }      
+
+      .view {
+        display: none;
+      }
+
+      .arrowIcons {
+        display: block;
+        margin-right: -8%;
+        margin-top: -9%;
       }
     }

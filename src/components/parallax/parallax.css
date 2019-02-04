@@ -82,9 +82,16 @@
 @media only screen and (max-width : 375px) {
   .parallaxContainer {
     margin-top: 28%;
+    height: 120%;
   }
 
   .parallax-banner-layer-0 {
     margin-left: -70%;
+  }
+
+  .about {
+    margin: 10% 10% 10% 20%;
+    padding-top: 25%;
+    font-size: 1em;
   }
 }
