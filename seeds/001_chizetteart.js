@@ -27,7 +27,6 @@ exports.seed = function(knex, Promise) {
         poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_necklace.JPG',
         price: 50
       },
-
       {
         id: 4,
         title: 'Aragonite Lady',
