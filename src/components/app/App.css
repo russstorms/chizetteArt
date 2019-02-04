@@ -267,6 +267,17 @@
 @media only screen and (max-width: 1366px) {
 }
 
+@media only screen and (max-width: 1320px) {
+  .wrapper2 {
+    grid-gap: 207%;
+    margin-bottom: -22.5%;
+  }
+  
+  .arrowIcons {
+    margin-top: -12%;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   .wrapper2 {
     grid-gap: 204%;
