@@ -44,7 +44,7 @@
   text-shadow: 1px 3px 3px rgba(99, 95, 84, .8);
   letter-spacing: .1em;
   margin-top: -.5%;
-  animation: fadeInLeft 1.2s linear;
+  animation: fadeInLeft .8s linear;
 }
 
 .singleViewMedium {
