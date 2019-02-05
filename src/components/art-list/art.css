@@ -230,7 +230,7 @@ button.modal-close {
 /* *****************************************************************
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
-@media only screen and (max-width: 1921px) and (min-width: 1821px){
+@media only screen and (max-width: 1921px) and (min-width: 1821px) {
   .artTitle {
     font-size: 1.5em;
   }
@@ -240,8 +240,13 @@ button.modal-close {
     max-height: 410px;
   }
   
-  .poster:hover {
-    transform: scale(1.3);
+  .editButton {
+    font-size: 2em !important;
+    margin-left: -13%;
+  }
+
+  .deleteButton {
+    margin-top: -11%;
   }
 
   .posterSingleView {
