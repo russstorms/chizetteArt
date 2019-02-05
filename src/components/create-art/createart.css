@@ -71,7 +71,7 @@ label {
 }
 
 
-@media only screen and (max-width: 1921px) {
+@media only screen and (max-width: 1921px) and (min-width: 1600px) {
   .createArtButton {
     margin-left: 85%;
     margin-top: -5%;
@@ -85,5 +85,6 @@ label {
     background-color: transparent;
     border: none;
     margin-left: 85%;
+    margin-top: -10%;
   }
 }
