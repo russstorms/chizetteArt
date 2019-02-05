@@ -263,14 +263,26 @@
 /* *****************************************************************
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
-@media only screen and (max-width: 1921px) {
+@media only screen and (max-width: 1921px) and (min-width: 1600px) {
   .wrapper2 {
-    grid-gap: 247%;
-    margin-bottom: -18%;
+    grid-gap: 257%;
+    margin-bottom: -20%;
   }
   
   .arrowIcons {
     margin-top: -8%;
+  }
+
+  .art {
+    font-size: 2em;
+  }
+
+  .jewelry {
+    font-size: 2em;
+  }
+
+  .photography {
+    font-size: 2em;
   }
 }
 
@@ -289,6 +301,7 @@
     margin-right: -8%;
     margin-top: -11%;
   }
+
 }
 
 
@@ -298,10 +311,10 @@
     margin-bottom: -21.5%;
   }
   
-  
   .arrowIcons {
     margin-top: -12%;
   }
+
 }
 
 @media only screen and (max-width: 1370px) {

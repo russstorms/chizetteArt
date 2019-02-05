@@ -69,3 +69,21 @@ label {
   font-weight: bolder;
   color: rgb(138, 222, 248);
 }
+
+
+@media only screen and (max-width: 1921px) {
+  .createArtButton {
+    margin-left: 85%;
+    margin-top: -5%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .createArtButton {
+    color: rgb(99, 95, 84);
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    margin-left: 85%;
+  }
+}

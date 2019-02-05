@@ -77,6 +77,43 @@
 /* *****************************************************************
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
+@media only screen and (max-width: 1921px) {
+  .sideNav {
+    height: 55%;
+    overflow: hidden;
+  }
+
+  .side-nav {
+    margin-top: 11%;
+    padding-top: 7%;
+    box-shadow: none;
+  }
+  
+
+  .side-nav {
+    margin-top: 12%;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .sideNav {
+    height: 70%;
+    overflow: hidden;
+  }
+  
+  .side-nav {
+    margin-top: 11%;
+    padding-top: 10%;
+    box-shadow: none;
+  }
+  
+  .side-nav li>a {
+    color: rgb(99, 95, 84);
+    font-family: 'Montserrat';
+    letter-spacing: .25em;
+    font-size: 1.1em;
+  }
+}
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
