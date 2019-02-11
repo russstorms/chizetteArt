@@ -48,10 +48,10 @@ pf.get('store/products')
 
 // pf.post('orders', {
 //   recipient: {
-//     name: 'Russ',
+//     name: 'Chris',
 //     address1: 'my address',
-//     city: 'Boulder',
-//     state_code: 'CO',
+//     city: 'New York',
+//     state_code: 'NY',
 //     country_code: 'US',
 //     zip: '80301'
 //   },
@@ -68,10 +68,10 @@ pf.get('store/products')
 
 // pf.post('orders', {
 //   recipient: {
-//     name: 'Russ',
+//     name: 'Chris',
 //     address1: 'my address',
-//     city: 'Boulder',
-//     state_code: 'CO',
+//     city: 'New York',
+//     state_code: 'NY',
 //     country_code: 'US',
 //     zip: '80301'
 //   },
