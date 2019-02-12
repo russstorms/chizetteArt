@@ -61,7 +61,8 @@ router.post('/', jwtVerify, (req, res, next) => {
         "title": req.body.title,
         "year": req.body.year,
         "medium": req.body.medium,
-        "poster": req.body.poster
+        "poster": req.body.poster,
+        "price": req.body.price
       })
       .returning('*')
       .then((data) => {
@@ -84,7 +85,8 @@ router.put('/:id', jwtVerify, checkIdisNum, (req, res, next) => {
       "title": req.body.title,
       "year": req.body.year,
       "medium": req.body.medium,
-      "poster": req.body.poster
+      "poster": req.body.poster,
+      "price": req.body.price
     })
     .returning('*')
     .then((data) => {
