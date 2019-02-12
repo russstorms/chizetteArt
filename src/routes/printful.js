@@ -46,46 +46,28 @@ pf.get('store/products')
   .success(ok_callback)
   .error(error_callback)
 
+//// POST ORDER ON ONE ID \\\\
 // pf.post('orders', {
 //   recipient: {
-//     name: 'Chris',
-//     address1: 'my address',
-//     city: 'New York',
-//     state_code: 'NY',
-//     country_code: 'US',
-//     zip: '80301'
-//   },
-  // "items": [{
-  //   "variant_id": 1,
-  //   "quantity": 1,
-  //   "files": [{
-  //     "url": "http://example.com/files/posters/poster_1.jpg"
-  //   }]
-  // }]
-// })
-  // .success(ok_callback)
-  // .error(error_callback)
-
-// pf.post('orders', {
-//   recipient: {
-//     name: 'Chris',
-//     address1: 'my address',
-//     city: 'New York',
-//     state_code: 'NY',
+//     name: 'Russ',
+//     address1: '7475 Spy Glass Ct.',
+//     city: 'Boulder',
+//     state_code: 'CO',
 //     country_code: 'US',
 //     zip: '80301'
 //   },
 //   items: [{
 //       variant_id: 1, //Small poster
-//       name: 'Niagara Falls poster', //Display name
-//       retail_price: '19.99', //Retail price for packing slip
+//       name: 'Amethyst', //Display name
+//       retail_price: '26', //Retail price for packing slip
 //       quantity: 1,
 //       files: [{
-//         url: 'http://example.com/files/posters/poster_1.jpg'
+//         url: 'https://printful.s3.amazonaws.com/files/904/904d24eed80c2820ef82bc24ef185a6f?response-content-disposition=inline%3B%20filename%3D%22amethyst.jpeg%22&response-content-type=image%2Fjpeg&AWSAccessKeyId=AKIAJH7JLGRY6WQHFAZQ&Expires=1550004366&Signature=u1VTXir0QqNVBKomC%2FHvuNM6i88%3D'
 //       }]
 //     }
 //   ]
 // }).success(ok_callback).error(error_callback)
+
 
 // Get information about the store
 // pf.get('store').success(ok_callback).error(error_callback)
