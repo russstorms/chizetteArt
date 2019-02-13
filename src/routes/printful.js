@@ -42,9 +42,9 @@ let error_callback = function (message, info) {
 let pf = new PrintfulClient(key)
 
 //// GET ALL SYNCED PRODUCTS \\\\
-pf.get('store/products')
-  .success(ok_callback)
-  .error(error_callback)
+// pf.get('store/products')
+//   .success(ok_callback)
+//   .error(error_callback)
 
 //// POST ORDER ON ONE ID \\\\
 // pf.post('orders', {
