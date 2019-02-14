@@ -47,14 +47,16 @@ let pf = new PrintfulClient(key)
 //   .error(error_callback)
 
 //// POST ORDER ON ONE ID \\\\
+//// TO DO ON ACTION CREATE NEW USER TO ORDER NEW PRINT \\\\
+
 // pf.post('orders', {
 //   recipient: {
-//     name: 'Russ',
-//     address1: '7475 Spy Glass Ct.',
-//     city: 'Boulder',
-//     state_code: 'CO',
+//     name: '',
+//     address1: '',
+//     city: '',
+//     state_code: '',
 //     country_code: 'US',
-//     zip: '80301'
+//     zip: ''
 //   },
 //   items: [{
 //       variant_id: 1, //Small poster
