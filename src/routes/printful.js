@@ -47,6 +47,8 @@ let pf = new PrintfulClient(key)
 //   .error(error_callback)
 
 //// POST ORDER ON ONE ID \\\\
+//// TO DO ON ACTION CREATE NEW USER TO ORDER NEW PRINT \\\\
+
 // pf.post('orders', {
 //   recipient: {
 //     name: '',
