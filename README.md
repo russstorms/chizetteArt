@@ -1,4 +1,7 @@
 In progress...
+
+On Chrome, go to chizetteart.com
+
 An artsite/portfolio for a painter who can create and edit posts. Users can filter by medium and buy prints of paintings.
 
 I worked with a local artist who wanted to create a website that showcased her art as an online gallery.
