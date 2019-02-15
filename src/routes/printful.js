@@ -2,7 +2,6 @@ require('dotenv').config()
 const PrintfulClient = require('../models/printfulClient.js')
 const express = require('express')
 const router = express.Router()
-const knex = require('../../knex')
 
 // Replace this with your API key
 
@@ -48,27 +47,62 @@ let pf = new PrintfulClient(key)
 
 //// POST ORDER ON ONE ID \\\\
 //// TO DO ON ACTION CREATE NEW USER TO ORDER NEW PRINT \\\\
+// let name,
+//   address1,
+//   city,
+//   state,
+//   country,
+//   zip,
+//   externalId,
+//   varientId,
+//   artName,
+//   retail_price,
+//   quantity,
+//   url
 
 // pf.post('orders', {
 //   recipient: {
-//     name: '',
-//     address1: '',
-//     city: '',
-//     state_code: '',
-//     country_code: 'US',
-//     zip: ''
+//     name: `${name}`,
+//     address1: `${address1}`,
+//     city: `${city}`,
+//     state_code: `${state}`,
+//     country_code: `${country}`,
+//     zip: `${zip}`
 //   },
 //   items: [{
-//       variant_id: 1, //Small poster
-//       name: 'Amethyst', //Display name
-//       retail_price: '26', //Retail price for packing slip
-//       quantity: 1,
-//       files: [{
-//         url: 'https://printful.s3.amazonaws.com/files/904/904d24eed80c2820ef82bc24ef185a6f?response-content-disposition=inline%3B%20filename%3D%22amethyst.jpeg%22&response-content-type=image%2Fjpeg&AWSAccessKeyId=AKIAJH7JLGRY6WQHFAZQ&Expires=1550004366&Signature=u1VTXir0QqNVBKomC%2FHvuNM6i88%3D'
-//       }]
-//     }
-//   ]
+//     external_id: `${externalId}`,
+//     varient_id: `${varientId}`,
+//     name: `${artName}`,
+//     retail_price: `${retail_price}`,
+//     quantity: `${quantity}`,
+//   files: [{
+//     url: `${url}`
+//   }]
+//   }]
 // }).success(ok_callback).error(error_callback)
+
+pf.post('orders', {
+  shipping: "STANDARD",
+  recipient: {
+    name: 'Chris Test',
+    address1: '856 Pharoh St.',
+    city: 'Boulder',
+    state_code: 'CO',
+    country_code: 'US',
+    zip: '80301'
+  },
+  items: [{
+      external_id: 5,
+      variant_id: 1, //Small poster
+      name: 'Amethyst', //Display name
+      retail_price: '26', //Retail price for packing slip
+      quantity: 1,
+      files: [{
+        url: 'https://printful.s3.amazonaws.com/files/904/904d24eed80c2820ef82bc24ef185a6f?response-content-disposition=inline%3B%20filename%3D%22amethyst.jpeg%22&response-content-type=image%2Fjpeg&AWSAccessKeyId=AKIAJH7JLGRY6WQHFAZQ&Expires=1550004366&Signature=u1VTXir0QqNVBKomC%2FHvuNM6i88%3D'
+      }]
+    }
+  ]
+}).success(ok_callback).error(error_callback)
 
 
 // Get information about the store
