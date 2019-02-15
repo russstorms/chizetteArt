@@ -53,26 +53,32 @@ let pf = new PrintfulClient(key)
 //   state,
 //   country,
 //   zip,
+//   externalId,
 //   varientId,
 //   artName,
 //   retail_price,
-//   quantity
+//   quantity,
+//   url
 
 // pf.post('orders', {
-  // recipient: {
-  //   name: `${name}`,
-  //   address1: `${address1}`,
-  //   city: `${city}`,
-  //   state_code: `${state}`,
-  //   country_code: `${country}`,
-  //   zip: `${zip}`
-  // },
-  // items: [{
-  //   varient_id: `${varientId}`,
-  //   name: `${artName}`,
-  //   retail_price: `${retail_price}`,
-  //   quantity: `${quantity}`
-  // }]
+//   recipient: {
+//     name: `${name}`,
+//     address1: `${address1}`,
+//     city: `${city}`,
+//     state_code: `${state}`,
+//     country_code: `${country}`,
+//     zip: `${zip}`
+//   },
+//   items: [{
+//     external_id: `${externalId}`,
+//     varient_id: `${varientId}`,
+//     name: `${artName}`,
+//     retail_price: `${retail_price}`,
+//     quantity: `${quantity}`,
+//   files: [{
+//     url: `${url}`
+//   }]
+//   }]
 // }).success(ok_callback).error(error_callback)
 
 pf.post('orders', {
