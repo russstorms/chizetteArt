@@ -18,7 +18,7 @@ const gateway = braintree.connect({
   merchantId:   '8vb6xrrc938pztx3',
   publicKey:    'mcxt26ck2ghfjzz8',
   privateKey:   process.env.BRAINTREEKEY
-});
+})
 
 function formatErrors(errors) {
   let formattedErrors = ''
