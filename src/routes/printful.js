@@ -47,40 +47,40 @@ let pf = new PrintfulClient(key)
 
 //// POST ORDER ON ONE ID \\\\
 //// TO DO ON ACTION CREATE NEW USER TO ORDER NEW PRINT \\\\
-let name,
-  address1,
-  city,
-  state,
-  country,
-  zip,
-  externalId,
-  variantId,
-  artName,
-  retail_price,
-  quantity,
-  url
+// let name,
+//   address1,
+//   city,
+//   state,
+//   country,
+//   zip,
+//   externalId,
+//   variantId,
+//   artName,
+//   retail_price,
+//   quantity,
+//   url
 
-pf.post('orders', {
-  shipping: "STANDARD",
-  recipient: {
-    name: `${name}`,
-    address1: `${address1}`,
-    city: `${city}`,
-    state_code: `${state}`,
-    country_code: `${country}`,
-    zip: `${zip}`
-  },
-  items: [{
-    external_id: externalId,
-    variant_id: variantId,
-    name: `${artName}`,
-    retail_price: retail_price,
-    quantity: quantity,
-  files: [{
-    url: `${url}`
-  }]
-  }]
-}).success(ok_callback).error(error_callback)
+// pf.post('orders', {
+//   shipping: "STANDARD",
+//   recipient: {
+//     name: `${name}`,
+//     address1: `${address1}`,
+//     city: `${city}`,
+//     state_code: `${state}`,
+//     country_code: `${country}`,
+//     zip: `${zip}`
+//   },
+//   items: [{
+//     external_id: externalId,
+//     variant_id: variantId,
+//     name: `${artName}`,
+//     retail_price: retail_price,
+//     quantity: quantity,
+//   files: [{
+//     url: `${url}`
+//   }]
+//   }]
+// }).success(ok_callback).error(error_callback)
 
 
 // pf.post('orders', {
