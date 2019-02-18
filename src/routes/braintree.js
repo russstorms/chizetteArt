@@ -13,6 +13,7 @@ let TRANSACTION_SUCCESS_STATUSES = [
   braintree.Transaction.Status.SubmittedForSettlement
 ]
 
+//// SANDBOX TEST \\\\
 const gateway = braintree.connect({
   environment:  braintree.Environment.Sandbox,
   merchantId:   '8vb6xrrc938pztx3',
