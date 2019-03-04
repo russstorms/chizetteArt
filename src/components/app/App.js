@@ -29,7 +29,6 @@ export default class App extends Component {
   
   //// POST TO LOGIN \\\\
   loginClick = async (loginInfo) => {
-    // console.log('before get call', this.state)
     const response = await fetch(`${API}/sign-in`, {
       method: "POST",
       mode: "cors",
@@ -40,7 +39,6 @@ export default class App extends Component {
     })
     
     if (response.status === 200) {
-      // console.log(response.headers.get('Auth'))
       const auth = response.headers.get('Auth').slice(8, response.headers.get('Auth').length)
       // console.log(auth)
       const json = await response.json()
@@ -63,10 +61,8 @@ export default class App extends Component {
 
 
   async getToken() {
-    // console.log('in getToken(), looking for TOKEN')
     const token = await localStorage.getItem('token')
     const userId = await localStorage.getItem('userId')
-    // console.log(`in getToken()`, userId, token)
     const parsed = JSON.parse(userId)
     this.setState({
       ...this.state,
@@ -76,7 +72,6 @@ export default class App extends Component {
   }
 
   async storeToken(userId = this.state.userId, token = this.state.actualToken) {
-    // console.log(userId, token)
     await localStorage.setItem('userId', JSON.stringify(userId))
     await localStorage.setItem('token', token)
   }
@@ -84,7 +79,6 @@ export default class App extends Component {
   componentDidMount = async () => {
     await this.getArtList()
     await this.getToken()
-    // await this.getPrintfulAPI()
   }
 
   // CONNECT TO PRINTFUL \\\\
@@ -120,7 +114,6 @@ export default class App extends Component {
       poster: url,
       price: price
     }
-    // console.log(JSON.stringify(artBody))
     const response = await fetch(`${API}/chizetteart`, {
       method: "POST",
       mode: "cors",
@@ -290,7 +283,6 @@ export default class App extends Component {
     let photoArr = []
     let splashList = []
     if (!this.state.filteredTerm) {
-      // return splashList
       for (let art of this.state.artList) {
         //// ART \\\\
         if (!art.medium.includes('Jewelry') && !art.medium.includes('Photography') && artCounter < 3) {
