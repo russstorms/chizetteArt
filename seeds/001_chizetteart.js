@@ -3,6 +3,8 @@ exports.seed = function(knex, Promise) {
   return knex('chizetteart').del()
     .then(function() {
       // Inserts seed entries
+
+      //// CHANGE QUALITY FROM CLOUDINARY \\\\
       return knex('chizetteart').insert([{
         id: 1,
         title: 'Amethyst',
