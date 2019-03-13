@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
         title: 'Amethyst',
         year: 2018,
         medium: 'Gouache',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg',
         price: 26
       },
       {
@@ -18,7 +18,7 @@ exports.seed = function(knex, Promise) {
         title: 'Aqua Gems',
         year: 2020,
         medium: 'Gouache',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aqua_gems.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/a_hflip,c_scale,w_1000/v1552434608/chizetteArt%20-%20Compressed/aqua_gems.jpg',
         price: 26
       },
       {
@@ -26,7 +26,7 @@ exports.seed = function(knex, Promise) {
         title: 'Aragonite Necklace',
         year: 2018,
         medium: 'Jewelry',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_necklace.JPG',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434629/chizetteArt%20-%20Compressed/aragonite_necklace.jpg',
         price: 50
       },
       {
@@ -34,7 +34,7 @@ exports.seed = function(knex, Promise) {
         title: 'Aragonite Lady',
         year: 2021,
         medium: 'Gouache',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_lady.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434597/chizetteArt%20-%20Compressed/aragonite_lady.jpg',
         price: 26
       },
       {
@@ -42,7 +42,7 @@ exports.seed = function(knex, Promise) {
         title: 'Aquarelle Lady',
         year: 2021,
         medium: 'Aquarelle Pencil',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aquarelle_lady.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434608/chizetteArt%20-%20Compressed/aquarelle_lady.jpg',
         price: 26
       },
       {
@@ -50,7 +50,7 @@ exports.seed = function(knex, Promise) {
         title: 'Citrine Amethyst',
         year: 2020,
         medium: 'Jewelry',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/citrine_amethyst.JPG',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434635/chizetteArt%20-%20Compressed/citrine_amethyst.jpg',
         price: 30
       },
       {
@@ -58,7 +58,7 @@ exports.seed = function(knex, Promise) {
         title: 'Flourite',
         year: 2019,
         medium: 'Jewelry',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/flourite.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434603/chizetteArt%20-%20Compressed/flourite.jpg',
         price: 30
       },
       {
@@ -66,7 +66,7 @@ exports.seed = function(knex, Promise) {
         title: 'Flourite Necklace',
         year: 2018,
         medium: 'Jewelry',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/flourite2.JPG',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434625/chizetteArt%20-%20Compressed/flourite2.jpg',
         price: 45
       },
       {
@@ -74,7 +74,7 @@ exports.seed = function(knex, Promise) {
         title: 'Gem Outlines',
         year: 2021,
         medium: 'Gouache',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/gem_outlines.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434626/chizetteArt%20-%20Compressed/gem_outlines.jpg',
         price: 26
       },
       {
@@ -82,7 +82,7 @@ exports.seed = function(knex, Promise) {
         title: 'Gem Outlines Man',
         year: 2022,
         medium: 'Gouache',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/gem_outlines_man.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434629/chizetteArt%20-%20Compressed/gem_outlines_man.jpg',
         price: 26
       },
       {
@@ -90,7 +90,7 @@ exports.seed = function(knex, Promise) {
         title: 'Geode',
         year: 2019,
         medium: 'Gouache',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/geode.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434634/chizetteArt%20-%20Compressed/geode.jpg',
         price: 27
       },
       {
@@ -98,7 +98,7 @@ exports.seed = function(knex, Promise) {
         title: 'Jimmie',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/jimmie.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434644/chizetteArt%20-%20Compressed/jimmie.jpg',
         price: 40
       },
       {
@@ -106,7 +106,7 @@ exports.seed = function(knex, Promise) {
         title: 'Lobster',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/lobster.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434637/chizetteArt%20-%20Compressed/lobster.jpg',
         price: 40
       },
       {
@@ -114,7 +114,7 @@ exports.seed = function(knex, Promise) {
         title: 'Maui',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/maui_plate.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434659/chizetteArt%20-%20Compressed/maui_plate.jpg',
         price: 40
       },
       {
@@ -122,7 +122,7 @@ exports.seed = function(knex, Promise) {
         title: 'Negril Horse',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/negril_horse.JPG',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434681/chizetteArt%20-%20Compressed/negril_horse.jpg',
         price: 40
       },
       {
@@ -130,7 +130,7 @@ exports.seed = function(knex, Promise) {
         title: 'Newspaper',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/newspaper.JPG',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434655/chizetteArt%20-%20Compressed/newspaper.jpg',
         price: 40
       },
       {
@@ -138,7 +138,7 @@ exports.seed = function(knex, Promise) {
         title: 'North Shore',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/north_shore.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434665/chizetteArt%20-%20Compressed/north_shore.jpg',
         price: 40
       },
       {
@@ -146,7 +146,7 @@ exports.seed = function(knex, Promise) {
         title: 'Rainbow Man',
         year: 2019,
         medium: 'Gouache',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/rainbow_man.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/v1552434640/chizetteArt%20-%20Compressed/rainbow_man.jpg',
         price: 27
       },
       {
@@ -154,7 +154,7 @@ exports.seed = function(knex, Promise) {
         title: 'Road to Hana',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/road_to_hana.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434645/chizetteArt%20-%20Compressed/road_to_hana.jpg',
         price: 40
       },
       {
@@ -162,7 +162,7 @@ exports.seed = function(knex, Promise) {
         title: 'Roots',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/roots.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434653/chizetteArt%20-%20Compressed/roots.jpg',
         price: 40
       },
       {
@@ -170,7 +170,7 @@ exports.seed = function(knex, Promise) {
         title: 'Self Portrait',
         year: 2019,
         medium: 'Gouache',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/self_portrait.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434663/chizetteArt%20-%20Compressed/self_portrait.jpg',
         price: 32
       },
       {
@@ -178,7 +178,7 @@ exports.seed = function(knex, Promise) {
         title: 'Shi',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/shi.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434680/chizetteArt%20-%20Compressed/shi.jpg',
         price: 40
       },
       {
@@ -186,7 +186,7 @@ exports.seed = function(knex, Promise) {
         title: 'Smoky Quartz',
         year: 2019,
         medium: 'Aquarelle Pencil',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/smoky_quartz.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434678/chizetteArt%20-%20Compressed/smoky_quartz.jpg',
         price: 32
       },
       {
@@ -194,7 +194,7 @@ exports.seed = function(knex, Promise) {
         title: 'Smoky Quartz Lady',
         year: 2019,
         medium: 'Gouache',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/smoky_quartz_lady.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/a_0/v1552434665/chizetteArt%20-%20Compressed/smoky_quartz_lady.jpg',
         price: 32
       },
       {
@@ -202,7 +202,7 @@ exports.seed = function(knex, Promise) {
         title: 'Sunset Beach',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/sunset_beach.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434670/chizetteArt%20-%20Compressed/sunset_beach.jpg',
         price: 40
       },
       {
@@ -210,7 +210,7 @@ exports.seed = function(knex, Promise) {
         title: 'Waikiki',
         year: 2019,
         medium: 'Photography',
-        poster: 'https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/waikiki.jpeg',
+        poster: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434679/chizetteArt%20-%20Compressed/waikiki.jpg',
         price: 40
       }
       ])
