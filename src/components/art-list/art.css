@@ -22,8 +22,8 @@
 }
 
 .posterSingleView {
-  max-width: 860px;
-  max-height: 640px;
+  max-width: 750px;
+  max-height: 560px;
   margin: -1.25% auto auto auto;
   display: flex;
   justify-content: center;

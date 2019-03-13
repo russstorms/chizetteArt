@@ -13,14 +13,14 @@ export default class ParallaxImage extends React.Component {
   componentWillMount() {
     this.intervalID = setInterval(() => {
       const parallaxPosters = [
-        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg",
-        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_necklace.JPG",
-        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/citrine_amethyst.JPG",
-        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/geode.jpeg",
-        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/north_shore.jpeg",
-        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/rainbow_man.jpeg",
-        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/self_portrait.jpeg",
-        "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/sunset_beach.jpeg"
+        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg",
+        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434629/chizetteArt%20-%20Compressed/aragonite_necklace.jpg",
+        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434635/chizetteArt%20-%20Compressed/citrine_amethyst.jpg",
+        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434634/chizetteArt%20-%20Compressed/geode.jpg",
+        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434665/chizetteArt%20-%20Compressed/north_shore.jpg",
+        "https://res.cloudinary.com/chizetteart/image/upload/v1552434640/chizetteArt%20-%20Compressed/rainbow_man.jpg",
+        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434663/chizetteArt%20-%20Compressed/self_portrait.jpg",
+        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434670/chizetteArt%20-%20Compressed/sunset_beach.jpg"
       ]
       this.setState({
         ...this.state,
@@ -31,14 +31,14 @@ export default class ParallaxImage extends React.Component {
 
   render () {
     const parallaxPosters = [
-      "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg",
-      "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/aragonite_necklace.JPG",
-      "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/citrine_amethyst.JPG",
-      "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/geode.jpeg",
-      "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/north_shore.jpeg",
-      "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/rainbow_man.jpeg",
-      "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/self_portrait.jpeg",
-      "https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/sunset_beach.jpeg"
+      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg",
+      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434629/chizetteArt%20-%20Compressed/aragonite_necklace.jpg",
+      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434635/chizetteArt%20-%20Compressed/citrine_amethyst.jpg",
+      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434634/chizetteArt%20-%20Compressed/geode.jpg",
+      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434665/chizetteArt%20-%20Compressed/north_shore.jpg",
+      "https://res.cloudinary.com/chizetteart/image/upload/v1552434640/chizetteArt%20-%20Compressed/rainbow_man.jpg",
+      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434663/chizetteArt%20-%20Compressed/self_portrait.jpg",
+      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434670/chizetteArt%20-%20Compressed/sunset_beach.jpg"
     ]
     return (
       <div className="parallaxContainer">
