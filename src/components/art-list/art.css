@@ -12,7 +12,7 @@
   max-width: 300px;
   max-height: 260px;
   margin-bottom: 10%;
-  transition: .3s ease-in-out
+  transition: .3s ease-in-out;
 }
 
 .poster:hover {
@@ -82,6 +82,7 @@
   border: 2px solid white;
   font-weight: bolder;
   font-size: 1.5em;
+  transition: .3s ease-in-out;
 }
 
 .singleViewPriceButton:hover {
@@ -119,13 +120,14 @@
   top: 345px;
   text-shadow: 2px 2px 2px rgb(99, 95, 84);
   user-select: none;
+  transition: .3s ease-in-out;
 }
 
 .nextButton:hover {
   color: rgb(138, 222, 248);
-  transform: scale(1.4);
+  font-size: 1.3em;
   transition-duration: .5s;
-  margin-right: -1%;
+  transform: scale(1.4);
 }
 
 .prevButton {
@@ -136,13 +138,14 @@
   top: 350px;
   text-shadow: 2px 2px 2px rgb(99, 95, 84);
   user-select: none;
+  transition: .3s ease-in-out;
 }
 
 .prevButton:hover {
   color: rgb(138, 222, 248);
-  transform: scale(1.4);
+  font-size: 1.3em;
   transition-duration: .5s;
-  margin-left: -1%;
+  transform: scale(1.4);
 }
 
 button.modal-close {
