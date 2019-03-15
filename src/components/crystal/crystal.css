@@ -24,19 +24,33 @@
   top: 40px;
   background-image: linear-gradient(to bottom right, teal, purple);
   animation: shine .3s infinite;
-  animation-duration: 7s;
+  animation-duration: 3s;
 }
 
 @keyframes shine {
   0%{
+    opacity: .7;
     background-image: linear-gradient(to bottom right, teal, purple);
   }
 
-  50%{
-    background-image: linear-gradient(to bottom right, white, rgb(236, 161, 236));
+  20%{
+    opacity: .2;
+    background-image: linear-gradient(to bottom right, rgb(149, 214, 214), rgb(236, 161, 236));
   }
-  100%{
+
+  30%{
+    opacity: .8;
+    background-image: linear-gradient(to bottom right, rgb(149, 214, 214), rgb(236, 161, 236));
+  }
+
+  70%{
+    opacity: .2;
     background-image: linear-gradient(to bottom right, teal, purple);
+  }
+
+  100%{
+    opacity: 1;
+    background-image: linear-gradient(to bottom right, teal ,purple);
   }
 }
 
