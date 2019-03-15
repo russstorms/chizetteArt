@@ -3,6 +3,7 @@
 }
 
 #stripes {
+  opacity: .8;
   width: 60%;
   height: 70%;
   margin-bottom: -20%;
@@ -10,18 +11,19 @@
   transform: skewY(-12deg);
   transform-origin: 0;
   background: linear-gradient(150deg, #5532FF 15%, #25DDF5 70%, white 94%);
-  box-shadow: 10px 10px 20px gray;
+  box-shadow: 20px 20px 30px gray;
 }
 
-#stripes span {
-  height: 40px
-}
+/* #stripes span {
+  height: 10px;
+} */
 
 #stripes :nth-child(1) {
   width: 50%;
   height: 25%;
   left: 50%;
   top: 40px;
+  transform: skewY(-24deg);
   background-image: linear-gradient(to bottom right, #25DDF5, #5532FF);
   animation: shine 1s infinite ease-in-out;
   animation-duration: 6s;
@@ -29,10 +31,11 @@
 }
 
 #stripes :nth-child(2) {
-  width: 20%;
+  width: 90%;
   height: 27%;
   right: 0;
   bottom: 160px;
+  transform: skewY(-14deg);
   background-image: linear-gradient(to bottom, #25DDF5, skyblue);
   animation: shine 1s infinite ease-in-out;
   animation-duration: 6s;
@@ -40,25 +43,21 @@
 }
 
 #stripes :nth-child(3) {
-  width: 30%;
-  height: 25%;
+  width: 90%;
+  height: 5%;
   bottom: 0;
   right: 0;
   background-image: linear-gradient(to bottom right, #25DDF5, skyblue);
-  animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
-  animation-delay: 3s;
+  
 }
 
 #stripes :nth-child(4) {
-  width: 20%;
-  height: 20%;
+  width: 85%;
+  height: 35%;
+  transform: skewY(-15deg);
   top: 0;
   left: 0;
   background-image: linear-gradient(to bottom right, #5532FF 20%, skyblue 80%);
-  animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
-  animation-delay: 4s;
 }
 
 #stripes :nth-child(5) {
@@ -68,9 +67,6 @@
   top: 0;
   left: 0;
   background-image: linear-gradient(to bottom right, #25DDF5, white);
-  animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
-  animation-delay: 3.5s;
 }
 
 
