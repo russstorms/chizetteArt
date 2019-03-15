@@ -9,7 +9,7 @@
   overflow: hidden;
   transform: skewY(-12deg);
   transform-origin: 0;
-  background: linear-gradient(150deg, purple 15%, teal 70%, white 94%);
+  background: linear-gradient(150deg, #5532FF 15%, #25DDF5 70%, white 94%);
   box-shadow: 10px 10px 20px gray;
 }
 
@@ -22,16 +22,16 @@
   height: 25%;
   left: 50%;
   top: 40px;
-  background-image: linear-gradient(to bottom right, teal, purple);
+  background-image: linear-gradient(to bottom right, #25DDF5, #5532FF);
   animation: shine 1s infinite ease-in-out;
-  animation-duration: 7s;
+  animation-duration: 6s;
   animation-delay: 3s;
 }
 
 @keyframes shine {
   0%{
     opacity: .7;
-    background-image: linear-gradient(to bottom right, teal, purple);
+    background-image: linear-gradient(to bottom right, #25DDF5, #5532FF);
   }
 
   3%{
@@ -41,22 +41,22 @@
 
   7%{
     opacity: .8;
-    background-image: linear-gradient(to bottom right, rgb(149, 214, 214), rgb(236, 161, 236));
+    background-image: linear-gradient(to bottom right, rgb(149, 214, 214), white);
   }
 
   13%{
     opacity: .2;
-    background-image: linear-gradient(to bottom right, rgb(149, 214, 214), rgb(236, 161, 236));
+    background-image: linear-gradient(to bottom right, rgb(149, 214, 214), white);
   }
 
   18%{
     opacity: .1;
-    background-image: linear-gradient(to bottom right, rgb(63, 138, 138), rgb(148, 33, 148));
+    background-image: linear-gradient(to bottom right, rgb(63, 138, 138), rgb(236, 161, 236));
   }
 
   25%, 100%{
     opacity: .7;
-    background-image: linear-gradient(to bottom right, teal ,purple);
+    background-image: linear-gradient(to bottom right, #25DDF5 , #5532FF);
   }
   
 }
@@ -66,7 +66,7 @@
   height: 27%;
   right: 0;
   bottom: 160px;
-  background-image: linear-gradient(to bottom, teal, skyblue);
+  background-image: linear-gradient(to bottom, #25DDF5, skyblue);
 }
 
 #stripes :nth-child(3) {
@@ -74,7 +74,7 @@
   height: 25%;
   bottom: 0;
   right: 0;
-  background-image: linear-gradient(to bottom right, teal, skyblue);
+  background-image: linear-gradient(to bottom right, #25DDF5, skyblue);
 }
 
 #stripes :nth-child(4) {
@@ -82,7 +82,7 @@
   height: 20%;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to bottom right, purple 20%, skyblue 80%);
+  background-image: linear-gradient(to bottom right, #5532FF 20%, skyblue 80%);
 }
 
 #stripes :nth-child(5) {
@@ -91,5 +91,5 @@
   margin-left: 20%;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to bottom right, teal, white);
+  background-image: linear-gradient(to bottom right, #25DDF5, white);
 }
