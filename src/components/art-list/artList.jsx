@@ -1,5 +1,6 @@
 import React from 'react'
 import Art from './art'
+import Crystal from '../crystal/crystal'
 import './artList.css'
 
 export default class ArtList extends React.Component {
@@ -52,9 +53,13 @@ export default class ArtList extends React.Component {
 
   render () {
     return (
-      <div className="wrapper">
-        { this.columnCheck() }
+      <div>
+        <div className="wrapper">
+          { this.columnCheck() }
+        </div>
+        <Crystal />
       </div>
+
     )
   }
 }

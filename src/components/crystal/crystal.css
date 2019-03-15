@@ -1,0 +1,74 @@
+#stripes, #stripes span {
+  position: absolute;
+}
+
+#stripes {
+  width: 60%;
+  height: 70%;
+  margin-bottom: -20%;
+  overflow: hidden;
+  transform: skewY(-12deg);
+  transform-origin: 0;
+  background: linear-gradient(150deg, purple 15%, teal 70%, white 94%);
+  box-shadow: 10px 10px 20px gray;
+}
+
+#stripes span {
+  height: 40px
+}
+
+#stripes :nth-child(1) {
+  width: 50%;
+  height: 25%;
+  left: 50%;
+  top: 40px;
+  background-image: linear-gradient(to bottom right, teal, purple);
+  animation: shine .3s infinite;
+  animation-duration: 7s;
+}
+
+@keyframes shine {
+  0%{
+    background-image: linear-gradient(to bottom right, teal, purple);
+  }
+
+  50%{
+    background-image: linear-gradient(to bottom right, white, rgb(236, 161, 236));
+  }
+  100%{
+    background-image: linear-gradient(to bottom right, teal, purple);
+  }
+}
+
+#stripes :nth-child(2) {
+  width: 20%;
+  height: 27%;
+  right: 0;
+  bottom: 160px;
+  background-image: linear-gradient(to bottom, teal, skyblue);
+}
+
+#stripes :nth-child(3) {
+  width: 30%;
+  height: 25%;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom right, teal, skyblue);
+}
+
+#stripes :nth-child(4) {
+  width: 20%;
+  height: 20%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, purple 20%, skyblue 80%);
+}
+
+#stripes :nth-child(5) {
+  width: 20%;
+  height: 20%;
+  margin-left: 20%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, teal, white);
+}
