@@ -23,8 +23,9 @@
   left: 50%;
   top: 40px;
   background-image: linear-gradient(to bottom right, teal, purple);
-  animation: shine .3s infinite;
-  animation-duration: 3s;
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 7s;
+  animation-delay: 3s;
 }
 
 @keyframes shine {
@@ -33,30 +34,31 @@
     background-image: linear-gradient(to bottom right, teal, purple);
   }
 
-  20%{
+  3%{
     opacity: .1;
     background-image: linear-gradient(to bottom right, rgb(149, 214, 214), rgb(236, 161, 236));
   }
 
-  30%{
+  7%{
     opacity: .8;
     background-image: linear-gradient(to bottom right, rgb(149, 214, 214), rgb(236, 161, 236));
   }
 
-  50%{
-    opacity: .1;
+  13%{
+    opacity: .2;
     background-image: linear-gradient(to bottom right, rgb(149, 214, 214), rgb(236, 161, 236));
   }
 
-  80%{
+  18%{
     opacity: .1;
     background-image: linear-gradient(to bottom right, rgb(63, 138, 138), rgb(148, 33, 148));
   }
 
-  100%{
+  25%, 100%{
     opacity: .7;
     background-image: linear-gradient(to bottom right, teal ,purple);
   }
+  
 }
 
 #stripes :nth-child(2) {
