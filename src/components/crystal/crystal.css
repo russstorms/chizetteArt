@@ -2,6 +2,8 @@
   width: 100%;
 }
 
+/* MIDDLEGROUND */
+
 #stripes, #stripes span {
   position: absolute;
 }
@@ -315,6 +317,8 @@
   }
 }
 
+/* BACKGROUND */
+
 #darkStripes, #darkStripes span {
   position: absolute;
 }
@@ -413,4 +417,52 @@
   animation: shine 1s infinite ease-in-out;
   animation-duration: 9s;
   animation-delay: 3s;
+}
+
+/* FOREGROUND */
+
+#foreGround, #foreGround span {
+  position: absolute;
+}
+
+#foreGround {
+  opacity: 1;
+  width: 70%;
+  height: 90%;
+  margin-bottom: -100%;
+  margin-left: 30%;
+  margin-top: -15%;
+  overflow: hidden;
+  z-index: 9999;
+  transform-origin: 0;
+  background-color: transparent;
+}
+
+#foreGround :nth-child(1) {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  animation: shineTriangles 1s infinite ease-in-out;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+@keyframes shineTriangles {
+  0%{
+    opacity: 0;
+    border-bottom: 5px solid white;
+  }
+
+  1%{
+    opacity: 1;
+    border-bottom: 5px solid white;
+  }
+
+  3%, 100%{
+    opacity: 0;
+    border-bottom: 5px solid white;
+  }
 }

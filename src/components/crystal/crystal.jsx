@@ -9,6 +9,9 @@ export default class Body extends Component {
     return (
       <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" offset={100}>
         <div className="bG">
+          <div id="foreGround">
+            <span></span>
+          </div>
           <div id="darkStripes">
             <span></span>
             <span></span>
