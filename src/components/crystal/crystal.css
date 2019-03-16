@@ -6,14 +6,14 @@
   opacity: .8;
   width: 70%;
   height: 90%;
-  margin-bottom: -20%;
+  margin-bottom: -30%;
   margin-left: 30%;
   margin-top: -20%;
   overflow: hidden;
   transform: skewY(12deg);
   transform-origin: 0;
-  /* background-image: linear-gradient(150deg, #5532FF 15%, #25DDF5 70%, white 94%); */
-  background-color: gray;
+  /* background-image: linear-gradient(150deg, #5532FF 15%, #FFA101 70%, white 94%); */
+  background-color: white;
 }
 
 /* #stripes span {
@@ -26,56 +26,52 @@
   left: 50%;
   top: 40px;
   transform: skewY(24deg);
-  background-image: linear-gradient(to bottom right, #25DDF5, #5532FF);
+  background-image: linear-gradient(to bottom right, #FFA101, #5532FF);
   animation: shine 1s infinite ease-in-out;
   animation-duration: 6s;
   animation-delay: 2s;
 }
 
 #stripes :nth-child(2) {
-  width: 90%;
-  height: 27%;
-  right: 0;
-  bottom: 160px;
-  transform: skewY(10deg);
-  background-image: linear-gradient(to bottom, #25DDF5, skyblue);
+  width: 70%;
+  height: 20%;
+  left: 40%;
+  top: -70px;
+  transform: skewY(28deg);
+  background-image: linear-gradient(to bottom right, #FFA101, #5532FF);
   animation: shine 1s infinite ease-in-out;
   animation-duration: 6s;
-  animation-delay: 2.5s;
+  animation-delay: 3s;
 }
 
 #stripes :nth-child(3) {
-  width: 90%;
-  height: 5%;
+  width: 30%;
+  height: 30%;
+  left: 0;
   bottom: 0;
-  right: 0;
-  background-image: linear-gradient(to bottom right, #25DDF5, skyblue);
-  
+  transform: skewY(60deg);
+  background-image: linear-gradient(to bottom right, #FFA101, #5532FF);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 6s;
+  animation-delay: 3.5s;
 }
 
 #stripes :nth-child(4) {
-  width: 85%;
-  height: 35%;
-  transform: skewY(5deg);
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(to bottom right, #5532FF 20%, skyblue 80%);
+  width: 50%;
+  height: 30%;
+  left: 70px;
+  bottom: 50px;
+  transform: skewY(35deg);
+  background-image: linear-gradient(to bottom right, #FFA101, #5532FF);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 6s;
+  animation-delay: 4s;
 }
-
-#stripes :nth-child(5) {
-  width: 20%;
-  height: 20%;
-  margin-left: 20%;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(to bottom right, #25DDF5, white);
-}
-
 
 @keyframes shine {
   0%{
     opacity: .7;
-    background-image: linear-gradient(to bottom right, #25DDF5, rgb(236, 161, 236));
+    background-image: linear-gradient(to bottom right, #FFA101, rgb(236, 161, 236));
   }
 
   3%{
@@ -100,11 +96,11 @@
 
   20%{
     opacity: .1;
-    background-image: linear-gradient(to bottom right, #25DDF5 , #5532FF);
+    background-image: linear-gradient(to bottom right, #FFA101 , #5532FF);
   }
 
   22%, 100%{
     opacity: .7;
-    background-image: linear-gradient(to bottom right, #25DDF5 , #5532FF);
+    background-image: linear-gradient(to bottom right, #FFA101 , #5532FF);
   }
 }

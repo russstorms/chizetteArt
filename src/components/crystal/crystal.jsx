@@ -8,8 +8,7 @@ export default class Body extends Component {
       <div className="bG">
         <div id="stripes">
           <span></span>
-          <span></span> 
-          <span></span> 
+          <span></span>
           <span></span>
           <span></span>
         </div>
