@@ -29,7 +29,7 @@
   transform: skewY(24deg);
   background-image: linear-gradient(to top left, #FFA101, #5532FF);
   animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: 2s;
 }
 
@@ -42,7 +42,7 @@
   transform: skewY(28deg);
   background-image: linear-gradient(to top left, #FFA101, #5532FF);
   animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: 3.5s;
 }
 
@@ -55,7 +55,7 @@
   transform: skewY(55deg);
   background-image: linear-gradient(to top left, #FFA101, #5532FF);
   animation: shine2 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: 3.5s;
 }
 
@@ -68,7 +68,7 @@
   transform: skewY(45deg);
   background-image: linear-gradient(to top left, #FFA101, #5532FF);
   animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: 4s;
 }
 
@@ -81,7 +81,7 @@
   transform: skewY(43deg);
   background-image: linear-gradient(to top left, #FFA101, #5532FF);
   animation: shine2 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: 1s;
 }
 
@@ -93,7 +93,7 @@
   transform: skewY(45deg);
   background-image: linear-gradient(to top left, #FFA101, #5532FF);
   animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: 4.5s;
 }
 
@@ -105,7 +105,7 @@
   transform: skewY(45deg);
   background-image: linear-gradient(to top left, black, #5532FF);
   animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: 4s;
 }
 
@@ -117,7 +117,7 @@
   transform: skewY(35deg);
   background-image: linear-gradient(to top left, #FFA101, #5532FF);
   animation: shine2 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: .5s;
 }
 
@@ -130,7 +130,7 @@
   transform: skewY(35deg);
   background-image: linear-gradient(to top left, #FFA101, #5532FF);
   animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: 1.5s;
 }
 
@@ -157,9 +157,9 @@
   height: .5%;
   top: 9.5%;
   left: 0%;
-  background: purple;
+  background-image: linear-gradient(to top left, rgb(149, 214, 214), white);
   animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: 4s;
 }
 
@@ -170,9 +170,9 @@
   height: 1%;
   top: 5%;
   left: 6%;
-  background: purple;
+  background-image: linear-gradient(to top left, rgb(149, 214, 214), white);
   animation: shine 1s infinite ease-in-out;
-  animation-duration: 6s;
+  animation-duration: 9s;
   animation-delay: 4.5s;
 }
 
