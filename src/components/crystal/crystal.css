@@ -1,3 +1,7 @@
+.crystalContainer {
+  width: 100%;
+}
+
 #stripes, #stripes span {
   position: absolute;
 }
@@ -8,17 +12,13 @@
   height: 90%;
   margin-bottom: -30%;
   margin-left: 30%;
-  margin-top: -10%;
+  margin-top: -15%;
   overflow: hidden;
   transform: skewY(12deg);
   transform-origin: 0;
   /* background-image: linear-gradient(150deg, #5532FF 15%, #FFA101 70%, white 94%); */
   background-color: white;
 }
-
-/* #stripes span {
-  height: 10px;
-} */
 
 #stripes :nth-child(1) {
   opacity: .8;
