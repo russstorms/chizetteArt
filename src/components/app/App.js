@@ -3,6 +3,7 @@ import './App.css'
 import Header from '../header/header'
 import Parallax from '../parallax/parallax'
 import ArtList from '../art-list/artList'
+import Crystal from '../crystal/crystal'
 import Login from '../login/loginForm'
 import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
@@ -368,7 +369,7 @@ export default class App extends Component {
             </ScrollAnimation>
           </div>
         : null}
-        <ArtList filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {
+        <ArtList contactMe={this.state.contactMe} filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {
           if (this.state.filteredTerm === 'All') {
             return art.medium
           }
@@ -392,6 +393,7 @@ export default class App extends Component {
         })
         } 
         token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
+        {!this.state.contactMe ? <Crystal /> : null}
         {this.state.contactMe ? <Contact contactMe={this.state.contactMe} /> : null}
         <Footer />
       </ParallaxProvider>

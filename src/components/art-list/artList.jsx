@@ -1,9 +1,15 @@
 import React from 'react'
 import Art from './art'
-import Crystal from '../crystal/crystal'
 import './artList.css'
 
 export default class ArtList extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      ...this.state,
+      contactMe: null
+    }
+  }
 
   componentDidUpdate() {
     window.scrollTo(0, 1)
@@ -57,7 +63,6 @@ export default class ArtList extends React.Component {
         <div className="wrapper">
           { this.columnCheck() }
         </div>
-        <Crystal />
       </div>
 
     )
