@@ -16,7 +16,7 @@
   overflow: hidden;
   transform: skewY(12deg);
   transform-origin: 0;
-  background-color: white;
+  background-color: transparent;
 }
 
 #stripes :nth-child(1) {
@@ -29,7 +29,7 @@
   background-image: linear-gradient(to top left, #FFA101, #5532FF);
   animation: shine 1s infinite ease-in-out;
   animation-duration: 9s;
-  animation-delay: 2s;
+  animation-delay: 3s;
 }
 
 #stripes :nth-child(2) {
@@ -200,6 +200,45 @@
   animation: shine2 1s infinite ease-in-out;
   animation-duration: 9s;
   animation-delay: .5s;
+}
+
+#stripes :nth-child(16) {
+  opacity: .8;
+  width: 50%;
+  height: 13.5%;
+  left: 50%;
+  top: 24.5%;
+  transform: skewY(24deg);
+  background-image: linear-gradient(to top left, #FFA101, #5532FF);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 9s;
+  animation-delay: 2s;
+}
+
+#stripes :nth-child(17) {
+  transform: skewY(-9deg);
+  opacity: .8;
+  width: 14%;
+  height: .5%;
+  top: 18.5%;
+  left: 50%;
+  background-image: linear-gradient(to top left, rgb(149, 214, 214), white);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 9s;
+  animation-delay: 2s;
+}
+
+#stripes :nth-child(18) {
+  transform: skewY(-61deg);
+  opacity: .8;
+  width: 3.5%;
+  height: 1%;
+  top: 12%;
+  left: 64%;
+  background-image: linear-gradient(to top left, rgb(149, 214, 214), white);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 9s;
+  animation-delay: 3s;
 }
 
 @keyframes shine {
