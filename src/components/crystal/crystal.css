@@ -64,7 +64,7 @@
   width: 15%;
   height: 30%;
   left: 0;
-  top: 22%;
+  top: 23%;
   transform: skewY(45deg);
   background-image: linear-gradient(to top left, #FFA101, #5532FF);
   animation: shine 1s infinite ease-in-out;
@@ -99,6 +99,18 @@
 
 #stripes :nth-child(7) {
   opacity: .8;
+  width: 40%;
+  height: 10%;
+  top: 31.5%;
+  transform: skewY(45deg);
+  background-image: linear-gradient(to top left, black, #5532FF);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 6s;
+  animation-delay: 4s;
+}
+
+#stripes :nth-child(8) {
+  opacity: .8;
   width: 80%;
   height: 20%;
   top: 10%;
@@ -109,7 +121,7 @@
   animation-delay: .5s;
 }
 
-#stripes :nth-child(8) {
+#stripes :nth-child(9) {
   opacity: .8;
   width: 45%;
   height: 10%;
@@ -122,7 +134,7 @@
   animation-delay: 1.5s;
 }
 
-#stripes :nth-child(9) {
+#stripes :nth-child(10) {
   width: 5%;
   height: 7%;
   top: 0%;
@@ -130,12 +142,38 @@
   background: white;
 }
 
-#stripes :nth-child(10) {
-  width: 18%;
+#stripes :nth-child(11) {
+  width: 19%;
   height: 7%;
   top: 0%;
   right: 32%;
   background: white;
+}
+
+#stripes :nth-child(12) {
+  transform: skewY(0deg);
+  opacity: .8;
+  width: 6%;
+  height: .5%;
+  top: 9.5%;
+  left: 0%;
+  background: purple;
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 6s;
+  animation-delay: 4s;
+}
+
+#stripes :nth-child(13) {
+  transform: skewY(-75deg);
+  opacity: .8;
+  width: 1.5%;
+  height: 1%;
+  top: 5%;
+  left: 6%;
+  background: purple;
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 6s;
+  animation-delay: 4.5s;
 }
 
 @keyframes shine {
