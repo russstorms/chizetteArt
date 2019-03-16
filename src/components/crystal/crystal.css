@@ -498,6 +498,19 @@
   animation-delay: 4s;
 }
 
+#darkStripes :nth-child(14) {
+  opacity: .8;
+  width: 35%;
+  height: 1%;
+  left: 64%;
+  top: 47%;
+  transform: skewY(26deg);
+  background-image: linear-gradient(to top left, rgb(138, 222, 248), #5532FF);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 9s;
+  animation-delay: 2s;
+}
+
 /* FOREGROUND */
 
 #foreGround, #foreGround span {
