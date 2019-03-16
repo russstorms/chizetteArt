@@ -401,3 +401,16 @@
   right: -5%;
   background-image: linear-gradient(to top left, #5532FF, purple);
 }
+
+#darkStripes :nth-child(7) {
+  transform: skewY(3deg);
+  opacity: .8;
+  width: 22%;
+  height: 17%;
+  top: 0%;
+  right: 10%;
+  background-image: linear-gradient(to top left, rgb(149, 214, 214), white);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
