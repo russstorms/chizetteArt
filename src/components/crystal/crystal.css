@@ -166,12 +166,12 @@
 
   20%{
     opacity: .1;
-    background-image: linear-gradient(to top left, #FFA101 , #5532FF);
+    background-image: linear-gradient(to top left, skyblue , #5532FF);
   }
 
   22%, 100%{
     opacity: .7;
-    background-image: linear-gradient(to top left, #FFA101 , #5532FF);
+    background-image: linear-gradient(to top left, skyblue , #5532FF);
   }
 }
 
