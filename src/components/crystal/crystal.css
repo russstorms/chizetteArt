@@ -386,13 +386,16 @@
 }
 
 #darkStripes :nth-child(4) {
-  transform: skewY(30deg);
+  transform: skewY(20deg);
+  transform: rotate(-52deg);
   opacity: 1;
-  width: 20%;
-  height: 1%;
-  bottom: 40%;
-  left: 68%;
-  background-image: linear-gradient(to top left, #5532FF, purple);
+  width: 0;
+  height: 0;
+  bottom: 30%;
+  left: 66%;
+  border-top: 190px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 40px solid #5532FF;
 }
 
 #darkStripes :nth-child(5) {
@@ -434,6 +437,16 @@
   top: 0;
   right: 58%;
   background: white;
+}
+
+#darkStripes :nth-child(9) {
+  transform: skewY(30deg);
+  opacity: 1;
+  width: 30%;
+  height: 20%;
+  top: 35%;
+  right: -10%;
+  background-image: linear-gradient(to top right, purple, #5532FF);
 }
 
 /* FOREGROUND */
