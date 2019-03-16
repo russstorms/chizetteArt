@@ -59,6 +59,7 @@ export default class Body extends Component {
             <span></span>
             <span></span>
             <span></span>
+            <span></span>
           </div>
           <div id="stripes">
             <span></span>

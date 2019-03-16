@@ -389,7 +389,7 @@
 #darkStripes :nth-child(5) {
   transform: skewY(38deg);
   opacity: 1;
-  width: 10%;
+  width: 14%;
   height: 16%;
   top: 8%;
   left: 35%;
@@ -417,6 +417,14 @@
   animation: shine 1s infinite ease-in-out;
   animation-duration: 9s;
   animation-delay: 3s;
+}
+
+#darkStripes :nth-child(8) {
+  width: 8%;
+  height: 7%;
+  top: 0;
+  right: 58%;
+  background: white;
 }
 
 /* FOREGROUND */
