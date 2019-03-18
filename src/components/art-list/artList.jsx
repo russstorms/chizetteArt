@@ -51,7 +51,7 @@ export default class ArtList extends React.Component {
                 <div onClick={this.props.splashFilter} className="viewArt">
                   <span className="view" data-medium="Art">
                     View Art
-                    <span className="arrowIcons">
+                    <span className="arrowIcons" data-medium="Art">
                       <i className="small material-icons icon viewAllIcons">chevron_right</i>
                     </span>
                   </span>
@@ -88,9 +88,11 @@ export default class ArtList extends React.Component {
               <Art art={art} id={idx} artPosters={splashArt} filterTerm={this.props.filterTerm} />
               <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
                 <div onClick={this.props.splashFilter} className="viewJewelry">
-                  <span className="view" data-medium="Jewelry">View Jewelry</span>
-                  <span className="arrowIcons">
-                    <i className="small material-icons icon viewAllIcons">chevron_right</i>
+                  <span className="view" data-medium="Jewelry">
+                    View Jewelry
+                    <span className="arrowIcons" data-medium="Jewelry">
+                      <i className="small material-icons icon viewAllIcons">chevron_right</i>
+                    </span>
                   </span>
                 </div>
               </ScrollAnimation>
@@ -129,9 +131,11 @@ export default class ArtList extends React.Component {
               <Art art={art} id={idx} artPosters={splashArt} filterTerm={this.props.filterTerm} />
               <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
                 <div onClick={this.props.splashFilter} className="viewPhotography">
-                  <span className="view" data-medium="Photography">View Photography</span>
-                  <span className="arrowIcons">
-                    <i className="small material-icons icon viewAllIcons">chevron_right</i>
+                  <span className="view" data-medium="Photography">
+                    View Photography
+                    <span className="arrowIcons" data-medium="Photography">
+                      <i className="small material-icons icon viewAllIcons">chevron_right</i>
+                    </span>
                   </span>
                 </div>
               </ScrollAnimation>
