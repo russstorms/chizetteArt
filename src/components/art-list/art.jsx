@@ -94,7 +94,7 @@ export default class Art extends React.Component {
     <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
       <div className="artPiece">
         {this.props.filterTerm === '' ? 
-          <img className="poster" src={art.poster} alt="https://placekitten.com/200/300"></img> 
+          <img className="poster2" src={art.poster} alt="https://placekitten.com/200/300"></img> 
           :
             <span>
             <Modal className="modalFullView animated fadeIn"
