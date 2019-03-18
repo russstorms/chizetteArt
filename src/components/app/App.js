@@ -231,12 +231,14 @@ export default class App extends Component {
         filteredTerm: 'Photography',
         counter: 0
       })
-    } else if (searchTerm === 'Jewelry') {
+    }
+    if (searchTerm === 'Jewelry') {
       this.setState({
         filteredTerm: 'Jewelry',
         counter: 0
       })
-    } else {
+    }
+    if (searchTerm === 'Art') {
       this.setState({
         filteredTerm: 'Art',
         counter: 0
