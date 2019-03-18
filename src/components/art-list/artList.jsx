@@ -47,7 +47,7 @@ export default class ArtList extends React.Component {
                 </div>
               </ScrollAnimation>
               <Art art={art} id={idx} artPosters={splashArt} filterTerm={this.props.filterTerm} />
-              <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
+              <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
                 <div onClick={this.props.splashFilter} className="viewArt">
                   <span className="view" data-medium="Art">
                     View Art
@@ -86,7 +86,7 @@ export default class ArtList extends React.Component {
                 </div>
               </ScrollAnimation>
               <Art art={art} id={idx} artPosters={splashArt} filterTerm={this.props.filterTerm} />
-              <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
+              <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
                 <div onClick={this.props.splashFilter} className="viewJewelry">
                   <span className="view" data-medium="Jewelry">
                     View Jewelry
@@ -129,7 +129,7 @@ export default class ArtList extends React.Component {
                 </div>
               </ScrollAnimation>
               <Art art={art} id={idx} artPosters={splashArt} filterTerm={this.props.filterTerm} />
-              <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
+              <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
                 <div onClick={this.props.splashFilter} className="viewPhotography">
                   <span className="view" data-medium="Photography">
                     View Photography

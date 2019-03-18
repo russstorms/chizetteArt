@@ -165,16 +165,27 @@
 
 @keyframes viewAll {
   0% {
-    margin-right: 2%;
+    opacity: 1;
   }
 
   50% {
-    margin-right: 5%;
     color: rgb(196, 107, 193);
   }
 
+  70% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: .1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
   100% {
-    margin-right: 2%;
+    opacity: 1;
   }
 }
 
