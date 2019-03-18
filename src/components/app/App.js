@@ -8,7 +8,6 @@ import Login from '../login/loginForm'
 import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
-import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
 
 const API = "http://localhost:3000"
@@ -27,7 +26,6 @@ export default class App extends Component {
     }
   }
 
-  
   //// POST TO LOGIN \\\\
   loginClick = async (loginInfo) => {
     const response = await fetch(`${API}/sign-in`, {
@@ -44,7 +42,7 @@ export default class App extends Component {
       // console.log(auth)
       const json = await response.json()
       this.setState({
-        ...this.state,
+
         userId: json.id,
         actualToken: auth
       })
@@ -54,7 +52,6 @@ export default class App extends Component {
 
   logoutClick = async () => {
     this.setState({
-      ...this.state,
       userId: ''
     })
     this.storeToken("", "")
@@ -66,7 +63,6 @@ export default class App extends Component {
     const userId = await localStorage.getItem('userId')
     const parsed = JSON.parse(userId)
     this.setState({
-      ...this.state,
       userId: parsed || "",
       actualToken: token || ""
     })
@@ -100,7 +96,6 @@ export default class App extends Component {
     const artListJson = await fetch(`${API}/chizetteart`)
     const artList = await artListJson.json()
     this.setState({
-      ...this.state,
       artList
     })
   }
@@ -133,7 +128,6 @@ export default class App extends Component {
       alert(`Art Created!`)
     }
     this.setState({
-      ...this.state,
       artList: [artBody, ...this.state.artList]
     })
   }
@@ -165,7 +159,7 @@ export default class App extends Component {
       }
       newList.splice(indexToEdit, 1, { id, ...artBody})
       this.setState({
-        ...this.state,
+
         artList: newList
       })
     }
@@ -191,12 +185,11 @@ export default class App extends Component {
   toggleLoginForm = () => {
     if (this.state.secretLogIn) {
     this.setState({
-      ...this.state,
       secretLogIn: false
     })
     } else {
       this.setState({
-        ...this.state,
+
         secretLogIn: true
       })
     }
@@ -209,67 +202,35 @@ export default class App extends Component {
 
     if (searchTerm === 'All') {
       this.setState({
-        ...this.state,
         filteredTerm: 'All',
         counter: 0
       })
     } else if (searchTerm === 'Photography') {
       this.setState({
-        ...this.state,
         filteredTerm: 'Photography',
         counter: 0
       })
     } else if (searchTerm === 'Jewelry') {
       this.setState({
-        ...this.state,
         filteredTerm: 'Jewelry',
         counter: 0
       })
     } else {
       this.setState({
-        ...this.state,
         filteredTerm: 'Art',
         counter: 0
       })
     }
   }
 
-    //// FILTER BY MEDIUM \\\\
-    splashFilterArt = (ev) => {
-      ev.preventDefault()
-      let searchTerm = ev.target.dataset.medium
-  
-      if (searchTerm === 'Photography') {
-        this.setState({
-          ...this.state,
-          filteredTerm: 'Photography',
-          counter: 0
-        })
-      } else if (searchTerm === 'Jewelry') {
-        this.setState({
-          ...this.state,
-          filteredTerm: 'Jewelry',
-          counter: 0
-        })
-      } else {
-        this.setState({
-          ...this.state,
-          filteredTerm: 'Art',
-          counter: 0
-        })
-      }
-    }
-
   //// TOGGLE CONTACT FORM \\\\
   toggleContactMe = () => {
     if (this.state.contactMe) {
     this.setState({
-      ...this.state,
       contactMe: false
     })
     } else {
       this.setState({
-        ...this.state,
         contactMe: true
       })
     }
@@ -313,62 +274,6 @@ export default class App extends Component {
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <br />
         <br />
-        
-        {!this.state.filteredTerm ?
-          <div className="wrapper2">
-            <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
-              <div className="art">
-                <span className="artA">A</span>
-                <span className="artR">r</span>
-                <span className="artT">t</span>
-              </div>
-              <div onClick={this.splashFilterArt} className="viewAll1">
-                <span className="view" data-medium="Art">View Art</span>
-                <span className="arrowIcons">
-                  <i className="small material-icons icon viewAllIcons">chevron_right</i>
-                </span>
-              </div>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
-              <div className="jewelry">
-                <span className="jewelryJ">J</span>
-                <span className="jewelryE">e</span>
-                <span className="jewelryW">w</span>
-                <span className="jewelryE2">e</span>
-                <span className="jewelryL">l</span>
-                <span className="jewelryR">r</span>
-                <span className="jewelryY">y</span>
-              </div>
-              <div onClick={this.splashFilterArt} className="viewAll2">
-                <span className="view" data-medium="Jewelry">View Jewelry</span>
-                <span className="arrowIcons">
-                  <i className="small material-icons icon viewAllIcons">chevron_right</i>
-                </span>
-              </div>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
-              <div className="photography">
-                <span className="photographyP">P</span>
-                <span className="photographyH">h</span>
-                <span className="photographyO">o</span>
-                <span className="photographyT">t</span>
-                <span className="photographyO2">o</span>
-                <span className="photographyG">g</span>
-                <span className="photographyR">r</span>
-                <span className="photographyA">a</span>
-                <span className="photographyP2">p</span>
-                <span className="photographyH2">h</span>
-                <span className="photographyY">y</span>
-              </div>
-              <div onClick={this.splashFilterArt} className="viewAll3">
-                <span className="view" data-medium="Photography">View Photography</span>
-                <span className="arrowIcons">
-                  <i className="small material-icons icon viewAllIcons">chevron_right</i>
-                </span>
-              </div>
-            </ScrollAnimation>
-          </div>
-        : null}
         <ArtList contactMe={this.state.contactMe} filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {
           if (this.state.filteredTerm === 'All') {
             return art.medium
