@@ -401,101 +401,22 @@ button.modal-close {
     max-width: 270px;
     max-height: 230px;
   }
-
-  .poster:hover {
-    transform: scale(1.2);
-  }
-
-  .posterSingleView {
-    max-width: 840px;
-    max-height: 620px;
-    margin: -4% auto auto auto;
-  }
-
-  .nextButton {
-    position: fixed;
-    right: 10px;
-    top: 350px;
-  }
-  
-  .prevButton {
-    position: fixed;
-    left: 10px;
-    top: 350px;
-  }
-
-  .artInfoContainer {
-    margin-left: 30%;
-    margin-top: -2%;
-    width: 50%;
-  }
-  
-  .singleViewPrice {
-    margin-top: -11%;
-    margin-left: 85%;
-  }
-
-  .close {
-    right: 30px;
-    top: 25px;
-  }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-  .poster {
-    max-width: 230px;
-    max-height: 190px;
-  }
-
-  .poster:hover {
-    transform: scale(1.1);
-  }
-
-  .artTitle {
-    font-size: 1em;
-  }
-
-  .posterSingleView {
-    max-width: 840px;
-    max-height: 620px;
-    margin: -6% auto auto auto;
-  }
-
-  .nextButton {
-    position: fixed;
-    right: 10px;
-    top: 350px;
-  }
-  
-  .prevButton {
-    position: fixed;
-    left: 10px;
-    top: 350px;
-  }
-
-  .artInfoContainer {
-    margin-left: 15%;
-    margin-top: -2%;
-    width: 60%;
-  }
-  
-  .singleViewPrice {
-    margin-top: -14%;
-    margin-left: 85%;
-  }
-
-  .close {
-    right: 30px;
-    top: 25px;
-  }
+ 
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {}
+@media only screen and (max-width : 480px) {
+
+}
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {}
+@media only screen and (max-width : 320px) {
+
+}
 
 /* iPhone 8 */
 @media only screen 
