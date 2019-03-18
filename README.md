@@ -1,6 +1,6 @@
 In progress...
 
-On Chrome, go to chizetteart.com
+Go to chizetteart.com (currently down, working on deployment to different website)
 
 An artsite/portfolio for a painter who can create and edit posts. Users can filter by medium and buy prints of paintings.
 

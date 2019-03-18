@@ -133,36 +133,35 @@ export default class App extends Component {
   }
 
 
-    //// EDIT ART \\\\
-    editArt = async (id, title, year, medium, url) => {
-      const artBody = {
-        title: title,
-        year: year,
-        medium: medium,
-        poster: url
-      }
-
-      let newList = this.state.artList.slice()
-      let indexToEdit = newList.findIndex(art => art.id === +id)
-  
-      let response = await fetch(`${API}/chizetteart/${id}`, {
-        method: "PUT",
-        body: JSON.stringify(artBody),
-        headers: {
-          "Accept": "application/JSON",
-          "Content-Type": "application/json",
-          "token": this.state.actualToken
-        },
-      })
-      if (response.status !== 200) {
-        alert(`Couldn't edit this masterpiece.`)
-      }
-      newList.splice(indexToEdit, 1, { id, ...artBody})
-      this.setState({
-
-        artList: newList
-      })
+  //// EDIT ART \\\\
+  editArt = async (id, title, year, medium, url) => {
+    const artBody = {
+      title: title,
+      year: year,
+      medium: medium,
+      poster: url
     }
+
+    let newList = this.state.artList.slice()
+    let indexToEdit = newList.findIndex(art => art.id === +id)
+  
+    let response = await fetch(`${API}/chizetteart/${id}`, {
+      method: "PUT",
+      body: JSON.stringify(artBody),
+      headers: {
+        "Accept": "application/JSON",
+        "Content-Type": "application/json",
+        "token": this.state.actualToken
+      },
+    })
+    if (response.status !== 200) {
+      alert(`Couldn't edit this masterpiece.`)
+    }
+    newList.splice(indexToEdit, 1, { id, ...artBody})
+    this.setState({
+      artList: newList
+    })
+  }
 
 
   //// DELETE ART \\\\
@@ -189,7 +188,6 @@ export default class App extends Component {
     })
     } else {
       this.setState({
-
         secretLogIn: true
       })
     }
@@ -206,6 +204,29 @@ export default class App extends Component {
         counter: 0
       })
     } else if (searchTerm === 'Photography') {
+      this.setState({
+        filteredTerm: 'Photography',
+        counter: 0
+      })
+    } else if (searchTerm === 'Jewelry') {
+      this.setState({
+        filteredTerm: 'Jewelry',
+        counter: 0
+      })
+    } else {
+      this.setState({
+        filteredTerm: 'Art',
+        counter: 0
+      })
+    }
+  }
+
+  //// FILTER BY MEDIUM \\\\
+  splashFilterArt = (ev) => {
+    ev.preventDefault()
+    let searchTerm = ev.target.dataset.medium
+      
+    if (searchTerm === 'Photography') {
       this.setState({
         filteredTerm: 'Photography',
         counter: 0
@@ -274,7 +295,7 @@ export default class App extends Component {
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <br />
         <br />
-        <ArtList contactMe={this.state.contactMe} filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {
+        <ArtList splashFilter={this.splashFilterArt} contactMe={this.state.contactMe} filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {
           if (this.state.filteredTerm === 'All') {
             return art.medium
           }

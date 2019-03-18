@@ -9,9 +9,7 @@ export default class ArtList extends React.Component {
     super(props)
     this.state = {
       ...this.state,
-      contactMe: null,
-      counter: 0,
-      filteredTerm: ''
+      contactMe: null
     }
   }
 
@@ -50,7 +48,7 @@ export default class ArtList extends React.Component {
               </ScrollAnimation>
               <Art art={art} id={idx} artPosters={splashArt} filterTerm={this.props.filterTerm} />
               <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
-                <div onClick={this.splashFilterArt} className="viewArt">
+                <div onClick={this.props.splashFilter} className="viewArt">
                   <span className="view" data-medium="Art">
                     View Art
                     <span className="arrowIcons">
@@ -89,7 +87,7 @@ export default class ArtList extends React.Component {
               </ScrollAnimation>
               <Art art={art} id={idx} artPosters={splashArt} filterTerm={this.props.filterTerm} />
               <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
-                <div onClick={this.splashFilterArt} className="viewJewelry">
+                <div onClick={this.props.splashFilter} className="viewJewelry">
                   <span className="view" data-medium="Jewelry">View Jewelry</span>
                   <span className="arrowIcons">
                     <i className="small material-icons icon viewAllIcons">chevron_right</i>
@@ -130,7 +128,7 @@ export default class ArtList extends React.Component {
               </ScrollAnimation>
               <Art art={art} id={idx} artPosters={splashArt} filterTerm={this.props.filterTerm} />
               <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
-                <div onClick={this.splashFilterArt} className="viewPhotography">
+                <div onClick={this.props.splashFilter} className="viewPhotography">
                   <span className="view" data-medium="Photography">View Photography</span>
                   <span className="arrowIcons">
                     <i className="small material-icons icon viewAllIcons">chevron_right</i>
@@ -142,7 +140,6 @@ export default class ArtList extends React.Component {
       )
     ]
     }
-
     return this.props.artList.map(
       (art, idx) => {
         switch (column) {
@@ -172,27 +169,3 @@ export default class ArtList extends React.Component {
     )
   }
 }
-
-
-//// FILTER BY MEDIUM \\\\
-// splashFilterArt = (ev) => {
-//   ev.preventDefault()
-//   let searchTerm = ev.target.dataset.medium
-  
-//   if (searchTerm === 'Photography') {
-//     this.setState({
-//       filteredTerm: 'Photography',
-//       counter: 0
-//     })
-//   } else if (searchTerm === 'Jewelry') {
-//     this.setState({
-//       filteredTerm: 'Jewelry',
-//       counter: 0
-//     })
-//   } else {
-//     this.setState({
-//       filteredTerm: 'Art',
-//       counter: 0
-//     })
-//   }
-// }
