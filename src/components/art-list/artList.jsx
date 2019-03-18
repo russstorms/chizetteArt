@@ -34,7 +34,7 @@ export default class ArtList extends React.Component {
           return <div key={idx} className={column}><Art art={art} id={idx} artPosters={this.props.splashList.filter((art) => {
               return art.medium
           })} 
-          token={this.props.token} editArt={this.props.editArt} deleteArt={this.props.deleteArt} /></div>
+          token={this.props.token} editArt={this.props.editArt} deleteArt={this.props.deleteArt} filterTerm={this.props.filterTerm} /></div>
         }
       )
     }
