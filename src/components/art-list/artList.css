@@ -1,7 +1,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
   grid-gap: 10px;
   margin: 6% 0% 10% 0%;
 }
@@ -31,6 +31,38 @@
 }
 
 .third .art {
+  display: none;
+}
+
+.first .viewJewelry {
+  display: none;
+}
+
+.second .viewJewelry {
+  display: none;
+}
+
+.second .jewelry {
+  display: none;
+}
+
+.third .jewelry {
+  display: none;
+}
+
+.first .viewPhotography {
+  display: none;
+}
+
+.second .viewPhotography {
+  display: none;
+}
+
+.second .photography {
+  display: none;
+}
+
+.third .photography {
   display: none;
 }
 
@@ -94,6 +126,7 @@
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
+  margin-left: 25%;
 }
 
 .viewJewelry {
@@ -103,6 +136,8 @@
   font-weight: bolder;
   animation: viewAll 5s infinite;
   cursor: pointer;
+  position: absolute;
+  right: 0;
 }
 
 .photography {
@@ -111,6 +146,7 @@
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
+  margin-left: 25%;
 }
 
 .viewPhotography{
@@ -120,6 +156,8 @@
   font-weight: bolder;
   animation: viewAll 5s infinite;
   cursor: pointer;
+  position: absolute;
+  right: 0;
 }
 
 .arrowIcons {
