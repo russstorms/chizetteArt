@@ -148,6 +148,7 @@ export default class App extends Component {
   
     let response = await fetch(`${API}/chizetteart/${id}`, {
       method: "PUT",
+      mode: "cors",
       body: JSON.stringify(artBody),
       headers: {
         "Accept": "application/JSON",
@@ -169,6 +170,7 @@ export default class App extends Component {
   deleteArt = async (id) => {
     let response = await fetch(`${API}/chizetteart/${id}`, {
       method: "DELETE",
+      mode: "cors",
       headers: {
         "Accept": "application/JSON",
         "Content-Type": "application/json",
