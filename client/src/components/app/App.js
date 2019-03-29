@@ -160,7 +160,7 @@ export default class App extends Component {
     if (response.status !== 200) {
       alert(`Couldn't edit this masterpiece.`)
     }
-    newList.splice(indexToEdit, 1, { id, ...artBody})
+    newList.splice(indexToEdit, 1, {id, ...artBody})
     this.setState({
       artList: newList
     })
