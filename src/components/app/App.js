@@ -9,7 +9,7 @@ import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import 'animate.css/animate.min.css'
-
+// env on site
 const API = process.env.REACT_APP_API
 
 export default class App extends Component {
