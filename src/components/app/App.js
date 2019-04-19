@@ -10,8 +10,8 @@ import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import 'animate.css/animate.min.css'
 
-//// API not working
-const API = process.env.REACT_APP_API
+// const API = process.env.REACT_APP_API
+const API = 'http://localhost:3000'
 
 export default class App extends Component {
   constructor(props) {
