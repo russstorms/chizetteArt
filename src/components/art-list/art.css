@@ -423,4 +423,42 @@ button.modal-close {
     and (device-width : 375px) 
     and (device-height : 667px) 
     and (-webkit-device-pixel-ratio : 2) {
+      .posterSingleView {
+        max-width: 80%;
+        max-height: 80%;
+      }
+    
+      .singleViewTitle {
+        margin-top: 5%;
+        font-size: 1.1em;
+      }
+    
+      .singleViewPrice {
+        margin-top: -12%;
+        margin-left: 85%;
+      }
+    
+      .nextButton {
+        position: fixed;
+        right: 90px;
+        top: 345px;
+      }
+    
+      .prevButton {
+        position: fixed;
+        left: 90px;
+        top: 350px;
+      }
+    
+      .close {
+        position: fixed;
+        right: 50px;
+        top: 15px;
+      }
+    
+      .singleViewPriceButton {
+        position: fixed;
+        right: 10px;
+        bottom: 50px;
+      }
     }
