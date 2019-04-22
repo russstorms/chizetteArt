@@ -346,6 +346,12 @@
 @media only screen and (max-width : 480px) {}
 
 /* iPhone 8 */
-@media only screen and (max-width : 375px) 
+@media only screen and (max-width : 375px)
     and (-webkit-device-pixel-ratio : 2) {
+      .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        margin-top: 6%;
+        margin-bottom: 10%;
+      }
     }

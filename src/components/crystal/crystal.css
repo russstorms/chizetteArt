@@ -3,7 +3,6 @@
 }
 
 /* MIDDLEGROUND */
-
 #stripes, #stripes span {
   position: absolute;
 }
@@ -1024,4 +1023,9 @@
     opacity: 0;
     border-bottom: 5px solid white;
   }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
 }
