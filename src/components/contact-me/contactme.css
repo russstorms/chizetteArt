@@ -109,16 +109,12 @@
 
       .instagramIcon {
         font-size: 2em;
-        position: fixed;
-        bottom: 130px;
-        right: 150px;
+        margin: -5%;
       }
 
       .emailIcon {
         font-size: 2em;
-        position: fixed;
-        bottom: 130px;
-        left: 150px;
+        margin: -5%;
       }
 
       .contact {
