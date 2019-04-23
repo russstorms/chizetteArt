@@ -32,8 +32,6 @@
 }
 
 .posterSingleView {
-  display: flex;
-  justify-content: center;
   box-shadow: 5px 5px 10px rgba(99, 95, 84, .8);
 }
 
@@ -310,10 +308,24 @@ button.modal-close {
     and (device-width : 375px) 
     and (device-height : 667px) 
     and (-webkit-device-pixel-ratio : 2) {
+      .poster {
+        border: 2px solid rgb(99, 95, 84);
+        max-width: 280px;
+        max-height: 220px;
+        margin-bottom: 5%;
+      }
+
+      .poster2 {
+        max-width: 280px;
+        max-height: 220px;
+      }
+
       .posterSingleView {
-        max-width: 330px;
-        max-height: 440px;
+        max-width: 400px;
+        max-height: 240px;
         margin-top: -5%;
+        display: flex;
+        justify-content: center;
       }
 
       .close {

@@ -358,5 +358,6 @@
       .filteredTitle {
         margin-top: 30%;
         font-size: 1.3em;
+        margin-bottom: -10%;
       }
     }
