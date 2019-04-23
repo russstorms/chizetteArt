@@ -45,67 +45,32 @@
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
 
-@media only screen and (max-width: 1921px) {
-  .about {
-    margin: auto 10% 10% 20%;
-    font-size: 3em;
-  }
-}
-
-@media only screen and (max-width: 1440px) {
-  .about {
-    margin: auto 10% 10% 20%;
-    font-size: 2em;
-  }
-}
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-  .parallaxContainer {
-    height: 110%;
-    width: 110%;
-  }
+@media only screen and (min-width : 992px) {
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
-  .parallaxContainer {
-    height: 100vh;
-    margin-left: -10%;
-    margin-top: 16%;
-    margin-bottom: 5%;
-    object-fit: contain;
-  }
-
-  .about {
-    padding-top: 18%;
-    margin: auto 10% 0% 20%;
-  }
+@media only screen and (min-width : 768px) {
+ 
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {}
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
 
 /* iPhone 8 */
-@media only screen and (max-width : 375px)
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 667px) 
     and (-webkit-device-pixel-ratio : 2) {
-      .parallaxContainer {
-        margin-top: 28%;
-        height: 120%;
-      }
-    
-      .parallax-banner-layer-0 {
-        margin-left: -70%;
-      }
-    
-      .about {
-        margin: 10% 10% 10% 20%;
-        padding-top: 25%;
-        font-size: 1em;
-      }
     }
