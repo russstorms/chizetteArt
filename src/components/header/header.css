@@ -14,8 +14,6 @@
 }
 
 .logo {
-  height: 10%;
-  width: 10%;
   margin: 1%;
   border-radius: 50%;
 }
@@ -29,7 +27,6 @@
   letter-spacing: .25em;
   font-family: "Megrim";
   margin-top: -6%;
-  margin-left: 9%;
   color: rgb(99, 95, 84);
   text-shadow: 2px 2px 1px rgb(255, 255, 255);
   cursor: default;
@@ -174,4 +171,22 @@
     and (device-width : 375px) 
     and (device-height : 667px) 
     and (-webkit-device-pixel-ratio : 2) {
+      .logo {
+        height: 20%;
+        width: 20%;
+      }
+
+      .nav {
+        height: 17%;
+      }
+
+      .chizetteArt {
+        font-size: 2em;
+        margin-left: 17%;
+        margin-top: -13%;
+      }
+
+      .menuButton {
+        margin-top: -6%;
+      }
     }
