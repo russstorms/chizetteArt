@@ -321,7 +321,16 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
- 
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+  }
+
+  .filteredTitle {
+    margin-top: 30%;
+    font-size: 1.5em;
+  }
 }
 
 /* Extra Small Devices, Phones */

@@ -9,9 +9,7 @@
 
 .poster {
   border: 2px solid rgb(99, 95, 84);
-  max-width: 300px;
-  max-height: 260px;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   transition: .3s ease-in-out;
 }
 
@@ -23,8 +21,6 @@
 
 .poster2 {
   border: 2px solid rgb(99, 95, 84);
-  max-width: 300px;
-  max-height: 260px;
   margin-bottom: 10%;
   transition: .3s ease-in-out;
 }
@@ -233,7 +229,17 @@ button.modal-close {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
- 
+  .poster {
+    border: 2px solid rgb(99, 95, 84);
+    max-width: 200px;
+    max-height: 140px;
+    margin-bottom: 5%;
+  }
+
+  .poster2 {
+    max-width: 200px;
+    max-height: 140px;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -301,3 +307,4 @@ button.modal-close {
         top: 140px;
       }
     }
+

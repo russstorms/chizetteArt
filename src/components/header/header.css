@@ -153,17 +153,24 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
- 
-}
+  .logo {
+    height: 15%;
+    width: 15%;
+  }
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
+  .nav {
+    height: 22%;
+  }
 
-}
+  .chizetteArt {
+    font-size: 2.5em;
+    margin-left: 12%;
+    margin-top: -8%;
+  }
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
-
+  .menuButton {
+    margin-top: -6%;
+  }
 }
 
 /* iPhone 8 */

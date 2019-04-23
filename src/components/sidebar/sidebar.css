@@ -85,17 +85,13 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
- 
-}
+  .side-nav {
+    margin-top: 18%;
+  }
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-
-}
-
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
-
+  .sideNav {
+    height: 75%;
+  }
 }
 
 /* iPhone 8 */
