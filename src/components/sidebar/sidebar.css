@@ -22,7 +22,6 @@
 }
 
 .sideNav {
-  height: 70%;
   overflow: hidden;
 }
 
@@ -105,6 +104,10 @@
     and (device-height : 667px) 
     and (-webkit-device-pixel-ratio : 2) {
       .side-nav {
-        margin-top: 29%;
+        margin-top: 28%;
+      }
+
+      .sideNav {
+        height: 80%;
       }
     }
