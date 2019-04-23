@@ -75,25 +75,6 @@
 /* *****************************************************************
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
-/* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-  .side-nav {
-    margin-top: 18%;
-  }
-
-  .sideNav {
-    height: 75%;
-  }
-}
-
 /* iPhone 8 */
 @media only screen 
     and (device-width : 375px) 
@@ -107,3 +88,28 @@
         height: 80%;
       }
     }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .side-nav {
+    margin-top: 18%;
+  }
+
+  .sideNav {
+    height: 75%;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .side-nav {
+    margin-top: 16%;
+  }
+
+  .sideNav {
+    height: 70%;
+  }
+}
+
+
+

@@ -143,54 +143,6 @@
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-  .logo {
-    height: 13% !important;
-    width: 13% !important;
-  }
-
-  .nav {
-    height: 25% !important;
-  }
-
-  .chizetteArt {
-    font-size: 2.5em !important;
-    margin-left: 11% !important;
-    margin-top: -7% !important;
-  }
-
-  .menuButton {
-    margin-top: -4% !important;
-  }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-  .logo {
-    height: 15%;
-    width: 15%;
-  }
-
-  .nav {
-    height: 22%;
-  }
-
-  .chizetteArt {
-    font-size: 2.5em;
-    margin-left: 12%;
-    margin-top: -8%;
-  }
-
-  .menuButton {
-    margin-top: -6%;
-  }
-}
-
 /* iPhone 8 */
 @media only screen 
     and (device-width : 375px) 
@@ -215,3 +167,47 @@
         margin-top: -6%;
       }
     }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .logo {
+    height: 15%;
+    width: 15%;
+  }
+
+  .nav {
+    height: 22%;
+  }
+
+  .chizetteArt {
+    font-size: 2.5em;
+    margin-left: 12%;
+    margin-top: -8%;
+  }
+
+  .menuButton {
+    margin-top: -6%;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .logo {
+    height: 13% !important;
+    width: 13% !important;
+  }
+
+  .nav {
+    height: 25% !important;
+  }
+
+  .chizetteArt {
+    font-size: 2.5em !important;
+    margin-left: 11% !important;
+    margin-top: -7% !important;
+  }
+
+  .menuButton {
+    margin-top: -4% !important;
+  }
+}
