@@ -240,6 +240,59 @@ button.modal-close {
     max-width: 200px;
     max-height: 140px;
   }
+
+  .posterSingleView {
+    max-width: 450px;
+    max-height: 550px;
+    margin-top: -5%;
+    margin-left: 20%;
+  }
+
+  .close {
+    font-size: 3em;
+    position: fixed;
+    right: 30px;
+    top: 0px;
+  }
+
+  .singleViewTitle {
+    font-size: 2.5em;
+  }
+
+  .artInfoContainer {
+    width: 100%;
+    margin-top: -2%;
+  }
+
+  .singleViewPrice {
+    font-size: 1em;
+    margin-top: -11%;
+    margin-left: 85%;
+  }
+
+  .singleViewPriceButton {
+    padding: 1%;
+    position: fixed;
+    right: 10px;
+    bottom: 25px;
+    font-size: 1.3em;
+  }
+
+  .nextButton {
+    position: fixed;
+    right: 10px;
+    top: 220px;
+  }
+
+  .prevButton {
+    position: fixed;
+    left: 10px;
+    top: 220px;
+  }
+
+  .singleViewMedium {
+    margin-left: 6%;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -307,4 +360,3 @@ button.modal-close {
         top: 140px;
       }
     }
-
