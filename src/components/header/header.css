@@ -193,21 +193,43 @@
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
   .logo {
-    height: 13% !important;
-    width: 13% !important;
+    height: 13%;
+    width: 13%;
   }
 
   .nav {
-    height: 25% !important;
+    height: 25%;
   }
 
   .chizetteArt {
-    font-size: 2.5em !important;
-    margin-left: 11% !important;
-    margin-top: -7% !important;
+    font-size: 2.5em;
+    margin-left: 11%;
+    margin-top: -7%;
   }
 
   .menuButton {
-    margin-top: -4% !important;
+    margin-top: -4%;
+  }
+}
+
+/* Styles for Desktops */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .logo {
+    height: 12%;
+    width: 12%;
+  }
+
+  .nav {
+    height: 25%;
+  }
+
+  .chizetteArt {
+    font-size: 2.5em;
+    margin-left: 11%;
+    margin-top: -7%;
+  }
+
+  .menuButton {
+    margin-top: -4%;
   }
 }

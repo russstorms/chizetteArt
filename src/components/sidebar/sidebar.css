@@ -111,5 +111,16 @@
   }
 }
 
+/* Styles for Desktops */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .side-nav {
+    margin-top: 15%;
+  }
+
+  .sideNav {
+    height: 70%;
+  }
+}
+
 
 
