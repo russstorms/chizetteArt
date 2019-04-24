@@ -20,8 +20,16 @@ export default class Contact extends React.Component {
         <br />
         <i><h5 className="contact">Please email for commissions, collaboration, or questions.</h5></i>
           <div className="contactIconContainer">
-            <a href="https://www.instagram.com/chizette/" target="blank" className="instagram"><span className="instagramIcon"><i className="fab fa-instagram"></i></span></a>
-            <a href="mailto:chizetteart@gmail.com" target="blank" className="email"><span className="emailIcon"><i className="far fa-envelope"></i></span></a>
+            <a href="https://www.instagram.com/chizette/" target="blank" className="instagram">
+              <span className="instagramIcon">
+                <i className="fab fa-instagram"></i>
+              </span>
+            </a>
+            <a href="mailto:chizetteart@gmail.com" target="blank" className="email">
+              <span className="emailIcon">
+                <i className="far fa-envelope"></i>
+              </span>
+            </a>
           </div>
         <br />
         <br />
