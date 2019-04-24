@@ -169,6 +169,28 @@
     }
 
 /* Small Devices, Tablets */
+@media only screen and (min-width : 550px) {
+  .logo {
+    height: 17%;
+    width: 17%;
+  }
+
+  .nav {
+    height: 22%;
+  }
+
+  .chizetteArt {
+    font-size: 2.2em;
+    margin-left: 14%;
+    margin-top: -9%;
+  }
+
+  .menuButton {
+    margin-top: -8%;
+  }
+}
+
+/* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
   .logo {
     height: 15%;

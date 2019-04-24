@@ -89,6 +89,21 @@
       }
     }
 
+    /* Small Devices, Tablets */
+@media only screen and (min-width : 550px) {
+  .side-nav {
+    margin-top: 23%;
+  }
+
+  .sidebarchizetteArt {
+    margin-top: -32%;
+  }
+
+  .sideNav {
+    height: 70%;
+  }
+}
+
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
   .side-nav {
