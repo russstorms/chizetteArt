@@ -346,6 +346,18 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+  .filteredTitle {
+    margin-top: 20%;
+    font-size: 1.5em;
+  }
+}
+
+/* Styles for Desktops */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .filteredTitle {
+    margin-top: 20%;
+    font-size: 1.5em;
+  }
 }
 
 

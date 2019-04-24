@@ -306,7 +306,9 @@ button.modal-close {
     max-width: 450px;
     max-height: 550px;
     margin-top: -5%;
-    margin-left: 20%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .close {
@@ -321,14 +323,14 @@ button.modal-close {
   }
 
   .artInfoContainer {
-    width: 100%;
+    width: 80%;
     margin-top: -2%;
   }
 
   .singleViewPrice {
     font-size: 1em;
     margin-top: -11%;
-    margin-left: 85%;
+    margin-left: 90%;
   }
 
   .singleViewPriceButton {
@@ -371,10 +373,11 @@ button.modal-close {
   }
 
   .posterSingleView {
-    max-width: 580px;
-    max-height: 590px;
-    margin-top: -5%;
-    margin-left: 23%;
+    max-width: 680px;
+    max-height: 560px;
+    margin-top: -2%;
+    display: flex;
+    justify-self: center;
   }
 
   .singleViewTitle {
@@ -400,6 +403,11 @@ button.modal-close {
     right: 10px;
     bottom: 25px;
     font-size: 1.2em;
+  }
+
+  .close {
+    right: 70px;
+    top: 20px;
   }
 }
 
