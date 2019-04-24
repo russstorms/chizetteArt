@@ -375,7 +375,7 @@ button.modal-close {
   .posterSingleView {
     max-width: 680px;
     max-height: 560px;
-    margin-top: -2%;
+    margin-top: -1%;
     display: flex;
     justify-self: center;
   }
