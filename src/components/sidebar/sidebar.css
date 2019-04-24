@@ -103,22 +103,11 @@
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
   .side-nav {
-    margin-top: 16%;
+    margin-top: 12%;
   }
 
   .sideNav {
-    height: 70%;
-  }
-}
-
-/* Styles for Desktops */
-@media screen and (min-width: 1025px) and (max-width: 1280px) {
-  .side-nav {
-    margin-top: 14%;
-  }
-
-  .sideNav {
-    height: 70%;
+    height: 75%;
   }
 }
 
