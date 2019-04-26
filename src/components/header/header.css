@@ -168,11 +168,10 @@
       }
     }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 550px) {
+@media (min-width: 481px) and (max-width: 767px) {
   .logo {
-    height: 17%;
-    width: 17%;
+    height: 22%;
+    width: 22%;
   }
 
   .nav {
@@ -180,31 +179,9 @@
   }
 
   .chizetteArt {
-    font-size: 2.2em;
-    margin-left: 14%;
-    margin-top: -9%;
-  }
-
-  .menuButton {
-    margin-top: -8%;
-  }
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-  .logo {
-    height: 15%;
-    width: 15%;
-  }
-
-  .nav {
-    height: 22%;
-  }
-
-  .chizetteArt {
-    font-size: 2.5em;
-    margin-left: 12%;
-    margin-top: -8%;
+    font-size: 2.3em;
+    margin-left: 18%;
+    margin-top: -13%;
   }
 
   .menuButton {
@@ -212,8 +189,49 @@
   }
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo {
+    height: 15%;
+    width: 15%;
+  }
+
+  .nav {
+    height: 25%;
+  }
+
+  .chizetteArt {
+    font-size: 2.5em;
+    margin-left: 13%;
+    margin-top: -9%;
+  }
+
+  .menuButton {
+    margin-top: -4%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .logo {
+    height: 11%;
+    width: 11%;
+  }
+
+  .nav {
+    height: 25%;
+  }
+
+  .chizetteArt {
+    font-size: 2.5em;
+    margin-left: 10%;
+    margin-top: -7%;
+  }
+
+  .menuButton {
+    margin-top: -4%;
+  }
+}
+
+@media (min-width: 1281px) {
   .logo {
     height: 11%;
     width: 11%;

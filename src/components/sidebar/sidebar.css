@@ -89,14 +89,9 @@
       }
     }
 
-    /* Small Devices, Tablets */
-@media only screen and (min-width : 550px) {
+@media (min-width: 481px) and (max-width: 767px) {
   .side-nav {
-    margin-top: 23%;
-  }
-
-  .sidebarchizetteArt {
-    margin-top: -32%;
+    margin-top: 25%;
   }
 
   .sideNav {
@@ -104,27 +99,32 @@
   }
 }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .side-nav {
-    margin-top: 18%;
+    margin-top: 17%;
   }
 
   .sideNav {
-    height: 75%;
+    height: 70%;
   }
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .side-nav {
+    margin-top: 25%;
+  }
+
+  .sideNav {
+    height: 70%;
+  }
+}
+
+@media (min-width: 1281px) {
   .side-nav {
     margin-top: 12%;
   }
 
   .sideNav {
-    height: 75%;
+    height: 70%;
   }
 }
-
-
-

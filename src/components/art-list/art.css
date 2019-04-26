@@ -288,8 +288,7 @@ button.modal-close {
       }
     }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 550px) {
+@media (min-width: 481px) and (max-width: 767px) {
   .poster {
     border: 2px solid rgb(99, 95, 84);
     max-width: 280px;
@@ -317,7 +316,7 @@ button.modal-close {
     font-size: 3em;
     position: fixed;
     right: 30px;
-    top: -5px;
+    top: 15px;
   }
 
   .singleViewTitle {
@@ -356,96 +355,26 @@ button.modal-close {
   }
 }
 
-    /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .poster {
     border: 2px solid rgb(99, 95, 84);
-    max-width: 200px;
-    max-height: 140px;
+    max-width: 220px;
+    max-height: 200px;
     margin-bottom: 5%;
   }
 
   .poster2 {
-    max-width: 200px;
-    max-height: 140px;
+    max-width: 240px;
+    max-height: 220px;
   }
 
   .posterSingleView {
-    max-width: 450px;
-    max-height: 550px;
-    margin-top: -5%;
+    max-width: 600px;
+    max-height: 450px;
+    margin-top: -1%;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .close {
-    font-size: 3em;
-    position: fixed;
-    right: 30px;
-    top: 0px;
-  }
-
-  .singleViewTitle {
-    font-size: 2.5em;
-  }
-
-  .artInfoContainer {
-    width: 80%;
-    margin-top: -2%;
-  }
-
-  .singleViewPrice {
-    font-size: 1em;
-    margin-top: -11%;
-    margin-left: 90%;
-  }
-
-  .singleViewPriceButton {
-    padding: 1%;
-    position: fixed;
-    right: 10px;
-    bottom: 25px;
-    font-size: 1.3em;
-  }
-
-  .nextButton {
-    position: fixed;
-    right: 10px;
-    top: 220px;
-  }
-
-  .prevButton {
-    position: fixed;
-    left: 10px;
-    top: 220px;
-  }
-
-  .singleViewMedium {
-    margin-left: 6%;
-  }
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-  .poster {
-    border: 2px solid rgb(99, 95, 84);
-    max-width: 280px;
-    max-height: 260px;
-    margin-bottom: 5%;
-  }
-
-  .poster2 {
-    max-width: 280px;
-    max-height: 260px;
-  }
-
-  .posterSingleView {
-    max-width: 680px;
-    max-height: 560px;
-    margin-top: -1%;
-    display: flex;
-    justify-self: center;
   }
 
   .singleViewTitle {
@@ -454,7 +383,7 @@ button.modal-close {
   }
 
   .artInfoContainer {
-    width: 90%;
+    width: 70%;
     margin-top: -2%;
     margin-left: 20%;
   }
@@ -474,19 +403,152 @@ button.modal-close {
   }
 
   .close {
+    font-size: 3em;
     right: 70px;
     top: 20px;
   }
+
+  .nextButton {
+    position: fixed;
+    right: 10px;
+    top: 350px;
+  }
+
+  .prevButton {
+    position: fixed;
+    left: 10px;
+    top: 350px;
+  }
 }
 
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .poster {
+    border: 2px solid rgb(99, 95, 84);
+    max-width: 220px;
+    max-height: 200px;
+    margin-bottom: 5%;
+  }
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
+  .poster2 {
+    max-width: 240px;
+    max-height: 220px;
+  }
 
+  .posterSingleView {
+    max-width: 600px;
+    max-height: 450px;
+    margin-top: -1%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .singleViewTitle {
+    font-size: 2.5em;
+    margin-bottom: 1%;
+  }
+
+  .artInfoContainer {
+    width: 70%;
+    margin-top: -2%;
+    margin-left: 20%;
+  }
+
+  .singleViewPrice {
+    font-size: 1em;
+    margin-top: -13%;
+    margin-left: 90%;
+  }
+
+  .singleViewPriceButton {
+    padding: 1%;
+    position: fixed;
+    right: 10px;
+    bottom: 25px;
+    font-size: 1.2em;
+  }
+
+  .close {
+    font-size: 3em;
+    right: 70px;
+    top: 20px;
+  }
+
+  .nextButton {
+    position: fixed;
+    right: 10px;
+    top: 300px;
+  }
+
+  .prevButton {
+    position: fixed;
+    left: 10px;
+    top: 300px;
+  }
 }
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
+@media (min-width: 1281px) {
+  .poster {
+    border: 2px solid rgb(99, 95, 84);
+    max-width: 270px;
+    max-height: 250px;
+    margin-bottom: 5%;
+  }
 
+  .poster2 {
+    max-width: 270px;
+    max-height: 250px;
+  }
+
+  .posterSingleView {
+    max-width: 650px;
+    max-height: 500px;
+    margin-top: -1%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .singleViewTitle {
+    font-size: 2.5em;
+    margin-bottom: 1%;
+  }
+
+  .artInfoContainer {
+    width: 70%;
+    margin-top: -2%;
+    margin-left: 15%;
+  }
+
+  .singleViewPrice {
+    font-size: 1em;
+    margin-top: -11%;
+    margin-left: 90%;
+  }
+
+  .singleViewPriceButton {
+    padding: 1%;
+    position: fixed;
+    right: 10px;
+    bottom: 25px;
+    font-size: 1.2em;
+  }
+
+  .close {
+    font-size: 3em;
+    right: 70px;
+    top: 20px;
+  }
+
+  .nextButton {
+    position: fixed;
+    right: 10px;
+    top: 350px;
+  }
+
+  .prevButton {
+    position: fixed;
+    left: 10px;
+    top: 350px;
+  }
 }
-
