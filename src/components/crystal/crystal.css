@@ -1027,39 +1027,10 @@
 }
 
 /* iPhone 8 */
-/* @media only screen 
-    and (device-width : 375px) 
-    and (device-height : 667px) 
-    and (-webkit-device-pixel-ratio : 2) {
-      #stripes {
-        margin-top: 5%;
-        margin-left: 30%;
-        margin-bottom: -40%;
-        height: 40%;
-        width: 85%;
-        overflow: hidden;
-      }
-
-      #darkStripes {
-        margin-top: 5%;
-        margin-left: 30%;
-        margin-bottom: -40%;
-        height: 40%;
-        width: 85%;
-        overflow: hidden;
-      }
-
-      #foreGround {
-        margin-top: 5%;
-        margin-left: 30%;
-        margin-bottom: -40%;
-        height: 40%;
-        width: 85%;
-        overflow: hidden;
-      }
-    }
-
-@media (min-width: 481px) and (max-width: 767px) {
+@media only screen 
+and (device-width : 375px) 
+and (device-height : 667px) 
+and (-webkit-device-pixel-ratio : 2) {
   #stripes {
     margin-top: 5%;
     margin-left: 30%;
@@ -1084,93 +1055,72 @@
     margin-bottom: -40%;
     height: 40%;
     width: 85%;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  #stripes {
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-bottom: -35%;
+    height: 50%;
+    width: 75%;
+    overflow: hidden;
+  }
+
+  #darkStripes {
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-bottom: -35%;
+    height: 50%;
+    width: 75%;
+    overflow: hidden;
+  }
+
+  #foreGround {
+    margin-top: 3%;
+    margin-left: 25%;
+    margin-bottom: -35%;
+    height: 50%;
+    width: 75%;
     overflow: hidden;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   #stripes {
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-bottom: -40%;
-    height: 40%;
-    width: 85%;
+    margin-top: -5%;
+    margin-left: 5%;
+    margin-bottom: -35%;
+    height: 70%;
+    width: 95%;
     overflow: hidden;
   }
 
   #darkStripes {
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-bottom: -40%;
-    height: 40%;
-    width: 85%;
+    margin-top: -5%;
+    margin-left: 5%;
+    margin-bottom: -35%;
+    height: 70%;
+    width: 95%;
     overflow: hidden;
   }
 
   #foreGround {
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-bottom: -40%;
-    height: 40%;
-    width: 85%;
+    margin-top: -5%;
+    margin-left: 5%;
+    margin-bottom: -35%;
+    height: 70%;
+    width: 95%;
     overflow: hidden;
   }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-  #stripes {
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-bottom: -40%;
-    height: 40%;
-    width: 85%;
-    overflow: hidden;
-  }
 
-  #darkStripes {
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-bottom: -40%;
-    height: 40%;
-    width: 85%;
-    overflow: hidden;
-  }
-
-  #foreGround {
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-bottom: -40%;
-    height: 40%;
-    width: 85%;
-    overflow: hidden;
-  }
 }
 
 @media (min-width: 1281px) {
-  #stripes {
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-bottom: -40%;
-    height: 40%;
-    width: 85%;
-    overflow: hidden;
-  }
 
-  #darkStripes {
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-bottom: -40%;
-    height: 40%;
-    width: 85%;
-    overflow: hidden;
-  }
-
-  #foreGround {
-    margin-top: 5%;
-    margin-left: 30%;
-    margin-bottom: -40%;
-    height: 40%;
-    width: 85%;
-    overflow: hidden;
-  }
-} */
+}
