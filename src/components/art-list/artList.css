@@ -310,6 +310,23 @@
 /* *****************************************************************
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        margin: 0% 0% 15% 0%;
+      }
+
+      .filteredTitle {
+        margin-top: 30%;
+        font-size: 1.3em;
+        margin-bottom: -10%;
+      }
+  }
 
 /* iPhone 8 */
 @media only screen 

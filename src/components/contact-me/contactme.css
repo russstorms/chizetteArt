@@ -57,28 +57,47 @@
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+      .contactContainer {
+        width: 80%;
+        margin-top: 15%;
+        margin-left: 10%;
+      }
+      
+      .contactPic {
+        height: 40%;
+        width: 40%;
+        margin-bottom: -8%;
+        margin-left: 70%;
+      }
 
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-}
+      .quote {
+        font-size: 1em;
+        margin-top: -3%;
+      }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
- 
-}
+      .bigLetter {
+        font-size: 2em;
+      }
 
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
+      .instagramIcon {
+        font-size: 2em;
+        margin: -5%;
+      }
 
-}
+      .emailIcon {
+        font-size: 2em;
+        margin: -5%;
+      }
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
-
-}
+      .contact {
+        font-size: 1em;
+        margin-right: 10%;
+      }
+  }
 
 /* iPhone 8 */
 @media only screen 

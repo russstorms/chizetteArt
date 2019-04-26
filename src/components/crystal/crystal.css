@@ -1026,6 +1026,37 @@
   }
 }
 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+      #stripes {
+        margin-top: 5%;
+        margin-left: 15%;
+        margin-bottom: -40%;
+        height: 40%;
+        width: 85%;
+        overflow: hidden;
+      }
+    
+      #darkStripes {
+        margin-top: 5%;
+        margin-left: 15%;
+        margin-bottom: -40%;
+        height: 40%;
+        width: 85%;
+        overflow: hidden;
+      }
+    
+      #foreGround {
+        margin-top: 5%;
+        margin-left: 15%;
+        margin-bottom: -40%;
+        height: 40%;
+        width: 85%;
+        overflow: hidden;
+      }
+  }
 /* iPhone 8 */
 @media only screen 
 and (device-width : 375px) 
