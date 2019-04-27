@@ -1057,6 +1057,8 @@
         overflow: hidden;
       }
   }
+
+/* Need more for diff devices */
 /* iPhone 8 */
 @media only screen 
 and (device-width : 375px) 
