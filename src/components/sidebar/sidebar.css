@@ -1,13 +1,3 @@
-.sidebarchizetteArt {
-  text-align: center;
-  font-family: 'Megrim';
-  color: rgb(99, 95, 84);
-  /* font-size: 1.5em; */
-  text-shadow: 2px 2px 1px rgb(255, 255, 255);
-  /* margin-top: -30%; */
-  letter-spacing: .25em;
-}
-
 .sidebarLogo {
   height: 30%;
   width: 30%;
@@ -26,15 +16,14 @@
 }
 
 .side-nav {
-  /* padding-top: 10%; */
   box-shadow: none;
+  z-index: -1;
 }
 
 .side-nav li>a {
   color: rgb(99, 95, 84);
   font-family: 'Montserrat';
   letter-spacing: .25em;
-  /* font-size: 1.1em; */
 }
 
 .side-nav li>a:hover {
@@ -63,13 +52,10 @@
 }
 
 .footerSidebar {
-  /* font-size: .8em; */
-  /* margin-left: 2%; */
   letter-spacing: .25em;
   font-family: "Megrim";
   color: rgb(99, 95, 84);
   position: fixed;
-  /* top: 85%; */
 }
 
 /* *****************************************************************
@@ -89,18 +75,12 @@
       }
 
       .side-nav {
-        margin-top: 30%;
+        
       }
 
       .sideNav {
         height: 70%;
         width: 70%;
-        top: 0;
-        left: 0;
-      }
-
-      .sidebarchizetteArt {
-        display: none;
       }
   }
 
@@ -110,67 +90,94 @@
     and (device-height : 667px) 
     and (-webkit-device-pixel-ratio : 2) {
       .side-nav {
-        margin-top: 28%;
+        padding-top: 25%;
+        width: 55%;
+      }
+
+      .footerSidebar {
+        font-size: .8em;
+        margin-left: 2%;
       }
 
       .sideNav {
-        height: 70%;
-        top: 0;
-        left: 0;
+        height: 80%;
       }
     }
 
+/* starts at 530px */
 @media (min-width: 481px) and (max-width: 767px) {
   .side-nav {
-    margin-top: 25%;
+    padding-top: 20%;
+    width: 45%;
+  }
+
+  .footerSidebar {
+    font-size: .8em;
+    margin-left: 2%;
+  }
+
+  .sideNavTitle {
+    font-size: .9em;
   }
 
   .sideNav {
-    height: 70%;
+    height: 90%;
+  }
+
+  .badge {
+    width: 65%;
   }
 }
 
-@media (min-width: 620px) and (max-width: 800px) {
+/* starts at 845 */
+@media (min-width: 768px) and (max-width: 1024px) {
   .side-nav {
-    margin-top: 20%;
     padding-top: 10%;
+    width: 30%;
+  }
+
+  .footerSidebar {
+    font-size: .8em;
+    margin-left: 2%;
+  }
+
+  .sideNavTitle {
+    font-size: 1em;
   }
 
   .sideNav {
     height: 80%;
   }
-
-  .sidebarchizetteArt {
-    display: none;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .side-nav {
-    margin-top: 17%;
-  }
-
-  .sideNav {
-    height: 70%;
-  }
 }
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   .side-nav {
-    margin-top: 25%;
+    padding-top: 10%;
+    width: 25%;
+  }
+
+  .footerSidebar {
+    font-size: .8em;
+    margin-left: 2%;
   }
 
   .sideNav {
-    height: 70%;
+    height: 80%;
   }
 }
 
 @media (min-width: 1281px) {
   .side-nav {
-    margin-top: 12%;
+    padding-top: 10%;
+    width: 25%;
+  }
+
+  .footerSidebar {
+    font-size: .8em;
+    margin-left: 2%;
   }
 
   .sideNav {
-    height: 70%;
+    height: 80%;
   }
 }

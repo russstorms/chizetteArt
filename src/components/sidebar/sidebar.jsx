@@ -14,7 +14,6 @@ export default class Sidebar extends React.Component {
         trigger={<Button className="menuButton btn-flat"><i className="large material-icons icon menuIcon">sort</i></Button>}
         options={{ closeonClick: true }}>
         <div>
-          <a href="/"><h4 className="sidebarchizetteArt"><b>chizette</b>Art</h4></a>
         </div>
         <br />
           <Badge className="new badge" data-badge-caption="Prints Coming Soon!"></Badge>
