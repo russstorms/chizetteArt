@@ -2,9 +2,9 @@
   text-align: center;
   font-family: 'Megrim';
   color: rgb(99, 95, 84);
-  font-size: 1.5em;
+  /* font-size: 1.5em; */
   text-shadow: 2px 2px 1px rgb(255, 255, 255);
-  margin-top: -30%;
+  /* margin-top: -30%; */
   letter-spacing: .25em;
 }
 
@@ -26,7 +26,7 @@
 }
 
 .side-nav {
-  padding-top: 10%;
+  /* padding-top: 10%; */
   box-shadow: none;
 }
 
@@ -34,7 +34,7 @@
   color: rgb(99, 95, 84);
   font-family: 'Montserrat';
   letter-spacing: .25em;
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
 }
 
 .side-nav li>a:hover {
@@ -63,27 +63,44 @@
 }
 
 .footerSidebar {
-  font-size: .8em;
-  margin-left: 2%;
+  /* font-size: .8em; */
+  /* margin-left: 2%; */
   letter-spacing: .25em;
   font-family: "Megrim";
   color: rgb(99, 95, 84);
   position: fixed;
-  top: 85%;
+  /* top: 85%; */
 }
 
 /* *****************************************************************
 ***************************  MEDIA QUERIES  ***********************
 ******************************************************************/
+/* Smartphones (portrait and landscape) ----------- */
 @media only screen 
     and (min-device-width : 320px)
     and (max-device-width : 480px) {
+      .side-nav li>a {
+        font-size: .8em;
+      }
+
+      .footerSidebar {
+        font-size: .8em;
+        margin-left: 2%;
+      }
+
       .side-nav {
-        margin-top: 28%;
+        margin-top: 30%;
       }
 
       .sideNav {
-        height: 80%;
+        height: 70%;
+        width: 70%;
+        top: 0;
+        left: 0;
+      }
+
+      .sidebarchizetteArt {
+        display: none;
       }
   }
 

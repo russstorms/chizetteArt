@@ -9,12 +9,12 @@
 }
 
 .logoAndTitle {
-  margin-left: 4%;
-  margin-bottom: 2%;
+  /* margin-left: 4%;
+  margin-bottom: 2%; */
 }
 
 .logo {
-  margin: 1%;
+  /* margin: 1%; */
   border-radius: 50%;
 }
 
@@ -23,10 +23,10 @@
 }
 
 .chizetteArt {
-  font-size: 2.5em;
+  /* font-size: 2.5em; */
   letter-spacing: .25em;
   font-family: "Megrim";
-  margin-top: -6%;
+  /* margin-top: -6%; */
   color: rgb(99, 95, 84);
   text-shadow: 2px 2px 1px rgb(255, 255, 255);
   cursor: default;
@@ -37,14 +37,14 @@
 }
 
 .menuIcon {
-  font-size: 1.5em !important;
+  /* font-size: 1.5em !important; */
 }
 
 .menuButton {
   color: rgb(99, 95, 84);
-  font-size: 1.5em !important;
+  /* font-size: 1.5em !important;
   margin-top: -4%;
-  margin-left: -5%;
+  margin-left: -5%; */
 }
 
 .menuButton:hover {
@@ -149,6 +149,7 @@
       .logo {
         height: 20%;
         width: 20%;
+        margin: 1%;
       }
 
       .nav {
@@ -163,6 +164,10 @@
 
       .menuButton {
         margin-top: -6%;
+      }
+
+      .menuIcon {
+        font-size: 2em !important;
       }
   }
 
