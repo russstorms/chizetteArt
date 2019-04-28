@@ -1058,7 +1058,7 @@
       }
   }
 
-/* Need more for diff devices */
+
 /* iPhone 8 */
 @media only screen 
 and (device-width : 375px) 
@@ -1066,7 +1066,7 @@ and (device-height : 667px)
 and (-webkit-device-pixel-ratio : 2) {
   #stripes {
     margin-top: 5%;
-    margin-left: 30%;
+    margin-left: 15%;
     margin-bottom: -40%;
     height: 40%;
     width: 85%;
@@ -1075,7 +1075,7 @@ and (-webkit-device-pixel-ratio : 2) {
 
   #darkStripes {
     margin-top: 5%;
-    margin-left: 30%;
+    margin-left: 15%;
     margin-bottom: -40%;
     height: 40%;
     width: 85%;
@@ -1084,7 +1084,7 @@ and (-webkit-device-pixel-ratio : 2) {
 
   #foreGround {
     margin-top: 5%;
-    margin-left: 30%;
+    margin-left: 15%;
     margin-bottom: -40%;
     height: 40%;
     width: 85%;

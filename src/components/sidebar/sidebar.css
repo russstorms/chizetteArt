@@ -97,7 +97,9 @@
       }
 
       .sideNav {
-        height: 80%;
+        height: 70%;
+        top: 0;
+        left: 0;
       }
     }
 
@@ -108,6 +110,21 @@
 
   .sideNav {
     height: 70%;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 800px) {
+  .side-nav {
+    margin-top: 20%;
+    padding-top: 10%;
+  }
+
+  .sideNav {
+    height: 80%;
+  }
+
+  .sidebarchizetteArt {
+    display: none;
   }
 }
 
