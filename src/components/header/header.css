@@ -10,6 +10,7 @@
 
 .logo {
   border-radius: 50%;
+  margin: 1%;
 }
 
 .chizette {
@@ -295,7 +296,6 @@
   .logo {
     height: 11%;
     width: 11%;
-    
   }
 
   .logoAndTitle {
@@ -303,7 +303,7 @@
   }
 
   .nav {
-    height: 20%;
+    height: 23%;
   }
 
   .chizetteArt {
@@ -326,7 +326,6 @@
   .logo {
     height: 11%;
     width: 11%;
-    
   }
 
   .logoAndTitle {
@@ -334,7 +333,7 @@
   }
 
   .nav {
-    height: 20%;
+    height: 23%;
   }
 
   .chizetteArt {
@@ -357,7 +356,6 @@
   .logo {
     height: 11%;
     width: 11%;
-    
   }
 
   .logoAndTitle {
@@ -365,7 +363,7 @@
   }
 
   .nav {
-    height: 20%;
+    height: 24%;
   }
 
   .chizetteArt {
