@@ -190,7 +190,7 @@ button.modal-close {
   margin-top: -5%;
   z-index: 1200 !important;
   max-height: 110%;
-  background-image: url("https://s3-us-west-2.amazonaws.com/chizetteart/chizetteart/amethyst.jpeg");
+  background-image: url("https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg");
   background-repeat: no-repeat;
 }
 
