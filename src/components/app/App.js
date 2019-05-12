@@ -205,9 +205,9 @@ export default class App extends Component {
         filteredTerm: 'All',
         counter: 0
       })
-    } else if (searchTerm === 'Photography') {
+    } else if (searchTerm === 'Photograph') {
       this.setState({
-        filteredTerm: 'Photography',
+        filteredTerm: 'Photograph',
         counter: 0
       })
     } else if (searchTerm === 'Jewelry') {
@@ -228,9 +228,9 @@ export default class App extends Component {
     ev.preventDefault()
     let searchTerm = ev.target.dataset.medium
       
-    if (searchTerm === 'Photography') {
+    if (searchTerm === 'Photograph') {
       this.setState({
-        filteredTerm: 'Photography',
+        filteredTerm: 'Photograph',
         counter: 0
       })
     }
@@ -272,7 +272,7 @@ export default class App extends Component {
     if (!this.state.filteredTerm) {
       for (let art of this.state.artList) {
         //// ART \\\\
-        if (!art.medium.includes('Jewelry') && !art.medium.includes('Photography') && artCounter < 3) {
+        if (!art.medium.includes('Jewelry') && !art.medium.includes('Photograph') && artCounter < 3) {
           artCounter++
           artArr.push(art)
         }
@@ -284,7 +284,7 @@ export default class App extends Component {
         }
 
         //// PHOTOGRAPHY \\\\
-        if (art.medium.includes('Photography') && photoCounter < 3) {
+        if (art.medium.includes('Photograph') && photoCounter < 3) {
           photoCounter++
           photoArr.push(art)
         }
@@ -304,7 +304,7 @@ export default class App extends Component {
             return art.medium
           }
           if (this.state.filteredTerm === 'Art') {
-            return !art.medium.includes('Photography') && !art.medium.includes('Jewelry')
+            return !art.medium.includes('Photograph') && !art.medium.includes('Jewelry')
           } else {
             return art.medium.includes(this.state.filteredTerm)
           }
@@ -316,7 +316,7 @@ export default class App extends Component {
             return art.medium
           }
           if (this.state.filteredTerm === 'Art') {
-            return !art.medium.includes('Photography') && !art.medium.includes('Jewelry')
+            return !art.medium.includes('Photograph') && !art.medium.includes('Jewelry')
           } else {
             return art.medium.includes(this.state.filteredTerm)
           }
