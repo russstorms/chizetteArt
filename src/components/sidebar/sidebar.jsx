@@ -19,7 +19,7 @@ export default class Sidebar extends React.Component {
           <Badge className="new badge" data-badge-caption="Prints Coming Soon!"></Badge>
           <SideNavItem onClick={this.props.filterArt}><span data-medium="Art" className="iconContainer"></span><span className="sideNavTitle">Art</span></SideNavItem>
           <SideNavItem onClick={this.props.filterArt}><span data-medium="Jewelry" className="iconContainer"><span className="sidebarIconContainer"></span></span><span className="sideNavTitle">Jewelry</span></SideNavItem>
-          <SideNavItem onClick={this.props.filterArt}><span data-medium="Photography" className="iconContainer"><span className="sidebarIconContainer"></span></span><span className="sideNavTitle">Photo</span></SideNavItem>
+          <SideNavItem onClick={this.props.filterArt}><span data-medium="Photograph" className="iconContainer"><span className="sidebarIconContainer"></span></span><span className="sideNavTitle">Photo</span></SideNavItem>
           <SideNavItem onClick={this.props.filterArt}><span data-medium="All" className="iconContainer"><span className="sidebarIconContainer"></span></span><span className="sideNavTitle">View All</span></SideNavItem>
         <SideNavItem divider />
           <SideNavItem href="/"><span className="sideNavTitle">Home</span></SideNavItem>
