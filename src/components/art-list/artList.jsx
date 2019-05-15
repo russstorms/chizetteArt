@@ -120,12 +120,7 @@ export default class ArtList extends React.Component {
                   <span className="photographyO">o</span>
                   <span className="photographyT">t</span>
                   <span className="photographyO2">o</span>
-                  <span className="photographyG">g</span>
-                  <span className="photographyR">r</span>
-                  <span className="photographyA">a</span>
-                  <span className="photographyP2">p</span>
-                  <span className="photographyH2">h</span>
-                  <span className="photographyY">y</span>
+                  <span className="photographyS">s</span>
                 </div>
               </ScrollAnimation>
               <Art art={art} id={idx} artPosters={splashArt} filterTerm={this.props.filterTerm} />

@@ -271,39 +271,9 @@
   animation-duration: 7s;
 }
 
-.photographyG {
+.photographyS {
   animation: shinyName .1s infinite;
   animation-delay: 1.5s;
-  animation-duration: 7s;
-}
-
-.photographyR {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.6s;
-  animation-duration: 7s;
-}
-
-.photographyA {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.7s;
-  animation-duration: 7s;
-}
-
-.photographyP2 {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.8s;
-  animation-duration: 7s;
-}
-
-.photographyH2 {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.9s;
-  animation-duration: 7s;
-}
-
-.photographyY {
-  animation: shinyName .1s infinite;
-  animation-delay: 2s;
   animation-duration: 7s;
 }
 
