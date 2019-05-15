@@ -132,7 +132,7 @@ export default class ArtList extends React.Component {
               <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
                 <div onClick={this.props.splashFilter} className="viewPhotography">
                   <span className="view" data-medium="Photo">
-                    View Photography
+                    View Photos
                     <span className="arrowIcons" data-medium="Photo">
                       <i className="small material-icons icon viewAllIcons">chevron_right</i>
                     </span>
