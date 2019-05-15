@@ -27,9 +27,9 @@ export default class Sidebar extends React.Component {
             <span className="sideNavTitle">Jewelry</span>
           </SideNavItem>
           <SideNavItem onClick={this.props.filterArt}>
-            <span data-medium="Photo" className="iconContainer">
+            <span data-medium="Photos" className="iconContainer">
             <span className="sidebarIconContainer"></span></span>
-            <span className="sideNavTitle">Photo</span>
+            <span className="sideNavTitle">Photos</span>
           </SideNavItem>
           <SideNavItem onClick={this.props.filterArt}>
             <span data-medium="All" className="iconContainer">
