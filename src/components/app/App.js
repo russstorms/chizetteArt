@@ -302,31 +302,47 @@ export default class App extends Component {
           if (this.state.filteredTerm === 'All') {
             return art.medium
           }
-          if (this.state.filteredTerm === 'Art') {
+          else if (this.state.filteredTerm === 'Art') {
             return !art.medium.includes('Photograph') && !art.medium.includes('Jewelry')
-          } else {
-            if (art.medium.includes('Photo')) {
-              return art.medium.includes('Photograph')
-            } else {
-              return art.medium.includes(this.state.filteredTerm)
-            }
           }
+          else if (this.state.filteredTerm === 'Jewelry') {
+            return art.medium.includes('Jewelry')
+          }
+          else {
+            return art.medium.includes('Photograph')
+          }
+          
+          // else {
+          //   if (art.medium.includes('Photo')) {
+          //     return art.medium.includes('Photograph')
+          //   } else {
+          //     return art.medium.includes(this.state.filteredTerm)
+          //   }
+          // }
         })
         }
         artPosters={this.state.artList.filter((art) => {
-
           if (this.state.filteredTerm === 'All') {
             return art.medium
           }
-          if (this.state.filteredTerm === 'Art') {
+          else if (this.state.filteredTerm === 'Art') {
             return !art.medium.includes('Photograph') && !art.medium.includes('Jewelry')
-          } else {
-            if (art.medium.includes('Photo')) {
-              return art.medium.includes('Photograph')
-            } else {
-              return art.medium.includes(this.state.filteredTerm)
-            }
           }
+          else if (this.state.filteredTerm === 'Jewelry') {
+            return art.medium.includes('Jewelry')
+          }
+          else {
+            return art.medium.includes('Photograph')
+          }
+          
+          // else {
+          //   if (art.medium.includes('Photo')) {
+          //     return art.medium.includes('Photograph')
+          //   } 
+          //   else {
+          //     return art.medium.includes(this.state.filteredTerm)
+          //   }
+          // }
         })
         } 
         token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />

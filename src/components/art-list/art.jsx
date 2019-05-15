@@ -22,7 +22,6 @@ export default class Art extends React.Component {
     let editArtYear = ev.target[1].value
     let editArtMedium = ev.target[2].value
     let editArtPoster = ev.target[3].value
-
     if (editArtTitle.length === 0) {
       editArtTitle = ev.target[0].placeholder
     }
