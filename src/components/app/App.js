@@ -311,14 +311,6 @@ export default class App extends Component {
           else {
             return art.medium.includes('Photograph')
           }
-          
-          // else {
-          //   if (art.medium.includes('Photo')) {
-          //     return art.medium.includes('Photograph')
-          //   } else {
-          //     return art.medium.includes(this.state.filteredTerm)
-          //   }
-          // }
         })
         }
         artPosters={this.state.artList.filter((art) => {
@@ -334,15 +326,6 @@ export default class App extends Component {
           else {
             return art.medium.includes('Photograph')
           }
-          
-          // else {
-          //   if (art.medium.includes('Photo')) {
-          //     return art.medium.includes('Photograph')
-          //   } 
-          //   else {
-          //     return art.medium.includes(this.state.filteredTerm)
-          //   }
-          // }
         })
         } 
         token={this.state.actualToken} editArt={this.editArt} deleteArt={this.deleteArt} />
