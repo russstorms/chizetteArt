@@ -105,11 +105,11 @@ export default class Art extends React.Component {
               <br />
               <div onClick={this.prevClick} className="prevButton"><i className="carouselArrow large material-icons icon animated fadeInLeft delay-1s">chevron_left</i></div>
               <div onClick={this.nextClick} className="nextButton"><i className="carouselArrow large material-icons icon animated fadeInRight delay-1s">chevron_right</i></div>
-              {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photograph') ? <a href="https://www.paypal.com" target="blank" className="singleViewPriceButton">Purchase Print</a> : null}
+              {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? <a href="https://www.paypal.com" target="blank" className="singleViewPriceButton">Purchase Print</a> : null}
               <div className="artInfoContainer">
                 <div className="singleViewTitle"><i>{artPosters[counter].title}</i><span className="singleViewYear">{artPosters[counter].year}</span></div>
                 <div className="singleViewMedium animated fadeInRight delay-1s">{artPosters[counter].medium}</div>
-                {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photograph') ? <div className="singleViewPrice">${artPosters[counter].price} USD</div> : null}
+                {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? <div className="singleViewPrice">${artPosters[counter].price} USD</div> : null}
               </div>
             </Modal>
           </span>

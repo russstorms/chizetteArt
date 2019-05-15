@@ -131,9 +131,9 @@ export default class ArtList extends React.Component {
               <Art art={art} id={idx} artPosters={splashArt} filterTerm={this.props.filterTerm} />
               <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
                 <div onClick={this.props.splashFilter} className="viewPhotography">
-                  <span className="view" data-medium="Photograph">
+                  <span className="view" data-medium="Photo">
                     View Photography
-                    <span className="arrowIcons" data-medium="Photograph">
+                    <span className="arrowIcons" data-medium="Photo">
                       <i className="small material-icons icon viewAllIcons">chevron_right</i>
                     </span>
                   </span>
