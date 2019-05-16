@@ -129,7 +129,7 @@ export default class Art extends React.Component {
                 <label>Medium</label>
                 <input type="text" placeholder={art.medium} name="Medium" />
                 <label>Url</label>
-                <input type="text" placeholder={art.url} name="Url" />
+                <input type="text" placeholder={art.poster} name="Url" />
                 <Button className="editArt waves-effect waves-red btn modal-close" name="submit">Edit!</Button>
               </form>
             </Modal>

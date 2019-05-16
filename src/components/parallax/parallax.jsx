@@ -14,9 +14,9 @@ export default class ParallaxImage extends React.Component {
     this.intervalID = setInterval(() => {
       const parallaxPosters = [
         "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg",
-        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434629/chizetteArt%20-%20Compressed/aragonite_necklace.jpg",
+        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434635/chizetteArt%20-%20Compressed/Citrine%20%2B%20Amethyst%20Necklace.jpg",
         "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434635/chizetteArt%20-%20Compressed/citrine_amethyst.jpg",
-        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434634/chizetteArt%20-%20Compressed/geode.jpg",
+        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434634/chizetteArt%20-%20Compressed/geode_slice.jpg",
         "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434665/chizetteArt%20-%20Compressed/north_shore.jpg",
         "https://res.cloudinary.com/chizetteart/image/upload/v1552434640/chizetteArt%20-%20Compressed/rainbow_man.jpg",
         "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434663/chizetteArt%20-%20Compressed/self_portrait.jpg",
@@ -32,9 +32,9 @@ export default class ParallaxImage extends React.Component {
   render () {
     const parallaxPosters = [
       "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg",
-      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434629/chizetteArt%20-%20Compressed/aragonite_necklace.jpg",
+      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434635/chizetteArt%20-%20Compressed/Citrine%20%2B%20Amethyst%20Necklace.jpg",
       "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434635/chizetteArt%20-%20Compressed/citrine_amethyst.jpg",
-      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434634/chizetteArt%20-%20Compressed/geode.jpg",
+      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434634/chizetteArt%20-%20Compressed/geode_slice.jpg",
       "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434665/chizetteArt%20-%20Compressed/north_shore.jpg",
       "https://res.cloudinary.com/chizetteart/image/upload/v1552434640/chizetteArt%20-%20Compressed/rainbow_man.jpg",
       "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434663/chizetteArt%20-%20Compressed/self_portrait.jpg",
