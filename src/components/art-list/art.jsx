@@ -87,7 +87,6 @@ export default class Art extends React.Component {
     let artPosters = this.props.artPosters
     //// CHECK COUNTER TO MAKE SURE IT ISN'T LONGER THAN ARRAY \\\\
     let counter = this.state.counter >= artPosters.length ? 0 : this.state.counter
-    //// Change Button \\\\
     return (
       //// ART PIECE \\\\
     <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
