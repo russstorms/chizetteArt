@@ -3,6 +3,7 @@ import './art.css'
 import { Button, Modal } from 'react-materialize'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
+import logo from '../header/chizetteLogo.jpg'
 import StripeCheckout from 'react-stripe-checkout'
 
 
@@ -108,7 +109,20 @@ export default class Art extends React.Component {
               <br />
               <div onClick={this.prevClick} className="prevButton"><i className="carouselArrow large material-icons icon animated fadeInLeft delay-1s">chevron_left</i></div>
               <div onClick={this.nextClick} className="nextButton"><i className="carouselArrow large material-icons icon animated fadeInRight delay-1s">chevron_right</i></div>
-              {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? <StripeCheckout className="singleViewPriceButton" token={this.onToken} stripeKey="pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V" /> : null}
+              {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
+                <StripeCheckout className="singleViewPriceButton" 
+                  token={this.onToken}
+                  stripeKey="pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V"
+                  name="chizetteArt"
+                  description="Purchase Print"
+                  image={logo}
+                  label="Purchase Print"
+                  currency="USD"
+                  >
+                  {/* <button className="singleViewPriceButton">
+                    Purchase Print
+                  </button> */}
+                </StripeCheckout> : null}
               <div className="artInfoContainer">
                 <div className="singleViewTitle"><i>{artPosters[counter].title}</i><span className="singleViewYear">{artPosters[counter].year}</span></div>
                 <div className="singleViewMedium animated fadeInRight delay-1s">{artPosters[counter].medium}</div>
