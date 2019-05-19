@@ -91,6 +91,7 @@ export default class App extends Component {
     // })
   // }
 
+
   //// GET THE ART \\\\
   getArtList = async () => {
     const artListJson = await fetch(`${API}/chizetteart`)
@@ -99,7 +100,6 @@ export default class App extends Component {
       artList
     })
   }
-
 
   //// CREATE NEW ART \\\\
   postArt = async (title, year, medium, url, price) => {
