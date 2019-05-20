@@ -72,6 +72,7 @@
   font-weight: bold;
   border-radius: 5%;
   border: 1px solid rgb(69, 166, 196);
+  z-index: 9999;
 }
 
 .singleViewPriceButton:hover {
@@ -283,7 +284,6 @@ button.modal-close {
     and (device-height : 667px) 
     and (-webkit-device-pixel-ratio : 2) {
       .poster {
-        
         max-width: 280px;
         max-height: 220px;
         margin-bottom: 5%;
@@ -574,13 +574,14 @@ button.modal-close {
 
   .singleViewPrice {
     font-size: 1em;
-    margin-top: -11%;
+    margin-top: -7%;
+    margin-bottom: -2%;
     margin-left: 90%;
   }
 
   .singleViewPriceButton {
     position: fixed;
-    right: 10px;
+    right: 200px;
     bottom: 25px;
   }
 
