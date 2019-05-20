@@ -62,6 +62,7 @@
 
 .singleViewPrice {
   color: white;
+  font-weight: bold;
   text-shadow: 1px 3px 3px rgba(99, 95, 84, .8);
 }
 
