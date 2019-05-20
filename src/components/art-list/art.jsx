@@ -3,7 +3,6 @@ import './art.css'
 import { Button, Modal } from 'react-materialize'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
-import logo from '../header/chizetteLogo.jpg'
 import StripeCheckout from 'react-stripe-checkout'
 
 
@@ -115,13 +114,12 @@ export default class Art extends React.Component {
                   stripeKey="pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V"
                   name="chizetteArt"
                   description="Purchase Print"
-                  image={logo}
-                  label="Purchase Print"
+                  image={artPosters[counter].poster}
                   currency="USD"
                   >
-                  {/* <button className="singleViewPriceButton">
+                  <button className="singleViewPriceButton">
                     Purchase Print
-                  </button> */}
+                  </button>
                 </StripeCheckout> : null}
               <div className="artInfoContainer">
                 <div className="singleViewTitle"><i>{artPosters[counter].title}</i><span className="singleViewYear">{artPosters[counter].year}</span></div>
