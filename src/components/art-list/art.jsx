@@ -81,6 +81,7 @@ export default class Art extends React.Component {
     })
   }
 
+  //// Make post request
   onToken(token) {
     console.log('onToken', token)
   }
