@@ -39,10 +39,8 @@ export default class App extends Component {
     
     if (response.status === 200) {
       const auth = response.headers.get('Auth').slice(8, response.headers.get('Auth').length)
-      // console.log(auth)
       const json = await response.json()
       this.setState({
-
         userId: json.id,
         actualToken: auth
       })
@@ -132,7 +130,6 @@ export default class App extends Component {
     })
   }
 
-
   //// EDIT ART \\\\
   editArt = async (id, title, year, medium, url) => {
     const artBody = {
@@ -163,7 +160,6 @@ export default class App extends Component {
       artList: newList
     })
   }
-
 
   //// DELETE ART \\\\
   deleteArt = async (id) => {

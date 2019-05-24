@@ -5,6 +5,8 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
 import StripeCheckout from 'react-stripe-checkout'
 
+const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
+
 
 export default class Art extends React.Component {
   constructor(props) {
@@ -81,9 +83,23 @@ export default class Art extends React.Component {
     })
   }
 
-  //// Make post request
-  onToken(token) {
+  onToken = async (token) => {
     console.log('onToken', token)
+    await fetch('https://api.stripe.com/v1/charges', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.REACT_APP_SECRET_KEY}`,
+        'Accept': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify({
+        stripeToken: token.id,
+      }),
+    })
+    .then(res => res.json())
+      .then(json => {
+        console.log('json>>>>', json)
+      })
   }
 
   render() {
@@ -112,7 +128,7 @@ export default class Art extends React.Component {
               {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
                 <StripeCheckout className="singleViewPriceButton" 
                   token={this.onToken}
-                  stripeKey="pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V"
+                  stripeKey={stripeKey}
                   name="chizetteArt"
                   description="Purchase Print"
                   image={artPosters[counter].poster}
