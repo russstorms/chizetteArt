@@ -7,7 +7,6 @@ import StripeCheckout from 'react-stripe-checkout'
 
 const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
 
-
 export default class Art extends React.Component {
   constructor(props) {
     super(props)
@@ -83,22 +82,21 @@ export default class Art extends React.Component {
     })
   }
 
-  onToken = async (token) => {
-    console.log('onToken', token)
-    await fetch('https://api.stripe.com/v1/charges', {
+  stripeBtn = async (token) => {
+    await fetch('http://localhost:3000/stripe', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${process.env.REACT_APP_SECRET_KEY}`,
+        'Authorization': `Bearer ${stripeKey}`,
         'Accept': 'application/json',
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        stripeToken: token.id,
+        stripeToken: token.id
       }),
     })
-    .then(res => res.json())
+    .then(response => response.json())
       .then(json => {
-        console.log('json>>>>', json)
+        console.log('json>>>', json)
       })
   }
 
@@ -127,12 +125,14 @@ export default class Art extends React.Component {
               <div onClick={this.nextClick} className="nextButton"><i className="carouselArrow large material-icons icon animated fadeInRight delay-1s">chevron_right</i></div>
               {!artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
                 <StripeCheckout className="singleViewPriceButton" 
-                  token={this.onToken}
+                  token={this.stripeBtn}
                   stripeKey={stripeKey}
                   name="chizetteArt"
                   description="Purchase Print"
                   image={artPosters[counter].poster}
                   currency="USD"
+                  locale="auto"
+                  // zipCode
                   >
                   <button className="singleViewPriceButton">
                     Purchase Print
