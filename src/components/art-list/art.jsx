@@ -83,7 +83,8 @@ export default class Art extends React.Component {
   }
 
   stripeBtn = async (token) => {
-    await fetch('http://localhost:3000/stripe', {
+    const API = process.env.REACT_APP_API
+    await fetch(`${API}/stripe`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${stripeKey}`,
@@ -95,8 +96,8 @@ export default class Art extends React.Component {
       }),
     })
     .then(response => response.json())
-      .then(json => {
-        console.log('json>>>', json)
+      .then(charge => {
+        console.log('charge>>>', charge)
       })
   }
 
