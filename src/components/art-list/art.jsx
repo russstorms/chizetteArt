@@ -83,7 +83,9 @@ export default class Art extends React.Component {
   }
 
   stripeBtn = async (token) => {
-    const API = process.env.REACT_APP_API
+    const artPosters = this.props.artPosters[this.state.counter]
+    // const API = process.env.REACT_APP_API
+    const API = 'http://localhost:3000'
     await fetch(`${API}/stripe`, {
       method: 'POST',
       headers: {
@@ -92,6 +94,12 @@ export default class Art extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        amount: artPosters.price * 100,
+        email: token.email,
+        artPiece: artPosters.title,
+        artMedium: artPosters.medium,
+        artYear: artPosters.year,
+        art: artPosters.poster,
         stripeToken: token.id
       }),
     })
@@ -131,9 +139,12 @@ export default class Art extends React.Component {
                   name="chizetteArt"
                   description="Purchase Print"
                   image={artPosters[counter].poster}
+                  amount={artPosters[counter].price * 100}
                   currency="USD"
                   locale="auto"
-                  // zipCode
+                  shippingAddress
+                  billingAddress={true}
+                  zipCode={true}
                   >
                   <button className="singleViewPriceButton">
                     Purchase Print
