@@ -85,6 +85,7 @@ export default class Art extends React.Component {
   stripeBtn = async (token) => {
     const artPosters = this.props.artPosters[this.state.counter]
     // const API = process.env.REACT_APP_API
+    console.log('TOKEN>>>', token.card)
     const API = 'http://localhost:3000'
     await fetch(`${API}/stripe`, {
       method: 'POST',
