@@ -83,31 +83,32 @@ export default class Art extends React.Component {
   }
 
   stripeBtn = async (token) => {
-    const artPosters = this.props.artPosters[this.state.counter]
     // const API = process.env.REACT_APP_API
+    // const API = 'http://localhost:3000'
+    // const artPosters = this.props.artPosters[this.state.counter]
     console.log('TOKEN>>>', token.card)
-    const API = 'http://localhost:3000'
-    await fetch(`${API}/stripe`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${stripeKey}`,
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        amount: artPosters.price * 100,
-        email: token.email,
-        artPiece: artPosters.title,
-        artMedium: artPosters.medium,
-        artYear: artPosters.year,
-        art: artPosters.poster,
-        stripeToken: token.id
-      }),
-    })
-    .then(response => response.json())
-      .then(charge => {
-        console.log('charge>>>', charge)
-      })
+    
+    // await fetch(`${API}/stripe`, {
+    //   method: 'POST',
+    //   headers: {
+    //     'Authorization': `Bearer ${stripeKey}`,
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     amount: artPosters.price * 100,
+    //     email: token.email,
+    //     artPiece: artPosters.title,
+    //     artMedium: artPosters.medium,
+    //     artYear: artPosters.year,
+    //     art: artPosters.poster,
+    //     stripeToken: token.id
+    //   }),
+    // })
+    // .then(response => response.json())
+    //   .then(charge => {
+    //     console.log('charge>>>', charge)
+    //   })
   }
 
   render() {
