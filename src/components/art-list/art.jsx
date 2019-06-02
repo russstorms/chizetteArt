@@ -111,6 +111,19 @@ export default class Art extends React.Component {
     //   })
   }
 
+  // CONNECT TO PRINTFUL \\\\
+  // getPrintfulAPI = async () => {
+    // const orders = await fetch(`${PRINTFULAPI}/orders`, {
+    //   method: "GET",
+    //   mode: "cors",
+    //   cache: "no-cache",
+    //   credentials: "same-origin",
+    //   headers: {
+    //     "Authorization": 'Base64 encoded API key'
+    //   }
+    // })
+  // }
+
   render() {
     //// LIST OF ART \\\\
     let art = this.props.art
@@ -126,7 +139,7 @@ export default class Art extends React.Component {
           <img className="poster2" src={art.poster} alt="https://placekitten.com/200/300"></img> 
           :
             <span>
-            <Modal className="modalFullView animated fadeIn"
+            <Modal className="modalFullView"
               header=''
               trigger={<a className="anchor" href="/"><img className="poster" onClick={this.modalClick} src={art.poster} alt="https://placekitten.com/200/300"></img></a>}>
               <i className="fas fa-times modal-close close"></i>
