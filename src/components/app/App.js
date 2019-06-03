@@ -276,12 +276,25 @@ export default class App extends Component {
     
     return (
       <ParallaxProvider className="App container">
-        <Header filterArt={this.filterArt} logoutClick={this.logoutClick} token={this.state.actualToken} toggleLoginForm={this.toggleLoginForm} toggleContactMe={this.toggleContactMe} contactMe={this.state.contactMe} postArt={this.postArt} />
-        {!this.state.filteredTerm ? <Parallax /> : <i><h4 className="filteredTitle">{this.state.filteredTerm}</h4></i>}
+        <Header
+          filterArt={this.filterArt}
+          logoutClick={this.logoutClick}
+          token={this.state.actualToken}
+          toggleLoginForm={this.toggleLoginForm}
+          toggleContactMe={this.toggleContactMe}
+          contactMe={this.state.contactMe}
+          postArt={this.postArt}
+        />
+        {!this.state.filteredTerm ?<Parallax /> : <i><h4 className="filteredTitle">{this.state.filteredTerm}</h4></i>}
         {this.state.secretLogIn ? <Login loginClick={this.loginClick} userId={this.state.userId}/> : null}
         <br />
         <br />
-        <ArtList splashFilter={this.splashFilterArt} contactMe={this.state.contactMe} filterTerm={this.state.filteredTerm} splashList={splashList} artList={this.state.artList.filter((art) => {
+        <ArtList 
+          splashFilter={this.splashFilterArt}
+          contactMe={this.state.contactMe}
+          filterTerm={this.state.filteredTerm}
+          splashList={splashList}
+          artList={this.state.artList.filter((art) => {
           if (this.state.filteredTerm === 'All') {
             return art.medium
           }

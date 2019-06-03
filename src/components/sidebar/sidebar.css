@@ -11,8 +11,8 @@
   color: black !important;
 }
 
-.sideNav {
-  overflow: hidden;
+.closeSideNav {
+  transform: translateX(-100%) !important;
 }
 
 .side-nav {

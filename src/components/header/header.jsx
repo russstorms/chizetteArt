@@ -33,8 +33,17 @@ export default class header extends Component {
               <span className="t3">t</span>
             </h1>
           </a>
-            <Sidebar filterArt={this.props.filterArt} toggleContactMe={this.props.toggleContactMe} contactMe={this.props.contactMe} logoutClick={this.props.logoutClick} token={this.props.token} postArt={this.props.postArt} />
-            {this.props.token ? <ComposeArt postArt={this.props.postArt} /> : null}
+            <Sidebar 
+              filterArt={this.props.filterArt}
+              toggleContactMe={this.props.toggleContactMe}
+              contactMe={this.props.contactMe}
+              logoutClick={this.props.logoutClick}
+              token={this.props.token}
+              postArt={this.props.postArt}
+            />
+            {this.props.token ?
+              <ComposeArt postArt={this.props.postArt} /> 
+              : null}
         </div>
       </div>
     )

@@ -86,7 +86,7 @@ export default class Art extends React.Component {
     // const API = process.env.REACT_APP_API
     // const API = 'http://localhost:3000'
     // const artPosters = this.props.artPosters[this.state.counter]
-    console.log('TOKEN>>>', token.card)
+    // console.log('TOKEN>>>', token.card)
     
     // await fetch(`${API}/stripe`, {
     //   method: 'POST',
