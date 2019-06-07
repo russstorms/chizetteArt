@@ -82,6 +82,7 @@ export default class Art extends React.Component {
     })
   }
 
+  // No Live key yet
   stripeBtn = async (token) => {
     // const API = process.env.REACT_APP_API
     // const API = 'http://localhost:3000'
