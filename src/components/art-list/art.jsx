@@ -4,7 +4,7 @@ import { Button, Modal } from 'react-materialize'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
 import StripeCheckout from 'react-stripe-checkout'
-
+// Test
 const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
 
 export default class Art extends React.Component {
