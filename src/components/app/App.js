@@ -12,6 +12,7 @@ import 'animate.css/animate.min.css'
 
 const API = process.env.REACT_APP_API
 // const API = 'http://localhost:3000'
+// Test with new dependencies
 
 export default class App extends Component {
   constructor(props) {
