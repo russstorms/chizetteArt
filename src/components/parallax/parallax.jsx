@@ -1,6 +1,6 @@
 import React from 'react'
 import { ParallaxBanner, Parallax } from 'react-scroll-parallax'
-import './parallax.css'
+import './styles/parallax.css'
 
 export default class ParallaxImage extends React.Component {
   constructor(props) {

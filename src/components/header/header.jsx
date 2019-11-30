@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Sidebar from '../sidebar/sidebar'
 import ComposeArt from '../create-art/createart'
-import logo from './chizetteLogo.jpg'
-import './header.css'
+import logo from './styles/chizetteLogo.jpg'
+import './styles/header.css'
 
 
 export default class header extends Component {

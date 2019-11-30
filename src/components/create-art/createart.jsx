@@ -1,6 +1,6 @@
 import React from 'react'
 import { Modal, Button } from 'react-materialize'
-import './createart.css'
+import './styles/createart.css'
 
 // Admin — Create new art
 const ComposeArt = ({postArt}) => {

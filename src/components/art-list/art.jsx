@@ -1,5 +1,5 @@
 import React from 'react'
-import './art.css'
+import './styles/art.css'
 import { Button, Modal } from 'react-materialize'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'

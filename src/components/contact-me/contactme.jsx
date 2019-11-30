@@ -1,5 +1,5 @@
 import React from 'react'
-import './contactme.css'
+import './styles/contactme.css'
 
 export default class Contact extends React.Component {
   constructor(props) {
