@@ -17,6 +17,7 @@ export default class ArtList extends React.Component {
     window.scrollTo(0, 1)
   }
 
+  // Different CSS classes to unalign CSS Grid columns
   columnCheck = () => {
     const splashList = this.props.splashList
     let column = ''

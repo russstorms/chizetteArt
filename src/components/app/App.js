@@ -28,7 +28,7 @@ export default class App extends Component {
     }
   }
 
-  //// POST TO LOGIN \\\\
+  // Post to Login
   loginClick = async (loginInfo) => {
     const response = await fetch(`${API}/sign-in`, {
       method: "POST",
@@ -78,7 +78,7 @@ export default class App extends Component {
     await this.getToken()
   }
 
-  //// GET THE ART \\\\
+  // Get Art
   getArtList = async () => {
     const artListJson = await fetch(`${API}/chizetteart`)
     const artList = await artListJson.json()
@@ -87,7 +87,7 @@ export default class App extends Component {
     })
   }
 
-  //// CREATE NEW ART \\\\
+  // Admin — Create new art
   postArt = async (title, year, medium, url, price) => {
     const artBody = {
       title: title,
@@ -118,7 +118,7 @@ export default class App extends Component {
     })
   }
 
-  //// EDIT ART \\\\
+  // Admin — Edit art
   editArt = async (id, title, year, medium, url) => {
     const artBody = {
       title: title,
@@ -149,7 +149,7 @@ export default class App extends Component {
     })
   }
 
-  //// DELETE ART \\\\
+  // Admin — Delete art
   deleteArt = async (id) => {
     let response = await fetch(`${API}/chizetteart/${id}`, {
       method: "DELETE",
@@ -166,7 +166,7 @@ export default class App extends Component {
     return this.getArtList()
   }
 
-  //// TOGGLE SECRET LOGIN FORM \\\\
+  // Admin — Toggle login form
   toggleLoginForm = () => {
     if (this.state.secretLogIn) {
     this.setState({
@@ -179,7 +179,7 @@ export default class App extends Component {
     }
   }
 
-  //// FILTER BY MEDIUM \\\\
+  // Filter by medium
   filterArt = (ev) => {
     ev.preventDefault()
     let searchTerm = ev.currentTarget.children[0].children[0].dataset.medium
@@ -207,7 +207,7 @@ export default class App extends Component {
     }
   }
 
-  //// FILTER BY MEDIUM \\\\
+  // Filter art on landing page
   splashFilterArt = (ev) => {
     ev.preventDefault()
     let searchTerm = ev.target.dataset.medium
@@ -231,7 +231,7 @@ export default class App extends Component {
     }
   }
 
-  //// TOGGLE CONTACT FORM \\\\
+  // Toggle contact form
   toggleContactMe = () => {
     if (this.state.contactMe) {
     this.setState({
@@ -254,19 +254,19 @@ export default class App extends Component {
     let splashList = []
     if (!this.state.filteredTerm) {
       for (let art of this.state.artList) {
-        //// ART \\\\
+        // Art
         if (!art.medium.includes('Jewelry') && !art.medium.includes('Photograph') && artCounter < 3) {
           artCounter++
           artArr.push(art)
         }
 
-        //// JEWELRY \\\\
+        // Jewelry
         if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
           jewelryCounter++
           jewelryArr.push(art)
         }
 
-        //// PHOTOGRAPHY \\\\
+        // Photography
         if (art.medium.includes('Photograph') && photoCounter < 3) {
           photoCounter++
           photoArr.push(art)

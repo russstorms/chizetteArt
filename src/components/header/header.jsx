@@ -7,6 +7,7 @@ import './header.css'
 
 export default class header extends Component {
 
+  // Admin — Login form
   secretLogin = (ev) => {
     ev.preventDefault()
     return this.props.toggleLoginForm()

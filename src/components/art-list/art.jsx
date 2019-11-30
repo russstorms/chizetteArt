@@ -4,7 +4,8 @@ import { Button, Modal } from 'react-materialize'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
 import StripeCheckout from 'react-stripe-checkout'
-// Test
+
+// Stripe Test Key
 const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
 
 export default class Art extends React.Component {
@@ -16,7 +17,7 @@ export default class Art extends React.Component {
     }
   }
 
-  //// EDIT ART \\\\
+  // Admin — Edit art
   editSubmit = (ev) => {
     ev.preventDefault()
     let editArtID = ev.target.id
@@ -39,14 +40,14 @@ export default class Art extends React.Component {
     this.props.editArt(editArtID, editArtTitle, editArtYear, editArtMedium, editArtPoster)
   }
 
-  //// DELETE ART \\\\
+  // Admin — Delete art
   deleteArt = (ev) => {
     ev.preventDefault()
     console.log(ev.target.id)
     return this.props.deleteArt(ev.target.id)
   }
 
-  //// SINGLE VIEW NEXT BUTTON \\\\
+  // Single view — Next click
   nextClick = (ev) => {
     const artPosters = this.props.artPosters
     
@@ -56,7 +57,7 @@ export default class Art extends React.Component {
     })
   }
 
-  //// SINGLE VIEW PREV BUTTON \\\\
+  // Single view — Prev click
   prevClick = (ev) => {
     const artPosters = this.props.artPosters
     
@@ -66,7 +67,7 @@ export default class Art extends React.Component {
     })
   }
   
-  //// OPEN SINGLE VIEW \\\\
+  // Single view modal
   modalClick = (ev) => {
     this.setState({
       ...this.state,
@@ -74,6 +75,7 @@ export default class Art extends React.Component {
     })
   }
 
+  // Keep track of counter and reset depending on if user clicks out of modal view
   componentWillUnmount() {
     let artPosters = this.props.artPosters
     this.setState({
@@ -82,7 +84,7 @@ export default class Art extends React.Component {
     })
   }
 
-  // Deal with this later
+  // TODO — Swap test keyf or live key
   stripeBtn = async (token) => {
     // const API = process.env.REACT_APP_API
     const API = 'http://localhost:3000'
@@ -112,28 +114,15 @@ export default class Art extends React.Component {
       })
   }
 
-  // CONNECT TO PRINTFUL \\\\
-  // getPrintfulAPI = async () => {
-    // const orders = await fetch(`${PRINTFULAPI}/orders`, {
-    //   method: "GET",
-    //   mode: "cors",
-    //   cache: "no-cache",
-    //   credentials: "same-origin",
-    //   headers: {
-    //     "Authorization": 'Base64 encoded API key'
-    //   }
-    // })
-  // }
-
   render() {
-    //// LIST OF ART \\\\
+    // List of art
     let art = this.props.art
-    //// LIST OF URLS \\\\
+    // List of URLs
     let artPosters = this.props.artPosters
-    //// CHECK COUNTER TO MAKE SURE IT ISN'T LONGER THAN ARRAY \\\\
+    // Check counter to ensure it isn't longer than array
     let counter = this.state.counter >= artPosters.length ? 0 : this.state.counter
     return (
-      //// ART PIECE \\\\
+      // Art piece
     <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
       <div className="artPiece">
         {this.props.filterTerm === '' ? 
