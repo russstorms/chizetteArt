@@ -2,7 +2,7 @@ import React from 'react'
 import SideNav from 'react-materialize/lib/SideNav'
 import SideNavItem from 'react-materialize/lib/SideNavItem'
 import { Button, Badge } from 'react-materialize'
-import './sidebar.css'
+import './styles/sidebar.css'
 
 export default class Sidebar extends React.Component {
 
