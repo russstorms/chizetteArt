@@ -84,7 +84,7 @@ export default class Art extends React.Component {
     })
   }
 
-  // TODO — Swap test keyf or live key
+  // TODO — Swap test key for live key
   stripeBtn = async (token) => {
     // const API = process.env.REACT_APP_API
     const API = 'http://localhost:3000'

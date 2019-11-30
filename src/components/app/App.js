@@ -10,8 +10,8 @@ import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import 'animate.css/animate.min.css'
 
-const API = process.env.REACT_APP_API
-// const API = 'http://localhost:3000'
+// const API = process.env.REACT_APP_API
+const API = 'http://localhost:3000'
 // Test with new dependencies
 
 export default class App extends Component {
@@ -141,7 +141,7 @@ export default class App extends Component {
       },
     })
     if (response.status !== 200) {
-      alert(`Couldn't edit this masterpiece.`)
+      alert(`Unable to edit this masterpiece.`)
     }
     newList.splice(indexToEdit, 1, {id, ...artBody})
     this.setState({
@@ -161,7 +161,7 @@ export default class App extends Component {
       },
     })
     if (response.status !== 200) {
-      alert(`Couldn't delete this masterpiece.`)
+      alert(`Unable to erase this masterpiece.`)
     }
     return this.getArtList()
   }
