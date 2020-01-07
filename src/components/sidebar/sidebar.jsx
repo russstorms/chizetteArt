@@ -10,32 +10,37 @@ export default class Sidebar extends React.Component {
     const { logoutClick } = this.props
     return (
       <SideNav
-        trigger={<Button className="menuButton btn-flat"><i className="large material-icons icon menuIcon">sort</i></Button>}
-        options={{ closeonClick: true }}>
-        <br />
-          <Badge className="new badge" data-badge-caption="Prints Coming Soon!"></Badge>
-          <SideNavItem onClick={this.props.filterArt}>
-            <span data-medium="Art" className="iconContainer"></span>
-            <span className="sideNavTitle">Art</span>
-          </SideNavItem>
-          <SideNavItem onClick={this.props.filterArt}>
-            <span data-medium="Jewelry" className="iconContainer">
-            <span className="sidebarIconContainer"></span></span>
-            <span className="sideNavTitle">Jewelry</span>
-          </SideNavItem>
-          <SideNavItem onClick={this.props.filterArt}>
-            <span data-medium="Photos" className="iconContainer">
-            <span className="sidebarIconContainer"></span></span>
-            <span className="sideNavTitle">Photos</span>
-          </SideNavItem>
-          <SideNavItem onClick={this.props.filterArt}>
-            <span data-medium="All" className="iconContainer">
-            <span className="sidebarIconContainer"></span></span>
-            <span className="sideNavTitle">View All</span>
-          </SideNavItem>
+        trigger={
+          <Button className="menuButton btn-flat">
+            <i className="large material-icons icon menuIcon">
+              sort
+            </i>
+          </Button>
+        }
+        options={{ closeonClick: true }}
+      >
+        <Badge className="new badge" data-badge-caption="Prints Coming Soon!"></Badge>
+        <SideNavItem onClick={this.props.filterArt}>
+          <span data-medium="Art" className="iconContainer"></span>
+          <span className="sideNavTitle">Art</span>
+        </SideNavItem>
+        <SideNavItem onClick={this.props.filterArt}>
+          <span data-medium="Jewelry" className="iconContainer">
+          <span className="sidebarIconContainer"></span></span>
+          <span className="sideNavTitle">Jewelry</span>
+        </SideNavItem>
+        <SideNavItem onClick={this.props.filterArt}>
+          <span data-medium="Photos" className="iconContainer">
+          <span className="sidebarIconContainer"></span></span>
+          <span className="sideNavTitle">Photos</span>
+        </SideNavItem>
+        <SideNavItem onClick={this.props.filterArt}>
+          <span data-medium="All" className="iconContainer">
+          <span className="sidebarIconContainer"></span></span>
+          <span className="sideNavTitle">View All</span>
+        </SideNavItem>
         <SideNavItem divider />
-          <SideNavItem href="/"><span className="sideNavTitle">Home</span></SideNavItem>
-        <br />
+        <SideNavItem href="/"><span className="sideNavTitle">Home</span></SideNavItem>
         {!this.props.contactMe ?
           <SideNavItem onClick={this.props.toggleContactMe}>
             <span className="iconContainer">

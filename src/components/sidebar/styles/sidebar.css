@@ -1,3 +1,23 @@
+.menuButton {
+  color: rgb(99, 95, 84);
+  position: absolute;
+  bottom: 0;
+}
+
+.menuButton:hover {
+  color: rgb(138, 222, 248);
+  background-color: transparent;
+  animation: sideNavColors 4s infinite;
+}
+
+.menuButton:focus {
+  background-color: transparent;
+}
+
+.menuButton .menuIcon {
+  font-size: 2em;
+}
+
 .sidebarLogo {
   height: 30%;
   width: 30%;
@@ -15,9 +35,24 @@
   transform: translateX(-100%) !important;
 }
 
+@keyframes sideNavColors {
+  20% {
+    color: rgb(138, 222, 248);
+  }
+  30% {
+    color: rgb(196, 107, 193);
+  }
+  50% {
+    color: rgb(138, 222, 248);
+  }
+}
+
 .side-nav {
   box-shadow: none;
   z-index: -1;
+  margin: 180px 0;
+  padding-top: 30px;
+  height: 400px;
 }
 
 .side-nav li>a {
@@ -34,18 +69,6 @@
   animation: sideNavColors 4s infinite;
 }
 
-@keyframes sideNavColors {
-  20% {
-    color: rgb(138, 222, 248);
-  }
-  30% {
-    color: rgb(196, 107, 193);
-  }
-  50% {
-    color: rgb(138, 222, 248);
-  }
-}
-
 #toTop {
   animation: bounce .7s infinite;
   animation-duration: 2s;
@@ -54,6 +77,9 @@
 .footerSidebar {
   letter-spacing: .25em;
   font-family: "Megrim";
+  font-size: 1.2em;
   color: rgb(99, 95, 84);
   position: fixed;
+  padding: 0 20px;
 }
+

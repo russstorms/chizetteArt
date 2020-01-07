@@ -1,4 +1,4 @@
-.nav {
+.Navbar {
   text-align: left;
   background-color: white;
   position: fixed;
@@ -6,41 +6,51 @@
   left: 0;
   top: 0;
   z-index: 1030;
+  max-height: 200px;
+}
+
+.anchorToHome {
+  cursor: pointer;
 }
 
 .logo {
   border-radius: 50%;
-  margin: 1%;
+  padding: 2%;
+  max-width: 150px;
+}
+
+.chizetteArt {
+  position: relative;
+  top: -60px;
+  left: 39px;
+  letter-spacing: .25em;
+  font-size: 2em;
+  font-family: "Megrim";
+  color: rgb(99, 95, 84);
+  text-shadow: 2px 2px 1px rgb(255, 255, 255);
+  cursor: default;
+  margin: 0;
+  text-align: center;
 }
 
 .chizette {
   font-weight: bolder;
 }
 
-.chizetteArt {
-  letter-spacing: .25em;
-  font-family: "Megrim";
-  color: rgb(99, 95, 84);
-  text-shadow: 2px 2px 1px rgb(255, 255, 255);
-  cursor: default;
-}
+/* Animation on Navbar Name */
+@keyframes shinyName {
+  0% {
+    opacity: .2;
+  }
 
-.anchorForHome {
-  width: 30%;
-}
+  10% {
+    opacity: 1;
+  }
 
-.menuButton {
-  color: rgb(99, 95, 84);
-}
-
-.menuButton:hover {
-  color: rgb(138, 222, 248);
-  background-color: transparent;
-  animation: sideNavColors 4s infinite;
-}
-
-.menuButton:focus {
-  background-color: transparent;
+  100% {
+    opacity: 1;
+    color: rgb(138, 222, 248);
+  }
 }
 
 .c {
@@ -107,21 +117,5 @@
   animation: shinyName .1s infinite;
   animation-delay: 2s;
   animation-duration: 7s;
-}
-
-
-@keyframes shinyName {
-  0% {
-    opacity: .2;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-    color: rgb(138, 222, 248);
-  }
 }
 

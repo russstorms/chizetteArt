@@ -41,8 +41,8 @@ export default class ParallaxImage extends React.Component {
       "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434670/chizetteArt%20-%20Compressed/sunset_beach.jpg"
     ]
     return (
-      <div className="parallaxContainer">
-        <ParallaxBanner className="parallax"
+      <div className="Parallax">
+        <ParallaxBanner className="parallaxBanner"
           layers={[
             {
               image: `${parallaxPosters[this.state.counter]}`,
@@ -52,10 +52,23 @@ export default class ParallaxImage extends React.Component {
               
           ]}
           style={{
-        height: '85vh',
-        }}>
-      </ParallaxBanner>
-      <Parallax offsetYMax={300} offsetYMin={-300} tag="figure"><h5 className="about"><span className="firstLetter">H</span>i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!</h5></Parallax>
+            height: '85vh',
+          }}>
+        </ParallaxBanner>
+        <Parallax
+          offsetYMax={300}
+          offsetYMin={-300}
+          tag="figure"
+        >
+          <div className="parallaxAbout">
+            <h5>
+              <span className="firstLetter">
+                H
+              </span>
+              i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!
+            </h5>
+          </div>
+        </Parallax>
       </div>
     )
   }
