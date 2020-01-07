@@ -132,71 +132,69 @@ export default class Art extends React.Component {
           {this.props.filterTerm === '' ? 
             <img className="poster" src={art.poster} alt="n/a" /> 
             :
-              <span>
-              <Modal
-                className="modalFullView"
-                header=''
-                trigger={
-                  <a 
-                    className="anchor"
-                    href="/"
-                  >
-                    <img
-                      className="poster"
-                      onClick={this.modalClick}
-                      src={art.poster}
-                      alt="https://placekitten.com/200/300"
-                    />
-                  </a>
+            <Modal
+              className="modalFullView"
+              header=''
+              trigger={
+                <a 
+                  className="anchor"
+                  href="/"
+                >
+                  <img
+                    className="poster"
+                    onClick={this.modalClick}
+                    src={art.poster}
+                    alt="https://placekitten.com/200/300"
+                  />
+                </a>
+              }
+            >
+              <i className="fas fa-times modal-close closeButton" />
+              <img
+                className="posterSingleView"
+                src={artPosters[counter].poster}
+                alt="https://placekitten.com/200/300"
+              />
+              <div className="ctrlButtons">
+                <div onClick={this.prevClick} className="prevButton">
+                  <i className="carouselArrow large material-icons icon animated fadeInLeft delay-1s">
+                    chevron_left
+                  </i>
+                </div>
+                <div onClick={this.nextClick} className="nextButton">
+                  <i className="carouselArrow large material-icons icon animated fadeInRight delay-1s">chevron_right</i>
+                </div>
+              </div>
+              <div className="artInfoContainer">
+                <div className="singleViewTitle">
+                  <i>{artPosters[counter].title}</i>
+                  <span className="singleViewYear">{artPosters[counter].year}</span>
+                </div>
+                <div className="singleViewMedium animated fadeInRight delay-1s">{artPosters[counter].medium}</div>
+                {!artPosters[counter].title.includes('Gold + Blue') && !artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
+                  <div className="singleViewPrice">${artPosters[counter].price} USD</div> 
+                  : null}
+                {!artPosters[counter].title.includes('Gold + Blue') && !artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
+                  <StripeCheckout className="singleViewPriceButton" 
+                    token={this.stripeBtn}
+                    stripeKey={stripeKey}
+                    name="chizetteArt"
+                    description="Purchase Print"
+                    image={artPosters[counter].poster}
+                    amount={artPosters[counter].price * 100}
+                    currency="USD"
+                    locale="auto"
+                    shippingAddress
+                    billingAddress={true}
+                    zipCode={true}
+                    >
+                    <button className="singleViewPriceButton">
+                      Purchase Print
+                    </button>
+                  </StripeCheckout> : null
                 }
-              >
-                <i className="fas fa-times modal-close closeButton" />
-                <img
-                  className="posterSingleView"
-                  src={artPosters[counter].poster}
-                  alt="https://placekitten.com/200/300"
-                />
-                <div className="ctrlButtons">
-                  <div onClick={this.prevClick} className="prevButton">
-                    <i className="carouselArrow large material-icons icon animated fadeInLeft delay-1s">
-                      chevron_left
-                    </i>
-                  </div>
-                  <div onClick={this.nextClick} className="nextButton">
-                    <i className="carouselArrow large material-icons icon animated fadeInRight delay-1s">chevron_right</i>
-                  </div>
-                </div>
-                <div className="artInfoContainer">
-                  <div className="singleViewTitle">
-                    <i>{artPosters[counter].title}</i>
-                    <span className="singleViewYear">{artPosters[counter].year}</span>
-                  </div>
-                  <div className="singleViewMedium animated fadeInRight delay-1s">{artPosters[counter].medium}</div>
-                  {!artPosters[counter].title.includes('Gold + Blue') && !artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
-                    <div className="singleViewPrice">${artPosters[counter].price} USD</div> 
-                    : null}
-                  {!artPosters[counter].title.includes('Gold + Blue') && !artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
-                    <StripeCheckout className="singleViewPriceButton" 
-                      token={this.stripeBtn}
-                      stripeKey={stripeKey}
-                      name="chizetteArt"
-                      description="Purchase Print"
-                      image={artPosters[counter].poster}
-                      amount={artPosters[counter].price * 100}
-                      currency="USD"
-                      locale="auto"
-                      shippingAddress
-                      billingAddress={true}
-                      zipCode={true}
-                      >
-                      <button className="singleViewPriceButton">
-                        Purchase Print
-                      </button>
-                    </StripeCheckout> : null
-                  }
-                </div>
-              </Modal>
-            </span>
+              </div>
+            </Modal>
           }
 
           <ScrollAnimation
