@@ -25,6 +25,7 @@ export default class Art extends React.Component {
     let editArtYear = ev.target[1].value
     let editArtMedium = ev.target[2].value
     let editArtPoster = ev.target[3].value
+
     if (editArtTitle.length === 0) {
       editArtTitle = ev.target[0].placeholder
     }
@@ -48,7 +49,7 @@ export default class Art extends React.Component {
   }
 
   // Single view — Next click
-  nextClick = (ev) => {
+  nextClick = () => {
     const artPosters = this.props.artPosters
     
     this.setState({
@@ -58,7 +59,7 @@ export default class Art extends React.Component {
   }
 
   // Single view — Prev click
-  prevClick = (ev) => {
+  prevClick = () => {
     const artPosters = this.props.artPosters
     
     this.setState({
@@ -123,169 +124,173 @@ export default class Art extends React.Component {
     let counter = this.state.counter >= artPosters.length ? 0 : this.state.counter
     return (
       // Art piece
-    <ScrollAnimation
-      animateIn="zoomInUp"
-      animateOut="fadeOut"
-    >
-      <div className="artPiece">
-        {this.props.filterTerm === '' ? 
-          <img className="poster2" src={art.poster} alt="https://placekitten.com/200/300" /> 
-          :
-            <span>
-            <Modal
-              className="modalFullView"
-              header=''
-              trigger={
-                <a 
-                  className="anchor"
-                  href="/"
-                >
-                  <img
-                    className="poster"
-                    onClick={this.modalClick}
-                    src={art.poster}
-                    alt="https://placekitten.com/200/300"
-                  />
-                </a>
-              }
-            >
-              <i className="fas fa-times modal-close close"></i>
-              <img
-                className="posterSingleView"
-                src={artPosters[counter].poster}
-                alt="https://placekitten.com/200/300"
-              />
-              <br />
-              <div onClick={this.prevClick} className="prevButton">
-                <i className="carouselArrow large material-icons icon animated fadeInLeft delay-1s">
-                  chevron_left
-                </i>
-              </div>
-              <div onClick={this.nextClick} className="nextButton">
-                <i className="carouselArrow large material-icons icon animated fadeInRight delay-1s">chevron_right</i>
-              </div>
-              {!artPosters[counter].title.includes('Gold + Blue') && !artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
-                <StripeCheckout className="singleViewPriceButton" 
-                  token={this.stripeBtn}
-                  stripeKey={stripeKey}
-                  name="chizetteArt"
-                  description="Purchase Print"
-                  image={artPosters[counter].poster}
-                  amount={artPosters[counter].price * 100}
-                  currency="USD"
-                  locale="auto"
-                  shippingAddress
-                  billingAddress={true}
-                  zipCode={true}
-                  >
-                  <button className="singleViewPriceButton">
-                    Purchase Print
-                  </button>
-                </StripeCheckout> : null}
-              <div className="artInfoContainer">
-                <div className="singleViewTitle">
-                  <i>{artPosters[counter].title}</i>
-                  <span className="singleViewYear">{artPosters[counter].year}</span>
-                </div>
-                <div className="singleViewMedium animated fadeInRight delay-1s">{artPosters[counter].medium}</div>
-                {!artPosters[counter].title.includes('Gold + Blue') && !artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
-                  <div className="singleViewPrice">${artPosters[counter].price} USD</div> 
-                  : null}
-              </div>
-            </Modal>
-          </span>
-        }
-
-        <ScrollAnimation
-          animateIn="fadeInDown"
-          animateOut="fadeOutUp"
-          offset={125}
-        >
-          <div className="artTitle">
-            <b>{art.title}</b>
-          </div>
-        </ScrollAnimation>
-        {this.props.token ?
-          <span>
-            <Modal
-              className="Modal editModal"
-              header={`Edit: ${art.title}`}
-              trigger={
-                <span>
-                  <Button className="editButton btn-flat waves-effect waves-light">
-                    <i className="large material-icons icon brushIcon">
-                      brush
-                    </i>
-                  </Button>
-                </span>
-              }
-            >
-              <i className="fas fa-times modal-close createClose"></i>
-              <form
-                autoComplete="off"
-                id={art.id}
-                onSubmit={this.editSubmit}
-              >
-                <label>
-                  Title
-                </label>
-                <input
-                  type="text"
-                  placeholder={art.title}
-                  name="Title"
-                />
-                <label>
-                  Year
-                </label>
-                <input
-                  type="text"
-                  placeholder={art.year}
-                  name="Year"
-                />
-                <label>
-                  Medium
-                </label>
-                <input
-                  type="text"
-                  placeholder={art.medium}
-                  name="Medium"
-                />
-                <label>
-                  Url
-                </label>
-                <input
-                  type="text"
-                  placeholder={art.poster}
-                  name="Url" 
-                />
-                <Button
-                  className="editArt waves-effect waves-red btn modal-close"
-                  name="submit">
-                    Edit!
-                </Button>
-              </form>
-            </Modal>
-            {this.props.token ? 
+      <ScrollAnimation
+        animateIn="zoomInUp"
+        animateOut="fadeOut"
+      >
+        <div className="Art">
+          {this.props.filterTerm === '' ? 
+            <img className="poster" src={art.poster} alt="n/a" /> 
+            :
               <span>
-                <Button
-                  id={art.id}
-                  onClick={(ev) => this.deleteArt(ev)}
-                  className="deleteButton waves-effect waves-light btn-flat delButton">
-                    <i 
-                      id={art.id}
-                      className="large material-icons icon deleteIcon"
-                    >
-                      delete
+              <Modal
+                className="modalFullView"
+                header=''
+                trigger={
+                  <a 
+                    className="anchor"
+                    href="/"
+                  >
+                    <img
+                      className="poster"
+                      onClick={this.modalClick}
+                      src={art.poster}
+                      alt="https://placekitten.com/200/300"
+                    />
+                  </a>
+                }
+              >
+                <i className="fas fa-times modal-close closeButton" />
+                <img
+                  className="posterSingleView"
+                  src={artPosters[counter].poster}
+                  alt="https://placekitten.com/200/300"
+                />
+                <div className="ctrlButtons">
+                  <div onClick={this.prevClick} className="prevButton">
+                    <i className="carouselArrow large material-icons icon animated fadeInLeft delay-1s">
+                      chevron_left
                     </i>
-                </Button>
-              </span> 
-              : null
-            }
-          </span> 
-          : null
-        }
-      </div>
-    </ScrollAnimation>
+                  </div>
+                  <div onClick={this.nextClick} className="nextButton">
+                    <i className="carouselArrow large material-icons icon animated fadeInRight delay-1s">chevron_right</i>
+                  </div>
+                </div>
+                <div className="artInfoContainer">
+                  <div className="singleViewTitle">
+                    <i>{artPosters[counter].title}</i>
+                    <span className="singleViewYear">{artPosters[counter].year}</span>
+                  </div>
+                  <div className="singleViewMedium animated fadeInRight delay-1s">{artPosters[counter].medium}</div>
+                  {!artPosters[counter].title.includes('Gold + Blue') && !artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
+                    <div className="singleViewPrice">${artPosters[counter].price} USD</div> 
+                    : null}
+                  {!artPosters[counter].title.includes('Gold + Blue') && !artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
+                    <StripeCheckout className="singleViewPriceButton" 
+                      token={this.stripeBtn}
+                      stripeKey={stripeKey}
+                      name="chizetteArt"
+                      description="Purchase Print"
+                      image={artPosters[counter].poster}
+                      amount={artPosters[counter].price * 100}
+                      currency="USD"
+                      locale="auto"
+                      shippingAddress
+                      billingAddress={true}
+                      zipCode={true}
+                      >
+                      <button className="singleViewPriceButton">
+                        Purchase Print
+                      </button>
+                    </StripeCheckout> : null
+                  }
+                </div>
+              </Modal>
+            </span>
+          }
+
+          <ScrollAnimation
+            animateIn="fadeInDown"
+            animateOut="fadeOutUp"
+            offset={125}
+          >
+            <div className="artTitle">
+              <b>{art.title}</b>
+            </div>
+          </ScrollAnimation>
+
+          {/* ADMIN CONTROLS */}
+          {this.props.token ?
+            <span>
+              <Modal
+                className="Modal editModal"
+                header={`Edit: ${art.title}`}
+                trigger={
+                  <span>
+                    <Button className="editButton btn-flat waves-effect waves-light">
+                      <i className="large material-icons icon brushIcon">
+                        brush
+                      </i>
+                    </Button>
+                  </span>
+                }
+              >
+                <i className="fas fa-times modal-close createClose"></i>
+                <form
+                  autoComplete="off"
+                  id={art.id}
+                  onSubmit={this.editSubmit}
+                >
+                  <label>
+                    Title
+                  </label>
+                  <input
+                    type="text"
+                    placeholder={art.title}
+                    name="Title"
+                  />
+                  <label>
+                    Year
+                  </label>
+                  <input
+                    type="text"
+                    placeholder={art.year}
+                    name="Year"
+                  />
+                  <label>
+                    Medium
+                  </label>
+                  <input
+                    type="text"
+                    placeholder={art.medium}
+                    name="Medium"
+                  />
+                  <label>
+                    Url
+                  </label>
+                  <input
+                    type="text"
+                    placeholder={art.poster}
+                    name="Url" 
+                  />
+                  <Button
+                    className="editArt waves-effect waves-red btn modal-close"
+                    name="submit">
+                      Edit!
+                  </Button>
+                </form>
+              </Modal>
+              {this.props.token ? 
+                <span>
+                  <Button
+                    id={art.id}
+                    onClick={(ev) => this.deleteArt(ev)}
+                    className="deleteButton waves-effect waves-light btn-flat delButton">
+                      <i 
+                        id={art.id}
+                        className="large material-icons icon deleteIcon"
+                      >
+                        delete
+                      </i>
+                  </Button>
+                </span> 
+                : null
+              }
+            </span> 
+            : null
+          }
+        </div>
+      </ScrollAnimation>
     )
   }
 }
