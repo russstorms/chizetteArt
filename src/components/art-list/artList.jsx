@@ -1,5 +1,5 @@
 import React from 'react'
-import Art from './art'
+import Art from '../art/art'
 import ScrollAnimation from 'react-animate-on-scroll'
 import 'animate.css/animate.min.css'
 import './styles/artList.css'

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Sidebar from '../sidebar/sidebar'
 import ComposeArt from '../create-art/createart'
 import logo from './styles/chizetteLogo.jpg'
-import './styles/header.css'
+import './styles/navbar.css'
 
 
 export default class header extends Component {

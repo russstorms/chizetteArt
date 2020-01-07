@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import Header from '../header/header'
+import Navbar from '../navbar/navbar'
 import Parallax from '../parallax/parallax'
 import ArtList from '../art-list/artList'
 import Crystal from '../crystal/crystal'
@@ -277,7 +277,7 @@ export default class App extends Component {
     
     return (
       <ParallaxProvider className="App container">
-        <Header
+        <Navbar
           filterArt={this.filterArt}
           logoutClick={this.logoutClick}
           token={this.state.actualToken}

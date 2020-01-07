@@ -123,20 +123,43 @@ export default class Art extends React.Component {
     let counter = this.state.counter >= artPosters.length ? 0 : this.state.counter
     return (
       // Art piece
-    <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
+    <ScrollAnimation
+      animateIn="zoomInUp"
+      animateOut="fadeOut"
+    >
       <div className="artPiece">
         {this.props.filterTerm === '' ? 
-          <img className="poster2" src={art.poster} alt="https://placekitten.com/200/300"></img> 
+          <img className="poster2" src={art.poster} alt="https://placekitten.com/200/300" /> 
           :
             <span>
-            <Modal className="modalFullView"
+            <Modal
+              className="modalFullView"
               header=''
-              trigger={<a className="anchor" href="/"><img className="poster" onClick={this.modalClick} src={art.poster} alt="https://placekitten.com/200/300"></img></a>}>
+              trigger={
+                <a 
+                  className="anchor"
+                  href="/"
+                >
+                  <img
+                    className="poster"
+                    onClick={this.modalClick}
+                    src={art.poster}
+                    alt="https://placekitten.com/200/300"
+                  />
+                </a>
+              }
+            >
               <i className="fas fa-times modal-close close"></i>
-              <img className="posterSingleView" src={artPosters[counter].poster} alt="https://placekitten.com/200/300"></img>
+              <img
+                className="posterSingleView"
+                src={artPosters[counter].poster}
+                alt="https://placekitten.com/200/300"
+              />
               <br />
               <div onClick={this.prevClick} className="prevButton">
-                <i className="carouselArrow large material-icons icon animated fadeInLeft delay-1s">chevron_left</i>
+                <i className="carouselArrow large material-icons icon animated fadeInLeft delay-1s">
+                  chevron_left
+                </i>
               </div>
               <div onClick={this.nextClick} className="nextButton">
                 <i className="carouselArrow large material-icons icon animated fadeInRight delay-1s">chevron_right</i>
@@ -173,27 +196,94 @@ export default class Art extends React.Component {
           </span>
         }
 
-        <ScrollAnimation animateIn="fadeInDown" animateOut="fadeOutUp" offset={125}><div className="artTitle"><b>{art.title}</b></div></ScrollAnimation>
+        <ScrollAnimation
+          animateIn="fadeInDown"
+          animateOut="fadeOutUp"
+          offset={125}
+        >
+          <div className="artTitle">
+            <b>{art.title}</b>
+          </div>
+        </ScrollAnimation>
         {this.props.token ?
           <span>
-            <Modal className="Modal editModal"
+            <Modal
+              className="Modal editModal"
               header={`Edit: ${art.title}`}
-              trigger={<span><Button className="editButton btn-flat waves-effect waves-light"><i className="large material-icons icon brushIcon">brush</i></Button></span>}>
+              trigger={
+                <span>
+                  <Button className="editButton btn-flat waves-effect waves-light">
+                    <i className="large material-icons icon brushIcon">
+                      brush
+                    </i>
+                  </Button>
+                </span>
+              }
+            >
               <i className="fas fa-times modal-close createClose"></i>
-              <form autoComplete="off" id={art.id} onSubmit={this.editSubmit}>
-                <label>Title</label>
-                <input type="text" placeholder={art.title} name="Title" />
-                <label>Year</label>
-                <input type="text" placeholder={art.year} name="Year" />
-                <label>Medium</label>
-                <input type="text" placeholder={art.medium} name="Medium" />
-                <label>Url</label>
-                <input type="text" placeholder={art.poster} name="Url" />
-                <Button className="editArt waves-effect waves-red btn modal-close" name="submit">Edit!</Button>
+              <form
+                autoComplete="off"
+                id={art.id}
+                onSubmit={this.editSubmit}
+              >
+                <label>
+                  Title
+                </label>
+                <input
+                  type="text"
+                  placeholder={art.title}
+                  name="Title"
+                />
+                <label>
+                  Year
+                </label>
+                <input
+                  type="text"
+                  placeholder={art.year}
+                  name="Year"
+                />
+                <label>
+                  Medium
+                </label>
+                <input
+                  type="text"
+                  placeholder={art.medium}
+                  name="Medium"
+                />
+                <label>
+                  Url
+                </label>
+                <input
+                  type="text"
+                  placeholder={art.poster}
+                  name="Url" 
+                />
+                <Button
+                  className="editArt waves-effect waves-red btn modal-close"
+                  name="submit">
+                    Edit!
+                </Button>
               </form>
             </Modal>
-            {this.props.token ? <span><Button id={art.id} onClick={(ev) => this.deleteArt(ev)} className="deleteButton waves-effect waves-light btn-flat delButton"><i id={art.id} className="large material-icons icon deleteIcon">delete</i></Button></span> : null}
-          </span> : null}
+            {this.props.token ? 
+              <span>
+                <Button
+                  id={art.id}
+                  onClick={(ev) => this.deleteArt(ev)}
+                  className="deleteButton waves-effect waves-light btn-flat delButton">
+                    <i 
+                      id={art.id}
+                      className="large material-icons icon deleteIcon"
+                    >
+                      delete
+                    </i>
+                </Button>
+              </span> 
+              : null
+            }
+          </span> 
+          : null
+        }
       </div>
     </ScrollAnimation>
     )

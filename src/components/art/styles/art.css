@@ -1,0 +1,210 @@
+.anchor {
+  cursor: default;
+}
+
+.artTitle {
+  font-family: 'Montserrat';
+  letter-spacing: .3em;
+}
+
+.poster {
+  margin-bottom: 5%;
+  transition: .3s ease-in-out;
+  max-width: 300px;
+}
+
+.poster:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  box-shadow: 10px 7px 15px rgba(0, 0, 0, 0.6);
+}
+
+.poster2 {
+  margin-bottom: 10%;
+  transition: .3s ease-in-out;
+  max-width: 300px;
+}
+
+.poster2:hover {
+  cursor: default;
+  transform: scale(1.3);
+  box-shadow: 10px 7px 15px rgba(0, 0, 0, 0.6);
+}
+
+.posterSingleView {
+  box-shadow: 5px 5px 10px rgba(99, 95, 84, .8);
+}
+
+.artInfoContainer {
+  background-image: linear-gradient(to right, rgb(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0));
+  box-shadow: 0px 10px 25px 25px rgba(0, 0, 0, .3);
+}
+
+.singleViewTitle {
+  color: white;
+  text-shadow: 1px 3px 3px rgba(99, 95, 84, .8);
+  letter-spacing: .1em;
+  animation: fadeInLeft .8s linear;
+}
+
+.singleViewMedium {
+  color: white;
+  font-family: "Megrim";
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-top: -2.5%;
+  margin-left: 5%;
+}
+
+.singleViewYear {
+  color: white;
+  font-size: .3em;
+  display: inline-block;
+}
+
+.singleViewPrice {
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 3px 3px rgba(99, 95, 84, .8);
+}
+
+.singleViewPriceButton {
+  background-image: linear-gradient(to bottom, rgb(138, 222, 248), rgb(69, 166, 196));
+  color: white;
+  font-weight: bold;
+  border-radius: 5%;
+  border: 1px solid rgb(69, 166, 196);
+  z-index: 9999;
+}
+
+.singleViewPriceButton:hover {
+  background-image: linear-gradient(to bottom, rgb(69, 166, 196), rgb(138, 222, 248));
+}
+
+.modalFullView {
+  margin-top: -6%;
+  margin-bottom: -5%;
+  overflow: hidden;
+  max-height: 110%;
+  width: 100vw;
+  z-index: 9999 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.modal-overlay {
+  z-index: 1030 !important;
+  opacity: 0.4 !important;
+}
+
+.modal-footer {
+  background: transparent !important;
+}
+
+.nextButton {
+  cursor: pointer;
+  color: white;
+  text-shadow: 2px 2px 2px rgb(99, 95, 84);
+  user-select: none;
+  transition: .3s ease-in-out;
+}
+
+.nextButton:hover {
+  color: rgb(138, 222, 248);
+  font-size: 1.3em;
+  transition-duration: .5s;
+  transform: scale(1.4);
+}
+
+.prevButton {
+  cursor: pointer;
+  color: white;
+  text-shadow: 2px 2px 2px rgb(99, 95, 84);
+  user-select: none;
+  transition: .3s ease-in-out;
+}
+
+.prevButton:hover {
+  color: rgb(138, 222, 248);
+  font-size: 1.3em;
+  transition-duration: .5s;
+  transform: scale(1.4);
+}
+
+button.modal-close {
+  display: none;
+}
+
+.close {
+  cursor: pointer;
+  color: white;
+  position: fixed;
+}
+
+.close:hover {
+  color: rgb(138, 222, 248);
+  background-color: transparent;
+  transform: scale(1.4);
+  transform: rotate(90deg);
+  transition-duration: .5s;
+}
+
+.artPiece {
+  text-align: center;
+  color: rgb(99, 95, 84);
+  letter-spacing: .1em;
+  font-size: 1.1em;
+}
+
+.editButton {
+  color: rgb(136, 127, 255);
+  font-size: 2em !important;
+  margin-left: -13%;
+}
+
+.editButton:hover {
+  color: rgb(138, 222, 248);
+  background-color: transparent;
+}
+
+.deleteButton {
+  color: rgb(136, 127, 255);
+  font-size: 2em !important;
+  margin-left: 30%;
+  margin-top: -16%;
+}
+
+.deleteButton:hover {
+  color: rgb(138, 222, 248);
+  background-color: transparent;
+}
+
+.brushIcon {
+  font-size: 1.5em !important;
+}
+
+.editModal {
+  margin-top: -5%;
+  z-index: 1200 !important;
+  max-height: 110%;
+  background-image: url("https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg");
+  background-repeat: no-repeat;
+}
+
+.editArt {
+  display: initial !important;
+  color: rgb(138, 222, 248);
+  font-size: 1em;
+  background-color: white;
+  border: none;
+  margin-left: 80%;
+}
+
+.editArt:hover {
+  display: initial !important;
+  color: white;
+  font-size: 1em;
+  background-color: rgb(138, 222, 248);
+  border: none;
+  margin-left: 80%;
+}
