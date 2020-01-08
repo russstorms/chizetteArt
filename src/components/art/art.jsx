@@ -37,39 +37,38 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
 
   const handleClose = () => {
     setOpen(false)
-    setCount(0)
   }
 
   // Admin — Edit art
-  const editSubmit = (ev) => {
-    ev.preventDefault()
-    let editArtID = ev.target.id
-    let editArtTitle = ev.target[0].value
-    let editArtYear = ev.target[1].value
-    let editArtMedium = ev.target[2].value
-    let editArtPoster = ev.target[3].value
+  // const editSubmit = (ev) => {
+  //   ev.preventDefault()
+  //   let editArtID = ev.target.id
+  //   let editArtTitle = ev.target[0].value
+  //   let editArtYear = ev.target[1].value
+  //   let editArtMedium = ev.target[2].value
+  //   let editArtPoster = ev.target[3].value
 
-    if (editArtTitle.length === 0) {
-      editArtTitle = ev.target[0].placeholder
-    }
-    if (editArtYear.length === 0) {
-      editArtYear = ev.target[1].placeholder
-    }
-    if (editArtMedium.length === 0) {
-      editArtMedium = ev.target[2].placeholder
-    }
-    if (editArtPoster.length === 0) {
-      editArtPoster = ev.target[3].placeholder
-    }
-    this.props.editArt(editArtID, editArtTitle, editArtYear, editArtMedium, editArtPoster)
-  }
+  //   if (editArtTitle.length === 0) {
+  //     editArtTitle = ev.target[0].placeholder
+  //   }
+  //   if (editArtYear.length === 0) {
+  //     editArtYear = ev.target[1].placeholder
+  //   }
+  //   if (editArtMedium.length === 0) {
+  //     editArtMedium = ev.target[2].placeholder
+  //   }
+  //   if (editArtPoster.length === 0) {
+  //     editArtPoster = ev.target[3].placeholder
+  //   }
+  //   this.props.editArt(editArtID, editArtTitle, editArtYear, editArtMedium, editArtPoster)
+  // }
 
   // Admin — Delete art
-  const deleteArt = (ev) => {
-    ev.preventDefault()
-    console.log(ev.target.id)
-    return this.props.deleteArt(ev.target.id)
-  }
+  // const deleteArt = (ev) => {
+  //   ev.preventDefault()
+  //   console.log(ev.target.id)
+  //   return this.props.deleteArt(ev.target.id)
+  // }
 
   // Single view — Next click
   const nextClick = () => {
@@ -82,7 +81,6 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
     const trackArtPosters = count === 0 ? artPosters.length - 1 : count - 1
     setCount(trackArtPosters)
   }
-
 
   // TODO — Swap test key for live key
   const stripeBtn = async (token) => {
@@ -113,6 +111,13 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
         console.log('charge>>>', charge)
       })
   }
+
+  // Logic to remove 'Purchase Print' button from Jewelry and Photos
+  const handleArtWithoutPrintAndOtherMediums =
+    // Current Print of 'Gold + Blue' does not have proper resolution to sell
+    !artPosters[counter].title.includes('Gold + Blue') 
+    && !artPosters[counter].medium.includes('Jewelry') 
+    && !artPosters[counter].medium.includes('Photo')
 
   return (
     // Art piece
@@ -159,10 +164,10 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
                       <span className="singleViewYear">{artPosters[counter].year}</span>
                     </div>
                     <div className="singleViewMedium animated fadeInRight delay-1s">{artPosters[counter].medium}</div>
-                    {!artPosters[counter].title.includes('Gold + Blue') && !artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
+                    {handleArtWithoutPrintAndOtherMediums &&
                       <div className="singleViewPrice">${artPosters[counter].price} USD</div> 
-                      : null}
-                    {!artPosters[counter].title.includes('Gold + Blue') && !artPosters[counter].medium.includes('Jewelry') && !artPosters[counter].medium.includes('Photo') ? 
+                    }
+                    {handleArtWithoutPrintAndOtherMediums && 
                       <StripeCheckout className="singleViewPriceButton" 
                         token={stripeBtn}
                         stripeKey={stripeKey}
@@ -181,7 +186,7 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
                             Purchase Print
                           </button>
                         </div>
-                      </StripeCheckout> : null
+                      </StripeCheckout>
                     }
                   </div>
                   <div className="ctrlButtons">

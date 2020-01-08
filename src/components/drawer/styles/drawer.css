@@ -7,7 +7,7 @@
 .menuButton:hover {
   color: rgb(138, 222, 248);
   background-color: transparent;
-  animation: sideNavColors 4s infinite;
+  animation: drawerColors 4s infinite;
 }
 
 .menuButton:focus {
@@ -31,11 +31,11 @@
   color: black !important;
 }
 
-.closeSideNav {
+.closeDrawer {
   transform: translateX(-100%) !important;
 }
 
-@keyframes sideNavColors {
+@keyframes drawerColors {
   20% {
     color: rgb(138, 222, 248);
   }
@@ -66,7 +66,7 @@
   background-color: transparent;
   letter-spacing: .30em;
   transition-duration: .5s;
-  animation: sideNavColors 4s infinite;
+  animation: drawerColors 4s infinite;
 }
 
 #toTop {
@@ -74,7 +74,7 @@
   animation-duration: 2s;
 }
 
-.footerSidebar {
+.footerDrawer {
   letter-spacing: .25em;
   font-family: "Megrim";
   font-size: 1.2em;

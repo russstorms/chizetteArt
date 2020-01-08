@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Sidebar from '../sidebar/sidebar'
+import Drawer from '../drawer/drawer'
 import ComposeArt from '../create-art/createart'
 import logo from './styles/chizetteLogo.jpg'
 import './styles/navbar.css'
@@ -33,7 +33,7 @@ export default class header extends Component {
             <span className="t3">t</span>
           </h1>
         </a>
-        <Sidebar 
+        <Drawer 
           filterArt={this.props.filterArt}
           toggleContactMe={this.props.toggleContactMe}
           contactMe={this.props.contactMe}
