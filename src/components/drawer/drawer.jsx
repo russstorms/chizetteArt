@@ -1,28 +1,17 @@
+
 import React, { useState } from 'react'
 import './styles/drawer.css'
+import SortRoundedIcon from '@material-ui/icons/SortRounded'
 
-import { makeStyles } from '@material-ui/core/styles'
 import {
   Drawer,
   Button,
   List,
   Divider,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
+  ListItem
 } from '@material-ui/core'
 
-const useStyles = makeStyles({
-  list: {
-    width: 250,
-  },
-  fullList: {
-    width: 'auto',
-  },
-})
-
 export default function TempDrawer({ filterArt, contactMe, toggleContactMe, logoutClick, token }) {
-  const classes = useStyles();
   const [state, setState] = useState({
     left: false
   })
@@ -37,43 +26,45 @@ export default function TempDrawer({ filterArt, contactMe, toggleContactMe, logo
 
   return (
     <div>
-      <Button
-        onClick={toggleDrawer('left', true)}
+      <div className="menuIconContainer">
+        <SortRoundedIcon
+          className="menuIcon"
+          onClick={toggleDrawer('left', !state.left)}
+        />
+      </div>
+      <Drawer
+        open={state.left}
+        onClose={toggleDrawer('left', false)}
       >
-        <i className="large material-icons icon menuIcon">
-          sort
-        </i>
-      </Button>
-      <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         <div
-        className={classes.list}
-        role="presentation"
-        onClick={toggleDrawer('left', false)}
-        onKeyDown={toggleDrawer('left', false)}
+          className={'drawer'}
+          role="presentation"
+          onClick={toggleDrawer('left', false)}
+          onKeyDown={toggleDrawer('left', false)}
         >
           <List>
-            <ListItem button onClick={filterArt}>
+            <ListItem onClick={filterArt}>
               <span data-medium="Art" className="iconContainer"></span>
               <span className="drawerTitle">Art</span>
             </ListItem>
-            <ListItem button onClick={filterArt}>
+            <ListItem onClick={filterArt}>
               <span data-medium="Jewelry" className="iconContainer">
               <span className="drawerIconContainer"></span></span>
               <span className="drawerTitle">Jewelry</span>
             </ListItem>
-            <ListItem button onClick={filterArt}>
+            <ListItem onClick={filterArt}>
               <span data-medium="Photos" className="iconContainer">
               <span className="drawerIconContainer"></span></span>
               <span className="drawerTitle">Photos</span>
             </ListItem>
-            <ListItem button onClick={filterArt}>
+            <ListItem onClick={filterArt}>
               <span data-medium="All" className="iconContainer">
               <span className="drawerIconContainer"></span></span>
               <span className="drawerTitle">View All</span>
             </ListItem>
             <Divider />
 
-            <ListItem href="/"><span className="drawerTitle">Home</span></ListItem>
+            <ListItem><span className="drawerTitle">Home</span></ListItem>
             {!contactMe ?
               <ListItem onClick={toggleContactMe}>
                 <span className="iconContainer">
@@ -110,4 +101,3 @@ export default function TempDrawer({ filterArt, contactMe, toggleContactMe, logo
     </div>
   )
 }
-
