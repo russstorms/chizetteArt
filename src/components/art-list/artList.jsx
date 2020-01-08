@@ -153,7 +153,21 @@ export default class ArtList extends React.Component {
             column = 'first'
             break
         }
-        return <div key={idx} className={column}><Art art={art} id={idx} artPosters={this.props.artPosters} token={this.props.token} editArt={this.props.editArt} deleteArt={this.props.deleteArt} /></div>
+        return (
+          <div
+            key={idx}
+            className={column}
+          >
+            <Art
+              art={art}
+              id={idx}
+              artPosters={this.props.artPosters}
+              token={this.props.token}
+              editArt={this.props.editArt}
+              deleteArt={this.props.deleteArt}
+            />
+          </div>
+        )
       }
     )
   }
