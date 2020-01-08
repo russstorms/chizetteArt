@@ -7,14 +7,13 @@ import {
   Button,
   List,
   Divider,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
+  ListItem
 } from '@material-ui/core'
 
 const useStyles = makeStyles({
   list: {
     width: 250,
+    height: 200
   },
   fullList: {
     width: 'auto',
@@ -44,7 +43,10 @@ export default function TempDrawer({ filterArt, contactMe, toggleContactMe, logo
           sort
         </i>
       </Button>
-      <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
+      <Drawer
+        open={state.left}
+        onClose={toggleDrawer('left', false)}
+      >
         <div
         className={classes.list}
         role="presentation"
@@ -52,28 +54,28 @@ export default function TempDrawer({ filterArt, contactMe, toggleContactMe, logo
         onKeyDown={toggleDrawer('left', false)}
         >
           <List>
-            <ListItem button onClick={filterArt}>
+            <ListItem onClick={filterArt}>
               <span data-medium="Art" className="iconContainer"></span>
               <span className="drawerTitle">Art</span>
             </ListItem>
-            <ListItem button onClick={filterArt}>
+            <ListItem onClick={filterArt}>
               <span data-medium="Jewelry" className="iconContainer">
               <span className="drawerIconContainer"></span></span>
               <span className="drawerTitle">Jewelry</span>
             </ListItem>
-            <ListItem button onClick={filterArt}>
+            <ListItem onClick={filterArt}>
               <span data-medium="Photos" className="iconContainer">
               <span className="drawerIconContainer"></span></span>
               <span className="drawerTitle">Photos</span>
             </ListItem>
-            <ListItem button onClick={filterArt}>
+            <ListItem onClick={filterArt}>
               <span data-medium="All" className="iconContainer">
               <span className="drawerIconContainer"></span></span>
               <span className="drawerTitle">View All</span>
             </ListItem>
             <Divider />
 
-            <ListItem href="/"><span className="drawerTitle">Home</span></ListItem>
+            <ListItem><span className="drawerTitle">Home</span></ListItem>
             {!contactMe ?
               <ListItem onClick={toggleContactMe}>
                 <span className="iconContainer">
