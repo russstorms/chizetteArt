@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './styles/drawer.css'
+import SortRoundedIcon from '@material-ui/icons/SortRounded'
 
-import { makeStyles } from '@material-ui/core/styles'
 import {
   Drawer,
   Button,
@@ -10,18 +10,7 @@ import {
   ListItem
 } from '@material-ui/core'
 
-const useStyles = makeStyles({
-  list: {
-    width: 250,
-    height: 200
-  },
-  fullList: {
-    width: 'auto',
-  },
-})
-
 export default function TempDrawer({ filterArt, contactMe, toggleContactMe, logoutClick, token }) {
-  const classes = useStyles();
   const [state, setState] = useState({
     left: false
   })
@@ -36,22 +25,21 @@ export default function TempDrawer({ filterArt, contactMe, toggleContactMe, logo
 
   return (
     <div>
-      <Button
-        onClick={toggleDrawer('left', true)}
-      >
-        <i className="large material-icons icon menuIcon">
-          sort
-        </i>
-      </Button>
+      <div className="menuIconContainer">
+        <SortRoundedIcon
+          className="menuIcon"
+          onClick={toggleDrawer('left', !state.left)}
+        />
+      </div>
       <Drawer
         open={state.left}
         onClose={toggleDrawer('left', false)}
       >
         <div
-        className={classes.list}
-        role="presentation"
-        onClick={toggleDrawer('left', false)}
-        onKeyDown={toggleDrawer('left', false)}
+          className={'drawer'}
+          role="presentation"
+          onClick={toggleDrawer('left', false)}
+          onKeyDown={toggleDrawer('left', false)}
         >
           <List>
             <ListItem onClick={filterArt}>

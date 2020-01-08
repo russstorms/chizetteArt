@@ -16,23 +16,25 @@ export default class header extends Component {
   render() {
     return (
       <div className="Navbar">
-        <a className="anchorToHome" href="/">
+        <a
+          href="/"  
+        >
           <img className="logo" src={logo} alt="logo"></img>
-          <h1 className="chizetteArt">
-            <strong className="chizette"><span className="c">c</span>
-              <span className="h">h</span>
-              <span className="i">i</span>
-              <span className="z">z</span>
-              <span className="e">e</span>
-              <span className="t">t</span>
-              <span className="t2">t</span>
-              <span className="e2">e</span>
-            </strong>
-            <span className="A" onClick={(ev) => this.secretLogin(ev)}>A</span>
-            <span className="r">r</span>
-            <span className="t3">t</span>
-          </h1>
         </a>
+        <h1 className="chizetteArt">
+          <strong className="chizette"><span className="c">c</span>
+            <span className="h">h</span>
+            <span className="i">i</span>
+            <span className="z">z</span>
+            <span className="e">e</span>
+            <span className="t">t</span>
+            <span className="t2">t</span>
+            <span className="e2">e</span>
+          </strong>
+          <span className="A" onClick={(ev) => this.secretLogin(ev)}>A</span>
+          <span className="r">r</span>
+          <span className="t3">t</span>
+        </h1>
         <Drawer 
           filterArt={this.props.filterArt}
           toggleContactMe={this.props.toggleContactMe}
@@ -41,9 +43,8 @@ export default class header extends Component {
           token={this.props.token}
           postArt={this.props.postArt}
         />
-        {this.props.token ?
-          <ComposeArt postArt={this.props.postArt} /> 
-          : null
+        {this.props.token &&
+          <ComposeArt postArt={this.props.postArt} />
         }
       </div>
     )

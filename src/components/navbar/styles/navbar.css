@@ -1,12 +1,12 @@
 .Navbar {
   text-align: left;
-  background-color: white;
+  background-color: #FFFFFF;
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
   z-index: 1030;
-  max-height: 200px;
+  max-height: 190px;
 }
 
 .anchorToHome {

@@ -1,21 +1,20 @@
-.menuButton {
+.menuIconContainer {
   color: rgb(99, 95, 84);
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
+  padding: 5px 15px;
 }
+  .menuIconContainer:hover {
+    color: rgb(138, 222, 248);
+    background-color: transparent;
+    animation: drawerColors 4s infinite;
+  }
+  .menuIconContainer:focus {
+    background-color: transparent;
+  }
 
-.menuButton:hover {
-  color: rgb(138, 222, 248);
-  background-color: transparent;
-  animation: drawerColors 4s infinite;
-}
-
-.menuButton:focus {
-  background-color: transparent;
-}
-
-.menuButton .menuIcon {
-  font-size: 2em;
+  .MuiSvgIcon-root.menuIcon {
+  font-size: 2.5em;
 }
 
 .sidebarLogo {
@@ -47,26 +46,30 @@
   }
 }
 
-.side-nav {
+.MuiDrawer-root.MuiDrawer-modal {
+  z-index: 0 !important;
+}
+  .MuiDrawer-paper {
+    top: 185px !important;
+    height: 320px !important;
+  }
+  .MuiListItem-gutters {
+    color: rgb(99, 95, 84);
+    font-family: 'Montserrat';
+    letter-spacing: .25em;
+  }
+  .MuiListItem-gutters:hover {
+    color: rgb(138, 222, 248);
+    background-color: transparent;
+    letter-spacing: .30em;
+    transition-duration: .5s;
+    animation: drawerColors 4s infinite;
+  }
+
+.drawer {
   box-shadow: none;
-  z-index: -1;
-  margin: 180px 0;
-  padding-top: 30px;
-  height: 400px;
-}
-
-.side-nav li>a {
-  color: rgb(99, 95, 84);
-  font-family: 'Montserrat';
-  letter-spacing: .25em;
-}
-
-.side-nav li>a:hover {
-  color: rgb(138, 222, 248);
-  background-color: transparent;
-  letter-spacing: .30em;
-  transition-duration: .5s;
-  animation: drawerColors 4s infinite;
+  z-index: 2030;
+  width: 230px;
 }
 
 #toTop {
