@@ -1,8 +1,10 @@
 .menuIconContainer {
   color: rgb(99, 95, 84);
-  position: absolute;
-  bottom: -10px;
+  position: fixed;
   padding: 5px 15px;
+  z-index: 9999;
+  left: 0;
+  top: 140px;
 }
   .menuIconContainer:hover {
     color: rgb(138, 222, 248);
@@ -50,7 +52,7 @@
   z-index: 0 !important;
 }
   .MuiDrawer-paper {
-    top: 185px !important;
+    top: 184px !important;
     height: 320px !important;
   }
   .MuiListItem-gutters {

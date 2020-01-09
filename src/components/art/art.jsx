@@ -8,6 +8,9 @@ import './styles/art.css'
 import 'animate.css/animate.min.css'
 import { makeStyles } from '@material-ui/core/styles';
 
+// Stripe Test Key
+const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
+
 const useStyles = makeStyles(() => ({
   modal: {
     display: 'flex',
@@ -20,15 +23,12 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-// Stripe Test Key
-const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
-
-export default function Art({ id, art, artPosters, filterTerm, token }) {
+export default function Art({ id, art, artList, filterTerm }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false)
   const [count, setCount] = useState(0)
   // Check counter to ensure it isn't longer than array
-  let counter = count >= artPosters.length ? 0 : count
+  let counter = count >= artList.length ? 0 : count
 
   const handleOpen = () => {
     setOpen(true)
@@ -72,13 +72,13 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
 
   // Single view — Next click
   const nextClick = () => {
-    const trackArtPosters = count === artPosters.length - 1 ? 0 : count + 1
+    const trackArtPosters = count === artList.length - 1 ? 0 : count + 1
     setCount(trackArtPosters)
   }
 
   // Single view — Prev click
   const prevClick = () => {
-    const trackArtPosters = count === 0 ? artPosters.length - 1 : count - 1
+    const trackArtPosters = count === 0 ? artList.length - 1 : count - 1
     setCount(trackArtPosters)
   }
 
@@ -86,7 +86,7 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
   const stripeBtn = async (token) => {
     // const API = process.env.REACT_APP_API
     const API = 'http://localhost:3000'
-    const artPosters = this.props.artPosters[setCount]
+    const artList = this.props.artList[setCount]
     console.log('TOKEN>>>', token.card)
     
     await fetch(`${API}/stripe`, {
@@ -97,12 +97,12 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        amount: artPosters.price * 100,
+        amount: artList.price * 100,
         email: token.email,
-        artPiece: artPosters.title,
-        artMedium: artPosters.medium,
-        artYear: artPosters.year,
-        art: artPosters.poster,
+        artPiece: artList.title,
+        artMedium: artList.medium,
+        artYear: artList.year,
+        art: artList.poster,
         stripeToken: token.id
       }),
     })
@@ -113,11 +113,11 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
   }
 
   // Logic to remove 'Purchase Print' button from Jewelry and Photos
-  const handleArtWithoutPrintAndOtherMediums =
-    // Current Print of 'Gold + Blue' does not have proper resolution to sell
-    !artPosters[counter].title.includes('Gold + Blue') 
-    && !artPosters[counter].medium.includes('Jewelry') 
-    && !artPosters[counter].medium.includes('Photo')
+  // const handleArtWithoutPrintAndOtherMediums =
+    //  Current Print of 'Gold + Blue' does not have proper resolution to sell
+  //   !artPosters[counter].title.includes('Gold + Blue') 
+  //   && !artPosters[counter].medium.includes('Jewelry') 
+  //   && !artPosters[counter].medium.includes('Photo')
 
   return (
     // Art piece
@@ -134,7 +134,7 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
               className="poster"
               onClick={handleOpen}
               src={art.poster}
-              alt="https://placekitten.com/200/300"
+              alt="n/a"
             />
             <Modal
               aria-labelledby="transition-modal-title"
@@ -154,18 +154,18 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
                 <div>
                   <img
                     className="posterSingleView"
-                    src={artPosters[counter].poster}
-                    alt="https://placekitten.com/200/300"
+                    src={artList[counter].poster}
+                    alt="n/a"
                   />
 
                   <div className="artInfoContainer">
                     <div className="singleViewTitle">
-                      <i>{artPosters[counter].title}</i>
-                      <span className="singleViewYear">{artPosters[counter].year}</span>
+                      <i>{artList[counter].title}</i>
+                      <span className="singleViewYear">{artList[counter].year}</span>
                     </div>
-                    <div className="singleViewMedium animated fadeInRight delay-1s">{artPosters[counter].medium}</div>
-                    {handleArtWithoutPrintAndOtherMediums &&
-                      <div className="singleViewPrice">${artPosters[counter].price} USD</div> 
+                    <div className="singleViewMedium animated fadeInRight delay-1s">{artList[counter].medium}</div>
+                    {/* {handleArtWithoutPrintAndOtherMediums &&
+                      <div className="singleViewPrice">${artList[counter].price} USD</div> 
                     }
                     {handleArtWithoutPrintAndOtherMediums && 
                       <StripeCheckout className="singleViewPriceButton" 
@@ -173,8 +173,8 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
                         stripeKey={stripeKey}
                         name="chizetteArt"
                         description="Purchase Print"
-                        image={artPosters.poster}
-                        amount={artPosters.price * 100}
+                        image={artList.poster}
+                        amount={artList.price * 100}
                         currency="USD"
                         locale="auto"
                         shippingAddress
@@ -187,7 +187,7 @@ export default function Art({ id, art, artPosters, filterTerm, token }) {
                           </button>
                         </div>
                       </StripeCheckout>
-                    }
+                    } */}
                   </div>
                   <div className="ctrlButtons">
                     <div onClick={prevClick} className="prevButton">

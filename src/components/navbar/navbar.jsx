@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Drawer from '../drawer/drawer'
 import ComposeArt from '../create-art/createart'
 import logo from './styles/chizetteLogo.jpg'
 import './styles/navbar.css'
@@ -35,14 +34,7 @@ export default class header extends Component {
           <span className="r">r</span>
           <span className="t3">t</span>
         </h1>
-        <Drawer 
-          filterArt={this.props.filterArt}
-          toggleContactMe={this.props.toggleContactMe}
-          contactMe={this.props.contactMe}
-          logoutClick={this.props.logoutClick}
-          token={this.props.token}
-          postArt={this.props.postArt}
-        />
+
         {this.props.token &&
           <ComposeArt postArt={this.props.postArt} />
         }
