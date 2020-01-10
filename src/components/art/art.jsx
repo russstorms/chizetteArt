@@ -127,7 +127,11 @@ export default function Art({ id, art, artList, filterTerm }) {
     >
       <div className="Art">
         {filterTerm === '' ? 
-          <img className="poster" src={art.poster} alt="n/a" /> 
+          <img
+            className="poster"
+            src={art.poster}
+            alt="n/a"
+          /> 
           :
           <div>
             <img
