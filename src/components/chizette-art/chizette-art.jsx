@@ -3,9 +3,9 @@ import Navbar from '../navbar/navbar'
 import Drawer from '../drawer/drawer'
 import Parallax from '../parallax/parallax'
 import ArtList from '../art-list/artList'
-// import Crystal from '../crystal/crystal'
+import Crystal from '../crystal/crystal'
 // import Login from '../loginForm/loginForm'
-// import Contact from '../contact-me/contactme'
+import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import 'animate.css/animate.min.css'
@@ -16,10 +16,10 @@ const API = 'http://localhost:3000'
 export default function ChizetteArt() {
   const [artList, setArtList] = useState([])
   const [filteredTerm, setFilteredTerm] = useState('')
+  const [contactMe, setContactMe] = useState(false)
   // const [userId, setUserId] = useState('')
   // const [actualToken, setActualToken] = useState('')
   // const [secretLogIn, setSecretLogIn] = useState(false)
-  // const [contactMe, setContactMe] = useState(false)
 
   // Get Art
   useEffect(() => {
@@ -61,19 +61,23 @@ export default function ChizetteArt() {
     }
   }
 
+  // Toggle contact form
+  const toggleContactMe = () => {
+    setContactMe(!contactMe)
+  }
+  
   return (
     <ParallaxProvider className="App container">
       <Navbar
         // logoutClick={logoutClick}
         // token={actualToken}
         // toggleLoginForm={toggleLoginForm}
-        // toggleContactMe={toggleContactMe}
         // postArt={postArt}
       />
       <Drawer 
         configureFilteredTerm={configureFilteredTerm}
-        // toggleContactMe={toggleContactMe}
-        // contactMe={contactMe}
+        toggleContactMe={toggleContactMe}
+        contactMe={contactMe}
         // logoutClick={logoutClick}
         // token={token}
         // postArt={postArt}
@@ -97,8 +101,8 @@ export default function ChizetteArt() {
         // editArt={editArt}
         // deleteArt={deleteArt}
       />
-      {/* {contactMe && <Crystal />}
-      {contactMe && <Contact contactMe={contactMe} />} */}
+      {contactMe && <Crystal />}
+      {contactMe && <Contact contactMe={contactMe} />}
       <Footer />
     </ParallaxProvider>
   )
@@ -298,16 +302,4 @@ export default function ChizetteArt() {
   // }
 
 
-  // Toggle contact form
-  // const toggleContactMe = () => {
-  //   if (this.state.contactMe) {
-  //   this.setState({
-  //     contactMe: false
-  //   })
-  //   } else {
-  //     this.setState({
-  //       contactMe: true
-  //     })
-  //   }
-  // }
-  
+

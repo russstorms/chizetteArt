@@ -66,6 +66,7 @@
     letter-spacing: .30em;
     transition-duration: .5s;
     animation: drawerColors 4s infinite;
+    cursor: pointer;
   }
 
 .drawer {
