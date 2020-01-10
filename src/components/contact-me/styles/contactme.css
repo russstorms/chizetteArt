@@ -1,54 +1,58 @@
 .contactContainer {
   text-align: center;
+  padding: 150px 20px 10px 20px;
 }
 
 .contactPic {
   border-radius: 50%;
   border: 1px solid white;
   box-shadow: 20px 20px 40px 10px rgb(138, 222, 248);
-}
-
-.contactIconContainer {
-  margin-left: 20%;
-}
-
-.contact {
-  color: rgb(99, 95, 84);
-  font-family: 'Montserrat';
-}
-
-.quote {
-  color: rgba(99, 95, 84, .8);
-}
-
-.instagram {
-  color: rgba(99, 95, 84, .8);
-  margin-top: 5%;
-  margin-left: -25%;
-}
-
-.instagram:hover {
-  color: rgb(138, 222, 248);
-}
-
-.instagramIcon {
-  font-size: 3em;
-}
-
-.email {
-  color: rgba(99, 95, 84, .8);
-  margin-top: 5%;
-  margin-left: -20%;
-}
-
-.email:hover {
-  color: rgb(138, 222, 248);
-}
-
-.emailIcon {
-  font-size: 3em;
+  height: auto;
+  max-width: 80%;
 }
 
 .bigLetter {
+  font-size: 1.8em;
   color: rgb(138, 222, 248);
 }
+
+.contact {
+  padding-top: 30px;
+  color: rgb(99, 95, 84);
+  font-family: 'Montserrat';
+  font-size: 1.2em;
+}
+
+.contactIconContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+  .instagram {
+    color: rgba(99, 95, 84, .8);
+  }
+
+  .instagram:hover {
+    color: rgb(138, 222, 248);
+  }
+
+  .instagramIcon {
+    font-size: 3em;
+  }
+
+  .email {
+    color: rgba(99, 95, 84, .8);
+  }
+
+  .email:hover {
+    color: rgb(138, 222, 248);
+  }
+
+  .emailIcon {
+    font-size: 3em;
+  }
+
+.quote {
+  color: rgba(99, 95, 84, .8);
+  font-size: 1em;
+}
+

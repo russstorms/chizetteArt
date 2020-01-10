@@ -1,78 +1,19 @@
 .Artlist {
-  padding-top: 180px;
-}
-
-.first {
-  margin-top: 15%;
-}
-
-.second {
-  margin-top: 0%;
-}
-
-.third {
-  margin-top: 25%;
-}
-
-.first .viewArt {
-  display: none;
-}
-
-.second .viewArt {
-  display: none;
-}
-
-.second .art {
-  display: none;
-}
-
-.third .art {
-  display: none;
-}
-
-.first .viewJewelry {
-  display: none;
-}
-
-.second .viewJewelry {
-  display: none;
-}
-
-.second .jewelry {
-  display: none;
-}
-
-.third .jewelry {
-  display: none;
-}
-
-.first .viewPhotography {
-  display: none;
-}
-
-.second .viewPhotography {
-  display: none;
-}
-
-.second .photography {
-  display: none;
-}
-
-.third .photography {
-  display: none;
+  padding-top: 210px;
 }
 
 .filteredTitle {
   position: absolute;
   top: 180px;
   right: 0;
-  z-index: 9999;
+  z-index: 99;
   padding: 15px 20px;
   text-align: center;
   color: rgb(99, 95, 84);
   letter-spacing: .4em;
   font-family: "Megrim";
   font-weight: bolder;
+  font-size: 1.3em;
   animation: colorTitle 7s infinite;
 }
 
@@ -95,11 +36,6 @@
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.wrapper2 {
   display: grid;
   grid-template-columns: 1fr;
 }
