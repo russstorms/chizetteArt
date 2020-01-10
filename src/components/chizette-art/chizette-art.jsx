@@ -32,14 +32,19 @@ export default function ChizetteArt() {
 
       // Filter based on filteredTerm
       let filteredArtArray = artList.filter((art) => {
-        if (filteredTerm === 'All') {
-          return art.medium
+        // Filter by Photography
+        if (filteredTerm === 'Photos') {
+          return art.medium.includes('Photograph')
+          // Filter by Art
         } else if (filteredTerm === 'Art') {
-          return !art.medium.includes('Photograph') && !art.medium.includes('Jewelry')
+          return !art.medium.includes('Photograph') 
+                  && !art.medium.includes('Jewelry')
+          // Filter by Jewelry
         } else if (filteredTerm === 'Jewelry') {
           return art.medium.includes('Jewelry')
+          // Don't Filter
         } else {
-          return art.medium.includes('Photograph')
+          return art.medium
         }
       })
       setArtList(filteredArtArray)
@@ -50,13 +55,13 @@ export default function ChizetteArt() {
   // Alter filteredTerm based on Drawer
   const configureFilteredTerm = (ev) => {
     ev.preventDefault()
-    let searchTerm = ev.currentTarget.children[1].innerText
+    let updateFilteredTerm = ev.currentTarget.children[1].innerText
 
-    if (searchTerm === 'View All') {
+    if (updateFilteredTerm === 'View All') {
       setFilteredTerm('All')
-    } else if (searchTerm === 'Art') {
+    } else if (updateFilteredTerm === 'Art') {
       setFilteredTerm('Art')
-    } else if (searchTerm === 'Jewelry') {
+    } else if (updateFilteredTerm === 'Jewelry') {
       setFilteredTerm('Jewelry')
     } else {
       setFilteredTerm('Photos')
@@ -70,11 +75,7 @@ export default function ChizetteArt() {
 
   // Admin — Toggle login form
   const toggleLoginForm = () => {
-    if (secretLogIn) {
-      setSecretLogIn(false)
-    } else {
-      setSecretLogIn(true)
-    }
+    setSecretLogIn(!secretLogIn)
   }
 
   // TESTING \\

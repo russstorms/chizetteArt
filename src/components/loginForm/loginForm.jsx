@@ -3,20 +3,15 @@ import TextField from "@material-ui/core/TextField"
 import './styles/loginForm.css'
 
 export default function LoginForm({ loginSubmit, userId }) {
-	const [username, setUsername] = useState("")
-	const [password, setPassword] = useState("")
+
 
 	const onSubmit = (e) => {
 		e.preventDefault()
 
-			loginSubmit({ username, password })
-			setUsername('')
-			setPassword('')
 	}
 
 	const handleChange = (e) => {
-		setUsername(e.target.value)
-		setPassword(e.target.value)
+
 	}
 
   return (
@@ -27,7 +22,7 @@ export default function LoginForm({ loginSubmit, userId }) {
       }}>
         <TextField
 					variant="outlined"
-          value={username}
+          value={''}
           onChange={handleChange}
           margin="normal"
           label="Username"
@@ -35,7 +30,7 @@ export default function LoginForm({ loginSubmit, userId }) {
         />
 				<TextField
 					variant="outlined"
-          value={username}
+          value={''}
           onChange={handleChange}
           margin="normal"
           label="Secret Code"
