@@ -5,7 +5,6 @@ import 'animate.css/animate.min.css'
 import './styles/artList.css'
 
 export default function ArtList({ artList }) {
-  // const [contactMe, setContactMe] = useState(null)
 
   useEffect(() => {
     window.scrollTo(0, 1)

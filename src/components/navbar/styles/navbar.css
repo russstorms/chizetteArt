@@ -21,8 +21,9 @@
 
 .chizetteArt {
   position: relative;
-  top: -60px;
-  left: 39px;
+  top: -66px;
+  left: 115px;
+  width: 230px;
   letter-spacing: .25em;
   font-size: 2em;
   font-family: "Megrim";

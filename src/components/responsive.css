@@ -2,13 +2,22 @@
 @media only screen and (min-width: 768px) {
 
   /* Navbar */
+  .logo {
+    max-width: 175px;
+  }
+
   .chizetteArt {
-    top: -80px;
-    left: -112px;
+    width: 350px;
+    top: -83px;
+    left: 116px;
     font-size: 3em;
   }
 
   /* Drawer */
+  .menuIconContainer {
+    top: 148px;
+  }
+
   .MuiDrawer-paper {
     width: 250px;
   }
@@ -24,7 +33,7 @@
 
   /* Art */
   .poster {
-    max-width: 200px;
+    max-width: 250px;
   }
 
   .posterSingleView {
@@ -55,5 +64,11 @@
   .quote {
     font-size: 1.2em;
   }
+
+}
+
+/* Desktops */
+@media only screen and (min-width: 992px) {
+
 
 }
