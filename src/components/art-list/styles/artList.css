@@ -2,6 +2,18 @@
   padding-top: 210px;
 }
 
+.first {
+  margin-top: 15%;
+}
+
+.second {
+  margin-top: 0%;
+}
+
+.third {
+  margin-top: 25%;
+}
+
 .filteredTitle {
   position: absolute;
   top: 180px;
@@ -40,7 +52,7 @@
   grid-template-columns: 1fr;
 }
 
-.art {
+/* .art {
   color: rgb(99, 95, 84);
   font-size: 1.4em;
   letter-spacing: .4em;
@@ -225,4 +237,4 @@
   animation-delay: 1.5s;
   animation-duration: 7s;
 }
-
+ */

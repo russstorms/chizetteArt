@@ -8,7 +8,9 @@ import LoginForm from '../loginForm/loginForm'
 import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
+
 import 'animate.css/animate.min.css'
+import '../responsive.css'
 
 // const API = process.env.REACT_APP_API
 const API = 'http://localhost:3000'

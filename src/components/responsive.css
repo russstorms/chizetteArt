@@ -1,0 +1,59 @@
+/* Tablet */
+@media only screen and (min-width: 768px) {
+
+  /* Navbar */
+  .chizetteArt {
+    top: -80px;
+    left: -112px;
+    font-size: 3em;
+  }
+
+  /* Drawer */
+  .MuiDrawer-paper {
+    width: 250px;
+  }
+
+  /* ArtList */
+  .Artlist {
+    padding: 210px 15px 0 15px;
+  }
+
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Art */
+  .poster {
+    max-width: 200px;
+  }
+
+  .posterSingleView {
+    max-width: 600px;
+  }
+
+  .artInfoContainer {
+    width: 600px;
+  }
+
+  .ctrlButtons {
+    bottom: -10px;
+  }
+
+  /* Contact */
+  .contactPic {
+    max-width: 60%;
+  }
+
+  .bigLetter {
+    font-size: 4em;
+  }
+
+  .contact {
+    font-size: 1.4em;
+  }
+
+  .quote {
+    font-size: 1.2em;
+  }
+
+}
