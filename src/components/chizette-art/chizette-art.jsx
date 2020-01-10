@@ -4,7 +4,7 @@ import Drawer from '../drawer/drawer'
 import Parallax from '../parallax/parallax'
 import ArtList from '../art-list/artList'
 import Crystal from '../crystal/crystal'
-// import Login from '../loginForm/loginForm'
+import LoginForm from '../loginForm/loginForm'
 import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
@@ -17,9 +17,9 @@ export default function ChizetteArt() {
   const [artList, setArtList] = useState([])
   const [filteredTerm, setFilteredTerm] = useState('')
   const [contactMe, setContactMe] = useState(false)
-  // const [userId, setUserId] = useState('')
-  // const [actualToken, setActualToken] = useState('')
-  // const [secretLogIn, setSecretLogIn] = useState(false)
+  const [secretLogIn, setSecretLogIn] = useState(false)
+  const [userId, setUserId] = useState('')
+  const [actualToken, setActualToken] = useState('')
 
   // Get Art
   useEffect(() => {
@@ -28,7 +28,7 @@ export default function ChizetteArt() {
       const artListJson = await fetch(`${API}/chizetteart`)
       const artList = await artListJson.json()
 
-      // Filter based on function
+      // Filter based on filteredTerm
       let filteredArtArray = artList.filter((art) => {
         if (filteredTerm === 'All') {
           return art.medium
@@ -65,13 +65,80 @@ export default function ChizetteArt() {
   const toggleContactMe = () => {
     setContactMe(!contactMe)
   }
+
+  // Admin — Toggle login form
+  const toggleLoginForm = () => {
+    if (secretLogIn) {
+      setSecretLogIn(false)
+    } else {
+      setSecretLogIn(true)
+    }
+  }
+
+  // TESTING \\
+  // useEffect(() => {
+  //   async function getArtList() {
+  //     // Load the art collection
+  //     const artListJson = await fetch(`${API}/chizetteart`)
+  //     const artList = await artListJson.json()
+
+  //     setArtList([artList])
+  //   }
+  //   getArtList()
+  // }, [filteredTerm])
+
+  // Post to Login
+  const loginSubmit = async (loginInfo) => {
+    const response = await fetch(`${API}/sign-in`, {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(loginInfo)
+    })
+    
+    if (response.status === 200) {
+      const auth = response.headers.get('Auth').slice(8, response.headers.get('Auth').length)
+      const json = await response.json()
+
+      setUserId(json.id)
+      setActualToken(auth)
+
+      // storeToken(json.id, auth)
+    }
+  }
+  // Creates token from admin and stores in local storage
+  // const async storeToken(userId = this.state.userId, token = this.state.actualToken) {
+  //   await localStorage.setItem('userId', JSON.stringify(userId))
+  //   await localStorage.setItem('token', token)
+  // }
+
+  // Grabs token from local storage
+  // const async getToken() {
+  //   const token = await localStorage.getItem('token')
+  //   const userId = await localStorage.getItem('userId')
+  //   const parsed = JSON.parse(userId)
+  //   this.setState({
+  //     userId: parsed || "",
+  //     actualToken: token || ""
+  //   })
+  // }
+
+
+  // const logoutClick = async () => {
+  //   this.setState({
+  //     userId: ''
+  //   })
+  //   this.storeToken("", "")
+  //   }
   
   return (
     <ParallaxProvider className="App container">
       <Navbar
+        toggleLoginForm={toggleLoginForm}
         // logoutClick={logoutClick}
         // token={actualToken}
-        // toggleLoginForm={toggleLoginForm}
         // postArt={postArt}
       />
       <Drawer 
@@ -83,12 +150,12 @@ export default function ChizetteArt() {
         // postArt={postArt}
       />
       {!filteredTerm ? <Parallax /> : <i><h4 className="filteredTitle">{filteredTerm}</h4></i>}
-      {/* {secretLogIn && 
-        <Login 
-          loginClick={loginClick}
+      {secretLogIn && 
+        <LoginForm 
+          loginSubmit={loginSubmit}
           userId={userId}
         />
-      } */}
+      }
       <br />
       <br />
       <ArtList 
@@ -101,13 +168,19 @@ export default function ChizetteArt() {
         // editArt={editArt}
         // deleteArt={deleteArt}
       />
-      {contactMe && <Crystal />}
+      {contactMe ? 
+        null 
+        : 
+        <Crystal />
+      }
       {contactMe && <Contact contactMe={contactMe} />}
       <Footer />
     </ParallaxProvider>
   )
 }
 
+
+// Below is filtering splash list and admin controls
 
   // Filter art into splashlist array
   // let artCounter = 0
@@ -162,51 +235,6 @@ export default function ChizetteArt() {
   //       counter: 0
   //     })
   //   }
-  // }
-
-  // Post to Login
-  // const loginClick = async (loginInfo) => {
-  //   const response = await fetch(`${API}/sign-in`, {
-  //     method: "POST",
-  //     mode: "cors",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify(loginInfo)
-  //   })
-    
-  //   if (response.status === 200) {
-  //     const auth = response.headers.get('Auth').slice(8, response.headers.get('Auth').length)
-  //     const json = await response.json()
-  //     this.setState({
-  //       userId: json.id,
-  //       actualToken: auth
-  //     })
-  //     this.storeToken(json.id, auth)
-  //   }
-  // }
-
-  // const logoutClick = async () => {
-  //   this.setState({
-  //     userId: ''
-  //   })
-  //   this.storeToken("", "")
-  //   }
-
-
-  // const async getToken() {
-  //   const token = await localStorage.getItem('token')
-  //   const userId = await localStorage.getItem('userId')
-  //   const parsed = JSON.parse(userId)
-  //   this.setState({
-  //     userId: parsed || "",
-  //     actualToken: token || ""
-  //   })
-  // }
-
-  // const async storeToken(userId = this.state.userId, token = this.state.actualToken) {
-  //   await localStorage.setItem('userId', JSON.stringify(userId))
-  //   await localStorage.setItem('token', token)
   // }
 
   // Admin — Create new art
@@ -287,19 +315,5 @@ export default function ChizetteArt() {
   //   }
   //   return this.getArtList()
   // }
-
-  // Admin — Toggle login form
-  // const toggleLoginForm = () => {
-  //   if (this.state.secretLogIn) {
-  //   this.setState({
-  //     secretLogIn: false
-  //   })
-  //   } else {
-  //     this.setState({
-  //       secretLogIn: true
-  //     })
-  //   }
-  // }
-
 
 

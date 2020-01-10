@@ -10,6 +10,7 @@
     color: rgb(138, 222, 248);
     background-color: transparent;
     animation: drawerColors 4s infinite;
+    cursor: pointer;
   }
   .menuIconContainer:focus {
     background-color: transparent;
