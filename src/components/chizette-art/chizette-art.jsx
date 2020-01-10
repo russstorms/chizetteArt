@@ -24,10 +24,23 @@ export default function ChizetteArt() {
   // Get Art
   useEffect(() => {
     async function getArtList() {
+      // Load the art collection
       const artListJson = await fetch(`${API}/chizetteart`)
       const artList = await artListJson.json()
 
-      setArtList([ ...artList ])
+      // Filter based on function
+      let filteredArtArray = artList.filter((art) => {
+        if (filteredTerm === 'All') {
+          return art.medium
+        } else if (filteredTerm === 'Art') {
+          return !art.medium.includes('Photograph') && !art.medium.includes('Jewelry')
+        } else if (filteredTerm === 'Jewelry') {
+          return art.medium.includes('Jewelry')
+        } else {
+          return art.medium.includes('Photograph')
+        }
+      })
+      setArtList(filteredArtArray)
     }
     getArtList()
   }, [filteredTerm])
@@ -36,48 +49,17 @@ export default function ChizetteArt() {
   const configureFilteredTerm = (ev) => {
     ev.preventDefault()
     let searchTerm = ev.currentTarget.children[1].innerText
-      if (searchTerm === 'View All') {
-        setFilteredTerm('All')
-      } else if (searchTerm === 'Art') {
-        setFilteredTerm('Art')
-      } else if (searchTerm === 'Jewelry') {
-        setFilteredTerm('Jewelry')
-      } else {
-        setFilteredTerm('Photos')
-      }
-    filteredTermArt()
-  }
 
-  const filteredTermArt = () => {
-    let filteredArtArray = artList.filter((art) => {
-      if (filteredTerm === 'All') {
-        return art.medium
-      } else if (filteredTerm === 'Art') {
-        return !art.medium.includes('Photograph') && !art.medium.includes('Jewelry')
-      } else if (filteredTerm === 'Jewelry') {
-        return art.medium.includes('Jewelry')
-      } else {
-        return art.medium.includes('Photograph')
-      }
-    })
-    setArtList(filteredArtArray)
+    if (searchTerm === 'View All') {
+      setFilteredTerm('All')
+    } else if (searchTerm === 'Art') {
+      setFilteredTerm('Art')
+    } else if (searchTerm === 'Jewelry') {
+      setFilteredTerm('Jewelry')
+    } else {
+      setFilteredTerm('Photos')
+    }
   }
-
-  // artList={this.state.artList.filter((art) => {
-  //   if (this.state.filteredTerm === 'All') {
-  //     return art.medium
-  //   }
-  //   else if (this.state.filteredTerm === 'Art') {
-  //     return !art.medium.includes('Photograph') && !art.medium.includes('Jewelry')
-  //   }
-  //   else if (this.state.filteredTerm === 'Jewelry') {
-  //     return art.medium.includes('Jewelry')
-  //   }
-  //   else {
-  //     return art.medium.includes('Photograph')
-  //   }
-  // })
-  // }
 
   return (
     <ParallaxProvider className="App container">
@@ -86,7 +68,6 @@ export default function ChizetteArt() {
         // token={actualToken}
         // toggleLoginForm={toggleLoginForm}
         // toggleContactMe={toggleContactMe}
-        // contactMe={contactMe}
         // postArt={postArt}
       />
       <Drawer 
