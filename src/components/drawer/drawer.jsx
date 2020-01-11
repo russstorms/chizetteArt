@@ -5,7 +5,6 @@ import {
   Divider,
   ListItem
 } from '@material-ui/core'
-import storageHelpers from '../../Login/localStorageHelpers'
 
 import './styles/drawer.css'
 import SortRoundedIcon from '@material-ui/icons/SortRounded'

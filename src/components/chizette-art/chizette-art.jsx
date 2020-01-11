@@ -123,6 +123,8 @@ export default function ChizetteArt() {
 
   // Admin Logout
   const logoutClick = () => {
+    setToken('')
+    setUserId('')
     localStorage.clear()
   }
 
@@ -130,7 +132,7 @@ export default function ChizetteArt() {
     <ParallaxProvider className="App container">
       <Navbar
         toggleLoginForm={toggleLoginForm}
-        // token={actualToken}
+        token={token}
         // postArt={postArt}
       />
       <Drawer 

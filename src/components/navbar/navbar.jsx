@@ -1,10 +1,10 @@
 import React from 'react'
-// import ComposeArt from '../create-art/createart'
+import ComposeArt from '../create-art/createart'
 import logo from './styles/chizetteLogo.jpg'
 import './styles/navbar.css'
 
 
-export default function Navbar({ toggleLoginForm, secretLogin }) {
+export default function Navbar({ toggleLoginForm, token, postArt, secretLogin }) {
 
   // Admin — Login form
   secretLogin = (ev) => {
@@ -27,14 +27,15 @@ export default function Navbar({ toggleLoginForm, secretLogin }) {
             <span className="t2">t</span>
             <span className="e2">e</span>
           </strong>
-          <span className="A" onClick={(ev) => secretLogin(ev)}>A</span>
+          <span className="A" onClick={(e) => secretLogin(e)}>A</span>
           <span className="r">r</span>
           <span className="t3">t</span>
         </h1>
-      {/* {this.props.token ?
-        <ComposeArt postArt={this.props.postArt} /> 
-        : null
-      } */}
+      {token &&
+        <ComposeArt
+          // postArt={postArt}
+        /> 
+      }
     </div>
   )
 }
