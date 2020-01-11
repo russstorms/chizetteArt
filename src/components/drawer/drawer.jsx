@@ -81,12 +81,15 @@ export default function DrawerSideNav({ logoutClick, configureFilteredTerm, cont
                 </div>
               </ListItem>}
             {token ? 
+            <div>
               <ListItem
                 href='/'
                 onClick={logoutClick}
               >
                 Logout
               </ListItem>
+            </div>
+
               :
               <h1 className="footerDrawer">
                 chizetteArt

@@ -133,7 +133,6 @@ export default function ChizetteArt() {
       <Navbar
         toggleLoginForm={toggleLoginForm}
         token={token}
-        // postArt={postArt}
       />
       <Drawer 
         configureFilteredTerm={configureFilteredTerm}
@@ -141,7 +140,6 @@ export default function ChizetteArt() {
         contactMe={contactMe}
         logoutClick={logoutClick}
         token={token}
-        // postArt={postArt}
       />
       {!filteredTerm ? <Parallax /> : <i><h4 className="filteredTitle">{filteredTerm}</h4></i>}
       {secretLogIn && 

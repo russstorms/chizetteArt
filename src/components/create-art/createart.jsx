@@ -18,7 +18,7 @@ const ComposeArt = ({postArt}) => {
   <br />
     <Modal className="Modal createModal"
     header='Create Art!'
-    trigger={<i className="medium material-icons icon createArtButton">add_circle</i>}>
+    trigger={<button className="createArtButton">Create Art</button>}>
     <i className="fas fa-times modal-close createClose"></i>
     <form onSubmit={createArt} autoComplete="off">
       <label>Title</label>

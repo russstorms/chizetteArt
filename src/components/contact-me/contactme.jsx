@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ComposeArt from '../create-art/createart'
 import './styles/contactme.css'
 
 export default class Contact extends Component {
@@ -55,6 +56,7 @@ export default class Contact extends Component {
           </i>
            ~Chagall
         </h5>
+        <ComposeArt />
       </div>
     )
   }
