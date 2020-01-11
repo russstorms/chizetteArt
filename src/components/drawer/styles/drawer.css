@@ -7,14 +7,25 @@
   top: 140px;
 }
   .menuIconContainer:hover {
-    color: rgb(138, 222, 248);
     background-color: transparent;
-    animation: drawerColors 4s infinite;
+    animation: menuIconColors 4s infinite;
     cursor: pointer;
   }
   .menuIconContainer:focus {
     background-color: transparent;
   }
+  
+@keyframes menuIconColors {
+  20% {
+    color: rgb(138, 222, 248);
+  }
+  30% {
+    color: rgb(99, 95, 84);
+  }
+  50% {
+    color: rgb(138, 222, 248);
+  }
+}
 
   .MuiSvgIcon-root.menuIcon {
   font-size: 2.5em;
@@ -39,13 +50,10 @@
 
 @keyframes drawerColors {
   20% {
-    color: rgb(138, 222, 248);
-  }
-  30% {
-    color: rgb(196, 107, 193);
+    color: rgb(255, 255, 255);
   }
   50% {
-    color: rgb(138, 222, 248);
+    color: rgb(196, 107, 193);
   }
 }
 
@@ -63,14 +71,44 @@
     color: rgb(99, 95, 84);
     font-family: 'Montserrat';
     letter-spacing: .25em;
+    overflow: hidden;
+  }
+  .MuiListItem-gutters:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding: 5px 20px;
+  }
+  .MuiListItem-gutters:after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 300px;
+    /* background: rgba(138, 222, 248); */
+    background: linear-gradient(#FFFFFF 5%, rgba(138, 222, 248) 95%);
+    position: absolute;
+    left: -370px;
+    top: -62px;
+    transform: rotate(45deg);
+    transition: left 1s;
+    z-index: -1;
   }
   .MuiListItem-gutters:hover {
-    color: rgb(138, 222, 248);
+    /* color: rgb(138, 222, 248); */
     background-color: transparent;
     letter-spacing: .30em;
     transition-duration: .5s;
     animation: drawerColors 4s infinite;
     cursor: pointer;
+  }
+  .MuiListItem-gutters:hover:after {
+    left: -25px;
   }
 
 .drawer {
