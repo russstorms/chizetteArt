@@ -4,3 +4,6 @@
   width: 80%;
 }
 
+.goButton:hover {
+  color: rgb(138, 222, 248);
+}

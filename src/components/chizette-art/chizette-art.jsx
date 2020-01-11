@@ -21,7 +21,7 @@ export default function ChizetteArt() {
   const [contactMe, setContactMe] = useState(false)
   const [secretLogIn, setSecretLogIn] = useState(false)
   const [userId, setUserId] = useState('')
-  const [actualToken, setActualToken] = useState('')
+  const [token, setToken] = useState('')
 
   // Get Art
   useEffect(() => {
@@ -50,6 +50,7 @@ export default function ChizetteArt() {
       setArtList(filteredArtArray)
     }
     getArtList()
+    getToken()
   }, [filteredTerm])
 
   // Alter filteredTerm based on Drawer
@@ -79,19 +80,10 @@ export default function ChizetteArt() {
   }
 
   // TESTING \\
-  // useEffect(() => {
-  //   async function getArtList() {
-  //     // Load the art collection
-  //     const artListJson = await fetch(`${API}/chizetteart`)
-  //     const artList = await artListJson.json()
-
-  //     setArtList([artList])
-  //   }
-  //   getArtList()
-  // }, [filteredTerm])
-
-  // Post to Login
+  // PUT INSIDE useEFFECT()
+  // Admin login
   const loginSubmit = async (loginInfo) => {
+    console.log(loginInfo)
     const response = await fetch(`${API}/sign-in`, {
       method: "POST",
       mode: "cors",
@@ -106,41 +98,37 @@ export default function ChizetteArt() {
       const json = await response.json()
 
       setUserId(json.id)
-      setActualToken(auth)
+      setToken(auth)
 
-      // storeToken(json.id, auth)
+      storeToken(json.id, auth)
     }
   }
+
   // Creates token from admin and stores in local storage
-  // const async storeToken(userId = this.state.userId, token = this.state.actualToken) {
-  //   await localStorage.setItem('userId', JSON.stringify(userId))
-  //   await localStorage.setItem('token', token)
-  // }
+  const storeToken = (userId, token) => {
+    localStorage.setItem('userId', JSON.stringify(userId))
+    localStorage.setItem('token', token)
+  }
 
-  // Grabs token from local storage
-  // const async getToken() {
-  //   const token = await localStorage.getItem('token')
-  //   const userId = await localStorage.getItem('userId')
-  //   const parsed = JSON.parse(userId)
-  //   this.setState({
-  //     userId: parsed || "",
-  //     actualToken: token || ""
-  //   })
-  // }
+  const getToken = () => {
+    const token = localStorage.getItem('token')
+    const userId = localStorage.getItem('userId')
+    const parsed = JSON.parse(userId)
+    setUserId(parsed || "")
+    setToken(token || "")
+  }
 
+  // Admin Logout
+  const logoutClick = () => {
+    setUserId('')
+    setToken('')
+    localStorage.clear()
+  }
 
-  // const logoutClick = async () => {
-  //   this.setState({
-  //     userId: ''
-  //   })
-  //   this.storeToken("", "")
-  //   }
-  
   return (
     <ParallaxProvider className="App container">
       <Navbar
         toggleLoginForm={toggleLoginForm}
-        // logoutClick={logoutClick}
         // token={actualToken}
         // postArt={postArt}
       />
@@ -148,8 +136,8 @@ export default function ChizetteArt() {
         configureFilteredTerm={configureFilteredTerm}
         toggleContactMe={toggleContactMe}
         contactMe={contactMe}
-        // logoutClick={logoutClick}
-        // token={token}
+        logoutClick={logoutClick}
+        token={token}
         // postArt={postArt}
       />
       {!filteredTerm ? <Parallax /> : <i><h4 className="filteredTitle">{filteredTerm}</h4></i>}
@@ -163,13 +151,13 @@ export default function ChizetteArt() {
       <br />
       <ArtList 
         artList={artList}
-        // splashFilter={splashFilterArt}
         // contactMe={contactMe}
         // filterTerm={filteredTerm}
         // splashList={splashList}
         // token={actualToken}
         // editArt={editArt}
         // deleteArt={deleteArt}
+        // splashFilter={splashFilterArt}
       />
       {contactMe ? 
         null 

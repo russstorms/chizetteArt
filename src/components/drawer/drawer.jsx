@@ -4,7 +4,6 @@ import SortRoundedIcon from '@material-ui/icons/SortRounded'
 
 import {
   Drawer,
-  Button,
   List,
   Divider,
   ListItem

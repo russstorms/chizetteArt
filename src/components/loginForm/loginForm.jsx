@@ -1,41 +1,44 @@
 import React, { useState } from 'react'
-import TextField from "@material-ui/core/TextField"
+import { TextField, Button } from "@material-ui/core"
 import './styles/loginForm.css'
 
-export default function LoginForm({ loginSubmit, userId }) {
-
-
-	const onSubmit = (e) => {
-		e.preventDefault()
-
-	}
-
-	const handleChange = (e) => {
-
-	}
+export default function LoginForm({ loginSubmit }) {
+	const [username, setUsername] = useState('')
+	const [password, setPassword] = useState('')
 
   return (
     <div className="LoginForm">
-      <form onSubmit={e => {
-        e.preventDefault()
-        onSubmit()
-      }}>
+			<form 
+				onSubmit={e => {
+					e.preventDefault()
+					loginSubmit({username, password})
+					setUsername('')
+					setPassword('')
+				}}
+			>
         <TextField
 					variant="outlined"
-          value={''}
-          onChange={handleChange}
+          value={username}
+          onChange={e => setUsername(e.target.value)}
           margin="normal"
           label="Username"
-          fullWidth
+					fullWidth
+					required
         />
 				<TextField
 					variant="outlined"
-          value={''}
-          onChange={handleChange}
+          value={password}
+          onChange={e => setPassword(e.target.value)}
           margin="normal"
           label="Secret Code"
-          fullWidth
+					fullWidth
+					required
         />
+				<Button
+					className="goButton"
+					type="submit">
+						GO!
+				</Button>
       </form>
     </div>
   )
