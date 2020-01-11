@@ -9,6 +9,8 @@ import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
+// import storageHelpers from '../../Login/localStorageHelpers'
+
 import 'animate.css/animate.min.css'
 import '../responsive.css'
 
@@ -110,18 +112,17 @@ export default function ChizetteArt() {
     localStorage.setItem('token', token)
   }
 
+  // Grab token on reload
   const getToken = () => {
-    const token = localStorage.getItem('token')
     const userId = localStorage.getItem('userId')
-    const parsed = JSON.parse(userId)
-    setUserId(parsed || "")
+    const token = localStorage.getItem('token')
+
+    setUserId(userId || "")
     setToken(token || "")
   }
 
   // Admin Logout
   const logoutClick = () => {
-    setUserId('')
-    setToken('')
     localStorage.clear()
   }
 
