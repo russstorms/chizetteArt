@@ -1,6 +1,7 @@
 import React from 'react'
 import { Modal, Button } from 'react-materialize'
 import './styles/createart.css'
+import '../theme.css'
 
 // Admin — Create new art
 const ComposeArt = ({postArt}) => {
@@ -18,7 +19,7 @@ const ComposeArt = ({postArt}) => {
   <br />
     <Modal className="Modal createModal"
     header='Create Art!'
-    trigger={<button className="createArtButton">Create Art</button>}>
+    trigger={<button className="commonBtn">Create Art</button>}>
     <i className="fas fa-times modal-close createClose"></i>
     <form onSubmit={createArt} autoComplete="off">
       <label>Title</label>

@@ -58,7 +58,7 @@ export default function ChizetteArt() {
   // Alter filteredTerm based on Drawer
   const configureFilteredTerm = (ev) => {
     ev.preventDefault()
-    let updateFilteredTerm = ev.currentTarget.children[1].innerText
+    let updateFilteredTerm = ev.currentTarget.children[0].innerText
 
     if (updateFilteredTerm === 'View All') {
       setFilteredTerm('All')

@@ -9,7 +9,7 @@ import {
 import './styles/drawer.css'
 import SortRoundedIcon from '@material-ui/icons/SortRounded'
 
-export default function DrawerSideNav({ logoutClick, configureFilteredTerm, contactMe, toggleContactMe, token }) {
+export default function DrawerSideNav({ configureFilteredTerm, toggleContactMe, contactMe, logoutClick, token }) {
   const [state, setState] = useState({
     left: false
   })
@@ -23,7 +23,7 @@ export default function DrawerSideNav({ logoutClick, configureFilteredTerm, cont
   };
 
   return (
-    <div>
+    <div className="Drawer">
       <div className="menuIconContainer">
         <SortRoundedIcon
           className="menuIcon"
@@ -42,22 +42,15 @@ export default function DrawerSideNav({ logoutClick, configureFilteredTerm, cont
         >
           <List>
             <ListItem onClick={configureFilteredTerm}>
-              <span className="iconContainer"></span>
               <span className="drawerTitle">Art</span>
             </ListItem>
             <ListItem onClick={configureFilteredTerm}>
-              <span className="iconContainer">
-              <span className="drawerIconContainer"></span></span>
               <span className="drawerTitle">Jewelry</span>
             </ListItem>
             <ListItem onClick={configureFilteredTerm}>
-              <span className="iconContainer">
-              <span className="drawerIconContainer"></span></span>
               <span className="drawerTitle">Photos</span>
             </ListItem>
             <ListItem onClick={configureFilteredTerm}>
-              <span className="iconContainer">
-              <span className="drawerIconContainer"></span></span>
               <span className="drawerTitle">View All</span>
             </ListItem>
             <Divider />
@@ -65,18 +58,14 @@ export default function DrawerSideNav({ logoutClick, configureFilteredTerm, cont
             <ListItem component="a" href="/"><span className="drawerTitle">Home</span></ListItem>
             {!contactMe ?
               <ListItem onClick={toggleContactMe}>
-                <span className="iconContainer">
-                  <span className="drawerIconContainer"></span>
-                  </span><span>Contact Me</span>
+                <span>Contact Me</span>
               </ListItem>
               : 
               <ListItem onClick={toggleContactMe}>
                 <div id="toTop">
-                  <span className="iconContainer">
                     <span className="drawerIconContainer">
                       <i className="fas fa-angle-up"></i>
                     </span>
-                  </span>
                   To Top
                 </div>
               </ListItem>}
@@ -95,7 +84,6 @@ export default function DrawerSideNav({ logoutClick, configureFilteredTerm, cont
                 chizetteArt
               </h1>
             }
-
           </List>
         </div>
       </Drawer>

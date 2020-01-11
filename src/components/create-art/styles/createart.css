@@ -3,52 +3,6 @@ label {
   font-size: 1.5em;
 }
 
-.createArtButton {
-  color: #FFFFFF;
-  font-size: 1.5em;
-  border: none;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  padding: 5px 20px;
-}
-
-.createArtButton:before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: rgb(138, 222, 248);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  padding: 5px 20px;
-}
-
-.createArtButton:after {
-  content: "";
-  display: block;
-  width: 120px;
-  height: 120px;
-  background: rgba(46, 131, 156, .15);
-  position: absolute;
-  right: -12px;
-  top: -62px;
-  transform: rotate(45deg);
-  transition: right .5s;
-  z-index: -1;
-}
-
-.createArtButton:hover:after {
-  cursor: pointer;
-  right: -95px;
-}
-
-.createArtButton:focus {
-  background-color: transparent;
-}
-
 .createModal {
   margin-top: -5%;
   z-index: 1200 !important;

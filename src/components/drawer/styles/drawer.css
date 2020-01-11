@@ -52,6 +52,9 @@
 .MuiDrawer-root.MuiDrawer-modal {
   z-index: 0 !important;
 }
+  .MuiList-padding {
+    padding-top: 25px !important;
+  }
   .MuiDrawer-paper {
     top: 184px !important;
     height: 320px !important;
