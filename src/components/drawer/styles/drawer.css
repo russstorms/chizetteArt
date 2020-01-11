@@ -20,7 +20,7 @@
     color: rgb(138, 222, 248);
   }
   30% {
-    color: rgb(99, 95, 84);
+    color: #FFFFFF;
   }
   50% {
     color: rgb(138, 222, 248);
@@ -49,11 +49,11 @@
 }
 
 @keyframes drawerColors {
+  5% {
+    color: rgb(138, 222, 248);
+  }
   20% {
     color: rgb(255, 255, 255);
-  }
-  50% {
-    color: rgb(196, 107, 193);
   }
 }
 
@@ -73,6 +73,14 @@
     letter-spacing: .25em;
     overflow: hidden;
   }
+  .MuiListItem-gutters:hover {
+    color: #FFFFFF;
+    background-color: transparent;
+    letter-spacing: .30em;
+    transition-duration: .5s;
+    animation: drawerColors 4s infinite;
+    cursor: pointer;
+  }
   .MuiListItem-gutters:before {
     content: "";
     display: block;
@@ -91,21 +99,13 @@
     width: 300px;
     height: 300px;
     /* background: rgba(138, 222, 248); */
-    background: linear-gradient(#FFFFFF 5%, rgba(138, 222, 248) 95%);
+    background: linear-gradient(rgb(196, 107, 193) 5%, rgba(138, 222, 248) 95%);
     position: absolute;
     left: -370px;
     top: -62px;
     transform: rotate(45deg);
     transition: left 1s;
     z-index: -1;
-  }
-  .MuiListItem-gutters:hover {
-    /* color: rgb(138, 222, 248); */
-    background-color: transparent;
-    letter-spacing: .30em;
-    transition-duration: .5s;
-    animation: drawerColors 4s infinite;
-    cursor: pointer;
   }
   .MuiListItem-gutters:hover:after {
     left: -25px;
