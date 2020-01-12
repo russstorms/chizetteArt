@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import { TextField } from "@material-ui/core"
 import './styles/loginForm.css'
 
+
 export default function LoginForm({ loginSubmit }) {
 	const [username, setUsername] = useState('')
 	const [password, setPassword] = useState('')
-
   return (
     <div className="LoginForm">
 			<form 
 				onSubmit={e => {
 					e.preventDefault()
-					loginSubmit({username, password})
+					loginSubmit({ username, password })
 					setUsername('')
 					setPassword('')
 				}}
