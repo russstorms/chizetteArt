@@ -165,7 +165,13 @@ export default function ChizetteArt() {
         : 
         <Crystal />
       }
-      {contactMe && <Contact contactMe={contactMe} />}
+      {
+        contactMe && 
+        <Contact 
+          contactMe={contactMe} 
+          token={token}
+        />
+        }
       <Footer />
     </ParallaxProvider>
   )

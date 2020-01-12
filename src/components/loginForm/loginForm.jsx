@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { TextField, Button } from "@material-ui/core"
+import { TextField } from "@material-ui/core"
 import './styles/loginForm.css'
 
 export default function LoginForm({ loginSubmit }) {
@@ -26,6 +26,7 @@ export default function LoginForm({ loginSubmit }) {
 					required
         />
 				<TextField
+					type="password"
 					variant="outlined"
           value={password}
           onChange={e => setPassword(e.target.value)}
@@ -34,11 +35,11 @@ export default function LoginForm({ loginSubmit }) {
 					fullWidth
 					required
         />
-				<Button
-					className="goButton"
+				<button
+					className="commonBtn"
 					type="submit">
-						GO!
-				</Button>
+						Go
+				</button>
       </form>
     </div>
   )

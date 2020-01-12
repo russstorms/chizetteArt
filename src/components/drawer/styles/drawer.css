@@ -117,11 +117,6 @@
   width: 230px;
 }
 
-#toTop {
-  animation: bounce .7s infinite;
-  animation-duration: 2s;
-}
-
 .footerDrawer {
   letter-spacing: .25em;
   font-family: "Megrim";

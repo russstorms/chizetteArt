@@ -14,13 +14,10 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <div className="contactContainer">
-        <img
-          ref={this.myRef}
-          className="contactPic"
-          src="https://res.cloudinary.com/chizetteart/image/upload/v1556310776/chizetteArt%20-%20Compressed/contactme.png"
-          alt="#">
-        </img>
+      <div 
+        className="contactContainer"
+        ref={this.myRef}
+      >
         <p className="contact">
           <span className="bigLetter">C</span>
             hizette grew up in a pink house on a little island with two artist parents who taught her to draw and paint.
@@ -56,7 +53,10 @@ export default class Contact extends Component {
           </i>
            ~Chagall
         </h5>
-        <ComposeArt />
+        {
+          this.props.token &&
+          <ComposeArt />
+        }
       </div>
     )
   }

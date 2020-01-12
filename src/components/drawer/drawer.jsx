@@ -62,12 +62,10 @@ export default function DrawerSideNav({ configureFilteredTerm, toggleContactMe, 
               </ListItem>
               : 
               <ListItem onClick={toggleContactMe}>
-                <div id="toTop">
-                    <span className="drawerIconContainer">
-                      <i className="fas fa-angle-up"></i>
-                    </span>
-                  To Top
-                </div>
+                <span className="drawerIconContainer">
+                  <i className="fas fa-angle-up"></i>
+                </span>
+                To Top
               </ListItem>}
             {token ? 
             <div>
