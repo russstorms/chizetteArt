@@ -16,12 +16,6 @@
   }
   
 @keyframes menuIconColors {
-  20% {
-    color: rgb(138, 222, 248);
-  }
-  30% {
-    color: #FFFFFF;
-  }
   50% {
     color: rgb(138, 222, 248);
   }
