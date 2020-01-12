@@ -55,7 +55,9 @@ export default class Contact extends Component {
         </h5>
         {
           this.props.token &&
-          <ComposeArt />
+          <ComposeArt 
+            postArt={this.props.postArt}
+          />
         }
       </div>
     )

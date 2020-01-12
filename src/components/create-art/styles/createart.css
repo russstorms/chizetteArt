@@ -1,29 +1,12 @@
-label {
-  color: rgb(138, 222, 248);
-  font-size: 1.5em;
+.MuiInputBase-root {
+  color: black !important;
+  background-color: #FFFFFF !important;
 }
 
-.createModal {
-  margin-top: -5%;
-  z-index: 1200 !important;
-  max-height: 110%;
+.CreateArtFormContainer {
   background-image: url("https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg");
   background-repeat: no-repeat;
-  /* background-size: cover; */
-}
-
-.createClose {
-  cursor: pointer;
-  color: rgb(138, 222, 248);
-  font-size: 3em;
-  position: fixed;
-  right: 50px;
-  top: 15px;
-}
-
-.createClose:hover {
-  transform: scale(1.4);
-  transition-duration: .5s;
+  padding: 20px 50px;
 }
 
 .createArt {
@@ -44,7 +27,7 @@ label {
   margin-left: 80%;
 }
 
-.modal-content h4 {
+.formTitle {
   text-align: center;
   font-family: "Megrim";
   letter-spacing: .1em;

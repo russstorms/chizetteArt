@@ -9,7 +9,6 @@ import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
-// import storageHelpers from '../../Login/localStorageHelpers'
 
 import 'animate.css/animate.min.css'
 import '../responsive.css'
@@ -81,11 +80,9 @@ export default function ChizetteArt() {
     setSecretLogIn(!secretLogIn)
   }
 
-  // TESTING \\
   // PUT INSIDE useEFFECT()
   // Admin login
   const loginSubmit = async (loginInfo) => {
-    console.log(loginInfo)
     const response = await fetch(`${API}/sign-in`, {
       method: "POST",
       mode: "cors",
@@ -126,6 +123,35 @@ export default function ChizetteArt() {
     setToken('')
     setUserId('')
     localStorage.clear()
+  }
+
+  // Admin — Create new art
+  const postArt = async (title, year, medium, url, price) => {
+    const artBody = {
+      title: title,
+      year: year,
+      medium: medium,
+      poster: url,
+      price: price
+    }
+    const response = await fetch(`${API}/chizetteart`, {
+      method: "POST",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        "Accept": "application/JSON",
+        "Content-Type": "application/json",
+        "token": token
+      },
+      body: JSON.stringify(artBody)
+    })
+    if (response.status !== 200) {
+      alert(`Post Art: Invalid post`)
+    } else {
+      alert(`Art Created!`)
+    }
+    setArtList([artBody, ...artList])
   }
 
   return (
@@ -170,6 +196,7 @@ export default function ChizetteArt() {
         <Contact 
           contactMe={contactMe} 
           token={token}
+          postArt={postArt}
         />
         }
       <Footer />
@@ -235,36 +262,6 @@ export default function ChizetteArt() {
   //   }
   // }
 
-  // Admin — Create new art
-  // const postArt = async (title, year, medium, url, price) => {
-  //   const artBody = {
-  //     title: title,
-  //     year: year,
-  //     medium: medium,
-  //     poster: url,
-  //     price: price
-  //   }
-  //   const response = await fetch(`${API}/chizetteart`, {
-  //     method: "POST",
-  //     mode: "cors",
-  //     cache: "no-cache",
-  //     credentials: "same-origin",
-  //     headers: {
-  //       "Accept": "application/JSON",
-  //       "Content-Type": "application/json",
-  //       "token": this.state.actualToken
-  //     },
-  //     body: JSON.stringify(artBody)
-  //   })
-  //   if (response.status !== 200) {
-  //     alert(`Post Art: Invalid post`)
-  //   } else {
-  //     alert(`Art Created!`)
-  //   }
-  //   this.setState({
-  //     artList: [artBody, ...this.state.artList]
-  //   })
-  // }
 
   // Admin — Edit art
   // const editArt = async (id, title, year, medium, url) => {

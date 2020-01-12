@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-import { Modal, Button, Backdrop, Fade} from '@material-ui/core/'
+import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
 import ScrollAnimation from 'react-animate-on-scroll'
 import StripeCheckout from 'react-stripe-checkout'
 
 // Styles
 import './styles/art.css'
 import 'animate.css/animate.min.css'
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles'
 
 // Stripe Test Key
 const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
