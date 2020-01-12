@@ -5,7 +5,7 @@ import Art from '../art/art'
 import 'animate.css/animate.min.css'
 import './styles/artList.css'
 
-export default function ArtList({ artList }) {
+export default function ArtList({ artList, deleteArt, token }) {
 
   useEffect(() => {
     window.scrollTo(0, 1)
@@ -36,9 +36,9 @@ export default function ArtList({ artList }) {
               art={art}
               id={idx}
               artList={artList}
-              // token={this.props.token}
+              deleteArt={deleteArt}
+              token={token}
               // editArt={this.props.editArt}
-              // deleteArt={this.props.deleteArt}
             />
           </div>
         )

@@ -147,11 +147,30 @@ export default function ChizetteArt() {
       body: JSON.stringify(artBody)
     })
     if (response.status !== 200) {
-      alert(`Post Art: Invalid post`)
+      alert(`Unable to create this masterpiece!`)
     } else {
       alert(`Art Created!`)
     }
     setArtList([artBody, ...artList])
+  }
+
+  // Admin — Delete art
+  const deleteArt = async (id) => {
+    let response = await fetch(`${API}/chizetteart/${id}`, {
+      method: "DELETE",
+      mode: "cors",
+      headers: {
+        "Accept": "application/JSON",
+        "Content-Type": "application/json",
+        "token": token
+      },
+    })
+    if (response.status !== 200) {
+      alert(`Unable to erase this masterpiece!`)
+    } else {
+      alert(`Crumbled up and thrown away!`)
+    }
+    setArtList([...artList])
   }
 
   return (
@@ -178,12 +197,12 @@ export default function ChizetteArt() {
       <br />
       <ArtList 
         artList={artList}
+        deleteArt={deleteArt}
+        token={token}
         // contactMe={contactMe}
         // filterTerm={filteredTerm}
         // splashList={splashList}
-        // token={actualToken}
         // editArt={editArt}
-        // deleteArt={deleteArt}
         // splashFilter={splashFilterArt}
       />
       {contactMe ? 
@@ -292,23 +311,6 @@ export default function ChizetteArt() {
   //   this.setState({
   //     artList: newList
   //   })
-  // }
-
-  // Admin — Delete art
-  // const deleteArt = async (id) => {
-  //   let response = await fetch(`${API}/chizetteart/${id}`, {
-  //     method: "DELETE",
-  //     mode: "cors",
-  //     headers: {
-  //       "Accept": "application/JSON",
-  //       "Content-Type": "application/json",
-  //       "token": this.state.actualToken
-  //     },
-  //   })
-  //   if (response.status !== 200) {
-  //     alert(`Unable to erase this masterpiece.`)
-  //   }
-  //   return this.getArtList()
   // }
 
 

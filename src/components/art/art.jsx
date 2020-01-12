@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function Art({ id, art, artList, filterTerm }) {
+export default function Art({ id, art, artList, filterTerm, deleteArt, token }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false)
   const [count, setCount] = useState(0)
@@ -52,41 +52,47 @@ export default function Art({ id, art, artList, filterTerm }) {
   }
 
   // TODO — Swap test key for live key
-  // const stripeBtn = async (token) => {
-  //   // const API = process.env.REACT_APP_API
-  //   const API = 'http://localhost:3000'
-  //   const artList = this.props.artList[setCount]
-  //   console.log('TOKEN>>>', token.card)
+  const stripeBtn = async (token) => {
+    // const API = process.env.REACT_APP_API
+    const API = 'http://localhost:3000'
+    const artList = this.props.artList[setCount]
+    console.log('TOKEN>>>', token.card)
     
-  //   await fetch(`${API}/stripe`, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Authorization': `Bearer ${stripeKey}`,
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({
-  //       amount: artList.price * 100,
-  //       email: token.email,
-  //       artPiece: artList.title,
-  //       artMedium: artList.medium,
-  //       artYear: artList.year,
-  //       art: artList.poster,
-  //       stripeToken: token.id
-  //     }),
-  //   })
-  //   .then(response => response.json())
-  //     .then(charge => {
-  //       console.log('charge>>>', charge)
-  //     })
-  // }
+    await fetch(`${API}/stripe`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${stripeKey}`,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        amount: artList.price * 100,
+        email: token.email,
+        artPiece: artList.title,
+        artMedium: artList.medium,
+        artYear: artList.year,
+        art: artList.poster,
+        stripeToken: token.id
+      }),
+    })
+    .then(response => response.json())
+      .then(charge => {
+        console.log('charge>>>', charge)
+      })
+  }
 
-  // Logic to remove 'Purchase Print' button from Jewelry and Photos
+  // Admin — Delete art
+  const removeArt = (ev) => {
+    ev.preventDefault()
+    return deleteArt(ev.target.id)
+  }
+
+  // // Logic to remove 'Purchase Print' button from Jewelry and Photos
   // const handleArtWithoutPrintAndOtherMediums =
-    //  Current Print of 'Gold + Blue' does not have proper resolution to sell
-  //   !artPosters[counter].title.includes('Gold + Blue') 
-  //   && !artPosters[counter].medium.includes('Jewelry') 
-  //   && !artPosters[counter].medium.includes('Photo')
+  //   //  Current Print of 'Gold + Blue' does not have proper resolution to sell
+  //   !artList[counter].title.includes('Gold + Blue') 
+  //   && !artList[counter].medium.includes('Jewelry') 
+  //   && !artList[counter].medium.includes('Photo')
 
   // Admin — Edit art
   // const editSubmit = (ev) => {
@@ -112,13 +118,6 @@ export default function Art({ id, art, artList, filterTerm }) {
   //   this.props.editArt(editArtID, editArtTitle, editArtYear, editArtMedium, editArtPoster)
   // }
 
-  // Admin — Delete art
-  // const deleteArt = (ev) => {
-  //   ev.preventDefault()
-  //   console.log(ev.target.id)
-  //   return this.props.deleteArt(ev.target.id)
-  // }
-
   return (
     // Art piece
     <ScrollAnimation
@@ -126,12 +125,26 @@ export default function Art({ id, art, artList, filterTerm }) {
       animateOut="fadeOut"
     >
       <div className="Art">
+        {token ? 
+          <Button
+            id={art.id}
+            onClick={(ev) => removeArt(ev)}
+            className="deleteButton waves-effect waves-light btn-flat delButton">
+              <i 
+                id={art.id}
+                className="large material-icons icon deleteIcon"
+              >
+                delete
+              </i>
+          </Button>
+          : null
+        }
         {filterTerm === '' ? 
           <img
             className="poster"
             src={art.poster}
             alt="n/a"
-          /> 
+          />
           :
           <div>
             <img
@@ -281,20 +294,7 @@ export default function Art({ id, art, artList, filterTerm }) {
                 </Button>
               </form>
             </Modal>
-            {this.props.token ? 
-              <Button
-                id={art.id}
-                onClick={(ev) => this.deleteArt(ev)}
-                className="deleteButton waves-effect waves-light btn-flat delButton">
-                  <i 
-                    id={art.id}
-                    className="large material-icons icon deleteIcon"
-                  >
-                    delete
-                  </i>
-              </Button>
-              : null
-            }
+            
           </span> 
           : null
         } */}
