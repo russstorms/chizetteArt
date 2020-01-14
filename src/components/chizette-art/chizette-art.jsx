@@ -154,6 +154,37 @@ export default function ChizetteArt() {
     setArtList([artBody, ...artList])
   }
 
+  // Admin — Edit art
+  const editArt = async (id, title, year, medium, url) => {
+    const artBody = {
+      title: title,
+      year: year,
+      medium: medium,
+      poster: url
+    }
+
+    let newList = artList.slice()
+    let indexToEdit = newList.findIndex(art => art.id === +id)
+  
+    let response = await fetch(`${API}/chizetteart/${id}`, {
+      method: "PUT",
+      mode: "cors",
+      body: JSON.stringify(artBody),
+      headers: {
+        "Accept": "application/JSON",
+        "Content-Type": "application/json",
+        "token": token
+      },
+    })
+    if (response.status !== 200) {
+      alert(`Unable to edit this masterpiece!`)
+    } else {
+      alert(`Edited this masterpiece!`)
+    }
+    newList.splice(indexToEdit, 1, {id, ...artBody})
+    setArtList(newList)
+  }
+
   // Admin — Delete art
   const deleteArt = async (id) => {
     let response = await fetch(`${API}/chizetteart/${id}`, {
@@ -197,12 +228,12 @@ export default function ChizetteArt() {
       <br />
       <ArtList 
         artList={artList}
+        editArt={editArt}
         deleteArt={deleteArt}
         token={token}
         // contactMe={contactMe}
         // filterTerm={filteredTerm}
         // splashList={splashList}
-        // editArt={editArt}
         // splashFilter={splashFilterArt}
       />
       {contactMe ? 
@@ -279,38 +310,6 @@ export default function ChizetteArt() {
   //       counter: 0
   //     })
   //   }
-  // }
-
-
-  // Admin — Edit art
-  // const editArt = async (id, title, year, medium, url) => {
-  //   const artBody = {
-  //     title: title,
-  //     year: year,
-  //     medium: medium,
-  //     poster: url
-  //   }
-
-  //   let newList = this.state.artList.slice()
-  //   let indexToEdit = newList.findIndex(art => art.id === +id)
-  
-  //   let response = await fetch(`${API}/chizetteart/${id}`, {
-  //     method: "PUT",
-  //     mode: "cors",
-  //     body: JSON.stringify(artBody),
-  //     headers: {
-  //       "Accept": "application/JSON",
-  //       "Content-Type": "application/json",
-  //       "token": this.state.actualToken
-  //     },
-  //   })
-  //   if (response.status !== 200) {
-  //     alert(`Unable to edit this masterpiece.`)
-  //   }
-  //   newList.splice(indexToEdit, 1, {id, ...artBody})
-  //   this.setState({
-  //     artList: newList
-  //   })
   // }
 
 

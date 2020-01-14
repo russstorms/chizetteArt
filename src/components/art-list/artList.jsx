@@ -5,11 +5,11 @@ import Art from '../art/art'
 import 'animate.css/animate.min.css'
 import './styles/artList.css'
 
-export default function ArtList({ artList, deleteArt, token }) {
+export default function ArtList({ artList, editArt, deleteArt, token }) {
 
-  useEffect(() => {
-    window.scrollTo(0, 1)
-  }, [artList])
+  // useEffect(() => {
+  //   window.scrollTo(0, 1)
+  // }, [artList])
 
   // Differing CSS classes to unalign CSS Grid columns
   const columnCheck = () => {
@@ -36,9 +36,9 @@ export default function ArtList({ artList, deleteArt, token }) {
               art={art}
               id={idx}
               artList={artList}
+              editArt={editArt}
               deleteArt={deleteArt}
               token={token}
-              // editArt={this.props.editArt}
             />
           </div>
         )

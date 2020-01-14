@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import EditArt from '../edit-art/editart'
 import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
 import ScrollAnimation from 'react-animate-on-scroll'
 import StripeCheckout from 'react-stripe-checkout'
@@ -23,7 +24,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function Art({ id, art, artList, filterTerm, deleteArt, token }) {
+export default function Art({ id, art, artList, filterTerm, editArt, deleteArt, token }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false)
   const [count, setCount] = useState(0)
@@ -55,7 +56,7 @@ export default function Art({ id, art, artList, filterTerm, deleteArt, token }) 
   const stripeBtn = async (token) => {
     // const API = process.env.REACT_APP_API
     const API = 'http://localhost:3000'
-    const artList = this.props.artList[setCount]
+    const artList = artList[setCount]
     console.log('TOKEN>>>', token.card)
     
     await fetch(`${API}/stripe`, {
@@ -93,30 +94,6 @@ export default function Art({ id, art, artList, filterTerm, deleteArt, token }) 
   //   !artList[counter].title.includes('Gold + Blue') 
   //   && !artList[counter].medium.includes('Jewelry') 
   //   && !artList[counter].medium.includes('Photo')
-
-  // Admin — Edit art
-  // const editSubmit = (ev) => {
-  //   ev.preventDefault()
-  //   let editArtID = ev.target.id
-  //   let editArtTitle = ev.target[0].value
-  //   let editArtYear = ev.target[1].value
-  //   let editArtMedium = ev.target[2].value
-  //   let editArtPoster = ev.target[3].value
-
-  //   if (editArtTitle.length === 0) {
-  //     editArtTitle = ev.target[0].placeholder
-  //   }
-  //   if (editArtYear.length === 0) {
-  //     editArtYear = ev.target[1].placeholder
-  //   }
-  //   if (editArtMedium.length === 0) {
-  //     editArtMedium = ev.target[2].placeholder
-  //   }
-  //   if (editArtPoster.length === 0) {
-  //     editArtPoster = ev.target[3].placeholder
-  //   }
-  //   this.props.editArt(editArtID, editArtTitle, editArtYear, editArtMedium, editArtPoster)
-  // }
 
   return (
     // Art piece
@@ -234,71 +211,15 @@ export default function Art({ id, art, artList, filterTerm, deleteArt, token }) 
         </ScrollAnimation>
 
         {/* ADMIN CONTROLS */}
-        {/* {token ?
-          <span>
-            <Modal
-              className="Modal editModal"
-              header={`Edit: ${art.title}`}
-              trigger={
-                <span>
-                  <Button className="editButton btn-flat waves-effect waves-light">
-                    <i className="large material-icons icon brushIcon">
-                      brush
-                    </i>
-                  </Button>
-                </span>
-              }
-            >
-              <i className="fas fa-times modal-close createClose"></i>
-              <form
-                autoComplete="off"
-                id={art.id}
-                onSubmit={this.editSubmit}
-              >
-                <label>
-                  Title
-                </label>
-                <input
-                  type="text"
-                  placeholder={art.title}
-                  name="Title"
-                />
-                <label>
-                  Year
-                </label>
-                <input
-                  type="text"
-                  placeholder={art.year}
-                  name="Year"
-                />
-                <label>
-                  Medium
-                </label>
-                <input
-                  type="text"
-                  placeholder={art.medium}
-                  name="Medium"
-                />
-                <label>
-                  Url
-                </label>
-                <input
-                  type="text"
-                  placeholder={art.poster}
-                  name="Url" 
-                />
-                <Button
-                  className="editArt waves-effect waves-red btn modal-close"
-                  name="submit">
-                    Edit!
-                </Button>
-              </form>
-            </Modal>
-            
-          </span> 
-          : null
-        } */}
+        {
+          token &&
+          <EditArt
+            id={id}
+            editArt={editArt}
+          />
+        }
       </div>
     </ScrollAnimation>
   )
 }
+
