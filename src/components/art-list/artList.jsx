@@ -1,15 +1,10 @@
 import React, { useEffect } from 'react'
 import Art from '../art/art'
-// import ScrollAnimation from 'react-animate-on-scroll'
 
 import 'animate.css/animate.min.css'
 import './styles/artList.css'
 
 export default function ArtList({ artList, editArt, deleteArt, token }) {
-
-  // useEffect(() => {
-  //   window.scrollTo(0, 1)
-  // }, [artList])
 
   // Differing CSS classes to unalign CSS Grid columns
   const columnCheck = () => {

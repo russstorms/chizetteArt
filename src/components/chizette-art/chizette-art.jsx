@@ -9,7 +9,6 @@ import Contact from '../contact-me/contactme'
 import Footer from '../footer/footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
-
 import 'animate.css/animate.min.css'
 import '../responsive.css'
 
@@ -31,28 +30,33 @@ export default function ChizetteArt() {
       const artListJson = await fetch(`${API}/chizetteart`)
       const artList = await artListJson.json()
 
-      // Filter based on filteredTerm
-      let filteredArtArray = artList.filter((art) => {
-        // Filter by Photography
-        if (filteredTerm === 'Photos') {
-          return art.medium.includes('Photograph')
-          // Filter by Art
-        } else if (filteredTerm === 'Art') {
-          return !art.medium.includes('Photograph') 
-                  && !art.medium.includes('Jewelry')
-          // Filter by Jewelry
-        } else if (filteredTerm === 'Jewelry') {
-          return art.medium.includes('Jewelry')
-          // Don't Filter
-        } else {
-          return art.medium
-        }
-      })
-      setArtList(filteredArtArray)
+      // Filter artList and set to current state
+      setArtList(filterArtList(artList))
     }
     getArtList()
     getToken()
   }, [filteredTerm])
+
+  // Filter artList based on filteredTerm
+  const filterArtList = (artList) => {
+    let filteredArtArray = artList.filter((art) => {
+      // Filter by Photography
+      if (filteredTerm === 'Photos') {
+        return art.medium.includes('Photograph')
+        // Filter by Art
+      } else if (filteredTerm === 'Art') {
+        return !art.medium.includes('Photograph') 
+                && !art.medium.includes('Jewelry')
+        // Filter by Jewelry
+      } else if (filteredTerm === 'Jewelry') {
+        return art.medium.includes('Jewelry')
+        // Don't Filter
+      } else {
+        return art.medium
+      }
+    })
+    return filteredArtArray
+  }
 
   // Alter filteredTerm based on Drawer
   const configureFilteredTerm = (ev) => {
@@ -80,7 +84,6 @@ export default function ChizetteArt() {
     setSecretLogIn(!secretLogIn)
   }
 
-  // PUT INSIDE useEFFECT()
   // Admin login
   const loginSubmit = async (loginInfo) => {
     const response = await fetch(`${API}/sign-in`, {
@@ -165,6 +168,7 @@ export default function ChizetteArt() {
 
     let newList = artList.slice()
     let indexToEdit = newList.findIndex(art => art.id === +id)
+    // console.log(indexToEdit, id)
   
     let response = await fetch(`${API}/chizetteart/${id}`, {
       method: "PUT",
@@ -231,10 +235,6 @@ export default function ChizetteArt() {
         editArt={editArt}
         deleteArt={deleteArt}
         token={token}
-        // contactMe={contactMe}
-        // filterTerm={filteredTerm}
-        // splashList={splashList}
-        // splashFilter={splashFilterArt}
       />
       {contactMe ? 
         null 
@@ -253,4 +253,63 @@ export default function ChizetteArt() {
     </ParallaxProvider>
   )
 }
+
+
+// Below is filtering splash list and admin controls
+
+  // Filter art into splashlist array
+  // let artCounter = 0
+  // let jewelryCounter = 0
+  // let photoCounter = 0
+  // let artArr = []
+  // let jewelryArr = []
+  // let photoArr = []
+  // let splashList = []
+  
+  // if (!filteredTerm) {
+  //   for (let art of artList) {
+  //     const medium = art.medium
+  //     // Art
+  //     if (!medium.includes('Jewelry') && !medium.includes('Photograph') && artCounter < 3) {
+  //       artCounter++
+  //       artArr.push(art)
+  //     }
+  //     // Jewelry
+  //     if (medium.includes('Jewelry') && jewelryCounter < 3) {
+  //       jewelryCounter++
+  //       jewelryArr.push(art)
+  //     }
+  //     // Photography
+  //     if (medium.includes('Photograph') && photoCounter < 3) {
+  //       photoCounter++
+  //       photoArr.push(art)
+  //     }
+  //     splashList = artArr.concat(jewelryArr, photoArr)
+  //   }
+  // }
+
+  // Filter art on landing page
+  // const splashFilterArt = (ev) => {
+  //   ev.preventDefault()
+  //   let searchTerm = ev.target.dataset.medium
+  //   if (searchTerm === 'Photos') {
+  //     this.setState({
+  //       filteredTerm: 'Photos',
+  //       counter: 0
+  //     })
+  //   }
+  //   if (searchTerm === 'Jewelry') {
+  //     this.setState({
+  //       filteredTerm: 'Jewelry',
+  //       counter: 0
+  //     })
+  //   }
+  //   if (searchTerm === 'Art') {
+  //     this.setState({
+  //       filteredTerm: 'Art',
+  //       counter: 0
+  //     })
+  //   }
+  // }
+
 
