@@ -6,9 +6,10 @@ import './styles/artList.css'
 
 export default function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {
 
+  // Scroll to the top to animate art
   useEffect(() => {
     if(filteredTerm !== '') {
-      document.getElementById('testId').scrollIntoView({ behavior: "smooth" }) 
+      document.getElementById('artList').scrollIntoView({ behavior: "smooth" }) 
     }
   }, [filteredTerm])
 
@@ -49,7 +50,7 @@ export default function ArtList({ artList, editArt, deleteArt, token, filteredTe
   }
 
   return (
-    <div className="Artlist" id="testId">
+    <div className="Artlist" id="artList">
       <div className="wrapper">
         { alterColumns() }
       </div>
