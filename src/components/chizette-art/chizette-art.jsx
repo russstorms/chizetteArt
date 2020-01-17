@@ -166,9 +166,7 @@ export default function ChizetteArt() {
       poster: url
     }
 
-    let newList = artList.slice()
-    let indexToEdit = newList.findIndex(art => art.id === +id)
-    // console.log(indexToEdit, id)
+    let newList = artList.map( art => (art.id === id) ? {id, ...artBody} : art )
   
     let response = await fetch(`${API}/chizetteart/${id}`, {
       method: "PUT",
@@ -185,7 +183,7 @@ export default function ChizetteArt() {
     } else {
       alert(`Edited this masterpiece!`)
     }
-    newList.splice(indexToEdit, 1, {id, ...artBody})
+    
     setArtList(newList)
   }
 

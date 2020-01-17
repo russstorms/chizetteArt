@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Art from '../art/art'
 
 import 'animate.css/animate.min.css'
@@ -29,7 +29,7 @@ export default function ArtList({ artList, editArt, deleteArt, token }) {
           >
             <Art
               art={art}
-              id={idx}
+              id={art.id}
               artList={artList}
               editArt={editArt}
               deleteArt={deleteArt}
