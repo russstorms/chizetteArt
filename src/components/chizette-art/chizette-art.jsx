@@ -228,11 +228,12 @@ export default function ChizetteArt() {
       }
       <br />
       <br />
-      <ArtList 
+      <ArtList
         artList={artList}
         editArt={editArt}
         deleteArt={deleteArt}
         token={token}
+        filteredTerm={filteredTerm}
       />
       {contactMe ? 
         null 
