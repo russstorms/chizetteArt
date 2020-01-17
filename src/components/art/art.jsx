@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function Art({ id, art, artList, filterTerm, editArt, deleteArt, token }) {
+export default function Art({ id, modalId, art, artList, filterTerm, editArt, deleteArt, token }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false)
   const [count, setCount] = useState(0)
@@ -33,7 +33,7 @@ export default function Art({ id, art, artList, filterTerm, editArt, deleteArt, 
 
   const handleOpen = () => {
     setOpen(true)
-    setCount(id)
+    setCount(modalId)
   }
 
   const handleClose = () => {
@@ -57,43 +57,6 @@ export default function Art({ id, art, artList, filterTerm, editArt, deleteArt, 
     ev.preventDefault()
     return deleteArt(ev.target.id)
   }
-
-  // TODO — Swap test key for live key
-  // const stripeBtn = async (token) => {
-  //   // const API = process.env.REACT_APP_API
-  //   const API = 'http://localhost:3000'
-  //   const artList = artList[setCount]
-  //   console.log('TOKEN>>>', token.card)
-    
-  //   await fetch(`${API}/stripe`, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Authorization': `Bearer ${stripeKey}`,
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({
-  //       amount: artList.price * 100,
-  //       email: token.email,
-  //       artPiece: artList.title,
-  //       artMedium: artList.medium,
-  //       artYear: artList.year,
-  //       art: artList.poster,
-  //       stripeToken: token.id
-  //     }),
-  //   })
-  //   .then(response => response.json())
-  //     .then(charge => {
-  //       console.log('charge>>>', charge)
-  //     })
-  // }
-
-  // // Logic to remove 'Purchase Print' button from Jewelry and Photos
-  // const handleArtWithoutPrintAndOtherMediums =
-  //   //  Current Print of 'Gold + Blue' does not have proper resolution to sell
-  //   !artList[counter].title.includes('Gold + Blue') 
-  //   && !artList[counter].medium.includes('Jewelry') 
-  //   && !artList[counter].medium.includes('Photo')
 
   return (
     // Art piece
@@ -223,3 +186,39 @@ export default function Art({ id, art, artList, filterTerm, editArt, deleteArt, 
   )
 }
 
+// TODO — Swap test key for live key
+// const stripeBtn = async (token) => {
+//   // const API = process.env.REACT_APP_API
+//   const API = 'http://localhost:3000'
+//   const artList = artList[setCount]
+//   console.log('TOKEN>>>', token.card)
+  
+//   await fetch(`${API}/stripe`, {
+//     method: 'POST',
+//     headers: {
+//       'Authorization': `Bearer ${stripeKey}`,
+//       'Accept': 'application/json',
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify({
+//       amount: artList.price * 100,
+//       email: token.email,
+//       artPiece: artList.title,
+//       artMedium: artList.medium,
+//       artYear: artList.year,
+//       art: artList.poster,
+//       stripeToken: token.id
+//     }),
+//   })
+//   .then(response => response.json())
+//     .then(charge => {
+//       console.log('charge>>>', charge)
+//     })
+// }
+
+// // Logic to remove 'Purchase Print' button from Jewelry and Photos
+// const handleArtWithoutPrintAndOtherMediums =
+//   //  Current Print of 'Gold + Blue' does not have proper resolution to sell
+//   !artList[counter].title.includes('Gold + Blue') 
+//   && !artList[counter].medium.includes('Jewelry') 
+//   && !artList[counter].medium.includes('Photo')

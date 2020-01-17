@@ -128,6 +128,7 @@ export default function ComposeArt({ postArt }) {
                 margin="normal"
                 label="Price"
                 fullWidth
+                required
               />
               <button
                 className="commonBtn"

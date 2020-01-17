@@ -30,6 +30,7 @@ export default function ArtList({ artList, editArt, deleteArt, token }) {
             <Art
               art={art}
               id={art.id}
+              modalId={idx}
               artList={artList}
               editArt={editArt}
               deleteArt={deleteArt}
