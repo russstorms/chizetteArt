@@ -39,7 +39,7 @@ export default function ChizetteArt() {
 
   // Filter artList based on filteredTerm
   const filterArtList = (artList) => {
-    // Track splashList
+    // Filter SplashList
     let artCounter = 0
     let jewelryCounter = 0
     let photoCounter = 0
@@ -50,17 +50,17 @@ export default function ChizetteArt() {
 
     if (filteredTerm === 'Splash') {
       for (let art of artList) {
-        // Art
+        // First Three Art
         if (!art.medium.includes('Jewelry') && !art.medium.includes('Photograph') && artCounter < 3) {
           artCounter++
           artArr.push(art)
         }
-        // Jewelry
+        // First Three Jewelry
         if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
           jewelryCounter++
           jewelryArr.push(art)
         }
-        // Photography
+        // First Three Photography
         if (art.medium.includes('Photograph') && photoCounter < 3) {
           photoCounter++
           photoArr.push(art)
