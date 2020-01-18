@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../navbar/navbar'
 import Drawer from '../drawer/drawer'
 import Parallax from '../parallax/parallax'
+import SplashList from '../splash-list/splashlist'
 import ArtList from '../art-list/artList'
 import Crystal from '../crystal/crystal'
 import LoginForm from '../loginForm/loginForm'
@@ -68,6 +69,7 @@ export default function ChizetteArt() {
         splashList = artArr.concat(jewelryArr, photoArr)
       }
       return splashList
+      
     } else {
       let filteredArtArray = artList.filter((art) => {
         // Filter by Photos
@@ -92,7 +94,10 @@ export default function ChizetteArt() {
   // Alter filteredTerm based on Drawer
   const configureFilteredTerm = (ev) => {
     ev.preventDefault()
-    let updateFilteredTerm = ev.currentTarget.children[0].innerText
+    // Check if filter came from splashlist or drawer
+    let updateFilteredTerm = 
+        ev.currentTarget.dataset.medium
+        || ev.currentTarget.children[0].innerText
 
     if (updateFilteredTerm === 'All') {
       setFilteredTerm('All')
@@ -261,6 +266,11 @@ export default function ChizetteArt() {
       }
       <br />
       <br />
+      { filteredTerm === 'Splash' &&
+        <SplashList
+          configureFilteredTerm={configureFilteredTerm}
+        />
+      }
       <ArtList
         artList={artList}
         editArt={editArt}
