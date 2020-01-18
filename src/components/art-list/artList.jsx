@@ -1,14 +1,14 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react'
 import Art from '../art/art'
 
 import 'animate.css/animate.min.css'
 import './styles/artList.css'
 
-export default function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {
+function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {
 
   // Scroll to the top to animate art
   useEffect(() => {
-    if(filteredTerm !== '') {
+    if(filteredTerm !== 'Splash') {
       document.getElementById('artList').scrollIntoView({ behavior: "smooth" }) 
     }
   }, [filteredTerm])
@@ -57,6 +57,8 @@ export default function ArtList({ artList, editArt, deleteArt, token, filteredTe
     </div>
   )
 }
+
+export default ArtList
 
   // let splashArt = splashList.splice(0, 3)
   // let splashJewelry = splashList.splice(0, 3)

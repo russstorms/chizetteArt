@@ -17,7 +17,7 @@ const API = 'http://localhost:3000'
 
 export default function ChizetteArt() {
   const [artList, setArtList] = useState([])
-  const [filteredTerm, setFilteredTerm] = useState('')
+  const [filteredTerm, setFilteredTerm] = useState('Splash')
   const [contactMe, setContactMe] = useState(false)
   const [secretLogIn, setSecretLogIn] = useState(false)
   const [userId, setUserId] = useState('')
@@ -39,23 +39,54 @@ export default function ChizetteArt() {
 
   // Filter artList based on filteredTerm
   const filterArtList = (artList) => {
-    let filteredArtArray = artList.filter((art) => {
-      // Filter by Photography
-      if (filteredTerm === 'Photos') {
-        return art.medium.includes('Photograph')
-        // Filter by Art
-      } else if (filteredTerm === 'Art') {
-        return !art.medium.includes('Photograph') 
-                && !art.medium.includes('Jewelry')
-        // Filter by Jewelry
-      } else if (filteredTerm === 'Jewelry') {
-        return art.medium.includes('Jewelry')
-        // Don't Filter
-      } else {
-        return art.medium
+    // Track splashList
+    let artCounter = 0
+    let jewelryCounter = 0
+    let photoCounter = 0
+    let artArr = []
+    let jewelryArr = []
+    let photoArr = []
+    let splashList = []
+
+    if (filteredTerm === 'Splash') {
+      for (let art of artList) {
+        // Art
+        if (!art.medium.includes('Jewelry') && !art.medium.includes('Photograph') && artCounter < 3) {
+          artCounter++
+          artArr.push(art)
+        }
+        // Jewelry
+        if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
+          jewelryCounter++
+          jewelryArr.push(art)
+        }
+        // Photography
+        if (art.medium.includes('Photograph') && photoCounter < 3) {
+          photoCounter++
+          photoArr.push(art)
+        }
+        splashList = artArr.concat(jewelryArr, photoArr)
       }
-    })
-    return filteredArtArray
+      return splashList
+    } else {
+      let filteredArtArray = artList.filter((art) => {
+        // Filter by Photos
+        if (filteredTerm === 'Photos') {
+          return art.medium.includes('Photograph')
+          // Filter by Art
+        } else if (filteredTerm === 'Art') {
+          return !art.medium.includes('Photograph') 
+                  && !art.medium.includes('Jewelry')
+          // Filter by Jewelry
+        } else if (filteredTerm === 'Jewelry') {
+          return art.medium.includes('Jewelry')
+          // Don't Filter
+        } else if (filteredTerm === 'All') {
+          return art.medium
+        }
+      })
+      return filteredArtArray
+    }
   }
 
   // Alter filteredTerm based on Drawer
@@ -63,14 +94,16 @@ export default function ChizetteArt() {
     ev.preventDefault()
     let updateFilteredTerm = ev.currentTarget.children[0].innerText
 
-    if (updateFilteredTerm === 'View All') {
+    if (updateFilteredTerm === 'All') {
       setFilteredTerm('All')
     } else if (updateFilteredTerm === 'Art') {
       setFilteredTerm('Art')
     } else if (updateFilteredTerm === 'Jewelry') {
       setFilteredTerm('Jewelry')
-    } else {
+    } else if (updateFilteredTerm === 'Photos'){
       setFilteredTerm('Photos')
+    } else {
+      setFilteredTerm('All')
     }
   }
 
@@ -219,7 +252,7 @@ export default function ChizetteArt() {
         logoutClick={logoutClick}
         token={token}
       />
-      {!filteredTerm ? <Parallax /> : <i><h4 className="filteredTitle">{filteredTerm}</h4></i>}
+      {filteredTerm === 'Splash' ? <Parallax /> : <i><h4 className="filteredTitle">{filteredTerm}</h4></i>}
       {secretLogIn && 
         <LoginForm 
           loginSubmit={loginSubmit}
@@ -252,63 +285,4 @@ export default function ChizetteArt() {
     </ParallaxProvider>
   )
 }
-
-
-// Below is filtering splash list and admin controls
-
-  // Filter art into splashlist array
-  // let artCounter = 0
-  // let jewelryCounter = 0
-  // let photoCounter = 0
-  // let artArr = []
-  // let jewelryArr = []
-  // let photoArr = []
-  // let splashList = []
-  
-  // if (!filteredTerm) {
-  //   for (let art of artList) {
-  //     const medium = art.medium
-  //     // Art
-  //     if (!medium.includes('Jewelry') && !medium.includes('Photograph') && artCounter < 3) {
-  //       artCounter++
-  //       artArr.push(art)
-  //     }
-  //     // Jewelry
-  //     if (medium.includes('Jewelry') && jewelryCounter < 3) {
-  //       jewelryCounter++
-  //       jewelryArr.push(art)
-  //     }
-  //     // Photography
-  //     if (medium.includes('Photograph') && photoCounter < 3) {
-  //       photoCounter++
-  //       photoArr.push(art)
-  //     }
-  //     splashList = artArr.concat(jewelryArr, photoArr)
-  //   }
-  // }
-
-  // Filter art on landing page
-  // const splashFilterArt = (ev) => {
-  //   ev.preventDefault()
-  //   let searchTerm = ev.target.dataset.medium
-  //   if (searchTerm === 'Photos') {
-  //     this.setState({
-  //       filteredTerm: 'Photos',
-  //       counter: 0
-  //     })
-  //   }
-  //   if (searchTerm === 'Jewelry') {
-  //     this.setState({
-  //       filteredTerm: 'Jewelry',
-  //       counter: 0
-  //     })
-  //   }
-  //   if (searchTerm === 'Art') {
-  //     this.setState({
-  //       filteredTerm: 'Art',
-  //       counter: 0
-  //     })
-  //   }
-  // }
-
 
