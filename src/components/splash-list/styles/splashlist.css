@@ -1,41 +1,43 @@
 .SplashList {
   z-index: 3000;
+  height: auto;
+  max-width: 100%;
 }
 
 .viewArt {
   color: rgb(138, 222, 248);
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: "Montserrat";
   font-weight: bolder;
   animation: viewFilterColors 5s infinite;
   cursor: pointer;
   position: absolute;
   right: 50px;
-  top: 1185px;
+  top: 1180px;
 }
 
 .viewJewelry {
   color: rgb(138, 222, 248);
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: "Montserrat";
   font-weight: bolder;
   animation: viewFilterColors 5s infinite;
   cursor: pointer;
   position: absolute;
   right: 50px;
-  top: 1685px;
+  top: 2695px;
 }
 
-.viewPhotography{
+.viewPhotography {
   color: rgb(138, 222, 248);
-  font-size: 1em;
+  font-size: 1.5em;
   font-family: "Montserrat";
   font-weight: bolder;
   animation: viewFilterColors 5s infinite;
   cursor: pointer;
   position: absolute;
   right: 50px;
-  top: 2050px;
+  top: 3630px;
 }
 
 @keyframes viewFilterColors {

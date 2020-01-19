@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function Art({ id, modalId, art, artList, filterTerm, editArt, deleteArt, token }) {
+export default function Art({ id, modalId, art, artList, filteredTerm, editArt, deleteArt, token }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false)
   const [count, setCount] = useState(0)
@@ -79,7 +79,7 @@ export default function Art({ id, modalId, art, artList, filterTerm, editArt, de
           </Button>
           : null
         }
-        {filterTerm === '' ? 
+        {filteredTerm === 'Splash' ? 
           <img
             className="poster"
             src={art.poster}

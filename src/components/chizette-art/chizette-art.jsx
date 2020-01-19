@@ -50,7 +50,7 @@ export default function ChizetteArt() {
     let splashList = []
 
     if (filteredTerm === 'Splash') {
-      for (let art of artList) {
+      artList.map((art) => {
         // First Three Art
         if (!art.medium.includes('Jewelry') && !art.medium.includes('Photograph') && artCounter < 3) {
           artCounter++
@@ -67,7 +67,7 @@ export default function ChizetteArt() {
           photoArr.push(art)
         }
         splashList = artArr.concat(jewelryArr, photoArr)
-      }
+      })
       return splashList
       
     } else {

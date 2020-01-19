@@ -41,6 +41,7 @@ function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {
               artList={artList}
               editArt={editArt}
               deleteArt={deleteArt}
+              filteredTerm={filteredTerm}
               token={token}
             />
           </div>

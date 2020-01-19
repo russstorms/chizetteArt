@@ -1,3 +1,18 @@
+@media only screen and (min-width: 500px) {
+  /* SplashList */
+  .viewArt {
+    top: 1200px;
+  }
+
+  .viewJewelry {
+    top: 2800px;
+  }
+
+  .viewPhotography {
+    top: 3800px;
+  }
+}
+
 /* Tablet */
 @media only screen and (min-width: 768px) {
 
@@ -22,6 +37,19 @@
     width: 250px;
   }
 
+  /* SplashList */
+  .viewArt {
+    top: 1165px;
+  }
+
+  .viewJewelry {
+    top: 1570px;
+  }
+
+  .viewPhotography {
+    top: 1835px;
+  }
+
   /* ArtList */
   .Artlist {
     padding: 210px 15px 0 15px;
@@ -33,7 +61,7 @@
 
   /* Art */
   .poster {
-    max-width: 250px;
+    max-width: 220px;
   }
 
   .posterSingleView {
@@ -68,7 +96,72 @@
 }
 
 /* Desktops */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 950px) {
+  /* SplashList */
+  .viewArt {
+    top: 1180px;
+  }
 
+  .viewJewelry {
+    top: 1595px;
+  }
 
+  .viewPhotography {
+    top: 1875px;
+  }
+}
+
+@media only screen and (min-width: 1060px) {
+  /* SplashList */
+  .viewArt {
+    top: 1185px;
+  }
+
+  .viewJewelry {
+    top: 1650px;
+  }
+
+  .viewPhotography {
+    top: 1970px;
+  }
+
+  /* Art */
+  .poster {
+    max-width: 250px;
+  }
+}
+
+@media only screen and (min-width: 1199px) {
+  /* SplashList */
+  .viewArt {
+    top: 1205px;
+  }
+
+  .viewJewelry {
+    top: 1685px;
+  }
+
+  .viewPhotography {
+    top: 2010px;
+  }
+}
+
+@media only screen and (min-width: 1299px) {
+  /* SplashList */
+  .viewArt {
+    top: 1205px;
+  }
+
+  .viewJewelry {
+    top: 1730px;
+  }
+
+  .viewPhotography {
+    top: 2100px;
+  }
+
+  /* Art */
+  .poster {
+    max-width: 270px;
+  }
 }
