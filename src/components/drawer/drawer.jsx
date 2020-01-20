@@ -20,7 +20,8 @@ export default function DrawerSideNav({ configureFilteredTerm, toggleContactMe, 
     }
 
     setState({ ...state, [side]: open });
-  };
+  }
+
 
   return (
     <div className="Drawer">
@@ -61,7 +62,7 @@ export default function DrawerSideNav({ configureFilteredTerm, toggleContactMe, 
                 <span>Contact Me</span>
               </ListItem>
               : 
-              <ListItem onClick={toggleContactMe}>
+              <ListItem component="a" href='/'>
                 <span className="drawerIconContainer">
                   <i className="fas fa-angle-up"></i>
                 </span>

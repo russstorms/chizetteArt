@@ -266,11 +266,11 @@ export default function ChizetteArt() {
       }
       <br />
       <br />
-      { filteredTerm === 'Splash' &&
+      {/* { filteredTerm === 'Splash' &&
         <SplashList
           configureFilteredTerm={configureFilteredTerm}
         />
-      }
+      } */}
       <ArtList
         artList={artList}
         editArt={editArt}
@@ -286,7 +286,6 @@ export default function ChizetteArt() {
       {
         contactMe && 
         <Contact 
-          contactMe={contactMe} 
           token={token}
           postArt={postArt}
         />

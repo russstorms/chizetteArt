@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import EditArt from '../edit-art/editart'
 import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
 import ScrollAnimation from 'react-animate-on-scroll'
-import StripeCheckout from 'react-stripe-checkout'
+// import StripeCheckout from 'react-stripe-checkout'
 
 // Styles
 import './styles/art.css'
@@ -65,20 +65,6 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
       animateOut="fadeOut"
     >
       <div className="Art">
-        {token ? 
-          <Button
-            id={art.id}
-            onClick={(ev) => removeArt(ev)}
-            className="deleteButton waves-effect waves-light btn-flat delButton">
-              <i 
-                id={art.id}
-                className="large material-icons icon deleteIcon"
-              >
-                delete
-              </i>
-          </Button>
-          : null
-        }
         {filteredTerm === 'Splash' ? 
           <img
             className="poster"
@@ -176,10 +162,23 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
         {/* ADMIN CONTROLS */}
         {
           token &&
-          <EditArt
-            id={id}
-            editArt={editArt}
-          />
+          <div>
+            <EditArt
+              id={id}
+              editArt={editArt}
+            />
+            <Button
+            id={art.id}
+            onClick={(ev) => removeArt(ev)}
+            className="deleteButton waves-effect waves-light btn-flat delButton">
+              <i 
+                id={art.id}
+                className="large material-icons icon deleteIcon"
+              >
+                delete
+              </i>
+            </Button>
+          </div>
         }
       </div>
     </ScrollAnimation>
