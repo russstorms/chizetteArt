@@ -1,7 +1,7 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
-import 'animate.css/animate.min.css'
-import './styles/crystal.css'
+import '../Chizette-Art/node_modules/animate.css/animate.min.css'
+import './styles/Crystal.css'
 
 export default function Crystal() {
 

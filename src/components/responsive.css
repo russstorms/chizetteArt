@@ -96,8 +96,11 @@
 }
 
 /* Desktops */
-@media only screen and (min-width: 950px) {
-
+@media only screen and (min-width: 992px) {
+  .ctrlButtons {
+    bottom: 550px;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (min-width: 1060px) {
@@ -108,7 +111,7 @@
 }
 
 @media only screen and (min-width: 1199px) {
-
+  
 }
 
 @media only screen and (min-width: 1299px) {

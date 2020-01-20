@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Modal, Backdrop, Fade, TextField } from '@material-ui/core'
+import React, { useState } from './node_modules/react'
+import { Modal, Backdrop, Fade, TextField } from './node_modules/@material-ui/core'
 
-import { makeStyles } from '@material-ui/core/styles'
-import './styles/createart.css'
+import { makeStyles } from './node_modules/@material-ui/core/styles'
+import './styles/CreateArt.css'
 import '../theme.css'
 
 const useStyles = makeStyles(() => ({

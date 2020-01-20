@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
-import ComposeArt from '../create-art/createart'
-import './styles/contactme.css'
+import React, { useEffect } from './node_modules/react'
+import ComposeArt from '../Create-Art/CreateArt'
+import './styles/ContactMe.css'
 
 export default function Contact({ postArt, token }) {
 

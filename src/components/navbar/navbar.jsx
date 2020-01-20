@@ -1,6 +1,6 @@
-import React from 'react'
+import React from './node_modules/react'
 import logo from './styles/chizetteLogo.jpg'
-import './styles/navbar.css'
+import './styles/Navbar.css'
 
 
 export default function Navbar({ toggleLoginForm, secretLogin }) {

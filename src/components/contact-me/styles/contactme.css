@@ -4,10 +4,11 @@
   margin-top: 150px;
   height: auto;
   width: 100%;
-  background-image: url('https://res.cloudinary.com/chizetteart/image/upload/v1556310776/chizetteArt%20-%20Compressed/contactme.png');
+  background-color: plum;
+  /* background-image: url('https://res.cloudinary.com/chizetteart/image/upload/v1556310776/chizetteArt%20-%20Compressed/contactme.png');
   background-repeat: no-repeat;
   background-attachment: initial;
-  background-position: center;
+  background-position: center; */
 }
 
 .bigLetter {

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from './node_modules/react'
 
-import './styles/splashlist.css'
+import './styles/SplashList.css'
 
 function SplashList({ configureFilteredTerm }) {
 

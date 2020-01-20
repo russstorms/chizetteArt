@@ -68,9 +68,9 @@
 //   )
 // }
 
-import React from 'react'
-import { ParallaxBanner, Parallax } from 'react-scroll-parallax'
-import './styles/parallax.css'
+import React from './node_modules/react'
+import { ParallaxBanner, Parallax } from './node_modules/react-scroll-parallax'
+import './styles/Parallax.css'
 
 export default class ParallaxImage extends React.Component {
   constructor(props) {
