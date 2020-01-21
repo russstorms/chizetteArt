@@ -14,10 +14,14 @@
   }
 
   2% {
-    opacity: 0;
+    opacity: 1;
   }
 
   60% {
+    opacity: 1;
+  }
+
+  90% {
     opacity: 1;
   }
 
