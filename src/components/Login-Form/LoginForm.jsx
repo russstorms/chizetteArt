@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { TextField } from "@material-ui/core"
-import './styles/loginForm.css'
+import './styles/LoginForm.css'
 
 export default function LoginForm({ loginSubmit }) {
 	const [username, setUsername] = useState('')

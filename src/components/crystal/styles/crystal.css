@@ -1,6 +1,6 @@
-.bG {
-  width: 100%;
-  height: 100%;
+.Crystal {
+  max-width: 100%;
+  height: auto;
 }
 
 /* MIDDLEGROUND */
@@ -1150,10 +1150,3 @@ and (-webkit-device-pixel-ratio : 2) {
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-
-}
-
-@media (min-width: 1281px) {
-
-}

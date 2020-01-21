@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Chizetteart from '../chizette-art/chizette-art'
+import Chizetteart from '../Chizette-Art/ChizetteArt'
 
 export default class App extends Component {
   render() {

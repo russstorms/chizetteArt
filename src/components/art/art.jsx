@@ -1,13 +1,13 @@
-import React, { useState } from './node_modules/react'
+import React, { useState } from 'react'
 import EditArt from '../Edit-Art/EditArt'
-import { Modal, Button, Backdrop, Fade} from './node_modules/@material-ui/core'
-import ScrollAnimation from './node_modules/react-animate-on-scroll'
+import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
+import ScrollAnimation from 'react-animate-on-scroll'
 // import StripeCheckout from 'react-stripe-checkout'
 
 // Styles
 import './styles/Art.css'
-import './node_modules/animate.css/animate.min.css'
-import { makeStyles } from './node_modules/@material-ui/core/styles'
+import 'animate.css/animate.min.css'
+import { makeStyles } from '@material-ui/core/styles'
 
 // Stripe Test Key
 // const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
@@ -57,6 +57,44 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
     ev.preventDefault()
     return deleteArt(ev.target.id)
   }
+
+  // // TODO — Swap test key for live key
+  // const stripeBtn = async (token) => {
+  //   // const API = process.env.REACT_APP_API
+  //   const API = 'http://localhost:3000'
+  //   const artList = artList[count]
+  //   console.log('TOKEN>>>', token.card)
+    
+  //   await fetch(`${API}/stripe`, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Authorization': `Bearer ${stripeKey}`,
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //       amount: artList.price * 100,
+  //       email: token.email,
+  //       artPiece: artList.title,
+  //       artMedium: artList.medium,
+  //       artYear: artList.year,
+  //       art: artList.poster,
+  //       stripeToken: token.id
+  //     }),
+  //   })
+  //   .then(response => response.json())
+  //     .then(charge => {
+  //       console.log('charge>>>', charge)
+  //     })
+  // }
+
+  // // Logic to remove 'Purchase Print' button from Jewelry and Photos
+  // const handleArtWithoutPrintAndOtherMediums =
+  //   //  Current Print of 'Gold + Blue' does not have proper resolution to sell
+  //   !artList[count].title.includes('Gold + Blue') 
+  //   && !artList[count].medium.includes('Jewelry') 
+  //   && !artList[count].medium.includes('Photo')
+
 
   return (
     // Art piece
@@ -185,39 +223,3 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
   )
 }
 
-// TODO — Swap test key for live key
-// const stripeBtn = async (token) => {
-//   // const API = process.env.REACT_APP_API
-//   const API = 'http://localhost:3000'
-//   const artList = artList[setCount]
-//   console.log('TOKEN>>>', token.card)
-  
-//   await fetch(`${API}/stripe`, {
-//     method: 'POST',
-//     headers: {
-//       'Authorization': `Bearer ${stripeKey}`,
-//       'Accept': 'application/json',
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify({
-//       amount: artList.price * 100,
-//       email: token.email,
-//       artPiece: artList.title,
-//       artMedium: artList.medium,
-//       artYear: artList.year,
-//       art: artList.poster,
-//       stripeToken: token.id
-//     }),
-//   })
-//   .then(response => response.json())
-//     .then(charge => {
-//       console.log('charge>>>', charge)
-//     })
-// }
-
-// // Logic to remove 'Purchase Print' button from Jewelry and Photos
-// const handleArtWithoutPrintAndOtherMediums =
-//   //  Current Print of 'Gold + Blue' does not have proper resolution to sell
-//   !artList[counter].title.includes('Gold + Blue') 
-//   && !artList[counter].medium.includes('Jewelry') 
-//   && !artList[counter].medium.includes('Photo')

@@ -1,7 +1,7 @@
-import React, { useEffect } from './node_modules/react'
-import Art from '../art/art'
+import React, { useEffect } from 'react'
+import Art from '../Art/Art'
 
-import './node_modules/animate.css/animate.min.css'
+import 'animate.css/animate.min.css'
 import './styles/ArtList.css'
 
 function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {

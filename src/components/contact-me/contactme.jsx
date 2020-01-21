@@ -1,4 +1,4 @@
-import React, { useEffect } from './node_modules/react'
+import React, { useEffect } from 'react'
 import ComposeArt from '../Create-Art/CreateArt'
 import './styles/ContactMe.css'
 
