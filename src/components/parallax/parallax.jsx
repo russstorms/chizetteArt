@@ -39,8 +39,10 @@ export default function ParallaxImages() {
   ))
 
   return (
-    <div className='ParallaxImages'>
-      {changingImage}
+    <div className='Parallax'>
+      <div className='ParallaxImages'>
+        {changingImage}
+      </div>
       <div className="parallaxAbout">
         <h5>
           <span className="firstLetter">

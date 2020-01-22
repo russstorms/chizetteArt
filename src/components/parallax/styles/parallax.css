@@ -1,5 +1,5 @@
-.ParallaxImages {
-  /* overflow-x: none; */
+body {
+  overflow-x: hidden;
 }
 
 .changingImg {
@@ -13,7 +13,7 @@
   will-change: opacity;
   animation: scaleInOut 5s infinite;
   z-index: -1;
-  overflow-x: none;
+  overflow-x: hidden;
 }
 
 @keyframes scaleInOut {
