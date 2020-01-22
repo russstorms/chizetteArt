@@ -8,10 +8,11 @@ function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {
 
   // Scroll to the top to animate artList
   useEffect(() => {
-    if(filteredTerm !== 'Splash') {
-      document.getElementById('artList').scrollIntoView({ behavior: "smooth" }) 
+    if (filteredTerm !== 'Splash') {
+        document.getElementById('artList').scrollIntoView({ behavior: "smooth" })
     }
   }, [filteredTerm])
+
 
   // Differing CSS classes to unalign CSS Grid columns
   const alterColumns = () => {
@@ -51,7 +52,10 @@ function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {
   }
 
   return (
-    <div className="Artlist" id="artList">
+    <div
+      id="artList"
+      className={`ArtList ${filteredTerm !== 'Splash' ? 'artListPadding' : 'splashListPadding'}`}
+    >
       <div className="wrapper">
         { alterColumns() }
       </div>

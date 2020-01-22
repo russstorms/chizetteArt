@@ -1,38 +1,28 @@
-.Parallax {
-  position: relative;
-  top: 180px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
+.ParallaxImages {
+  /* overflow-x: none; */
 }
 
-@keyframes fadeinout {
+.changingImg {
+  position: absolute;
+  top: 190px;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  will-change: opacity;
+  animation: scaleInOut 5s infinite;
+  z-index: -1;
+  overflow-x: none;
+}
+
+@keyframes scaleInOut {
   0% {
     transform: scale(1);
-    opacity: 0;
   }
-
-  2% {
-    opacity: 1;
-  }
-
-  60% {
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
   100% {
-    opacity: 0;
     transform: scale(1.1);
   }
-}
-
-.parallaxBanner {
-  animation: fadeinout 4s infinite;
 }
 
 .firstLetter {
@@ -44,5 +34,10 @@
   color: rgb(99, 95, 84);
   font-family: "Megrim";
   text-align: center;
-  padding: 70px 0 100px 0;
+  padding: 100px;
+  position: absolute;
+  top: 850px;
+  left: 0;
+  right: 0;
 }
+

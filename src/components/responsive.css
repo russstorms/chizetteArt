@@ -1,15 +1,10 @@
 @media only screen and (min-width: 500px) {
-  /* SplashList */
-  .viewArt {
-    top: 1650px;
+  .parallaxAbout {
+    top: 1180px;
   }
 
-  .viewJewelry {
-    top: 3250px;
-  }
-
-  .viewPhotography {
-    top: 4250px;
+  .splashListPadding {
+    padding-top: 1400px;
   }
 }
 
@@ -37,17 +32,8 @@
     width: 250px;
   }
 
-  /* SplashList */
-  .viewArt {
-    top: 1165px;
-  }
-
-  .viewJewelry {
-    top: 1570px;
-  }
-
-  .viewPhotography {
-    top: 1835px;
+  .splashListPadding {
+    padding-top: 1500px;
   }
 
   /* ArtList */

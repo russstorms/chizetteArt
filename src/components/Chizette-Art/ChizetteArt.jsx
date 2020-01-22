@@ -257,15 +257,19 @@ export default function ChizetteArt() {
         logoutClick={logoutClick}
         token={token}
       />
-      {filteredTerm === 'Splash' ? <Parallax /> : <i><h4 className="filteredTitle">{filteredTerm}</h4></i>}
-      {secretLogIn && 
-        <LoginForm 
-          loginSubmit={loginSubmit}
-          userId={userId}
-        />
+      {
+        filteredTerm === 'Splash' ?
+          <Parallax /> 
+        : 
+          <i><h4 className="filteredTitle">{filteredTerm}</h4></i>
       }
-      <br />
-      <br />
+      {
+        secretLogIn && 
+          <LoginForm 
+            loginSubmit={loginSubmit}
+            userId={userId}
+          />
+      }
       {/* { filteredTerm === 'Splash' &&
         <SplashList
           configureFilteredTerm={configureFilteredTerm}

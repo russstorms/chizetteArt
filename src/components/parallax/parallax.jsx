@@ -1,76 +1,55 @@
-import React from 'react'
-import { ParallaxBanner, Parallax } from 'react-scroll-parallax'
+import React, { useState, useEffect } from 'react'
+import { useTransition, animated, config } from 'react-spring'
+
 import './styles/Parallax.css'
 
-export default class ParallaxImage extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      counter: 0
+const parallaxPosters = [
+  { id: 0, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg' },
+  { id: 1, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434629/chizetteArt%20-%20Compressed/aragonite_necklace.jpg' },
+  { id: 2, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434635/chizetteArt%20-%20Compressed/Citrine%20%2B%20Amethyst%20Necklace.jpg' },
+  { id: 3, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434634/chizetteArt%20-%20Compressed/geode_slice.jpg' },
+  { id: 4, url: 'https://res.cloudinary.com/chizetteart/image/upload/v1552434640/chizetteArt%20-%20Compressed/gold%2Bblue.jpg' },
+  { id: 5, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434663/chizetteArt%20-%20Compressed/constellations.jpg' },
+  { id: 6, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434670/chizetteArt%20-%20Compressed/sunset_beach.jpg'}
+]
+
+export default function ParallaxImages() {
+  const [index, set] = useState(0)
+  const transitions = useTransition(parallaxPosters[index], item => item.id, {
+    from: { opacity: 0.1 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0.1 },
+    config: config.molasses,
+  })
+
+  useEffect(() => {
+    const counter = setInterval(() => set(state => (state + 1) % 7), 4000)
+
+    return function cleanup() {
+      clearInterval(counter)
     }
-  }
+  }, [])
 
-  componentWillMount() {
-    this.intervalID = setInterval(() => {
-      const parallaxPosters = [
-        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg",
-        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434629/chizetteArt%20-%20Compressed/aragonite_necklace.jpg",
-        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434635/chizetteArt%20-%20Compressed/Citrine%20%2B%20Amethyst%20Necklace.jpg",
-        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434634/chizetteArt%20-%20Compressed/geode_slice.jpg",
-        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434665/chizetteArt%20-%20Compressed/hale'iwa%20evening.jpg",
-        "https://res.cloudinary.com/chizetteart/image/upload/v1552434640/chizetteArt%20-%20Compressed/gold%2Bblue.jpg",
-        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434663/chizetteArt%20-%20Compressed/constellations.jpg",
-        "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434670/chizetteArt%20-%20Compressed/sunset_beach.jpg"
-      ]
-      this.setState({
-        ...this.state,
-        counter: this.state.counter === parallaxPosters.length - 1 ? 0 : this.state.counter + 1
-      })
-    }, 4000)
-  }
+  const changingImage = transitions.map(({ item, props, key }) => (
+    <animated.div
+      key={key}
+      className="changingImg"
+      style={{ ...props, backgroundImage: `url(${item.url})`, backgroundAttachment: 'fixed' }}
+    />
+  ))
 
-  render () {
-    const parallaxPosters = [
-      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg",
-      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434629/chizetteArt%20-%20Compressed/aragonite_necklace.jpg",
-      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434635/chizetteArt%20-%20Compressed/Citrine%20%2B%20Amethyst%20Necklace.jpg",
-      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434634/chizetteArt%20-%20Compressed/geode_slice.jpg",
-      "https://res.cloudinary.com/chizetteart/image/upload/v1552434640/chizetteArt%20-%20Compressed/gold%2Bblue.jpg",
-      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434663/chizetteArt%20-%20Compressed/constellations.jpg",
-      "https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434670/chizetteArt%20-%20Compressed/sunset_beach.jpg"
-    ]
-    return (
-      <div className="Parallax">
-        <ParallaxBanner className="parallaxBanner"
-          layers={[
-            {
-              image: `${parallaxPosters[this.state.counter]}`,
-              amount: 0.7,
-            },
-          ]}
-          style={{
-            height: '85vh',
-          }}
-        >
-        </ParallaxBanner>
-        <Parallax
-          offsetYMax={300}
-          offsetYMin={-300}
-          tag="figure"
-        >
-          <div className="parallaxAbout">
-            <h5>
-              <span className="firstLetter">
-                H
-              </span>
-              i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!
-            </h5>
-          </div>
-        </Parallax>
+  return (
+    <div className='ParallaxImages'>
+      {changingImage}
+      <div className="parallaxAbout">
+        <h5>
+          <span className="firstLetter">
+            H
+          </span>
+          i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!
+        </h5>
       </div>
-    )
-  }
-  componentWillUnmount() {
-    clearInterval(this.intervalID)
-  }
+    </div>
+  )
 }
+
