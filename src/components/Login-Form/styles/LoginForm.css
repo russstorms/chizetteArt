@@ -1,0 +1,13 @@
+.LoginForm {
+  padding: 50px 20px;
+  margin: 130px auto 0 auto;
+  width: 80%;
+}
+
+.MuiOutlinedInput-root {
+  padding: 0 15px;
+}
+
+.goButton:hover {
+  color: rgb(138, 222, 248);
+}
