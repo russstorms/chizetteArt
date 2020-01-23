@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 // import StripeCheckout from 'react-stripe-checkout'
 
 // Styles
-import './styles/Art.css'
+import './styles/art.css'
 import 'animate.css/animate.min.css'
 import { makeStyles } from '@material-ui/core/styles'
 
