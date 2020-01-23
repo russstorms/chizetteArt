@@ -55,7 +55,6 @@
   color: rgb(138, 222, 248);
   font-size: 1.3em;
   transition-duration: .5s;
-  transform: scale(1.4);
 }
 
 .prevButton {
@@ -70,7 +69,6 @@
   color: rgb(138, 222, 248);
   font-size: 1.3em;
   transition-duration: .5s;
-  transform: scale(1.4);
 }
 
 
