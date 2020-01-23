@@ -1,15 +1,114 @@
 @media only screen and (min-width: 500px) {
-  .parallaxAbout {
-    top: 1180px;
-  }
-
+  /* SplashList */
   .splashListPadding {
     padding-top: 1400px;
   }
+
+  .SplashList {
+    top: 1440px;
+  }
+  
+  .viewArt {
+    top: 0;
+  }
+  
+  .viewJewelry {
+    top: 1560px;
+  }
+  
+  .viewPhotography {
+    top: 2540px;
+  }
+
+  .parallaxAbout {
+    top: 1180px;
+  }
 }
+/* SplashList */
+  @media only screen and (min-width: 600px) {
+    .SplashList {
+      top: 1450px;
+    }
+    
+    .viewArt {
+      top: 0;
+      left: 100px;
+    }
+    
+    .viewJewelry {
+      top: 1620px;
+      left: 100px;
+    }
+    
+    .viewPhotography {
+      top: 2650px;
+      left: 100px;
+    }
+  }
+
+  @media only screen and (min-width: 650px) {
+    .SplashList {
+      top: 1470px;
+    }
+    
+    .viewArt {
+      top: 0;
+      left: 100px;
+    }
+    
+    .viewJewelry {
+      top: 1640px;
+      left: 100px;
+    }
+    
+    .viewPhotography {
+      top: 2700px;
+      left: 100px;
+    }
+  }
+
+  @media only screen and (min-width: 720px) {
+    .SplashList {
+      top: 1470px;
+    }
+    
+    .viewArt {
+      top: 0;
+      left: 160px;
+    }
+    
+    .viewJewelry {
+      top: 1690px;
+      left: 160px;
+    }
+    
+    .viewPhotography {
+      top: 2790px;
+      left: 160px;
+    }
+  }
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
+  /* SplashList */
+  .SplashList {
+    top: 1530px;
+  }
+  
+  .viewArt {
+    top: 0;
+    left: calc(100% - 160px);
+  }
+  
+  .viewJewelry {
+    top: 370px;
+    left: calc(100% - 160px);
+  }
+  
+  .viewPhotography {
+    top: 610px;
+    left: calc(100% - 160px);
+  }
 
   /* Navbar */
   .logo {
@@ -84,6 +183,23 @@
 
 /* Desktops */
 @media only screen and (min-width: 992px) {
+  /* SplashList */
+  .SplashList {
+    top: 1550px;
+  }
+  
+  .viewArt {
+    top: 0;
+  }
+  
+  .viewJewelry {
+    top: 390px;
+  }
+  
+  .viewPhotography {
+    top: 660px;
+  }
+
   .ctrlButtons {
     top: 50%;
     justify-content: space-between;
@@ -91,6 +207,15 @@
 }
 
 @media only screen and (min-width: 1060px) {
+  /* SplashList */
+  .viewJewelry {
+    top: 440px;
+  }
+  
+  .viewPhotography {
+    top: 730px;
+  }
+
   /* Art */
   .poster {
     max-width: 250px;
@@ -98,12 +223,47 @@
 }
 
 @media only screen and (min-width: 1199px) {
+  /* SplashList */
+  .viewJewelry {
+    top: 450px;
+  }
   
+  .viewPhotography {
+    top: 760px;
+  }
 }
 
 @media only screen and (min-width: 1299px) {
+  /* SplashList */
+  .viewJewelry {
+    top: 490px;
+  }
+  
+  .viewPhotography {
+    top: 820px;
+  }
+  
   /* Art */
   .poster {
     max-width: 270px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  /* SplashList */
+  .SplashList {
+    top: 1600px;
+  }
+  
+  .viewArt {
+    top: 0;
+  }
+  
+  .viewJewelry {
+    top: 510px;
+  }
+  
+  .viewPhotography {
+    top: 860px;
   }
 }

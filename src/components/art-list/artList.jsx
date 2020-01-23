@@ -13,7 +13,6 @@ function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {
     }
   }, [filteredTerm])
 
-
   // Differing CSS classes to unalign CSS Grid columns
   const alterColumns = () => {
     let column = ''

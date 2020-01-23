@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 import Drawer from '../Drawer/Drawer'
 import Parallax from '../Parallax/Parallax'
-// import SplashList from '../Splash-List/SplashList'
 import ArtList from '../Art-List/ArtList'
 import Crystal from '../Crystal/Crystal'
 import LoginForm from '../Login-Form/LoginForm'
 import Contact from '../Contact-Me/ContactMe'
 import Footer from '../Footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
+
+import SplashList from '../Splash-List/SplashList'
 
 import 'animate.css/animate.min.css'
 import '../responsive.css'
@@ -18,6 +19,7 @@ const API = 'http://localhost:3000'
 
 export default function ChizetteArt() {
   const [artList, setArtList] = useState([])
+  const [splashList, setSplashList] = useState([])
   const [filteredTerm, setFilteredTerm] = useState('Splash')
   const [contactMe, setContactMe] = useState(false)
   const [secretLogIn, setSecretLogIn] = useState(false)
@@ -275,11 +277,11 @@ export default function ChizetteArt() {
             userId={userId}
           />
       }
-      {/* { filteredTerm === 'Splash' &&
+      { filteredTerm === 'Splash' &&
         <SplashList
           configureFilteredTerm={configureFilteredTerm}
         />
-      } */}
+      }
       <ArtList
         artList={artList}
         editArt={editArt}
