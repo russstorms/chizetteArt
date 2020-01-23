@@ -114,7 +114,12 @@ export default function ChizetteArt() {
 
   // Toggle contact form
   const toggleContactMe = () => {
-    setContactMe(!contactMe)
+    if (!contactMe) {
+      document.getElementById('contact').scrollIntoView({ behavior: "smooth" })
+      setContactMe(!contactMe)
+    } else {
+      setContactMe(contactMe)
+    }
   }
 
   // Admin — Toggle login form
@@ -282,18 +287,11 @@ export default function ChizetteArt() {
         token={token}
         filteredTerm={filteredTerm}
       />
-      {contactMe ? 
-        null 
-        : 
-        <Crystal />
-      }
-      {
-        contactMe && 
-        <Contact 
-          token={token}
-          postArt={postArt}
-        />
-        }
+      <Contact 
+        token={token}
+        postArt={postArt}
+      />
+      <Crystal />
       <Footer />
     </ParallaxProvider>
   )
