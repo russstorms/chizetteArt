@@ -51,15 +51,16 @@
   }
 
   .posterSingleView {
-    max-width: 600px;
+    max-width: 475px;
   }
 
   .artInfoContainer {
-    width: 600px;
+    width: 475px;
   }
 
   .ctrlButtons {
     bottom: -10px;
+    justify-content: space-between;
   }
 
   /* Contact */
@@ -84,7 +85,7 @@
 /* Desktops */
 @media only screen and (min-width: 992px) {
   .ctrlButtons {
-    bottom: 550px;
+    top: 50%;
     justify-content: space-between;
   }
 }
