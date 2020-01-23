@@ -8,7 +8,7 @@
   margin-top: 400px;
   height: auto;
   width: 100%;
-  background-color: plum;
+  background: radial-gradient(circle, rgba(119, 25, 155, 1) 51%, rgba(0 , 212, 255, 1) 100%);
   /* background-image: url('https://res.cloudinary.com/chizetteart/image/upload/v1556310776/chizetteArt%20-%20Compressed/contactme.png');
   background-repeat: no-repeat;
   background-attachment: initial;
