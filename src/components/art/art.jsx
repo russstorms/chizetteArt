@@ -5,7 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 // import StripeCheckout from 'react-stripe-checkout'
 
 // Styles
-import './styles/art.css'
+import './styles/Art.css'
 import 'animate.css/animate.min.css'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -94,6 +94,7 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
   //   !artList[count].title.includes('Gold + Blue') 
   //   && !artList[count].medium.includes('Jewelry') 
   //   && !artList[count].medium.includes('Photo')
+
 
   return (
     // Art piece
