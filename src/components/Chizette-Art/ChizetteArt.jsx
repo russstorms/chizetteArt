@@ -10,7 +10,7 @@ import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
-import './node_modules/animate.css/animate.min.css'
+import 'animate.css/animate.min.css'
 import '../responsive.css'
 
 const API = process.env.REACT_APP_API

@@ -6,7 +6,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 
 // Styles
 import './styles/Art.css'
-import '../Chizette-Art/node_modules/animate.css/animate.min.css'
+import 'animate.css/animate.min.css'
 import { makeStyles } from '@material-ui/core/styles'
 
 // Stripe Test Key
