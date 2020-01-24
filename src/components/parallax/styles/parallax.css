@@ -25,19 +25,3 @@ body {
   }
 }
 
-.firstLetter {
-  font-size: 4em;
-  color: rgb(138, 222, 248);
-}
-
-.parallaxAbout {
-  color: rgb(99, 95, 84);
-  font-family: "Megrim";
-  text-align: center;
-  padding: 100px;
-  position: absolute;
-  top: 850px;
-  left: 0;
-  right: 0;
-}
-

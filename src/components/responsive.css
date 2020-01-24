@@ -19,10 +19,6 @@
   .viewPhotography {
     top: 2540px;
   }
-
-  .parallaxAbout {
-    top: 1180px;
-  }
 }
 /* SplashList */
   @media only screen and (min-width: 600px) {

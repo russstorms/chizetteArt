@@ -43,14 +43,6 @@ export default function ParallaxImages() {
       <div className='ParallaxImages'>
         {changingImage}
       </div>
-      <div className="parallaxAbout">
-        <h5>
-          <span className="firstLetter">
-            H
-          </span>
-          i! My name is Chizette and art is my passion. I wish to share my art with the world. Please enjoy!
-        </h5>
-      </div>
     </div>
   )
 }
