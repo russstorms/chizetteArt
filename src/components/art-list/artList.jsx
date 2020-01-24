@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import Art from '../art/Art'
 
-import 'animate.css/animate.min.css'
+import '../Chizette-Art/node_modules/animate.css/animate.min.css'
 import './styles/ArtList.css'
 
 function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {

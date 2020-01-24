@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from './node_modules/react'
 import Navbar from '../navbar/Navbar'
 import Drawer from '../drawer/Drawer'
 import Parallax from '../parallax/Parallax'
@@ -8,9 +8,9 @@ import Crystal from '../crystal/Crystal'
 import LoginForm from '../login-form/LoginForm'
 import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
-import { ParallaxProvider } from 'react-scroll-parallax'
+import { ParallaxProvider } from './node_modules/react-scroll-parallax'
 
-import 'animate.css/animate.min.css'
+import './node_modules/animate.css/animate.min.css'
 import '../responsive.css'
 
 const API = process.env.REACT_APP_API
