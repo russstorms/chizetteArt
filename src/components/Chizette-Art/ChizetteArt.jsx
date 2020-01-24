@@ -18,7 +18,6 @@ const API = 'http://localhost:3000'
 
 export default function ChizetteArt() {
   const [artList, setArtList] = useState([])
-  const [splashList, setSplashList] = useState([])
   const [filteredTerm, setFilteredTerm] = useState('Splash')
   const [contactMe, setContactMe] = useState(false)
   const [secretLogIn, setSecretLogIn] = useState(false)
