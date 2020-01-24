@@ -1,0 +1,59 @@
+.splashListPadding {
+  padding-top: 900px;
+}
+
+.artListPadding {
+  margin-top: 10px;
+  padding-top: 200px;
+}
+
+.first {
+  padding-top: 15%;
+}
+
+.second {
+  padding-top: 0%;
+}
+
+.third {
+  padding-top: 25%;
+}
+
+.filteredTitle {
+  position: absolute;
+  top: 200px;
+  right: 0;
+  z-index: 99;
+  padding: 15px 20px;
+  text-align: center;
+  color: rgb(99, 95, 84);
+  letter-spacing: .4em;
+  font-family: "Megrim";
+  font-weight: bolder;
+  font-size: 1.3em;
+  animation: colorTitle 7s infinite;
+}
+
+@keyframes colorTitle {
+  0% {
+    color: rgb(99, 95, 84);
+  }
+
+  25% {
+    color: rgb(138, 222, 248);
+  }
+
+  75% {
+    color: rgb(196, 107, 193);
+  }
+
+  100% {
+    color: rgb(99, 95, 84);
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
