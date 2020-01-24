@@ -51,18 +51,19 @@ export default function ChizetteArt() {
 
     if (filteredTerm === 'Splash') {
       artList.map((art) => {
+        const medium = art.medium
         // First Three Art
-        if (!art.medium.includes('Jewelry') && !art.medium.includes('Photograph') && artCounter < 3) {
+        if (!medium.includes('Jewelry') && !medium.includes('Photograph') && artCounter < 3) {
           artCounter++
           artArr.push(art)
         }
         // First Three Jewelry
-        if (art.medium.includes('Jewelry') && jewelryCounter < 3) {
+        if (medium.includes('Jewelry') && jewelryCounter < 3) {
           jewelryCounter++
           jewelryArr.push(art)
         }
         // First Three Photography
-        if (art.medium.includes('Photograph') && photoCounter < 3) {
+        if (medium.includes('Photograph') && photoCounter < 3) {
           photoCounter++
           photoArr.push(art)
         }
@@ -72,19 +73,20 @@ export default function ChizetteArt() {
       
     } else {
       let filteredArtArray = artList.filter((art) => {
+        const medium = art.medium
         // Filter by Photos
         if (filteredTerm === 'Photos') {
-          return art.medium.includes('Photograph')
+          return medium.includes('Photograph')
           // Filter by Art
         } else if (filteredTerm === 'Art') {
-          return !art.medium.includes('Photograph') 
-                  && !art.medium.includes('Jewelry')
+          return !medium.includes('Photograph') 
+                  && !medium.includes('Jewelry')
           // Filter by Jewelry
         } else if (filteredTerm === 'Jewelry') {
-          return art.medium.includes('Jewelry')
+          return medium.includes('Jewelry')
           // Don't Filter
         } else if (filteredTerm === 'All') {
-          return art.medium
+          return medium
         }
       })
       return filteredArtArray

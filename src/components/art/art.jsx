@@ -95,7 +95,6 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
   //   && !artList[count].medium.includes('Jewelry') 
   //   && !artList[count].medium.includes('Photo')
 
-
   return (
     // Art piece
     <ScrollAnimation
