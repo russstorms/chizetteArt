@@ -1,6 +1,6 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
-import ComposeArt from '../Create-Art/CreateArt'
+import ComposeArt from '../create-art/CreateArt'
 import './styles/ContactMe.css'
 
 export default function Contact({ postArt, token }) {

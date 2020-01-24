@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import Art from '../Art/Art'
+import Art from '../art/Art'
 
 import 'animate.css/animate.min.css'
 import './styles/ArtList.css'

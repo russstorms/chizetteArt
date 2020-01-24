@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import EditArt from '../Edit-Art/EditArt'
+import EditArt from '../edit-art/EditArt'
 import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
 import ScrollAnimation from 'react-animate-on-scroll'
 // import StripeCheckout from 'react-stripe-checkout'
