@@ -13,8 +13,8 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 import 'animate.css/animate.min.css'
 import '../responsive.css'
 
-// const API = process.env.REACT_APP_API
-const API = 'http://localhost:3000'
+const API = process.env.REACT_APP_API
+// const API = 'http://localhost:3000'
 
 export default function ChizetteArt() {
   const [artList, setArtList] = useState([])
