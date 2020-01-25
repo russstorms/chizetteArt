@@ -1,11 +1,11 @@
 @media only screen and (min-width: 500px) {
   /* SplashList */
   .splashListPadding {
-    padding-top: 1400px;
+    padding-top: 1300px;
   }
 
   .SplashList {
-    top: 1440px;
+    top: 1340px;
   }
   
   .viewArt {
@@ -13,17 +13,17 @@
   }
   
   .viewJewelry {
-    top: 1560px;
+    top: 1380px;
   }
   
   .viewPhotography {
-    top: 2540px;
+    top: 2350px;
   }
 }
 /* SplashList */
   @media only screen and (min-width: 600px) {
     .SplashList {
-      top: 1450px;
+      top: 1360px;
     }
     
     .viewArt {
@@ -32,19 +32,19 @@
     }
     
     .viewJewelry {
-      top: 1620px;
+      top: 1420px;
       left: 100px;
     }
     
     .viewPhotography {
-      top: 2650px;
+      top: 2450px;
       left: 100px;
     }
   }
 
   @media only screen and (min-width: 650px) {
     .SplashList {
-      top: 1470px;
+      top: 1360px;
     }
     
     .viewArt {
@@ -53,19 +53,19 @@
     }
     
     .viewJewelry {
-      top: 1640px;
+      top: 1450px;
       left: 100px;
     }
     
     .viewPhotography {
-      top: 2700px;
+      top: 2520px;
       left: 100px;
     }
   }
 
   @media only screen and (min-width: 720px) {
     .SplashList {
-      top: 1470px;
+      top: 1380px;
     }
     
     .viewArt {
@@ -74,12 +74,12 @@
     }
     
     .viewJewelry {
-      top: 1690px;
+      top: 1490px;
       left: 160px;
     }
     
     .viewPhotography {
-      top: 2790px;
+      top: 2590px;
       left: 160px;
     }
   }
