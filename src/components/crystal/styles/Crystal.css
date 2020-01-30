@@ -332,20 +332,20 @@
 }
 
 #foreGround {
-  width: 70%;
-  height: 90%;
+  width: calc(100% - 20px);
+  height: 300px;
+  right: 0;
   margin-bottom: -100%;
-  margin-left: 30%;
-  margin-top: -15%;
   overflow: hidden;
   z-index: 9999;
   transform-origin: 0;
+  transform: skewY(9deg);
   background-color: transparent;
 }
 
 #foreGround :nth-child(1) {
-  top: 0;
-  left: 0;
+  top: 1%;
+  left: 5%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -356,8 +356,8 @@
 }
 
 #foreGround :nth-child(2) {
-  top: 2%;
-  left: 2%;
+  top: 32%;
+  left: 52%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -368,8 +368,8 @@
 }
 
 #foreGround :nth-child(3) {
-  top: 5%;
-  left: 0;
+  top: 35%;
+  left: 15%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -381,7 +381,7 @@
 
 #foreGround :nth-child(4) {
   top: 5%;
-  left: 5%;
+  left: 11%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -392,8 +392,8 @@
 }
 
 #foreGround :nth-child(5) {
-  top: 6%;
-  left: 6%;
+  top: 16%;
+  left: 16%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -404,8 +404,8 @@
 }
 
 #foreGround :nth-child(6) {
-  top: 7%;
-  left: 0;
+  top: 10%;
+  left: 12%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -416,8 +416,8 @@
 }
 
 #foreGround :nth-child(7) {
-  top: 8%;
-  left: 5%;
+  top: 18%;
+  left: 27%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -429,7 +429,7 @@
 
 #foreGround :nth-child(8) {
   top: 10%;
-  left: 2%;
+  left: 25%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -441,7 +441,7 @@
 
 #foreGround :nth-child(9) {
   top: 15%;
-  left: 5%;
+  left: 35%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -489,7 +489,7 @@
 
 #foreGround :nth-child(13) {
   top: 45%;
-  left: 2%;
+  left: 12%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -513,7 +513,7 @@
 
 #foreGround :nth-child(15) {
   top: 50%;
-  left: 80%;
+  left: 88%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -536,8 +536,8 @@
 }
 
 #foreGround :nth-child(17) {
-  top: 10%;
-  left: 70%;
+  top: 22%;
+  left: 56%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -561,7 +561,7 @@
 
 #foreGround :nth-child(19) {
   top: 15%;
-  left: 42%;
+  left: 46%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
@@ -572,7 +572,7 @@
 }
 
 #foreGround :nth-child(20) {
-  top: 12%;
+  top: 23%;
   left: 90%;
   opacity: 0;
   border-left: 5px solid transparent;
@@ -800,8 +800,8 @@
 }
 
 #foreGround :nth-child(39) {
-  top: 5%;
-  left: 36%;
+  top: 18%;
+  left: 40%;
   opacity: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;

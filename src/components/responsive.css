@@ -21,7 +21,7 @@
   }
 
   /* Crystal */
-  #stripes, #darkStripes {
+  #stripes, #darkStripes, #foreGround {
     width: calc(100% - 90px);
     height: 320px;
   }
@@ -48,7 +48,7 @@
     }
 
     /* Crystal */
-    #stripes, #darkStripes {
+    #stripes, #darkStripes, #foreGround {
       width: calc(100% - 90px);
       height: 415px;
       margin-bottom: -269px;
@@ -104,7 +104,7 @@
     }
 
     /* Crystal */
-    #stripes, #darkStripes {
+    #stripes, #darkStripes, #foreGround {
       width: calc(100% - 180px);
       height: 447px;
       margin-bottom: -269px;
@@ -209,7 +209,7 @@
     font-size: 1.2em;
   }
   /* Crystal */
-  #stripes, #darkStripes {
+  #stripes, #darkStripes, #foreGround {
     width: calc(100% - 180px);
     height: 489px;
     margin-bottom: -322px;
@@ -241,7 +241,7 @@
   }
 
   /* Crystal */
-  #stripes, #darkStripes {
+  #stripes, #darkStripes, #foreGround {
     width: calc(100% - 180px);
     height: 670px;
     margin-bottom: -450px;
@@ -271,7 +271,7 @@
   }
 
   /* Crystal */
-  #stripes, #darkStripes {
+  #stripes, #darkStripes, #foreGround {
     width: calc(100% - 180px);
     height: 731px;
     margin-bottom: -489px;
@@ -289,7 +289,7 @@
   }
 
   /* Crystal */
-  #stripes, #darkStripes {
+  #stripes, #darkStripes, #foreGround {
     width: calc(100% - 310px);
     height: 740px;
     margin-bottom: -489px;
@@ -312,7 +312,7 @@
   }
 
   /* Crystal */
-  #stripes, #darkStripes {
+  #stripes, #darkStripes, #foreGround {
     width: calc(100% - 310px);
     height: 823px;
     margin-bottom: -544px;
@@ -328,7 +328,7 @@
 
 @media only screen and (min-width: 1399px) {
   /* Crystal */
-  #stripes, #darkStripes {
+  #stripes, #darkStripes, #foreGround {
     width: calc(100% - 310px);
     height: 903px;
     margin-bottom: -593px;
@@ -361,7 +361,7 @@
   }
 
   /* Crystal */
-  #stripes, #darkStripes {
+  #stripes, #darkStripes, #foreGround {
     width: calc(100% - 310px);
     height: 987px;
     margin-bottom: -654px;
