@@ -310,6 +310,36 @@
   .poster {
     max-width: 270px;
   }
+
+  /* Crystal */
+  #stripes, #darkStripes {
+    width: calc(100% - 310px);
+    height: 823px;
+    margin-bottom: -544px;
+  }
+  #darkStripes :nth-child(4) {
+    bottom: 47%;
+    left: 71%;
+    border-top: 238px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 36px solid #5532FF;
+  }
+}
+
+@media only screen and (min-width: 1399px) {
+  /* Crystal */
+  #stripes, #darkStripes {
+    width: calc(100% - 310px);
+    height: 903px;
+    margin-bottom: -593px;
+  }
+  #darkStripes :nth-child(4) {
+    bottom: 47%;
+    left: 72%;
+    border-top: 238px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 36px solid #5532FF;
+  }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -328,5 +358,19 @@
   
   .viewPhotography {
     top: 860px;
+  }
+
+  /* Crystal */
+  #stripes, #darkStripes {
+    width: calc(100% - 310px);
+    height: 987px;
+    margin-bottom: -654px;
+  }
+  #darkStripes :nth-child(4) {
+    bottom: 48%;
+    left: 71%;
+    border-top: 269px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 55px solid #5532FF;
   }
 }
