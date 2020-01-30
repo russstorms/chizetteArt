@@ -4,6 +4,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import "animate.css/animate.css"
 import './styles/Crystal.css'
 import './styles/CrystalDark.css'
+import './styles/CrystalForeGround.css'
 
 export default function Crystal() {
 
