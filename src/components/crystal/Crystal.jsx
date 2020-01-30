@@ -10,7 +10,7 @@ export default function Crystal() {
   return (
     <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" offset={100}>
       <div className="Crystal">
-        {/* <div id="foreGround">
+        <div id="foreGround">
           <span></span>
           <span></span>
           <span></span>
@@ -51,7 +51,7 @@ export default function Crystal() {
           <span></span>
           <span></span>
           <span></span>
-        </div> */}
+        </div>
         <div id="darkStripes">
           <span></span>
           <span></span>

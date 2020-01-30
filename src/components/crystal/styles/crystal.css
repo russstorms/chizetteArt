@@ -252,7 +252,7 @@
   border-left: 23px solid white;
 }
 
-/* @keyframes shine {
+@keyframes shine {
   0%{
     opacity: .7;
     background-image: linear-gradient(to top left, #FFA101, rgb(236, 161, 236));
@@ -324,10 +324,10 @@
     opacity: .7;
     background-image: linear-gradient(to top left, purple , #5532FF);
   }
-} */
+}
 
 /* FOREGROUND */
-/* #foreGround, #foreGround span {
+#foreGround, #foreGround span {
   position: absolute;
 }
 
@@ -821,7 +821,7 @@
   animation: shineTriangles 1s infinite ease-in-out;
   animation-duration: 7s;
   animation-delay: 3s;
-} */
+}
 
 @keyframes shineTriangles {
   0%{
