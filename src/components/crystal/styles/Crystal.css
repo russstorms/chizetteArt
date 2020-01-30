@@ -7,6 +7,7 @@
 /* MIDDLEGROUND */
 #stripes, #stripes span {
   position: absolute;
+  display: inline-block;
 }
 
 #stripes {
@@ -252,7 +253,7 @@
   border-left: 23px solid white;
 }
 
-/* @keyframes shine {
+@keyframes shine {
   0%{
     opacity: .7;
     background-image: linear-gradient(to top left, #FFA101, rgb(236, 161, 236));
@@ -324,11 +325,12 @@
     opacity: .7;
     background-image: linear-gradient(to top left, purple , #5532FF);
   }
-} */
+}
 
 /* FOREGROUND */
 #foreGround, #foreGround span {
   position: absolute;
+  display: inline-block;
 }
 
 #foreGround {
