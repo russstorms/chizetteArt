@@ -1,0 +1,182 @@
+/* BACKGROUND */
+#darkStripes, #darkStripes span {
+  position: absolute;
+}
+
+#darkStripes {
+  opacity: 1;
+  width: calc(100% - 20px);
+  height: 300px;
+  margin-bottom: -200px;
+  right: 0;
+  overflow: hidden;
+  transform: skewY(9deg);
+  transform-origin: 0;
+  background-color: transparent;
+}
+
+#darkStripes :nth-child(1) {
+  transform: skewY(45deg);
+  opacity: 1;
+  width: 30%;
+  height: 20%;
+  top: 5%;
+  right: -10%;
+  background-image: linear-gradient(to top left, #5532FF, purple);
+}
+
+#darkStripes :nth-child(1) {
+  transform: skewY(45deg);
+  opacity: 1;
+  width: 28%;
+  height: 11%;
+  top: 5%;
+  right: -10%;
+  background-image: linear-gradient(to top left, #5532FF, purple);
+}
+
+#darkStripes :nth-child(2) {
+  transform: skewY(55deg);
+  opacity: 1;
+  width: 30%;
+  height: 16%;
+  bottom: 26%;
+  left: 1%;
+  background-image: linear-gradient(to top left, #5532FF, purple);
+}
+
+#darkStripes :nth-child(3) {
+  transform: skewY(43deg);
+  opacity: 1;
+  width: 47%;
+  height: 4%;
+  bottom: 41%;
+  left: 36%;
+  background-image: linear-gradient(to top left, #5532FF, purple);
+}
+
+#darkStripes :nth-child(4) {
+  transform: skewY(20deg);
+  transform: rotate(-52deg);
+  opacity: 1;
+  width: 0;
+  height: 0;
+  bottom: 37%;
+  left: 73%;
+  border-top: 121px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 21px solid #5532FF;
+}
+
+#darkStripes :nth-child(5) {
+  transform: skewY(38deg);
+  opacity: 1;
+  width: 14%;
+  height: 10%;
+  top: 2%;
+  left: 35%;
+  background-image: linear-gradient(to top left, #5532FF, purple);
+}
+
+#darkStripes :nth-child(6) {
+  transform: skewY(27deg);
+  opacity: 1;
+  width: 52.5%;
+  height: .5%;
+  top: 34.5%;
+  right: -16%;
+  background-image: linear-gradient(to top left, #5532FF, purple);
+}
+
+#darkStripes :nth-child(7) {
+  transform: skewY(2deg);
+  opacity: .8;
+  width: 21%;
+  height: 10%;
+  top: -1%;
+  right: 8%;
+  background-image: linear-gradient(to top left, rgb(149, 214, 214), white);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+
+#darkStripes :nth-child(8) {
+  width: 14%;
+  height: 6%;
+  top: 0;
+  right: 52%;
+  background: white;
+}
+
+#darkStripes :nth-child(9) {
+  transform: skewY(30deg);
+  opacity: 1;
+  width: 30%;
+  height: 14%;
+  top: 20%;
+  right: -10%;
+  background-image: linear-gradient(to top right, purple, #5532FF);
+}
+
+#darkStripes :nth-child(10) {
+  opacity: 1;
+  width: 10%;
+  height: 28%;
+  bottom: 25%;
+  left: 18%;
+  transform: skewY(43deg);
+  background-image: linear-gradient(to top left, rgb(138, 222, 248), #5532FF);
+}
+
+#darkStripes :nth-child(11) {
+  opacity: 1;
+  width: 52%;
+  height: 1%;
+  top: 33%;
+  left: 27%;
+  transform: skewY(37deg);
+  background-image: linear-gradient(to top left, rgb(138, 222, 248), #5532FF);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 9s;
+  animation-delay: 1.5s;
+}
+
+#darkStripes :nth-child(12) {
+  opacity: 1;
+  width: 8%;
+  height: 1%;
+  right: 0%;
+  top: 11.5%;
+  transform: skewY(30deg);
+  background: #5532FF;
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 9s;
+  animation-delay: 3.5s;
+}
+
+#darkStripes :nth-child(13) {
+  opacity: .8;
+  width: 61%;
+  height: 1%;
+  top: 46%;
+  left: 5%;
+  transform: skewY(46deg);
+  background-image: linear-gradient(to top left, rgb(138, 222, 248), #5532FF);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 9s;
+  animation-delay: 4s;
+}
+
+#darkStripes :nth-child(14) {
+  /* opacity: .8;
+  width: 35%;
+  height: 1%;
+  left: 64%;
+  top: 47%;
+  transform: skewY(26deg);
+  background-image: linear-gradient(to top left, rgb(138, 222, 248), #5532FF);
+  animation: shine 1s infinite ease-in-out;
+  animation-duration: 9s;
+  animation-delay: 2s; */
+}
