@@ -1,7 +1,6 @@
 /* BACKGROUND */
 #darkStripes, #darkStripes span {
   position: absolute;
-  display: inline-block;
 }
 
 #darkStripes {

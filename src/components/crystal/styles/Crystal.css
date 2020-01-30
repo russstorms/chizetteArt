@@ -7,7 +7,6 @@
 /* MIDDLEGROUND */
 #stripes, #stripes span {
   position: absolute;
-  display: inline-block;
 }
 
 #stripes {
@@ -330,7 +329,6 @@
 /* FOREGROUND */
 #foreGround, #foreGround span {
   position: absolute;
-  display: inline-block;
 }
 
 #foreGround {

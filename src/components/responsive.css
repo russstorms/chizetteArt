@@ -448,3 +448,16 @@
     border-left: 55px solid #5532FF;
   }
 }
+
+@media only screen and (min-width: 1500px) {
+  /* Crystal */
+  #stripes, #darkStripes, #foreGround {
+    width: calc(100% - 310px);
+    height: 1153px;
+    margin-bottom: -756px;
+  }
+  #darkStripes :nth-child(4) {
+    bottom: 48%;
+    left: 73%;
+  }
+}
