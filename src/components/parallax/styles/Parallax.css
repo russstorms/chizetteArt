@@ -1,0 +1,26 @@
+body {
+  overflow-x: hidden;
+}
+
+.changingImg {
+  position: absolute;
+  top: 190px;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  will-change: opacity;
+  animation: scaleInOut 5s infinite;
+  z-index: -1;
+  overflow-x: hidden;
+}
+
+@keyframes scaleInOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
