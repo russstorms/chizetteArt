@@ -1,3 +1,11 @@
+@media only screen and (min-width: 450px) {
+  /* Crystal */
+  #stripes, #darkStripes, #foreGround {
+    width: calc(100% - 90px);
+    height: 304px;
+  }
+}
+
 @media only screen and (min-width: 500px) {
   /* SplashList */
   .splashListPadding {
@@ -26,97 +34,113 @@
     height: 320px;
   }
 }
+
+@media only screen and (min-width: 550px) {
+  /* Crystal */
+  #stripes, #darkStripes, #foreGround {
+    width: calc(100% - 90px);
+    height: 382px;
+  }
+}
+
 /* SplashList & Crystal */
-  @media only screen and (min-width: 600px) {
-    .SplashList {
-      top: 1360px;
-    }
-    
-    .viewArt {
-      top: 0;
-      left: 100px;
-    }
-    
-    .viewJewelry {
-      top: 1420px;
-      left: 100px;
-    }
-    
-    .viewPhotography {
-      top: 2450px;
-      left: 100px;
-    }
-
-    /* Crystal */
-    #stripes, #darkStripes, #foreGround {
-      width: calc(100% - 90px);
-      height: 415px;
-      margin-bottom: -269px;
-    }
-    #darkStripes :nth-child(4) {
-      bottom: 43%;
-      left: 72%;
-      border-top: 121px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-left: 21px solid #5532FF;
-    }
+@media only screen and (min-width: 600px) {
+  .SplashList {
+    top: 1360px;
+  }
+  
+  .viewArt {
+    top: 0;
+    left: 100px;
+  }
+  
+  .viewJewelry {
+    top: 1420px;
+    left: 100px;
+  }
+  
+  .viewPhotography {
+    top: 2450px;
+    left: 100px;
   }
 
-  @media only screen and (min-width: 650px) {
-    .SplashList {
-      top: 1360px;
-    }
-    
-    .viewArt {
-      top: 0;
-      left: 100px;
-    }
-    
-    .viewJewelry {
-      top: 1450px;
-      left: 100px;
-    }
-    
-    .viewPhotography {
-      top: 2520px;
-      left: 100px;
-    }
+  /* Crystal */
+  #stripes, #darkStripes, #foreGround {
+    width: calc(100% - 90px);
+    height: 415px;
+    margin-bottom: -269px;
+  }
+  #darkStripes :nth-child(4) {
+    bottom: 43%;
+    left: 72%;
+    border-top: 121px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 21px solid #5532FF;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .SplashList {
+    top: 1360px;
+  }
+  
+  .viewArt {
+    top: 0;
+    left: 100px;
+  }
+  
+  .viewJewelry {
+    top: 1450px;
+    left: 100px;
+  }
+  
+  .viewPhotography {
+    top: 2520px;
+    left: 100px;
   }
 
-  @media only screen and (min-width: 720px) {
-    .SplashList {
-      top: 1380px;
-    }
-    
-    .viewArt {
-      top: 0;
-      left: 160px;
-    }
-    
-    .viewJewelry {
-      top: 1490px;
-      left: 160px;
-    }
-    
-    .viewPhotography {
-      top: 2590px;
-      left: 160px;
-    }
-
-    /* Crystal */
-    #stripes, #darkStripes, #foreGround {
-      width: calc(100% - 180px);
-      height: 447px;
-      margin-bottom: -269px;
-    }
-    #darkStripes :nth-child(4) {
-      bottom: 37%;
-      left: 76%;
-      border-top: 171px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-left: 27px solid #5532FF;
-    }
+  /* Crystal */
+  #stripes, #darkStripes, #foreGround {
+    width: calc(100% - 90px);
+    height: 463px;
+    margin-bottom: -303px;
   }
+}
+
+@media only screen and (min-width: 720px) {
+  .SplashList {
+    top: 1380px;
+  }
+  
+  .viewArt {
+    top: 0;
+    left: 160px;
+  }
+  
+  .viewJewelry {
+    top: 1490px;
+    left: 160px;
+  }
+  
+  .viewPhotography {
+    top: 2590px;
+    left: 160px;
+  }
+
+  /* Crystal */
+  #stripes, #darkStripes, #foreGround {
+    width: calc(100% - 180px);
+    height: 447px;
+    margin-bottom: -269px;
+  }
+  #darkStripes :nth-child(4) {
+    bottom: 37%;
+    left: 76%;
+    border-top: 171px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 27px solid #5532FF;
+  }
+}
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
@@ -216,6 +240,38 @@
   }
 }
 
+@media only screen and (min-width: 850px) {
+  /* Crystal */
+  #stripes, #darkStripes, #foreGround {
+    width: calc(100% - 180px);
+    height: 555px;
+    margin-bottom: -362px;
+  }
+  #darkStripes :nth-child(4) {
+    bottom: 45%;
+    left: 70%;
+    border-top: 171px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 27px solid #5532FF;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  /* Crystal */
+  #stripes, #darkStripes, #foreGround {
+    width: calc(100% - 180px);
+    height: 624px;
+    margin-bottom: -416px;
+  }
+  #darkStripes :nth-child(4) {
+    bottom: 45%;
+    left: 73%;
+    border-top: 171px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 27px solid #5532FF;
+  }
+}
+
 /* Desktops */
 @media only screen and (min-width: 992px) {
   /* SplashList */
@@ -278,6 +334,15 @@
   }
 }
 
+@media only screen and (min-width: 1149px) {
+  /* Crystal */
+  #stripes, #darkStripes, #foreGround {
+    width: calc(100% - 310px);
+    height: 701px;
+    margin-bottom: -466px;
+  }
+}
+
 @media only screen and (min-width: 1199px) {
   /* SplashList */
   .viewJewelry {
@@ -293,6 +358,22 @@
     width: calc(100% - 310px);
     height: 740px;
     margin-bottom: -489px;
+  }
+}
+
+@media only screen and (min-width: 1249px) {
+  /* Crystal */
+  #stripes, #darkStripes, #foreGround {
+    width: calc(100% - 310px);
+    height: 790px;
+    margin-bottom: -519px;
+  }
+  #darkStripes :nth-child(4) {
+    bottom: 47%;
+    left: 71%;
+    border-top: 238px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 36px solid #5532FF;
   }
 }
 
@@ -316,13 +397,6 @@
     width: calc(100% - 310px);
     height: 823px;
     margin-bottom: -544px;
-  }
-  #darkStripes :nth-child(4) {
-    bottom: 47%;
-    left: 71%;
-    border-top: 238px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 36px solid #5532FF;
   }
 }
 
