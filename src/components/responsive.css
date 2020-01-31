@@ -11,10 +11,6 @@
   .splashListPadding {
     padding-top: calc(100vh + 100px);
   }
-
-  /* .SplashList {
-    top: 940px;
-  } */
   
   .viewArt {
     top: 0;
@@ -136,10 +132,6 @@
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
-  /* SplashList */
-  /* .SplashList {
-    top: 938px;
-  } */
   
   .viewArt {
     top: 0;
@@ -400,10 +392,6 @@
 }
 
 @media only screen and (min-width: 1500px) {
-  /* SplashList */
-  .SplashList {
-    top: 1600px;
-  }
   
   .viewArt {
     top: 0;
