@@ -9,11 +9,11 @@
 @media only screen and (min-width: 500px) {
   /* SplashList */
   .splashListPadding {
-    padding-top: 1300px;
+    padding-top: 900px;
   }
 
   .SplashList {
-    top: 1340px;
+    top: 940px;
   }
   
   .viewArt {
@@ -46,7 +46,7 @@
 /* SplashList & Crystal */
 @media only screen and (min-width: 600px) {
   .SplashList {
-    top: 1360px;
+    top: 966px;
   }
   
   .viewArt {
@@ -80,10 +80,6 @@
 }
 
 @media only screen and (min-width: 650px) {
-  .SplashList {
-    top: 1360px;
-  }
-  
   .viewArt {
     top: 0;
     left: 100px;
@@ -108,10 +104,6 @@
 }
 
 @media only screen and (min-width: 720px) {
-  .SplashList {
-    top: 1380px;
-  }
-  
   .viewArt {
     top: 0;
     left: 160px;
@@ -146,7 +138,7 @@
 @media only screen and (min-width: 768px) {
   /* SplashList */
   .SplashList {
-    top: 1530px;
+    top: 938px;
   }
   
   .viewArt {
@@ -183,10 +175,6 @@
 
   .MuiDrawer-paper {
     width: 250px;
-  }
-
-  .splashListPadding {
-    padding-top: 1500px;
   }
 
   /* ArtList */
@@ -273,12 +261,7 @@
 }
 
 /* Desktops */
-@media only screen and (min-width: 992px) {
-  /* SplashList */
-  .SplashList {
-    top: 1550px;
-  }
-  
+@media only screen and (min-width: 992px) {  
   .viewArt {
     top: 0;
   }
@@ -461,3 +444,4 @@
     left: 73%;
   }
 }
+
