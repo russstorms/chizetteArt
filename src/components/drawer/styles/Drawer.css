@@ -61,6 +61,9 @@
     top: 184px !important;
     height: 320px !important;
   }
+  .MuiListItem-root {
+    width: 400px !important;
+  }
   .MuiListItem-gutters {
     color: rgb(99, 95, 84);
     font-family: 'Montserrat';

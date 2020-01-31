@@ -75,13 +75,10 @@
 
 
 
-
-
-
-
 /* Art Info */
 .artInfoContainer {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0));
+  /* background-color: rgba(0, 0, 0, 0.2); */
   width: 300px;
   padding: 5px 15px;
   /* background-image: linear-gradient(to right, rgb(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0));
