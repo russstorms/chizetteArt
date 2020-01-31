@@ -1,5 +1,6 @@
 /* BACKGROUND */
-#darkStripes, #darkStripes span {
+#darkStripes,
+#darkStripes span {
   position: absolute;
 }
 

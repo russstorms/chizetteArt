@@ -5,7 +5,8 @@
 }
 
 /* MIDDLEGROUND */
-#stripes, #stripes span {
+#stripes,
+#stripes span {
   position: absolute;
 }
 

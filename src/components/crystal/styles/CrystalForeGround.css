@@ -1,5 +1,6 @@
 /* FOREGROUND */
-#foreGround, #foreGround span {
+#foreGround,
+#foreGround span {
   position: absolute;
 }
 
