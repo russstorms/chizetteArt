@@ -87,6 +87,11 @@ export default function EditArt({ id, editArt }) {
                 type="number"
                 variant="outlined"
                 value={year}
+                inputProps={{
+                  min: "1995",
+                  max: "2100",
+                  step: "1"
+                }}
                 onChange={e => setYear(e.target.value)}
                 margin="normal"
                 label="Year"
