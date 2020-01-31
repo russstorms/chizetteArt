@@ -17,7 +17,7 @@ export default function Navbar({ toggleLoginForm, secretLogin }) {
         <img className="logo" src={logo} alt="logo"></img>
       </a>
         <h1 className="chizetteArt">
-          <strong className="chizette"><span className="c">c</span>
+          <span className="chizette"><span className="c">c</span>
             <span className="h">h</span>
             <span className="i">i</span>
             <span className="z">z</span>
@@ -25,7 +25,7 @@ export default function Navbar({ toggleLoginForm, secretLogin }) {
             <span className="t">t</span>
             <span className="t2">t</span>
             <span className="e2">e</span>
-          </strong>
+          </span>
           <span className="A" onClick={(e) => secretLogin(e)}>A</span>
           <span className="r">r</span>
           <span className="t3">t</span>

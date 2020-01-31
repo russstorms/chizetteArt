@@ -1,3 +1,8 @@
+body {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-text-stroke: 1px transparent;
+}
+
 .Navbar {
   text-align: left;
   background-color: #FFFFFF;
@@ -35,7 +40,7 @@
 }
 
 .chizette {
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 /* Animation on Navbar Name */
