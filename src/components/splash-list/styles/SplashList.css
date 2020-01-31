@@ -4,7 +4,7 @@
   height: auto;
   width: 100%;
   position: absolute;
-  top: 900px;
+  top: calc(100vh + 135px);
 }
 
 .viewArt {
@@ -16,7 +16,7 @@
   cursor: pointer;
   position: relative;
   left: 25px;
-  top: 0;
+  top: 100px;
 }
 
 .viewJewelry {
@@ -27,7 +27,7 @@
   animation: viewFilterColors 5s infinite;
   cursor: pointer;
   position: relative;
-  top: 1320px;
+  top: 1420px;
   left: 25px;
 }
 
@@ -39,7 +39,7 @@
   animation: viewFilterColors 5s infinite;
   cursor: pointer;
   position: relative;
-  top: 2230px;
+  top: 2020px;
   left: 25px;
 }
 
