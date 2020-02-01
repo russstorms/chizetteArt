@@ -20,6 +20,8 @@
   transform: skewY(12deg);
   transform-origin: 0;
   background-color: transparent;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 39%, 0 63%);
+  clip-path: polygon(0 0, 100% 0, 100% 39%, 0 63%);
 }
 
 #stripes :nth-child(1) {
