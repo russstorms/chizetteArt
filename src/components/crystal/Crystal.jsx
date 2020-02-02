@@ -1,6 +1,7 @@
 import React from 'react'
 import ScrollAnimation from 'react-animate-on-scroll'
 
+// Styles
 import "animate.css/animate.css"
 import './styles/Crystal.css'
 import './styles/CrystalDark.css'

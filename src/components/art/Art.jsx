@@ -106,8 +106,9 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
         {filteredTerm === 'Splash' ? 
           <img
             className="poster"
-            src={art.poster}
-            alt="n/a"
+            src={art.poster} 
+            alt={`${art.title}, ${art.year}, ${art.medium}`}
+            title={art.title}
           />
           :
           <div>
@@ -115,7 +116,8 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
               className="poster"
               onClick={handleOpen}
               src={art.poster}
-              alt="n/a"
+              alt={`${art.title}, ${art.year}, ${art.medium}`}
+              title={art.title}
             />
             <Modal
               aria-labelledby="transition-modal-title"
@@ -136,15 +138,22 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
                   <img
                     className="posterSingleView"
                     src={artList[counter].poster}
-                    alt="n/a"
+                    alt={`${art.title}, ${art.year}, ${art.medium}`}
+                    title={art.title}
                   />
 
                   <div className="artInfoContainer">
                     <div className="singleViewTitle">
-                      <i>{artList[counter].title}</i>
-                      <span className="singleViewYear">{artList[counter].year}</span>
+                      <i>
+                        {artList[counter].title}
+                      </i>
+                      <span className="singleViewYear">
+                        {artList[counter].year}
+                      </span>
                     </div>
-                    <div className="singleViewMedium animated fadeInRight delay-1s">{artList[counter].medium}</div>
+                    <div className="singleViewMedium animated fadeInRight delay-1s">
+                      {artList[counter].medium}
+                    </div>
                     {/* {handleArtWithoutPrintAndOtherMediums &&
                       <div className="singleViewPrice">${artList[counter].price} USD</div> 
                     }

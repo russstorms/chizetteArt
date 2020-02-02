@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Modal, Backdrop, Fade, TextField } from '@material-ui/core'
 
+// Styles
 import { makeStyles } from '@material-ui/core/styles'
-
 import '../theme.css'
 
 const useStyles = makeStyles(() => ({

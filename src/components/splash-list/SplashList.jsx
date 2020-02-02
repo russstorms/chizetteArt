@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Styles
 import './styles/SplashList.css'
 
 function SplashList({ configureFilteredTerm }) {

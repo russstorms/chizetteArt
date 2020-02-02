@@ -10,6 +10,7 @@ import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
+// Styles
 import 'animate.css/animate.min.css'
 import '../responsive.css'
 

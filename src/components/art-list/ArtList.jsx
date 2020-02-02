@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Art from '../art/Art'
 
+// Styles
 import 'animate.css/animate.min.css'
 import './styles/ArtList.css'
 
@@ -49,7 +50,7 @@ function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {
       }
     )
   }
-
+  // Change padding depending on SplashList or not
   return (
     <div
       id="artList"

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SortRoundedIcon from '@material-ui/icons/SortRounded'
 import {
   Drawer,
   List,
@@ -6,8 +7,8 @@ import {
   ListItem
 } from '@material-ui/core'
 
+// Styles
 import './styles/Drawer.css'
-import SortRoundedIcon from '@material-ui/icons/SortRounded'
 
 export default function DrawerSideNav({ configureFilteredTerm, toggleContactMe, contactMe, logoutClick, token }) {
   const [state, setState] = useState({

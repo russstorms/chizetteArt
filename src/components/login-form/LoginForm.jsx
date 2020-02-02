@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { TextField } from "@material-ui/core"
+
+// Styles
 import './styles/LoginForm.css'
 
 export default function LoginForm({ loginSubmit }) {
