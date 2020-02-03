@@ -11,6 +11,7 @@ import Footer from '../footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 // Hooks
+import useFilteredTermState from '../hooks/useFilteredTermState'
 import useContactState from '../hooks/useContactState'
 
 // Styles
@@ -22,21 +23,12 @@ const API = process.env.REACT_APP_API
 
 const ChizetteArt = () => {
   const [artList, setArtList] = useState([])
-  const [filteredTerm, setFilteredTerm] = useState('Splash')
   const [secretLogIn, setSecretLogIn] = useState(false)
   const [userId, setUserId] = useState('')
   const [token, setToken] = useState('')
 
+  const {filteredTerm, configureFilteredTerm} = useFilteredTermState('Splash')
   const {contactMe, toggleContactMe} = useContactState(false)
-  // Toggle contact form
-  // const toggleContactMe = () => {
-  //   if (!contactMe) {
-  //     document.getElementById('contact').scrollIntoView({ behavior: "smooth" })
-  //     setContactMe(!contactMe)
-  //   } else {
-  //     setContactMe(contactMe)
-  //   }
-  // }
 
   // Get Art
   useEffect(() => {
@@ -104,27 +96,6 @@ const ChizetteArt = () => {
         }
       })
       return filteredArtArray
-    }
-  }
-
-  // Alter filteredTerm based on Drawer
-  const configureFilteredTerm = (ev) => {
-    ev.preventDefault()
-    // Check if filter came from splashlist or drawer
-    let updateFilteredTerm = 
-        ev.currentTarget.dataset.medium
-        || ev.currentTarget.children[0].innerText
-
-    if (updateFilteredTerm === 'All') {
-      setFilteredTerm('All')
-    } else if (updateFilteredTerm === 'Art') {
-      setFilteredTerm('Art')
-    } else if (updateFilteredTerm === 'Jewelry') {
-      setFilteredTerm('Jewelry')
-    } else if (updateFilteredTerm === 'Photos'){
-      setFilteredTerm('Photos')
-    } else {
-      setFilteredTerm('All')
     }
   }
 

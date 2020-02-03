@@ -2,9 +2,9 @@ import { useState } from 'react'
 
 export default initialContactState => {
   const [contactMe, setContactMe] = useState(initialContactState)
-  console.log(contactMe)
 
   return {
+    contactMe,
     // Toggle contact form
     toggleContactMe: () => {
       if (!contactMe) {
