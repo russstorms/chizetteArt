@@ -1,4 +1,4 @@
-const SpanMaker = (num = 1, callback) => {
+const times = (num = 1, callback) => {
   let spans = []
   
   for (let i = 0; i < num; i++) {
@@ -7,5 +7,5 @@ const SpanMaker = (num = 1, callback) => {
   return spans
 }
 
-export default SpanMaker
+export default times
 
