@@ -4,7 +4,7 @@ import { TextField } from "@material-ui/core"
 // Styles
 import './styles/LoginForm.css'
 
-export default function LoginForm({ loginSubmit }) {
+const LoginForm = ({ loginSubmit }) => {
 	const [username, setUsername] = useState('')
 	const [password, setPassword] = useState('')
   return (
@@ -45,3 +45,6 @@ export default function LoginForm({ loginSubmit }) {
     </div>
   )
 }
+
+export default LoginForm
+

@@ -18,7 +18,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 // Admin — Create new art
-export default function EditArt({ id, editArt }) {
+const EditArt = ({ id, editArt }) => {
   const [title, setTitle] = useState('')
   const [year, setYear] = useState(0)
   const [medium, setMedium] = useState('')
@@ -128,4 +128,6 @@ export default function EditArt({ id, editArt }) {
     </div>
   )
 }
+
+export default EditArt
 

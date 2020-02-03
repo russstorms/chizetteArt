@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function Art({ id, modalId, art, artList, filteredTerm, editArt, deleteArt, token }) {
+const Art = ({ id, modalId, art, artList, filteredTerm, editArt, deleteArt, token }) => {
   const classes = useStyles();
   const [open, setOpen] = useState(false)
   const [count, setCount] = useState(0)
@@ -231,4 +231,6 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
     </ScrollAnimation>
   )
 }
+
+export default Art
 

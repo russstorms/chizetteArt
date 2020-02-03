@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 // Admin — Create new art
-export default function ComposeArt({ postArt }) {
+const ComposeArt = ({ postArt }) => {
   const [title, setTitle] = useState('')
   const [year, setYear] = useState('')
   const [medium, setMedium] = useState('')
@@ -144,4 +144,5 @@ export default function ComposeArt({ postArt }) {
   )
 }
 
+export default ComposeArt
 

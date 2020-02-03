@@ -3,7 +3,7 @@ import React from 'react'
 // Styles
 import './styles/SplashList.css'
 
-function SplashList({ configureFilteredTerm }) {
+const SplashList = ({ configureFilteredTerm }) => {
 
   return (
     <div className="SplashList">

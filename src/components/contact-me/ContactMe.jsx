@@ -5,7 +5,7 @@ import ComposeArt from '../create-art/CreateArt'
 // Styles
 import './styles/ContactMe.css'
 
-export default function Contact({ postArt, token }) {
+const Contact = ({ postArt, token }) => {
 
   return (
     <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
@@ -62,4 +62,6 @@ export default function Contact({ postArt, token }) {
     </ScrollAnimation>
   )
 }
+
+export default Contact
 

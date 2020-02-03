@@ -5,7 +5,7 @@ import ColorString from '../helpers/ColorString'
 // Styles
 import './styles/Navbar.css'
 
-export default function Navbar({ toggleLoginForm, secretLogin }) {
+const Navbar = ({ toggleLoginForm, secretLogin }) => {
 
   // Admin — Login form
   secretLogin = (ev) => {
@@ -31,3 +31,5 @@ export default function Navbar({ toggleLoginForm, secretLogin }) {
     </div>
   )
 }
+
+export default Navbar

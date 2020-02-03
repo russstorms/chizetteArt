@@ -13,7 +13,7 @@ const parallaxPosters = [
   { id: 6, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434670/chizetteArt%20-%20Compressed/sunset_beach.jpg'}
 ]
 
-export default function ParallaxImages() {
+const ParallaxImages = () => {
   const [index, set] = useState(0)
   const transitions = useTransition(parallaxPosters[index], item => item.id, {
     from: { opacity: 0.1 },
@@ -47,3 +47,4 @@ export default function ParallaxImages() {
   )
 }
 
+export default ParallaxImages

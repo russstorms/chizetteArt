@@ -10,7 +10,7 @@ import {
 // Styles
 import './styles/Drawer.css'
 
-export default function DrawerSideNav({ configureFilteredTerm, toggleContactMe, contactMe, logoutClick, token }) {
+const DrawerSideNav = ({ configureFilteredTerm, toggleContactMe, contactMe, logoutClick, token }) => {
   const [state, setState] = useState({
     left: false
   })
@@ -92,4 +92,6 @@ export default function DrawerSideNav({ configureFilteredTerm, toggleContactMe, 
     </div>
   )
 }
+
+export default DrawerSideNav
 
