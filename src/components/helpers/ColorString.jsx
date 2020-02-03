@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ColorString = ({ string }) => (
+const ColorString = ({ string, duration }) => (
   <>
     {
       [...string]
@@ -11,7 +11,7 @@ const ColorString = ({ string }) => (
             idx={index}
             style={{
               animationDelay: `${index === 0 ? 1 : index * .1 + 1}s`,
-              animationDuration: `${string.length * .875}s`,
+              animationDuration: `${string.length * duration}s`,
             }}
           >
             {letter}

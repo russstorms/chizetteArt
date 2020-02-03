@@ -22,6 +22,7 @@ const Navbar = ({ toggleLoginForm, secretLogin }) => {
           <span className="chizette">
             <ColorString 
               string={'chizette'}
+              duration={.875}
             />
           </span>
           <span className="A" onClick={(e) => secretLogin(e)}>A</span>
