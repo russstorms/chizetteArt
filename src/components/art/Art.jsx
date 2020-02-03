@@ -215,15 +215,15 @@ export default function Art({ id, modalId, art, artList, filteredTerm, editArt, 
               editArt={editArt}
             />
             <Button
-            id={art.id}
-            onClick={(ev) => removeArt(ev)}
-            className="deleteButton waves-effect waves-light btn-flat delButton">
-              <i 
-                id={art.id}
-                className="large material-icons icon deleteIcon"
-              >
-                delete
-              </i>
+              id={art.id}
+              onClick={(ev) => removeArt(ev)}
+              className="deleteButton waves-effect waves-light btn-flat delButton">
+                <i 
+                  id={art.id}
+                  className="large material-icons icon deleteIcon"
+                >
+                  delete
+                </i>
             </Button>
           </div>
         }

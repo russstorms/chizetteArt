@@ -62,3 +62,4 @@ export default function Contact({ postArt, token }) {
     </ScrollAnimation>
   )
 }
+

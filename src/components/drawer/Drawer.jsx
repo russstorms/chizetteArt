@@ -20,7 +20,10 @@ export default function DrawerSideNav({ configureFilteredTerm, toggleContactMe, 
       return;
     }
 
-    setState({ ...state, [side]: open });
+    setState({
+      ...state,
+      [side]: open 
+    });
   }
 
 
@@ -70,15 +73,14 @@ export default function DrawerSideNav({ configureFilteredTerm, toggleContactMe, 
                 To Top
               </ListItem>}
             {token ? 
-            <div>
-              <ListItem
-                href='/'
-                onClick={logoutClick}
-              >
-                Logout
-              </ListItem>
-            </div>
-
+              <div>
+                <ListItem
+                  href='/'
+                  onClick={logoutClick}
+                >
+                  Logout
+                </ListItem>
+              </div>
               :
               <h1 className="footerDrawer">
                 chizetteArt
@@ -90,3 +92,4 @@ export default function DrawerSideNav({ configureFilteredTerm, toggleContactMe, 
     </div>
   )
 }
+
