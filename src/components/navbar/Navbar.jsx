@@ -26,7 +26,7 @@ export default function Navbar({ toggleLoginForm, secretLogin }) {
           </span>
           <span className="A" onClick={(e) => secretLogin(e)}>A</span>
           <span className="r">r</span>
-          <span className="t3">t</span>
+          <span className="t">t</span>
         </h1>
     </div>
   )

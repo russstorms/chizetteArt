@@ -50,7 +50,7 @@ function ArtList({ artList, editArt, deleteArt, token, filteredTerm }) {
       }
     )
   }
-  // Change padding depending on SplashList or not
+  // Change padding depending on if SplashList
   return (
     <div
       id="artList"

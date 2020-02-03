@@ -9,24 +9,21 @@ import './styles/CrystalDark.css'
 import './styles/CrystalForeGround.css'
 
 export default function Crystal() {
+  const foreGroundSparkles = SpanMaker(40, i => <span key={i} />)
+  const darkStripes = SpanMaker(14, i => <span key={i} />)
+  const stripes = SpanMaker(19, i => <span key={i} />)
 
   return (
     <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" offset={100}>
       <div className="Crystal">
         <div id="foreGround">
-          <SpanMaker 
-            num={40}
-          />
+          {foreGroundSparkles}
         </div>
         <div id="darkStripes">
-          <SpanMaker 
-            num={14}
-          />
+          {darkStripes}
         </div>
         <div id="stripes">
-          <SpanMaker 
-            num={19}
-          />
+          {stripes}
         </div>
       </div>
     </ScrollAnimation>
