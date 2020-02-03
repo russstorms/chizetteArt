@@ -8,11 +8,11 @@ import './styles/CrystalDark.css'
 import './styles/CrystalForeGround.css'
 
 const spanCreator = (num) => {
-  let spans = [];
+  let spans = []
   for (let i = 0; i < num; i++) {
-    spans.push(<span key={i}></span>);
+    spans.push(<span key={i}></span>)
   }
-  return spans;
+  return spans
 }
 
 export default function Crystal() {

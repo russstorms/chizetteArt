@@ -1,9 +1,9 @@
 import React from 'react'
 import logo from './styles/chizetteLogo.jpg'
+import ColorString from '../helpers/ColorString'
 
 // Styles
 import './styles/Navbar.css'
-
 
 export default function Navbar({ toggleLoginForm, secretLogin }) {
 
@@ -19,14 +19,10 @@ export default function Navbar({ toggleLoginForm, secretLogin }) {
         <img className="logo" src={logo} alt="logo"></img>
       </a>
         <h1 className="chizetteArt">
-          <span className="chizette"><span className="c">c</span>
-            <span className="h">h</span>
-            <span className="i">i</span>
-            <span className="z">z</span>
-            <span className="e">e</span>
-            <span className="t">t</span>
-            <span className="t2">t</span>
-            <span className="e2">e</span>
+          <span className="chizette">
+            <ColorString 
+              string={'chizette'}
+            />
           </span>
           <span className="A" onClick={(e) => secretLogin(e)}>A</span>
           <span className="r">r</span>

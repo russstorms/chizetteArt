@@ -59,52 +59,8 @@ body {
   }
 }
 
-.c {
-  animation: shinyName .1s infinite;
-  animation-delay: 1s;
-  animation-duration: 7s;
-}
-
-.h {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.1s;
-  animation-duration: 7s;
-}
-
-.i {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.2s;
-  animation-duration: 7s;
-}
-
-.z {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.3s;
-  animation-duration: 7s;
-}
-
-.e {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.4s;
-  animation-duration: 7s;
-}
-
-.t {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.5s;
-  animation-duration: 7s;
-}
-
-.t2 {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.6s;
-  animation-duration: 7s;
-}
-
-.e2 {
-  animation: shinyName .1s infinite;
-  animation-delay: 1.7s;
-  animation-duration: 7s;
+.ColorString {
+  animation: shinyName infinite;
 }
 
 .A {
