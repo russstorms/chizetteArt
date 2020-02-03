@@ -13,6 +13,7 @@ import { ParallaxProvider } from 'react-scroll-parallax'
 // Hooks
 import useFilteredTermState from '../hooks/useFilteredTermState'
 import useContactState from '../hooks/useContactState'
+import useSecretLogInState from '../hooks/useSecretLogInState'
 
 // Styles
 import 'animate.css/animate.min.css'
@@ -23,12 +24,13 @@ const API = process.env.REACT_APP_API
 
 const ChizetteArt = () => {
   const [artList, setArtList] = useState([])
-  const [secretLogIn, setSecretLogIn] = useState(false)
   const [userId, setUserId] = useState('')
   const [token, setToken] = useState('')
 
   const {filteredTerm, configureFilteredTerm} = useFilteredTermState('Splash')
   const {contactMe, toggleContactMe} = useContactState(false)
+  const {secretLogIn, toggleLoginForm} = useSecretLogInState(false)
+
 
   // Get Art
   useEffect(() => {
@@ -97,11 +99,6 @@ const ChizetteArt = () => {
       })
       return filteredArtArray
     }
-  }
-
-  // Admin — Toggle login form
-  const toggleLoginForm = () => {
-    setSecretLogIn(!secretLogIn)
   }
 
   // Admin login
