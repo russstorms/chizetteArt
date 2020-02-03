@@ -29,7 +29,7 @@ const ChizetteArt = () => {
   const [token, setToken] = useState('')
 
   // Custom Hooks
-  const {filteredTerm, configureFilteredTerm} = useFilteredTermState('Splash')
+  const {filteredTerm, configureFilteredTerm, filterArtList} = useFilteredTermState('Splash')
   const {contactMe, toggleContactMe} = useContactState(false)
   const {secretLogIn, toggleLoginForm} = useSecretLogInState(false)
 
@@ -47,61 +47,6 @@ const ChizetteArt = () => {
     getArtList()
     getToken()
   }, [filteredTerm])
-
-  // Filter artList based on filteredTerm
-  const filterArtList = (artList) => {
-    // Filter SplashList
-    let artCounter = 0
-    let jewelryCounter = 0
-    let photoCounter = 0
-    let artArr = []
-    let jewelryArr = []
-    let photoArr = []
-    let splashList = []
-
-    if (filteredTerm === 'Splash') {
-      artList.map((art) => {
-        const medium = art.medium
-        // First Three Art
-        if (!medium.includes('Jewelry') && !medium.includes('Photograph') && artCounter < 3) {
-          artCounter++
-          artArr.push(art)
-        }
-        // First Three Jewelry
-        if (medium.includes('Jewelry') && jewelryCounter < 3) {
-          jewelryCounter++
-          jewelryArr.push(art)
-        }
-        // First Three Photography
-        if (medium.includes('Photograph') && photoCounter < 3) {
-          photoCounter++
-          photoArr.push(art)
-        }
-        splashList = artArr.concat(jewelryArr, photoArr)
-      })
-      return splashList
-      
-    } else {
-      let filteredArtArray = artList.filter((art) => {
-        const medium = art.medium
-        // Filter by Photos
-        if (filteredTerm === 'Photos') {
-          return medium.includes('Photograph')
-          // Filter by Art
-        } else if (filteredTerm === 'Art') {
-          return !medium.includes('Photograph') 
-                  && !medium.includes('Jewelry')
-          // Filter by Jewelry
-        } else if (filteredTerm === 'Jewelry') {
-          return medium.includes('Jewelry')
-          // Don't Filter
-        } else if (filteredTerm === 'All') {
-          return medium
-        }
-      })
-      return filteredArtArray
-    }
-  }
 
   // Admin login
   const loginSubmit = async (loginInfo) => {
