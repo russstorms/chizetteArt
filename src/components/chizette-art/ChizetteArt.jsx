@@ -10,6 +10,9 @@ import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
+// Hooks
+import useContactState from '../hooks/useContactState'
+
 // Styles
 import 'animate.css/animate.min.css'
 import '../responsive.css'
@@ -17,13 +20,23 @@ import '../responsive.css'
 const API = process.env.REACT_APP_API
 // const API = 'http://localhost:3000'
 
-export default function ChizetteArt() {
+const ChizetteArt = () => {
   const [artList, setArtList] = useState([])
   const [filteredTerm, setFilteredTerm] = useState('Splash')
-  const [contactMe, setContactMe] = useState(false)
   const [secretLogIn, setSecretLogIn] = useState(false)
   const [userId, setUserId] = useState('')
   const [token, setToken] = useState('')
+
+  const {contactMe, toggleContactMe} = useContactState(false)
+  // Toggle contact form
+  // const toggleContactMe = () => {
+  //   if (!contactMe) {
+  //     document.getElementById('contact').scrollIntoView({ behavior: "smooth" })
+  //     setContactMe(!contactMe)
+  //   } else {
+  //     setContactMe(contactMe)
+  //   }
+  // }
 
   // Get Art
   useEffect(() => {
@@ -112,16 +125,6 @@ export default function ChizetteArt() {
       setFilteredTerm('Photos')
     } else {
       setFilteredTerm('All')
-    }
-  }
-
-  // Toggle contact form
-  const toggleContactMe = () => {
-    if (!contactMe) {
-      document.getElementById('contact').scrollIntoView({ behavior: "smooth" })
-      setContactMe(!contactMe)
-    } else {
-      setContactMe(contactMe)
     }
   }
 
@@ -299,4 +302,6 @@ export default function ChizetteArt() {
     </ParallaxProvider>
   )
 }
+
+export default ChizetteArt
 
