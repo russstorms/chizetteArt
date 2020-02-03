@@ -1,5 +1,3 @@
-import React from 'react'
-
 const SpanMaker = (num = 1, callback) => {
   let spans = []
   
