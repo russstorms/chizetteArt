@@ -10,7 +10,7 @@ import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
-// Hooks
+// Custom Hooks
 import useFilteredTermState from '../hooks/useFilteredTermState'
 import useContactState from '../hooks/useContactState'
 import useSecretLogInState from '../hooks/useSecretLogInState'
@@ -19,6 +19,7 @@ import useSecretLogInState from '../hooks/useSecretLogInState'
 import 'animate.css/animate.min.css'
 import '../responsive.css'
 
+// Node API
 const API = process.env.REACT_APP_API
 // const API = 'http://localhost:3000'
 
@@ -27,6 +28,7 @@ const ChizetteArt = () => {
   const [userId, setUserId] = useState('')
   const [token, setToken] = useState('')
 
+  // Custom Hooks
   const {filteredTerm, configureFilteredTerm} = useFilteredTermState('Splash')
   const {contactMe, toggleContactMe} = useContactState(false)
   const {secretLogIn, toggleLoginForm} = useSecretLogInState(false)
