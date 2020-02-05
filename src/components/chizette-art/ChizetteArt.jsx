@@ -4,7 +4,7 @@ import Drawer from '../drawer/Drawer'
 import Parallax from '../parallax/Parallax'
 import ArtList from '../art-list/ArtList'
 import SplashList from '../splash-list/SplashList'
-import Crystal from '../crystal/Crystal'
+// import Crystal from '../crystal/Crystal'
 import LoginForm from '../login-form/LoginForm'
 import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
@@ -34,6 +34,21 @@ const ChizetteArt = () => {
   const {secretLogIn, toggleLoginForm} = useSecretLogInState(false)
 
 
+  // Creates token from admin and stores in local storage
+  const storeToken = (userId, token) => {
+    localStorage.setItem('userId', JSON.stringify(userId))
+    localStorage.setItem('token', token)
+  }
+
+  // Grab token on reload
+  const getToken = () => {
+    const userId = localStorage.getItem('userId')
+    const token = localStorage.getItem('token')
+
+    setUserId(userId || "")
+    setToken(token || "")
+  }
+
   // Get Art
   useEffect(() => {
     async function getArtList() {
@@ -47,6 +62,7 @@ const ChizetteArt = () => {
     getArtList()
     getToken()
   }, [filteredTerm])
+
 
   // Admin login
   const loginSubmit = async (loginInfo) => {
@@ -69,22 +85,7 @@ const ChizetteArt = () => {
       storeToken(json.id, auth)
     }
   }
-
-  // Creates token from admin and stores in local storage
-  const storeToken = (userId, token) => {
-    localStorage.setItem('userId', JSON.stringify(userId))
-    localStorage.setItem('token', token)
-  }
-
-  // Grab token on reload
-  const getToken = () => {
-    const userId = localStorage.getItem('userId')
-    const token = localStorage.getItem('token')
-
-    setUserId(userId || "")
-    setToken(token || "")
-  }
-
+  
   // Admin Logout
   const logoutClick = () => {
     setToken('')
@@ -212,7 +213,7 @@ const ChizetteArt = () => {
         token={token}
         postArt={postArt}
       />
-      <Crystal />
+      {/* <Crystal /> */}
       <Footer />
     </ParallaxProvider>
   )
