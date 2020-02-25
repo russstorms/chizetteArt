@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Navbar from '../navbar/Navbar'
 import Drawer from '../drawer/Drawer'
 import Parallax from '../parallax/Parallax'
@@ -9,6 +9,8 @@ import LoginForm from '../login-form/LoginForm'
 import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
+
+import { AdminContext, AdminProvider } from "../../context/adminContext"
 
 // Custom Hooks
 import useFilteredTermState from '../hooks/useFilteredTermState'
@@ -25,29 +27,14 @@ const API = process.env.REACT_APP_API
 
 const ChizetteArt = () => {
   const [artList, setArtList] = useState([])
-  const [userId, setUserId] = useState('')
-  const [token, setToken] = useState('')
 
   // Custom Hooks
   const {filteredTerm, configureFilteredTerm, filterArtList} = useFilteredTermState('Splash')
   const {contactMe, toggleContactMe} = useContactState(false)
   const {secretLogIn, toggleLoginForm} = useSecretLogInState(false)
 
-
-  // Creates token from admin and stores in local storage
-  const storeToken = (userId, token) => {
-    localStorage.setItem('userId', JSON.stringify(userId))
-    localStorage.setItem('token', token)
-  }
-
-  // Grab token on reload
-  const getToken = () => {
-    const userId = localStorage.getItem('userId')
-    const token = localStorage.getItem('token')
-
-    setUserId(userId || "")
-    setToken(token || "")
-  }
+  // Contexts
+  const token = useContext(AdminContext)
 
   // Get Art
   useEffect(() => {
@@ -60,38 +47,8 @@ const ChizetteArt = () => {
       setArtList(filterArtList(artList))
     }
     getArtList()
-    getToken()
   }, [filteredTerm])
 
-
-  // Admin login
-  const loginSubmit = async (loginInfo) => {
-    const response = await fetch(`${API}/sign-in`, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(loginInfo)
-    })
-    
-    if (response.status === 200) {
-      const auth = response.headers.get('Auth').slice(8, response.headers.get('Auth').length)
-      const json = await response.json()
-
-      setUserId(json.id)
-      setToken(auth)
-
-      storeToken(json.id, auth)
-    }
-  }
-  
-  // Admin Logout
-  const logoutClick = () => {
-    setToken('')
-    setUserId('')
-    localStorage.clear()
-  }
 
   // Admin — Create new art
   const postArt = async (title, year, medium, url, price) => {
@@ -173,48 +130,42 @@ const ChizetteArt = () => {
 
   return (
     <ParallaxProvider className="App container">
-      <Navbar
-        toggleLoginForm={toggleLoginForm}
-        token={token}
-      />
-      <Drawer 
-        configureFilteredTerm={configureFilteredTerm}
-        toggleContactMe={toggleContactMe}
-        contactMe={contactMe}
-        logoutClick={logoutClick}
-        token={token}
-      />
-      {
-        filteredTerm === 'Splash' ?
-          <Parallax /> 
-        : 
-          <i><h4 className="filteredTitle">{filteredTerm}</h4></i>
-      }
-      {
-        secretLogIn && 
-          <LoginForm 
-            loginSubmit={loginSubmit}
-            userId={userId}
-          />
-      }
-      { filteredTerm === 'Splash' &&
-        <SplashList
-          configureFilteredTerm={configureFilteredTerm}
+      <AdminProvider>
+        <Navbar
+          toggleLoginForm={toggleLoginForm}
         />
-      }
-      <ArtList
-        artList={artList}
-        editArt={editArt}
-        deleteArt={deleteArt}
-        token={token}
-        filteredTerm={filteredTerm}
-      />
-      <Contact 
-        token={token}
-        postArt={postArt}
-      />
-      {/* <Crystal /> */}
-      <Footer />
+        <Drawer 
+          configureFilteredTerm={configureFilteredTerm}
+          toggleContactMe={toggleContactMe}
+          contactMe={contactMe}
+        />
+        {
+          filteredTerm === 'Splash' ?
+            <Parallax /> 
+          : 
+            <i><h4 className="filteredTitle">{filteredTerm}</h4></i>
+        }
+        {
+          secretLogIn && 
+            <LoginForm />
+        }
+        { filteredTerm === 'Splash' &&
+          <SplashList
+            configureFilteredTerm={configureFilteredTerm}
+          />
+        }
+        <ArtList
+          artList={artList}
+          editArt={editArt}
+          deleteArt={deleteArt}
+          filteredTerm={filteredTerm}
+        />
+        <Contact 
+          postArt={postArt}
+        />
+        {/* <Crystal /> */}
+        <Footer />
+      </AdminProvider>
     </ParallaxProvider>
   )
 }

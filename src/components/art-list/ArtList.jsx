@@ -5,7 +5,7 @@ import Art from '../art/Art'
 import 'animate.css/animate.min.css'
 import './styles/ArtList.css'
 
-const ArtList = ({ artList, editArt, deleteArt, token, filteredTerm }) => {
+const ArtList = ({ artList, editArt, deleteArt, filteredTerm }) => {
 
   // Scroll to the top to animate artList
   useEffect(() => {
@@ -43,7 +43,6 @@ const ArtList = ({ artList, editArt, deleteArt, token, filteredTerm }) => {
               editArt={editArt}
               deleteArt={deleteArt}
               filteredTerm={filteredTerm}
-              token={token}
             />
           </div>
         )

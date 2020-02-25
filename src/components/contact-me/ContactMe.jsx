@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AdminContext } from "../../context/adminContext"
 import ScrollAnimation from 'react-animate-on-scroll'
 import ComposeArt from '../create-art/CreateArt'
 
 // Styles
 import './styles/ContactMe.css'
 
-const Contact = ({ postArt, token }) => {
+const Contact = ({ postArt }) => {
+  // Contexts
+  const { token } = useContext(AdminContext)
 
   return (
     <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
@@ -52,7 +55,7 @@ const Contact = ({ postArt, token }) => {
               ~Chagall
           </h5>
           {
-            token &&
+            token !== '' &&
             <ComposeArt 
               postArt={postArt}
             />

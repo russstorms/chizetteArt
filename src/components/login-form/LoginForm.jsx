@@ -1,12 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { AdminContext } from "../../context/adminContext"
 import { TextField } from "@material-ui/core"
 
 // Styles
 import './styles/LoginForm.css'
 
-const LoginForm = ({ loginSubmit }) => {
+const LoginForm = () => {
 	const [username, setUsername] = useState('')
 	const [password, setPassword] = useState('')
+
+	// Contexts
+	const { loginSubmit } = useContext(AdminContext)
+
   return (
     <div className="LoginForm">
 			<form 

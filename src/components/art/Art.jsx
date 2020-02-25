@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { AdminContext } from "../../context/adminContext"
 import EditArt from '../edit-art/EditArt'
 import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
 import ScrollAnimation from 'react-animate-on-scroll'
@@ -24,10 +25,14 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const Art = ({ id, modalId, art, artList, filteredTerm, editArt, deleteArt, token }) => {
+const Art = ({ id, modalId, art, artList, filteredTerm, editArt, deleteArt }) => {
   const classes = useStyles();
   const [open, setOpen] = useState(false)
   const [count, setCount] = useState(0)
+
+  // Contexts
+  const { token } = useContext(AdminContext)
+
   // Check counter to ensure it isn't longer than array
   let counter = count >= artList.length ? 0 : count
 
@@ -208,7 +213,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm, editArt, deleteArt, toke
 
         {/* ADMIN CONTROLS */}
         {
-          token &&
+          token !== '' &&
           <div>
             <EditArt
               id={id}

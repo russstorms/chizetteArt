@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { AdminContext } from "../../context/adminContext"
 import SortRoundedIcon from '@material-ui/icons/SortRounded'
 import {
   Drawer,
@@ -10,22 +11,24 @@ import {
 // Styles
 import './styles/Drawer.css'
 
-const DrawerSideNav = ({ configureFilteredTerm, toggleContactMe, contactMe, logoutClick, token }) => {
+const DrawerSideNav = ({ configureFilteredTerm, toggleContactMe, contactMe }) => {
   const [state, setState] = useState({
     left: false
   })
 
   const toggleDrawer = (side, open) => event => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
+      return
     }
 
     setState({
       ...state,
       [side]: open 
-    });
+    })
   }
 
+  // Contexts
+  const { logoutClick, token } = useContext(AdminContext)
 
   return (
     <div className="Drawer">
