@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Navbar from '../navbar/Navbar'
 import Drawer from '../drawer/Drawer'
 import Parallax from '../parallax/Parallax'
@@ -11,11 +11,11 @@ import Footer from '../footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 import { AdminProvider } from "../../context/adminContext"
-import { CrudContext, CrudProvider } from "../../context/crudContext"
 
 // Custom Hooks
 import useContactState from '../hooks/useContactState'
 import useSecretLogInState from '../hooks/useSecretLogInState'
+import useFilteredTermState from '../hooks/useFilteredTermState'
 
 // Styles
 import 'animate.css/animate.min.css'
@@ -24,20 +24,9 @@ import '../responsive.css'
 const ChizetteArt = () => {
 
   // Custom Hooks
-  // const {filteredTerm, configureFilteredTerm, filterArtList} = useFilteredTermState('Splash')
+  const {configureFilteredTerm, filteredTerm} = useFilteredTermState('Splash')
   const {contactMe, toggleContactMe} = useContactState(false)
   const {secretLogIn, toggleLoginForm} = useSecretLogInState(false)
-
-  // Contexts
-  const { 
-    artList,
-    filteredTerm,
-    configureFilteredTerm,
-    postArt,
-    editArt,
-    deleteArt 
-  } = useContext(CrudContext)
-
 
   return (
     <ParallaxProvider className="App container">
@@ -50,12 +39,15 @@ const ChizetteArt = () => {
           toggleContactMe={toggleContactMe}
           contactMe={contactMe}
         />
-        <CrudProvider>
           {
             filteredTerm === 'Splash' ?
-              <Parallax /> 
+              <Parallax />
             : 
-            <i><h4 className="filteredTitle">{filteredTerm}</h4></i>
+            <i>
+              <h4 className="filteredTitle">
+                {filteredTerm}
+              </h4>
+            </i>
           }
           {
             secretLogIn && 
@@ -67,15 +59,12 @@ const ChizetteArt = () => {
             />
           }
           <ArtList
-            artList={artList}
-            editArt={editArt}
-            deleteArt={deleteArt}
-            filteredTerm={filteredTerm}
+            // editArt={editArt}
+            // deleteArt={deleteArt}
           />
           <Contact 
-            postArt={postArt}
+            // postArt={postArt}
           />
-        </CrudProvider>
         {/* <Crystal /> */}
         <Footer />
       </AdminProvider>

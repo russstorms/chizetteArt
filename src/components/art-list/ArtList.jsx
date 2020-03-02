@@ -1,11 +1,25 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Art from '../art/Art'
+
+import useFilteredTermState from '../hooks/useFilteredTermState'
 
 // Styles
 import 'animate.css/animate.min.css'
 import './styles/ArtList.css'
 
-const ArtList = ({ artList, editArt, deleteArt, filteredTerm }) => {
+import useSWR from 'swr'
+
+// Node API
+const API = process.env.REACT_APP_API
+// const API = 'http://localhost:3000'
+
+const ArtList = ({ editArt, deleteArt }) => {
+
+  // Custom Hooks
+  const { filteredTerm, filterArtList } = useFilteredTermState('Splash')
+
+  const fetcher = url => fetch(url).then(r => r.json())
+  const { data } = useSWR(`${API}/chizetteart`, fetcher)
 
   // Scroll to the top to animate artList
   useEffect(() => {
@@ -17,37 +31,40 @@ const ArtList = ({ artList, editArt, deleteArt, filteredTerm }) => {
   // Differing CSS classes to unalign CSS Grid columns
   const alterColumns = () => {
     let column = ''
-    return artList.map(
-      (art, idx) => {
-        switch (column) {
-          case 'first':
-            column = 'second'
-            break
-          case 'second':
-            column = 'third'
-            break
-          default:
-            column = 'first'
-            break
+
+    if (data !== undefined) {
+      return filterArtList(data).map(
+        (art, idx) => {
+          switch (column) {
+            case 'first':
+              column = 'second'
+              break
+            case 'second':
+              column = 'third'
+              break
+            default:
+              column = 'first'
+              break
+          }
+          return (
+            <div
+              key={idx}
+              className={column}
+            >
+              <Art
+                id={art.id}
+                art={art}
+                modalId={idx}
+                artList={data}
+                // editArt={editArt}
+                // deleteArt={deleteArt}
+                filteredTerm={filteredTerm}
+              />
+            </div>
+          )
         }
-        return (
-          <div
-            key={idx}
-            className={column}
-          >
-            <Art
-              id={art.id}
-              art={art}
-              modalId={idx}
-              artList={artList}
-              editArt={editArt}
-              deleteArt={deleteArt}
-              filteredTerm={filteredTerm}
-            />
-          </div>
-        )
-      }
-    )
+      )
+    }
   }
   // Change padding depending on if SplashList
   return (

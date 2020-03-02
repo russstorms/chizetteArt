@@ -12,7 +12,7 @@ export default initialFilteredTermState => {
       let updateFilteredTerm = 
           ev.currentTarget.dataset.medium
           || ev.currentTarget.children[0].innerText
-
+          
       if (updateFilteredTerm === 'All') {
         setFilteredTerm('All')
       } else if (updateFilteredTerm === 'Art') {
