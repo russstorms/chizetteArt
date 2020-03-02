@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Art from '../art/Art'
 
 import useFilteredTermState from '../hooks/useFilteredTermState'
@@ -22,11 +22,12 @@ const ArtList = ({ editArt, deleteArt }) => {
   const { data } = useSWR(`${API}/chizetteart`, fetcher)
 
   // Scroll to the top to animate artList
-  useEffect(() => {
-    if (filteredTerm !== 'Splash') {
-        document.getElementById('artList').scrollIntoView({ behavior: "smooth" })
-    }
-  }, [filteredTerm])
+  // useEffect(() => {
+  //   if (filteredTerm !== 'Splash') {
+  //     document.getElementById('artList').scrollIntoView({ behavior: "smooth" })
+  //   }
+  // }, [filteredTerm])
+
 
   // Differing CSS classes to unalign CSS Grid columns
   const alterColumns = () => {
