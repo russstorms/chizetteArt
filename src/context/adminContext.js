@@ -59,18 +59,18 @@ export function AdminProvider(props) {
     localStorage.clear()
   }
 
-    return (
-      <AdminContext.Provider
-        value={{
-          userId,
-          token,
-          getToken,
-          loginSubmit,
-          logoutClick
-        }}
-      >
-        {props.children}
-      </AdminContext.Provider>
-    )
+  return (
+    <AdminContext.Provider
+      value={{
+        userId,
+        token,
+        getToken,
+        loginSubmit,
+        logoutClick
+      }}
+    >
+      {props.children}
+    </AdminContext.Provider>
+  )
 }
 
