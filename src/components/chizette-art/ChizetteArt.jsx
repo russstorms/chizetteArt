@@ -25,7 +25,7 @@ import '../responsive.css'
 const ChizetteArt = () => {
 
   // Custom Hooks
-  const {filteredTerm} = useFilteredTermState('Splash')
+  const {filteredTerm, configureFilteredTerm} = useFilteredTermState('Splash')
   const {contactMe, toggleContactMe} = useContactState(false)
   const {secretLogIn, toggleLoginForm} = useSecretLogInState(false)
 
@@ -38,6 +38,7 @@ const ChizetteArt = () => {
         <Drawer
           toggleContactMe={toggleContactMe}
           contactMe={contactMe}
+          configureFilteredTerm={configureFilteredTerm}
         />
           {
             filteredTerm === 'Splash' ?
@@ -58,6 +59,7 @@ const ChizetteArt = () => {
               <SplashList />
             }
             <ArtList
+              filteredTerm={filteredTerm}
               // artList={data}
               // editArt={editArt}
               // deleteArt={deleteArt}

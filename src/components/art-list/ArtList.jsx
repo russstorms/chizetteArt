@@ -8,26 +8,27 @@ import useFilteredTermState from '../hooks/useFilteredTermState'
 import 'animate.css/animate.min.css'
 import './styles/ArtList.css'
 
-const ArtList = () => {
+const ArtList = ({ filteredTerm }) => {
   // Contexts
   const { data } = useContext(ArtListContext)
 
   // Custom Hooks
-  const { filteredTerm } = useFilteredTermState('Splash')
+  const { filterArtList } = useFilteredTermState('Splash')
 
   // Scroll to the top to animate artList
-  // useEffect(() => {
-  //   if (filteredTerm !== 'Splash') {
-  //     document.getElementById('artList').scrollIntoView({ behavior: "smooth" })
-  //   }
-
-  // }, [filteredTerm])
+  useEffect(() => {
+    if (filteredTerm !== 'Splash') {
+      document.getElementById('artList').scrollIntoView({ behavior: "smooth" })
+    }
+  }, [filteredTerm])
 
   // Differing CSS classes to unalign CSS Grid columns
   const alterColumns = () => {
     let column = ''
     if (data !== undefined) {
-      return data.map(
+      const artList = filterArtList(data)
+      // console.log(artList)
+      return artList.map(
         (art, idx) => {
           switch (column) {
             case 'first':
@@ -49,7 +50,7 @@ const ArtList = () => {
                 id={art.id}
                 art={art}
                 modalId={idx}
-                artList={data}
+                artList={artList}
                 // editArt={editArt}
                 // deleteArt={deleteArt}
                 filteredTerm={filteredTerm}
