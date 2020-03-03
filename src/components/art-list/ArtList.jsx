@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
+import { ArtListContext } from "../../context/artListContext"
 import Art from '../art/Art'
 
 import useFilteredTermState from '../hooks/useFilteredTermState'
@@ -7,34 +8,26 @@ import useFilteredTermState from '../hooks/useFilteredTermState'
 import 'animate.css/animate.min.css'
 import './styles/ArtList.css'
 
-import useSWR from 'swr'
-
-// Node API
-const API = process.env.REACT_APP_API
-// const API = 'http://localhost:3000'
-
-const ArtList = ({ editArt, deleteArt }) => {
+const ArtList = () => {
+  // Contexts
+  const { data } = useContext(ArtListContext)
 
   // Custom Hooks
-  const { filteredTerm, filterArtList } = useFilteredTermState('Splash')
-
-  const fetcher = url => fetch(url).then(r => r.json())
-  const { data } = useSWR(`${API}/chizetteart`, fetcher)
+  const { filteredTerm } = useFilteredTermState('Splash')
 
   // Scroll to the top to animate artList
   // useEffect(() => {
   //   if (filteredTerm !== 'Splash') {
   //     document.getElementById('artList').scrollIntoView({ behavior: "smooth" })
   //   }
-  // }, [filteredTerm])
 
+  // }, [filteredTerm])
 
   // Differing CSS classes to unalign CSS Grid columns
   const alterColumns = () => {
     let column = ''
-
     if (data !== undefined) {
-      return filterArtList(data).map(
+      return data.map(
         (art, idx) => {
           switch (column) {
             case 'first':

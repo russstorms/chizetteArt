@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export default initialFilteredTermState => {
   const [filteredTerm, setFilteredTerm] = useState(initialFilteredTermState)
-
+  
   return {
     filteredTerm,
     // Alter filteredTerm based on Drawer click
@@ -12,7 +12,7 @@ export default initialFilteredTermState => {
       let updateFilteredTerm = 
           ev.currentTarget.dataset.medium
           || ev.currentTarget.children[0].innerText
-          
+
       if (updateFilteredTerm === 'All') {
         setFilteredTerm('All')
       } else if (updateFilteredTerm === 'Art') {

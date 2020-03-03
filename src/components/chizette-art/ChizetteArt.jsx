@@ -11,6 +11,7 @@ import Footer from '../footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 
 import { AdminProvider } from "../../context/adminContext"
+import { ArtListProvider } from "../../context/artListContext"
 
 // Custom Hooks
 import useContactState from '../hooks/useContactState'
@@ -53,18 +54,21 @@ const ChizetteArt = () => {
             secretLogIn && 
               <LoginForm />
           }
-          { filteredTerm === 'Splash' &&
-            <SplashList
-              configureFilteredTerm={configureFilteredTerm}
+          <ArtListProvider>
+            { filteredTerm === 'Splash' &&
+              <SplashList
+                configureFilteredTerm={configureFilteredTerm}
+              />
+            }
+            <ArtList
+              // artList={data}
+              // editArt={editArt}
+              // deleteArt={deleteArt}
             />
-          }
-          <ArtList
-            // editArt={editArt}
-            // deleteArt={deleteArt}
-          />
-          <Contact 
-            // postArt={postArt}
-          />
+            <Contact 
+              // postArt={postArt}
+            />
+          </ArtListProvider>
         {/* <Crystal /> */}
         <Footer />
       </AdminProvider>
