@@ -8,12 +8,12 @@ import useFilteredTermState from '../hooks/useFilteredTermState'
 import 'animate.css/animate.min.css'
 import './styles/ArtList.css'
 
-const ArtList = ({ filteredTerm }) => {
+const ArtList = ({ filteredTerm, filterArtList }) => {
   // Contexts
   const { data } = useContext(ArtListContext)
 
   // Custom Hooks
-  const { filterArtList } = useFilteredTermState('Splash')
+  // const { filterArtList } = useFilteredTermState('Splash')
 
   // Scroll to the top to animate artList
   useEffect(() => {
@@ -27,7 +27,7 @@ const ArtList = ({ filteredTerm }) => {
     let column = ''
     if (data !== undefined) {
       const artList = filterArtList(data)
-      // console.log(artList)
+      console.log(artList)
       return artList.map(
         (art, idx) => {
           switch (column) {

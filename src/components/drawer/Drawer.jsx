@@ -8,9 +8,6 @@ import {
   ListItem
 } from '@material-ui/core'
 
-// Custom Hooks
-// import useFilteredTermState from '../hooks/useFilteredTermState'
-
 // Styles
 import './styles/Drawer.css'
 
@@ -29,9 +26,6 @@ const DrawerSideNav = ({ configureFilteredTerm, toggleContactMe, contactMe }) =>
       [side]: open 
     })
   }
-
-  // // Custom Hooks
-  // const { configureFilteredTerm } = useFilteredTermState('Splash')
 
   // Contexts
   const { logoutClick, token } = useContext(AdminContext)
