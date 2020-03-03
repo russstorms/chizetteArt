@@ -15,9 +15,7 @@ export function ArtListProvider(props) {
 
   return (
     <ArtListContext.Provider
-      value={{
-        data
-      }}
+      value={{ data }}
     >
       {props.children}
     </ArtListContext.Provider>
