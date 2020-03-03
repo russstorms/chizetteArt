@@ -2,8 +2,6 @@ import React, { useEffect, useContext } from 'react'
 import { ArtListContext } from "../../context/artListContext"
 import Art from '../art/Art'
 
-import useFilteredTermState from '../hooks/useFilteredTermState'
-
 // Styles
 import 'animate.css/animate.min.css'
 import './styles/ArtList.css'
@@ -11,9 +9,6 @@ import './styles/ArtList.css'
 const ArtList = ({ filteredTerm, filterArtList }) => {
   // Contexts
   const { data } = useContext(ArtListContext)
-
-  // Custom Hooks
-  // const { filterArtList } = useFilteredTermState('Splash')
 
   // Scroll to the top to animate artList
   useEffect(() => {
@@ -27,7 +22,7 @@ const ArtList = ({ filteredTerm, filterArtList }) => {
     let column = ''
     if (data !== undefined) {
       const artList = filterArtList(data)
-      console.log(artList)
+
       return artList.map(
         (art, idx) => {
           switch (column) {
