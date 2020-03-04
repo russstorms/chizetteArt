@@ -56,7 +56,9 @@ const ChizetteArt = () => {
           }
           <ArtListProvider>
             { filteredTerm === 'Splash' &&
-              <SplashList />
+              <SplashList
+                configureFilteredTerm={configureFilteredTerm}
+              />
             }
             <ArtList
               filteredTerm={filteredTerm}

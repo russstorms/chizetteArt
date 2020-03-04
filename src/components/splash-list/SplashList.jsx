@@ -1,13 +1,9 @@
 import React from 'react'
 
-// Custom Hooks
-import useFilteredTermState from '../hooks/useFilteredTermState'
-
 // Styles
 import './styles/SplashList.css'
 
-const SplashList = () => {
-  const { configureFilteredTerm } = useFilteredTermState('Splash')
+const SplashList = ({ configureFilteredTerm }) => {
 
   return (
     <div className="SplashList">
