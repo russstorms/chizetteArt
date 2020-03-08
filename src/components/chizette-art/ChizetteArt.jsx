@@ -4,7 +4,7 @@ import Drawer from '../drawer/Drawer'
 import Parallax from '../parallax/Parallax'
 import ArtList from '../art-list/ArtList'
 import SplashList from '../splash-list/SplashList'
-// import Crystal from '../crystal/Crystal'
+import Crystal from '../crystal/Crystal'
 import LoginForm from '../login-form/LoginForm'
 import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
@@ -66,7 +66,7 @@ const ChizetteArt = () => {
             />
             <Contact />
           </CrudProvider>
-        {/* <Crystal /> */}
+        <Crystal />
         <Footer />
       </AdminProvider>
     </ParallaxProvider>
