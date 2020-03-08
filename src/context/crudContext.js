@@ -48,7 +48,7 @@ export function CrudProvider(props) {
       headers: {
         "Accept": "application/JSON",
         "Content-Type": "application/json",
-        "token": token
+        "token": token.token
       },
       body: JSON.stringify(artBody)
     })
@@ -78,7 +78,7 @@ export function CrudProvider(props) {
       headers: {
         "Accept": "application/JSON",
         "Content-Type": "application/json",
-        "token": token
+        "token": token.token
       },
     })
     if (response.status !== 200) {
@@ -98,7 +98,7 @@ export function CrudProvider(props) {
       headers: {
         "Accept": "application/JSON",
         "Content-Type": "application/json",
-        "token": token
+        "token": token.token
       },
     })
     if (response.status !== 200) {
