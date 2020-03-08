@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { CrudContext } from "../../context/crudContext"
 import { Modal, Backdrop, Fade, TextField } from '@material-ui/core'
 
 // Styles
@@ -19,12 +20,16 @@ const useStyles = makeStyles(() => ({
 }))
 
 // Admin — Create new art
-const ComposeArt = ({ postArt }) => {
+const ComposeArt = () => {
+  // Form State
   const [title, setTitle] = useState('')
   const [year, setYear] = useState('')
   const [medium, setMedium] = useState('')
   const [url, setUrl] = useState('')
   const [price, setPrice] = useState('')
+
+  // Contexts
+  const { postArt } = useContext(CrudContext)
 
   const classes = useStyles();
   const [open, setOpen] = useState(false)

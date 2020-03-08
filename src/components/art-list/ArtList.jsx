@@ -45,8 +45,6 @@ const ArtList = ({ filteredTerm, filterArtList }) => {
               art={art}
               modalId={idx}
               artList={filteredArtList}
-              // editArt={editArt}
-              // deleteArt={deleteArt}
               filteredTerm={filteredTerm}
             />
           </div>

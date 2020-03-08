@@ -8,8 +8,8 @@ import SplashList from '../splash-list/SplashList'
 import LoginForm from '../login-form/LoginForm'
 import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
-import { ParallaxProvider } from 'react-scroll-parallax'
 
+import { ParallaxProvider } from 'react-scroll-parallax'
 import { AdminProvider } from "../../context/adminContext"
 import { CrudProvider } from "../../context/crudContext"
 
@@ -52,7 +52,7 @@ const ChizetteArt = () => {
           }
           {
             secretLogIn &&
-              <LoginForm />
+            <LoginForm />
           }
           <CrudProvider>
             { filteredTerm === 'Splash' &&
@@ -63,13 +63,8 @@ const ChizetteArt = () => {
             <ArtList
               filteredTerm={filteredTerm}
               filterArtList={filterArtList}
-              // artList={data}
-              // editArt={editArt}
-              // deleteArt={deleteArt}
             />
-            <Contact 
-              // postArt={postArt}
-            />
+            <Contact />
           </CrudProvider>
         {/* <Crystal /> */}
         <Footer />

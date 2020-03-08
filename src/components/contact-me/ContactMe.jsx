@@ -6,7 +6,7 @@ import ComposeArt from '../create-art/CreateArt'
 // Styles
 import './styles/ContactMe.css'
 
-const Contact = ({ postArt }) => {
+const Contact = () => {
   // Contexts
   const { token } = useContext(AdminContext)
 
@@ -56,9 +56,7 @@ const Contact = ({ postArt }) => {
           </h5>
           {
             token !== '' &&
-            <ComposeArt 
-              postArt={postArt}
-            />
+            <ComposeArt />
           }
         </div>
       </div>

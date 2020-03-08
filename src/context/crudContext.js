@@ -11,7 +11,7 @@ export const CrudContext = createContext()
 
 export function CrudProvider(props) {
   // Grab token from AdminContext
-  // const token = useContext(AdminContext)
+  const token = useContext(AdminContext)
 
   const [artList, setArtList] = useState([])
 
@@ -31,92 +31,92 @@ export function CrudProvider(props) {
     getArtList()
   }, [filteredTerm])
 
-  // // Admin — Create new art
-  // const postArt = async (title, year, medium, url, price) => {
-  //   const artBody = {
-  //     title: title,
-  //     year: year,
-  //     medium: medium,
-  //     poster: url,
-  //     price: price
-  //   }
-  //   const response = await fetch(`${API}/chizetteart`, {
-  //     method: "POST",
-  //     mode: "cors",
-  //     cache: "no-cache",
-  //     credentials: "same-origin",
-  //     headers: {
-  //       "Accept": "application/JSON",
-  //       "Content-Type": "application/json",
-  //       "token": token
-  //     },
-  //     body: JSON.stringify(artBody)
-  //   })
-  //   if (response.status !== 200) {
-  //     alert(`Unable to create this masterpiece!`)
-  //   } else {
-  //     alert(`Art Created!`)
-  //   }
-  //   setArtList([artBody, ...artList])
-  // }
+  // Admin — Create new art
+  const postArt = async (title, year, medium, url, price) => {
+    const artBody = {
+      title: title,
+      year: year,
+      medium: medium,
+      poster: url,
+      price: price
+    }
+    const response = await fetch(`${API}/chizetteart`, {
+      method: "POST",
+      mode: "cors",
+      cache: "no-cache",
+      credentials: "same-origin",
+      headers: {
+        "Accept": "application/JSON",
+        "Content-Type": "application/json",
+        "token": token
+      },
+      body: JSON.stringify(artBody)
+    })
+    if (response.status !== 200) {
+      alert(`Unable to create this masterpiece!`)
+    } else {
+      alert(`Art Created!`)
+    }
+    setArtList([artBody, ...artList])
+  }
 
-  // // Admin — Edit art
-  // const editArt = async (id, title, year, medium, url) => {
-  //   const artBody = {
-  //     title: title,
-  //     year: year,
-  //     medium: medium,
-  //     poster: url
-  //   }
+  // Admin — Edit art
+  const editArt = async (id, title, year, medium, url) => {
+    const artBody = {
+      title: title,
+      year: year,
+      medium: medium,
+      poster: url
+    }
 
-  //   let newList = artList.map( art => (art.id === id) ? {id, ...artBody} : art )
+    let newList = artList.map( art => (art.id === id) ? {id, ...artBody} : art )
 
-  //   let response = await fetch(`${API}/chizetteart/${id}`, {
-  //     method: "PUT",
-  //     mode: "cors",
-  //     body: JSON.stringify(artBody),
-  //     headers: {
-  //       "Accept": "application/JSON",
-  //       "Content-Type": "application/json",
-  //       "token": token
-  //     },
-  //   })
-  //   if (response.status !== 200) {
-  //     alert(`Unable to edit this masterpiece!`)
-  //   } else {
-  //     alert(`Edited this masterpiece!`)
-  //   }
+    let response = await fetch(`${API}/chizetteart/${id}`, {
+      method: "PUT",
+      mode: "cors",
+      body: JSON.stringify(artBody),
+      headers: {
+        "Accept": "application/JSON",
+        "Content-Type": "application/json",
+        "token": token
+      },
+    })
+    if (response.status !== 200) {
+      alert(`Unable to edit this masterpiece!`)
+    } else {
+      alert(`Edited this masterpiece!`)
+    }
     
-  //   setArtList(newList)
-  // }
+    setArtList(newList)
+  }
 
-  // // Admin — Delete art
-  // const deleteArt = async (id) => {
-  //   let response = await fetch(`${API}/chizetteart/${id}`, {
-  //     method: "DELETE",
-  //     mode: "cors",
-  //     headers: {
-  //       "Accept": "application/JSON",
-  //       "Content-Type": "application/json",
-  //       "token": token
-  //     },
-  //   })
-  //   if (response.status !== 200) {
-  //     alert(`Unable to erase this masterpiece!`)
-  //   } else {
-  //     alert(`Crumbled up and thrown away!`)
-  //   }
-  //   setArtList([...artList])
-  // }
+  // Admin — Delete art
+  const deleteArt = async (id) => {
+    let response = await fetch(`${API}/chizetteart/${id}`, {
+      method: "DELETE",
+      mode: "cors",
+      headers: {
+        "Accept": "application/JSON",
+        "Content-Type": "application/json",
+        "token": token
+      },
+    })
+    if (response.status !== 200) {
+      alert(`Unable to erase this masterpiece!`)
+    } else {
+      alert(`Crumbled up and thrown away!`)
+    }
+    setArtList([...artList])
+  }
 
   return (
     <CrudContext.Provider
       value={{
         artList,
         filteredTerm,
-        // postArt,
-        // editArt,
-        // deleteArt
+        postArt,
+        editArt,
+        deleteArt
       }}
     >
       {props.children}
