@@ -4,7 +4,6 @@ import Drawer from '../drawer/Drawer'
 import Parallax from '../parallax/Parallax'
 import SplashList from '../splash-list/SplashList'
 import ArtList from '../art-list/ArtList'
-import Crystal from '../crystal/Crystal'
 import LoginForm from '../login-form/LoginForm'
 import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
@@ -66,8 +65,10 @@ const ChizetteArt = () => {
             />
             <Contact />
           </CrudProvider>
-        <Crystal />
         <Footer />
+        <video preload="true" loop="true" autoPlay="autoplay" muted>
+          <source type="video/mp4" src={require('./chizetteArtCrystal.mp4')}></source>
+        </video>
       </AdminProvider>
     </ParallaxProvider>
   )
