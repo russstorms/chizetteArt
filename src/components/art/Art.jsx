@@ -4,6 +4,7 @@ import { CrudContext } from "../../context/crudContext"
 import EditArt from '../edit-art/EditArt'
 import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
 import ScrollAnimation from 'react-animate-on-scroll'
+import LazyLoad from 'react-lazyload'
 // import StripeCheckout from 'react-stripe-checkout'
 
 // Styles
@@ -111,21 +112,25 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
     >
       <div className="Art">
         {filteredTerm === 'Splash' ? 
-          <img
-            className="poster"
-            src={art.poster} 
-            alt={`${art.title}, ${art.year}, ${art.medium}`}
-            title={art.title}
-          />
-          :
-          <div>
+          <LazyLoad>
             <img
               className="poster"
-              onClick={handleOpen}
-              src={art.poster}
+              src={art.poster} 
               alt={`${art.title}, ${art.year}, ${art.medium}`}
               title={art.title}
             />
+          </LazyLoad>
+          :
+          <div>
+            <LazyLoad>
+              <img
+                className="poster"
+                onClick={handleOpen}
+                src={art.poster}
+                alt={`${art.title}, ${art.year}, ${art.medium}`}
+                title={art.title}
+              />
+            </LazyLoad>
             <Modal
               aria-labelledby="transition-modal-title"
               aria-describedby="transition-modal-description"
@@ -142,12 +147,14 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
             >
               <Fade in={open}>
                 <div>
-                  <img
-                    className="posterSingleView"
-                    src={artList[counter].poster}
-                    alt={`${art.title}, ${art.year}, ${art.medium}`}
-                    title={art.title}
-                  />
+                  <LazyLoad>
+                    <img
+                      className="posterSingleView"
+                      src={artList[counter].poster}
+                      alt={`${art.title}, ${art.year}, ${art.medium}`}
+                      title={art.title}
+                    />
+                  </LazyLoad>
 
                   <div className="artInfoContainer">
                     <div className="singleViewTitle">
