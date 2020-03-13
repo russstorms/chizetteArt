@@ -5,10 +5,6 @@
   font-size: 1.1em;
 }
 
-.anchor {
-  cursor: default;
-}
-
 .artTitle {
   font-family: 'Montserrat';
   letter-spacing: .3em;
@@ -129,55 +125,3 @@
   justify-content: center;
 }
 
-.editButton {
-  color: rgb(136, 127, 255);
-  font-size: 2em !important;
-  margin-left: -13%;
-}
-
-.editButton:hover {
-  color: rgb(138, 222, 248);
-  background-color: transparent;
-}
-
-.deleteButton {
-  color: rgb(136, 127, 255);
-  font-size: 2em !important;
-  margin-left: 30%;
-  margin-top: -16%;
-}
-
-.deleteButton:hover {
-  color: rgb(138, 222, 248);
-  background-color: transparent;
-}
-
-.brushIcon {
-  font-size: 1.5em !important;
-}
-
-.editModal {
-  margin-top: -5%;
-  z-index: 1200 !important;
-  max-height: 110%;
-  background-image: url("https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg");
-  background-repeat: no-repeat;
-}
-
-.editArt {
-  display: initial !important;
-  color: rgb(138, 222, 248);
-  font-size: 1em;
-  background-color: white;
-  border: none;
-  margin-left: 80%;
-}
-
-.editArt:hover {
-  display: initial !important;
-  color: white;
-  font-size: 1em;
-  background-color: rgb(138, 222, 248);
-  border: none;
-  margin-left: 80%;
-}

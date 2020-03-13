@@ -210,7 +210,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
             <Button
               id={art.id}
               onClick={(ev) => removeArt(ev)}
-              className="deleteButton waves-effect waves-light btn-flat delButton">
+              className="waves-effect waves-light btn-flat delButton">
                 <i 
                   id={art.id}
                   className="large material-icons icon deleteIcon"
