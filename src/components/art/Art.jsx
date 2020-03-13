@@ -4,7 +4,6 @@ import { CrudContext } from "../../context/crudContext"
 import EditArt from '../edit-art/EditArt'
 import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
 import ScrollAnimation from 'react-animate-on-scroll'
-import LazyLoad from 'react-lazyload'
 // import StripeCheckout from 'react-stripe-checkout'
 
 // Styles
@@ -112,17 +111,14 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
     >
       <div className="Art">
         {filteredTerm === 'Splash' ? 
-          <LazyLoad>
             <img
               className="poster"
               src={art.poster} 
               alt={`${art.title}, ${art.year}, ${art.medium}`}
               title={art.title}
             />
-          </LazyLoad>
           :
           <div>
-            <LazyLoad>
               <img
                 className="poster"
                 onClick={handleOpen}
@@ -130,7 +126,6 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                 alt={`${art.title}, ${art.year}, ${art.medium}`}
                 title={art.title}
               />
-            </LazyLoad>
             <Modal
               aria-labelledby="transition-modal-title"
               aria-describedby="transition-modal-description"
@@ -147,14 +142,12 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
             >
               <Fade in={open}>
                 <div>
-                  <LazyLoad>
-                    <img
-                      className="posterSingleView"
-                      src={artList[counter].poster}
-                      alt={`${art.title}, ${art.year}, ${art.medium}`}
-                      title={art.title}
-                    />
-                  </LazyLoad>
+                  <img
+                    className="posterSingleView"
+                    src={artList[counter].poster}
+                    alt={`${art.title}, ${art.year}, ${art.medium}`}
+                    title={art.title}
+                  />
 
                   <div className="artInfoContainer">
                     <div className="singleViewTitle">

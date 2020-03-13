@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useTransition, animated, config } from 'react-spring'
-import LazyLoad from 'react-lazyload'
 
 import './styles/Parallax.css'
 
@@ -42,9 +41,7 @@ const ParallaxImages = () => {
   return (
     <div className='Parallax'>
       <div className='ParallaxImages'>
-        <LazyLoad>
-          {changingImage}
-        </LazyLoad>
+        {changingImage}
       </div>
     </div>
   )
