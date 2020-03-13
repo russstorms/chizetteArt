@@ -122,8 +122,13 @@
   }
 
 
-
 /* Admin Controls */
+.modalStyle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .editButton {
   color: rgb(136, 127, 255);
   font-size: 2em !important;

@@ -3,21 +3,8 @@ import { CrudContext } from "../../context/crudContext"
 import { Modal, Backdrop, Fade, TextField } from '@material-ui/core'
 
 // Styles
-import { makeStyles } from '@material-ui/core/styles'
 import './styles/CreateArt.css'
 import '../theme.css'
-
-const useStyles = makeStyles(() => ({
-  modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  paper: {
-    border: 'none',
-    padding: '10px',
-  },
-}))
 
 // Admin — Create new art
 const ComposeArt = () => {
@@ -31,7 +18,6 @@ const ComposeArt = () => {
   // Contexts
   const { postArt } = useContext(CrudContext)
 
-  const classes = useStyles();
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => {
@@ -63,7 +49,7 @@ const ComposeArt = () => {
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
-        className={classes.modal}
+        className='modalStyle'
         open={open}
         onClose={handleClose}
         closeAfterTransition

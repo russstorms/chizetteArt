@@ -9,25 +9,11 @@ import ScrollAnimation from 'react-animate-on-scroll'
 // Styles
 import './styles/Art.css'
 import 'animate.css/animate.min.css'
-import { makeStyles } from '@material-ui/core/styles'
 
 // Stripe Test Key
 // const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
 
-const useStyles = makeStyles(() => ({
-  modal: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  paper: {
-    border: 'none',
-    padding: '10px',
-  },
-}))
-
 const Art = ({ id, modalId, art, artList, filteredTerm }) => {
-  const classes = useStyles();
   const [open, setOpen] = useState(false)
   const [count, setCount] = useState(0)
 
@@ -129,7 +115,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
             <Modal
               aria-labelledby="transition-modal-title"
               aria-describedby="transition-modal-description"
-              className={classes.modal}
+              className='modalStyle'
               open={open}
               onClose={handleClose}
               closeAfterTransition
