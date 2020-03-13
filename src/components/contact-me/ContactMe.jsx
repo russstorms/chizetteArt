@@ -33,6 +33,7 @@ const Contact = () => {
                 href="https://www.instagram.com/chizette/"
                 target="blank"
                 className="instagram"
+                alt="instagram link"
               >
                 <span className="instagramIcon">
                   <i className="fab fa-instagram"></i>
@@ -42,6 +43,7 @@ const Contact = () => {
                 href="mailto:chizetteart@gmail.com"
                 target="blank"
                 className="email"
+                alt="email link"
               >
                 <span className="emailIcon">
                   <i className="far fa-envelope"></i>
