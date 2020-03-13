@@ -1,4 +1,3 @@
-
 .commonBtn {
   color: #FFFFFF;
   font-size: 1.5em;
@@ -43,4 +42,9 @@
 
 .commonBtn:focus {
   background-color: transparent;
+}
+
+.crystalVid {
+  position: absolute;
+  right: 0;
 }
