@@ -33,6 +33,7 @@ const EditArt = ({ id, art }) => {
     setYear(0)
     setMedium('')
     setUrl('')
+    setOpen(false)
   }
 
   return (
