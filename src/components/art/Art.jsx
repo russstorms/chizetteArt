@@ -205,6 +205,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
           <div>
             <EditArt
               id={id}
+              art={art}
             />
             <Button
               id={art.id}
