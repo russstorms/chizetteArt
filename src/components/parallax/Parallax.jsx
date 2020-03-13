@@ -4,13 +4,13 @@ import { useTransition, animated, config } from 'react-spring'
 import './styles/Parallax.css'
 
 const parallaxPosters = [
-  { id: 0, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg' },
-  { id: 1, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434629/chizetteArt%20-%20Compressed/aragonite_necklace.jpg' },
-  { id: 2, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434635/chizetteArt%20-%20Compressed/Citrine%20%2B%20Amethyst%20Necklace.jpg' },
-  { id: 3, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434634/chizetteArt%20-%20Compressed/geode_slice.jpg' },
+  { id: 0, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_900/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg' },
+  { id: 1, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434629/chizetteArt%20-%20Compressed/aragonite_necklace.jpg' },
+  { id: 2, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_900/v1552434635/chizetteArt%20-%20Compressed/Citrine%20%2B%20Amethyst%20Necklace.jpg' },
+  { id: 3, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434634/chizetteArt%20-%20Compressed/geode_slice.jpg' },
   { id: 4, url: 'https://res.cloudinary.com/chizetteart/image/upload/v1552434640/chizetteArt%20-%20Compressed/gold%2Bblue.jpg' },
-  { id: 5, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1500/v1552434663/chizetteArt%20-%20Compressed/constellations.jpg' },
-  { id: 6, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434670/chizetteArt%20-%20Compressed/sunset_beach.jpg'}
+  { id: 5, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1000/v1552434663/chizetteArt%20-%20Compressed/constellations.jpg' },
+  { id: 6, url: 'https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_900/v1552434670/chizetteArt%20-%20Compressed/sunset_beach.jpg'}
 ]
 
 const ParallaxImages = () => {
