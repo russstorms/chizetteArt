@@ -66,7 +66,7 @@ const ChizetteArt = () => {
             <Contact />
           </CrudProvider>
         <Footer />
-        <video preload="true" loop="true" autoPlay="autoplay" muted>
+        <video preload="true" loop={true} autoPlay="autoplay" muted>
           <source type="video/mp4" src={require('./chizetteArtCrystal.mp4')}></source>
         </video>
       </AdminProvider>

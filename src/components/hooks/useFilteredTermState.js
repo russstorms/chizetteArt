@@ -37,7 +37,7 @@ export default initialFilteredTermState => {
       let splashList = []
 
       if (filteredTerm === 'Splash') {
-        artList.map((art) => {
+        artList.forEach((art) => {
           const medium = art.medium
           // First Three Art
           if (!medium.includes('Jewelry') && !medium.includes('Photograph') && artCounter < 3) {
