@@ -35,7 +35,8 @@ const ComposeArt = () => {
     let url = ev.url
     let price = ev.price
 
-    return postArt(title, year, medium, url, price)
+    postArt(title, year, medium, url, price)
+    setOpen(false)
   }
 
   return (
