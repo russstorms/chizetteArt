@@ -57,6 +57,7 @@ export function FilterProvider(props) {
           photoCounter++
           photoArr.push(art)
         }
+        // Concatenate into one array
         splashList = artArr.concat(jewelryArr, photoArr)
       })
       return splashList
@@ -76,6 +77,8 @@ export function FilterProvider(props) {
           return medium.includes('Jewelry')
           // Don't Filter
         } else if (filteredTerm === 'All') {
+          return medium
+        } else {
           return medium
         }
       })
