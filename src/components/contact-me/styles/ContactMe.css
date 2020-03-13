@@ -5,14 +5,10 @@
 .contactContainer {
   text-align: center;
   padding: 20px 40px;
-  margin-top: 400px;
+  margin-top: 100px;
   height: auto;
   width: 100%;
   background: radial-gradient(circle, rgba(119, 25, 155, 0.6) 30%, rgba(0 , 212, 255, 0.3) 90%);
-  /* background-image: url('https://res.cloudinary.com/chizetteart/image/upload/v1556310776/chizetteArt%20-%20Compressed/contactme.png');
-  background-repeat: no-repeat;
-  background-attachment: initial;
-  background-position: center; */
 }
 
 .bigLetter {
