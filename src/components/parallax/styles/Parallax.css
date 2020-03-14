@@ -15,7 +15,9 @@ body {
   animation: scaleInOut 5s infinite;
   z-index: -1;
   overflow-x: hidden;
-  -webkit-touch-callout: inherit;
+  @supports (-webkit-touch-callout: inherit) {
+    background-attachment: scroll;
+  }
 }
 
 @keyframes scaleInOut {
