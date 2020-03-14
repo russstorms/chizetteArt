@@ -2,10 +2,6 @@ body {
   overflow-x: hidden;
 }
 
-.ParallaxImages {
-  background-attachment: scroll;
-}
-
 .changingImg {
   position: absolute;
   top: 190px;
