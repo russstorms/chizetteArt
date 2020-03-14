@@ -1,9 +1,5 @@
 @media only screen and (min-width: 450px) {
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 90px);
-    height: 304px;
-  }
+
 }
 
 @media only screen and (min-width: 500px) {
@@ -24,19 +20,10 @@
     top: 2350px;
   }
 
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 90px);
-    height: 320px;
-  }
 }
 
 @media only screen and (min-width: 550px) {
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 90px);
-    height: 382px;
-  }
+
 }
 
 /* SplashList & Crystal */
@@ -56,20 +43,6 @@
     top: 2450px;
     left: 100px;
   }
-
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 90px);
-    height: 415px;
-    margin-bottom: -269px;
-  }
-  #darkStripes :nth-child(4) {
-    bottom: 43%;
-    left: 72%;
-    border-top: 121px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 21px solid #5532FF;
-  }
 }
 
 @media only screen and (min-width: 650px) {
@@ -87,13 +60,6 @@
     top: 2520px;
     left: 100px;
   }
-
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 90px);
-    height: 463px;
-    margin-bottom: -303px;
-  }
 }
 
 @media only screen and (min-width: 720px) {
@@ -110,20 +76,6 @@
   .viewPhotography {
     top: 2590px;
     left: 160px;
-  }
-
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 180px);
-    height: 447px;
-    margin-bottom: -269px;
-  }
-  #darkStripes :nth-child(4) {
-    bottom: 37%;
-    left: 76%;
-    border-top: 171px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 27px solid #5532FF;
   }
 }
 
@@ -209,44 +161,12 @@
   .quote {
     font-size: 1.2em;
   }
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 180px);
-    height: 489px;
-    margin-bottom: -322px;
-  }
 }
 
 @media only screen and (min-width: 850px) {
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 180px);
-    height: 555px;
-    margin-bottom: -362px;
-  }
-  #darkStripes :nth-child(4) {
-    bottom: 45%;
-    left: 70%;
-    border-top: 171px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 27px solid #5532FF;
-  }
 }
 
 @media only screen and (min-width: 920px) {
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 180px);
-    height: 624px;
-    margin-bottom: -416px;
-  }
-  #darkStripes :nth-child(4) {
-    bottom: 45%;
-    left: 73%;
-    border-top: 171px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 27px solid #5532FF;
-  }
 }
 
 /* Desktops */
@@ -267,20 +187,6 @@
     top: 50%;
     justify-content: space-between;
   }
-
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 180px);
-    height: 670px;
-    margin-bottom: -450px;
-  }
-  #darkStripes :nth-child(4) {
-    bottom: 47%;
-    left: 68%;
-    border-top: 238px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 36px solid #5532FF;
-  }
 }
 
 @media only screen and (min-width: 1060px) {
@@ -297,22 +203,9 @@
   .poster {
     max-width: 250px;
   }
-
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 180px);
-    height: 731px;
-    margin-bottom: -489px;
-  }
 }
 
 @media only screen and (min-width: 1149px) {
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 310px);
-    height: 701px;
-    margin-bottom: -466px;
-  }
 }
 
 @media only screen and (min-width: 1199px) {
@@ -324,29 +217,9 @@
   .viewPhotography {
     top: 760px;
   }
-
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 310px);
-    height: 740px;
-    margin-bottom: -489px;
-  }
 }
 
 @media only screen and (min-width: 1249px) {
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 310px);
-    height: 790px;
-    margin-bottom: -519px;
-  }
-  #darkStripes :nth-child(4) {
-    bottom: 47%;
-    left: 71%;
-    border-top: 238px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 36px solid #5532FF;
-  }
 }
 
 @media only screen and (min-width: 1299px) {
@@ -363,29 +236,9 @@
   .poster {
     max-width: 270px;
   }
-
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 310px);
-    height: 823px;
-    margin-bottom: -544px;
-  }
 }
 
 @media only screen and (min-width: 1399px) {
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 310px);
-    height: 903px;
-    margin-bottom: -593px;
-  }
-  #darkStripes :nth-child(4) {
-    bottom: 47%;
-    left: 72%;
-    border-top: 238px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 36px solid #5532FF;
-  }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -401,32 +254,9 @@
   .viewPhotography {
     top: 860px;
   }
-
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 310px);
-    height: 987px;
-    margin-bottom: -654px;
-  }
-  #darkStripes :nth-child(4) {
-    bottom: 48%;
-    left: 71%;
-    border-top: 269px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 55px solid #5532FF;
-  }
 }
 
 @media only screen and (min-width: 1500px) {
-  /* Crystal */
-  #stripes, #darkStripes, #foreGround {
-    width: calc(100% - 310px);
-    height: 1153px;
-    margin-bottom: -756px;
-  }
-  #darkStripes :nth-child(4) {
-    bottom: 48%;
-    left: 73%;
-  }
+  
 }
 
