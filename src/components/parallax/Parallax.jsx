@@ -34,7 +34,7 @@ const ParallaxImages = () => {
     <animated.div
       key={key}
       className="changingImg"
-      style={{ ...props, backgroundImage: `url(${item.url})`, backgroundAttachment: 'fixed' }}
+      style={{ ...props, backgroundImage: `url(${item.url})` }}
     />
   ))
 
