@@ -23,7 +23,7 @@
   position: absolute;
   top: 200px;
   right: 0;
-  z-index: 99;
+  z-index: 0;
   padding: 15px 20px;
   text-align: center;
   color: rgb(99, 95, 84);
