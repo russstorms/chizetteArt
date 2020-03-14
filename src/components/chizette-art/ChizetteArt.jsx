@@ -8,6 +8,7 @@ import LoginForm from '../login-form/LoginForm'
 import Contact from '../contact-me/ContactMe'
 import Footer from '../footer/Footer'
 
+// Providers
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { AdminProvider } from "../../context/adminContext"
 import { CrudProvider } from "../../context/crudContext"
