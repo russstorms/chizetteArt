@@ -48,3 +48,4 @@ const ParallaxImages = () => {
 }
 
 export default ParallaxImages
+
