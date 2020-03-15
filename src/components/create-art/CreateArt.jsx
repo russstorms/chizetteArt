@@ -1,8 +1,7 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useReducer } from 'react'
 import { CrudContext } from "../../context/crudContext"
 import { Modal, Backdrop, Fade, TextField } from '@material-ui/core'
-import { formReducer } from '../reducers/formReducer'
-
+import { FormReducer, reducer } from '../reducers/formReducer'
 
 // Styles
 import './styles/CreateArt.css'
@@ -18,24 +17,18 @@ const initialState = {
 
 // Admin — Create new art
 const ComposeArt = () => {
-  const [formState, dispatch] = formReducer(initialState)
+  const [formState, dispatch] = FormReducer(reducer, initialState)
+  // Form State
+  const { title, year, medium, url, price } = formState
 
   const onChange = (e) => {
     dispatch({ field: e.target.name, value: e.target.value })
   }
-  
-  // Form State
-  const { title, year, medium, url, price } = formState
-
-  // const [title, setTitle] = useState('')
-  // const [year, setYear] = useState('')
-  // const [medium, setMedium] = useState('')
-  // const [url, setUrl] = useState('')
-  // const [price, setPrice] = useState('')
 
   // Contexts
   const { postArt } = useContext(CrudContext)
 
+  // Modal state
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => {
@@ -86,11 +79,6 @@ const ComposeArt = () => {
                 e.preventDefault()
                 console.log('created')
                 createArt({title, year, medium, url, price})
-                // setTitle('')
-                // setYear('')
-                // setMedium('')
-                // setUrl('')
-                // setPrice('')
               }}
             >
               <h4 className="formTitle">Create Art</h4>
