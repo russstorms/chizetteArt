@@ -1,15 +1,20 @@
 import { useReducer } from "react"
 
-const reducer = (state, { field, value }) => {
-  return {
-    ...state,
-    [field]: value
+const init = (initialState) => {
+  return {initialState}
+}
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'form':
+      return { ...state, [action.field]: action.value }
+    case 'reset':
+      return init(action.payload)
   }
 }
 
 const FormReducer = (initialState, reducer) => {
   const [state, dispatch] = useReducer(initialState, reducer)
-  
   return [state, dispatch]
 }
 

@@ -1,4 +1,4 @@
-import React, { useState, useContext, useReducer } from 'react'
+import React, { useState, useContext } from 'react'
 import { CrudContext } from "../../context/crudContext"
 import { Modal, Backdrop, Fade, TextField } from '@material-ui/core'
 import { FormReducer, reducer } from '../reducers/formReducer'
@@ -7,22 +7,21 @@ import { FormReducer, reducer } from '../reducers/formReducer'
 import './styles/CreateArt.css'
 import '../theme.css'
 
-const initialState = {
-  title: '',
-  year: '',
-  medium: '',
-  url: '',
-  price: '',
-}
-
 // Admin — Create new art
 const ComposeArt = () => {
+  const initialState = {
+    title: '',
+    year: '',
+    medium: '',
+    url: '',
+    price: '',
+  }
+  // State Reducer
   const [formState, dispatch] = FormReducer(reducer, initialState)
-  // Form State
   const { title, year, medium, url, price } = formState
 
   const onChange = (e) => {
-    dispatch({ field: e.target.name, value: e.target.value })
+    dispatch({ type: 'form', field: e.target.name, value: e.target.value })
   }
 
   // Contexts
@@ -47,6 +46,7 @@ const ComposeArt = () => {
     let price = ev.price
 
     postArt(title, year, medium, url, price)
+    dispatch({ type: 'reset', payload: initialState })
     setOpen(false)
   }
 
