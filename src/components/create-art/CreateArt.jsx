@@ -1,19 +1,37 @@
 import React, { useState, useContext } from 'react'
 import { CrudContext } from "../../context/crudContext"
 import { Modal, Backdrop, Fade, TextField } from '@material-ui/core'
+import { formReducer } from '../reducers/formReducer'
+
 
 // Styles
 import './styles/CreateArt.css'
 import '../theme.css'
 
+const initialState = {
+  title: '',
+  year: '',
+  medium: '',
+  url: '',
+  price: '',
+}
+
 // Admin — Create new art
 const ComposeArt = () => {
+  const [formState, dispatch] = formReducer(initialState)
+
+  const onChange = (e) => {
+    dispatch({ field: e.target.name, value: e.target.value })
+  }
+  
   // Form State
-  const [title, setTitle] = useState('')
-  const [year, setYear] = useState('')
-  const [medium, setMedium] = useState('')
-  const [url, setUrl] = useState('')
-  const [price, setPrice] = useState('')
+  const { title, year, medium, url, price } = formState
+
+  // const [title, setTitle] = useState('')
+  // const [year, setYear] = useState('')
+  // const [medium, setMedium] = useState('')
+  // const [url, setUrl] = useState('')
+  // const [price, setPrice] = useState('')
 
   // Contexts
   const { postArt } = useContext(CrudContext)
@@ -68,56 +86,61 @@ const ComposeArt = () => {
                 e.preventDefault()
                 console.log('created')
                 createArt({title, year, medium, url, price})
-                setTitle('')
-                setYear('')
-                setMedium('')
-                setUrl('')
-                setPrice('')
+                // setTitle('')
+                // setYear('')
+                // setMedium('')
+                // setUrl('')
+                // setPrice('')
               }}
             >
               <h4 className="formTitle">Create Art</h4>
               <TextField
+                name="title"
                 variant="outlined"
                 value={title}
-                onChange={e => setTitle(e.target.value)}
+                onChange={onChange}
                 margin="normal"
                 label="Title"
                 fullWidth
                 required
               />
               <TextField
+                name="year"
                 type="number"
                 variant="outlined"
                 value={year}
-                onChange={e => setYear(e.target.value)}
+                onChange={onChange}
                 margin="normal"
                 label="Year"
                 fullWidth
                 required
               />
               <TextField
+                name="medium"
                 variant="outlined"
                 value={medium}
-                onChange={e => setMedium(e.target.value)}
+                onChange={onChange}
                 margin="normal"
                 label="Medium"
                 fullWidth
                 required
               />
               <TextField
+                name="url"
                 variant="outlined"
                 value={url}
-                onChange={e => setUrl(e.target.value)}
+                onChange={onChange}
                 margin="normal"
                 label="Url"
                 fullWidth
                 required
               />
               <TextField
+                name="price"
                 type="number"
                 variant="outlined"
                 value={price}
-                onChange={e => setPrice(e.target.value)}
+                onChange={onChange}
                 margin="normal"
                 label="Price"
                 fullWidth
