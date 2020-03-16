@@ -16,6 +16,7 @@ const ComposeArt = () => {
     url: '',
     price: '',
   }
+
   // State Reducer
   const [formState, dispatch] = FormReducer(reducer, initialState)
   const { title, year, medium, url, price } = formState
@@ -56,7 +57,7 @@ const ComposeArt = () => {
         className="commonBtn"
         onClick={handleOpen}
       >
-          Create Art
+        Create Art
       </button>
       <Modal
         aria-labelledby="transition-modal-title"

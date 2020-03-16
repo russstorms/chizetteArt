@@ -4,14 +4,14 @@ import { CrudContext } from "../../context/crudContext"
 import EditArt from '../edit-art/EditArt'
 import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
 import ScrollAnimation from 'react-animate-on-scroll'
-// import StripeCheckout from 'react-stripe-checkout'
+import StripeCheckout from 'react-stripe-checkout'
 
 // Styles
 import './styles/Art.css'
 import 'animate.css/animate.min.css'
 
 // Stripe Test Key
-// const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
+const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
 
 const Art = ({ id, modalId, art, artList, filteredTerm }) => {
   const [open, setOpen] = useState(false)
@@ -51,43 +51,42 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
     return deleteArt(ev.target.id)
   }
 
-  // // TODO — Swap test key for live key
-  // const stripeBtn = async (token) => {
-  //   // const API = process.env.REACT_APP_API
-  //   const API = 'http://localhost:3000'
-  //   const artList = artList[count]
-  //   console.log('TOKEN>>>', token.card)
+  // TODO — Swap test key for live key
+  const stripeBtn = async (token) => {
+    // const API = process.env.REACT_APP_API
+    const API = 'http://localhost:3000'
+    const artList = artList[count]
+    console.log('TOKEN>>>', token.card)
     
-  //   await fetch(`${API}/stripe`, {
-  //     method: 'POST',
-  //     headers: {
-  //       'Authorization': `Bearer ${stripeKey}`,
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json',
-  //     },
-  //     body: JSON.stringify({
-  //       amount: artList.price * 100,
-  //       email: token.email,
-  //       artPiece: artList.title,
-  //       artMedium: artList.medium,
-  //       artYear: artList.year,
-  //       art: artList.poster,
-  //       stripeToken: token.id
-  //     }),
-  //   })
-  //   .then(response => response.json())
-  //     .then(charge => {
-  //       console.log('charge>>>', charge)
-  //     })
-  // }
+    await fetch(`${API}/stripe`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${stripeKey}`,
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        amount: artList.price * 100,
+        email: token.email,
+        artPiece: artList.title,
+        artMedium: artList.medium,
+        artYear: artList.year,
+        art: artList.poster,
+        stripeToken: token.id
+      }),
+    })
+    .then(response => response.json())
+      .then(charge => {
+        console.log('charge>>>', charge)
+      })
+  }
 
-  // // Logic to remove 'Purchase Print' button from Jewelry and Photos
-  // const handleArtWithoutPrintAndOtherMediums =
-  //   //  Current Print of 'Gold + Blue' does not have proper resolution to sell
-  //   !artList[count].title.includes('Gold + Blue') 
-  //   && !artList[count].medium.includes('Jewelry') 
-  //   && !artList[count].medium.includes('Photo')
-
+  // Logic to remove 'Purchase Print' button from Jewelry and Photos
+  const handleArtWithoutPrintAndOtherMediums =
+    //  Current Print of 'Gold + Blue' does not have proper resolution to sell
+    !artList[count].title.includes('Gold + Blue') 
+    && !artList[count].medium.includes('Jewelry') 
+    && !artList[count].medium.includes('Photo')
 
   return (
     // Art piece
@@ -147,17 +146,17 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                     <div className="singleViewMedium animated fadeInRight delay-1s">
                       {artList[counter].medium}
                     </div>
-                    {/* {handleArtWithoutPrintAndOtherMediums &&
+                    {handleArtWithoutPrintAndOtherMediums &&
                       <div className="singleViewPrice">${artList[counter].price} USD</div> 
                     }
                     {handleArtWithoutPrintAndOtherMediums && 
-                      <StripeCheckout className="singleViewPriceButton" 
+                      <StripeCheckout
                         token={stripeBtn}
                         stripeKey={stripeKey}
                         name="chizetteArt"
                         description="Purchase Print"
-                        image={artList.poster}
-                        amount={artList.price * 100}
+                        image={artList[counter].poster}
+                        amount={artList[counter].price * 100}
                         currency="USD"
                         locale="auto"
                         shippingAddress
@@ -165,12 +164,13 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                         zipCode={true}
                         >
                         <div>
-                          <button className="singleViewPriceButton">
+                          <h6 style={{color: 'white'}}>Purchases Unavailable — Test Mode</h6>
+                          <button className="commonBtn singleViewPriceButton">
                             Purchase Print
                           </button>
                         </div>
                       </StripeCheckout>
-                    } */}
+                    }
                   </div>
                   <div className="ctrlButtons">
                     <div onClick={prevClick} className="prevButton">
