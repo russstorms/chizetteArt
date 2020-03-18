@@ -10,6 +10,8 @@ const reducer = (state, action) => {
       return { ...state, [action.field]: action.value }
     case 'reset':
       return init(action.payload)
+    default:
+      return
   }
 }
 

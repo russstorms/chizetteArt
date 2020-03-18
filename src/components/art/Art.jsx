@@ -55,7 +55,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
   const stripeBtn = async (token) => {
     // const API = process.env.REACT_APP_API
     const API = 'http://localhost:3000'
-    const artList = artList[count]
+    const artList = artList[counter]
     console.log('TOKEN>>>', token.card)
     
     await fetch(`${API}/stripe`, {
@@ -162,6 +162,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                         shippingAddress
                         billingAddress={true}
                         zipCode={true}
+                        sameSite="None"
                         >
                         <div>
                           <h6 style={{color: 'white'}}>Purchases Unavailable — Test Mode</h6>
