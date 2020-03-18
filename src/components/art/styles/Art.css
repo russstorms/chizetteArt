@@ -37,6 +37,7 @@
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: -1;
 }
 
 .nextButton {
@@ -66,10 +67,6 @@
   font-size: 1.3em;
   transition-duration: .5s;
 }
-
-
-
-
 
 /* Art Info */
 .artInfoContainer {
@@ -105,18 +102,9 @@
   }
 
   .singleViewPriceButton {
-    background-image: linear-gradient(to bottom, rgb(138, 222, 248), rgb(69, 166, 196));
-    color: white;
-    font-weight: bold;
-    border-radius: 5%;
-    border: 1px solid rgb(69, 166, 196);
-    z-index: 9999;
+    font-size: 1em;
+    margin: 5px;
   }
-
-  .singleViewPriceButton:hover {
-    background-image: linear-gradient(to bottom, rgb(69, 166, 196), rgb(138, 222, 248));
-  }
-
 
 /* Admin Controls */
 .modalStyle {

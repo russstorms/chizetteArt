@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { CrudContext } from "../../context/crudContext"
 import { Modal, Backdrop, Fade, TextField } from '@material-ui/core'
+import { FormReducer, reducer } from '../reducers/formReducer'
 
 // Styles
 import './styles/CreateArt.css'
@@ -8,16 +9,26 @@ import '../theme.css'
 
 // Admin — Create new art
 const ComposeArt = () => {
-  // Form State
-  const [title, setTitle] = useState('')
-  const [year, setYear] = useState('')
-  const [medium, setMedium] = useState('')
-  const [url, setUrl] = useState('')
-  const [price, setPrice] = useState('')
+  const initialState = {
+    title: '',
+    year: '',
+    medium: '',
+    url: '',
+    price: '',
+  }
+
+  // State Reducer
+  const [formState, dispatch] = FormReducer(reducer, initialState)
+  const { title, year, medium, url, price } = formState
+
+  const onChange = (e) => {
+    dispatch({ type: 'form', field: e.target.name, value: e.target.value })
+  }
 
   // Contexts
   const { postArt } = useContext(CrudContext)
 
+  // Modal state
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => {
@@ -36,6 +47,7 @@ const ComposeArt = () => {
     let price = ev.price
 
     postArt(title, year, medium, url, price)
+    dispatch({ type: 'reset', payload: initialState })
     setOpen(false)
   }
 
@@ -45,7 +57,7 @@ const ComposeArt = () => {
         className="commonBtn"
         onClick={handleOpen}
       >
-          Create Art
+        Create Art
       </button>
       <Modal
         aria-labelledby="transition-modal-title"
@@ -68,56 +80,56 @@ const ComposeArt = () => {
                 e.preventDefault()
                 console.log('created')
                 createArt({title, year, medium, url, price})
-                setTitle('')
-                setYear('')
-                setMedium('')
-                setUrl('')
-                setPrice('')
               }}
             >
               <h4 className="formTitle">Create Art</h4>
               <TextField
+                name="title"
                 variant="outlined"
                 value={title}
-                onChange={e => setTitle(e.target.value)}
+                onChange={onChange}
                 margin="normal"
                 label="Title"
                 fullWidth
                 required
               />
               <TextField
+                name="year"
                 type="number"
                 variant="outlined"
                 value={year}
-                onChange={e => setYear(e.target.value)}
+                onChange={onChange}
                 margin="normal"
                 label="Year"
                 fullWidth
                 required
               />
               <TextField
+                name="medium"
                 variant="outlined"
                 value={medium}
-                onChange={e => setMedium(e.target.value)}
+                onChange={onChange}
                 margin="normal"
                 label="Medium"
                 fullWidth
                 required
               />
               <TextField
+                name="url"
                 variant="outlined"
                 value={url}
-                onChange={e => setUrl(e.target.value)}
+                onChange={onChange}
                 margin="normal"
                 label="Url"
                 fullWidth
                 required
               />
               <TextField
+                name="price"
                 type="number"
                 variant="outlined"
                 value={price}
-                onChange={e => setPrice(e.target.value)}
+                onChange={onChange}
                 margin="normal"
                 label="Price"
                 fullWidth
