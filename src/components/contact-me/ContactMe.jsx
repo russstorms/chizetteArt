@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { AdminContext } from "../../context/adminContext"
+import { ThemeContext } from "../../context/themeContext"
 import ScrollAnimation from 'react-animate-on-scroll'
 import ComposeArt from '../create-art/CreateArt'
 
@@ -9,6 +10,7 @@ import './styles/ContactMe.css'
 const Contact = () => {
   // Contexts
   const { token } = useContext(AdminContext)
+  const { ThemeSwitch } = useContext(ThemeContext)
 
   return (
     <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
@@ -58,7 +60,10 @@ const Contact = () => {
           </h5>
           {
             token !== '' &&
-            <ComposeArt />
+            <>
+              <ComposeArt />
+              { ThemeSwitch }
+            </>
           }
         </div>
       </div>

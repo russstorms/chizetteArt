@@ -5,7 +5,7 @@ body {
 
 .Navbar {
   text-align: left;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
   position: fixed;
   right: 0;
   left: 0;

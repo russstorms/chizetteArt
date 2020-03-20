@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import logo from './styles/chizetteLogo.jpg'
 import ColorString from '../helpers/ColorString'
+import { ThemeContext } from "../../context/themeContext"
 
 // Styles
 import './styles/Navbar.css'
 
 const Navbar = ({ toggleLoginForm, secretLogin }) => {
+  // Contexts
+  const { checked } = useContext(ThemeContext)
 
   // Admin — Login form
   secretLogin = (ev) => {
@@ -14,7 +17,12 @@ const Navbar = ({ toggleLoginForm, secretLogin }) => {
   }
 
   return (
-    <div className="Navbar">
+    <div
+      className="Navbar"
+      style={{
+        backgroundColor: checked ? '#242424' : '#FFFFFF'
+      }}
+    >
       <a className="anchorToHome" href="/">
         <img className="logo" src={logo} alt="logo"></img>
       </a>

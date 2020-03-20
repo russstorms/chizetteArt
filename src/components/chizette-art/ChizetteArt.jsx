@@ -12,6 +12,7 @@ import Footer from '../footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { AdminProvider } from "../../context/adminContext"
 import { CrudProvider } from "../../context/crudContext"
+import { ThemeProvider } from "../../context/themeContext"
 
 // Custom Hooks
 import useContactState from '../hooks/useContactState'
@@ -31,56 +32,58 @@ const ChizetteArt = () => {
 
   return (
     <ParallaxProvider className="App container">
-      <AdminProvider>
-        <Navbar
-          toggleLoginForm={toggleLoginForm}
-        />
-        <Drawer
-          toggleContactMe={toggleContactMe}
-          contactMe={contactMe}
-          configureFilteredTerm={configureFilteredTerm}
-        />
-          {
-            filteredTerm === 'Splash' ?
-              <Parallax />
-            : 
-            <i>
-              <h4 className="filteredTitle">
-                {filteredTerm}
-              </h4>
-            </i>
-          }
-          {
-            secretLogIn &&
-            <LoginForm />
-          }
-          <CrudProvider>
-            { filteredTerm === 'Splash' &&
-              <SplashList
-                configureFilteredTerm={configureFilteredTerm}
-              />
-            }
-            <ArtList
-              filteredTerm={filteredTerm}
-              filterArtList={filterArtList}
-            />
-            <Contact />
-          </CrudProvider>
-        <Footer />
-        <video
-          className="crystalVid"
-          width="80%"
-          preload="true"
-          loop={true}
-          autoPlay="autoplay"
-          muted
-        >
-          <source
-            type="video/mp4"
-            src={require('./chizetteArtCrystal.mp4')}
+      <ThemeProvider>
+        <AdminProvider>
+          <Navbar
+            toggleLoginForm={toggleLoginForm}
           />
-        </video>
-      </AdminProvider>
+          <Drawer
+            toggleContactMe={toggleContactMe}
+            contactMe={contactMe}
+            configureFilteredTerm={configureFilteredTerm}
+          />
+            {
+              filteredTerm === 'Splash' ?
+                <Parallax />
+              : 
+              <i>
+                <h4 className="filteredTitle">
+                  {filteredTerm}
+                </h4>
+              </i>
+            }
+            {
+              secretLogIn &&
+              <LoginForm />
+            }
+            <CrudProvider>
+              { filteredTerm === 'Splash' &&
+                <SplashList
+                  configureFilteredTerm={configureFilteredTerm}
+                />
+              }
+              <ArtList
+                filteredTerm={filteredTerm}
+                filterArtList={filterArtList}
+              />
+              <Contact />
+            </CrudProvider>
+          <Footer />
+          <video
+            className="crystalVid"
+            width="80%"
+            preload="true"
+            loop={true}
+            autoPlay="autoplay"
+            muted
+          >
+            <source
+              type="video/mp4"
+              src={require('./chizetteArtCrystal.mp4')}
+            />
+          </video>
+        </AdminProvider>
+      </ThemeProvider>
     </ParallaxProvider>
   )
 }

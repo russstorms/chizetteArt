@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { AdminContext } from "../../context/adminContext"
+import { ThemeContext } from "../../context/themeContext"
 import SortRoundedIcon from '@material-ui/icons/SortRounded'
 import {
   Drawer,
@@ -29,6 +30,7 @@ const DrawerSideNav = ({ configureFilteredTerm, toggleContactMe, contactMe }) =>
 
   // Contexts
   const { logoutClick, token } = useContext(AdminContext)
+  const { checked } = useContext(ThemeContext)
 
   return (
     <div className="Drawer">
