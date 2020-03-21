@@ -110,7 +110,7 @@ const ComposeArt = () => {
                 value={medium}
                 onChange={onChange}
                 margin="normal"
-                label="Medium"
+                label="Medium ('Photograph', 'Jewelry', else Art)"
                 fullWidth
                 required
               />

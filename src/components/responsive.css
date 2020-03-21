@@ -140,6 +140,10 @@
     width: 475px;
   }
 
+  .printContainer {
+    display: flex;
+  }
+
   .ctrlButtons {
     bottom: -10px;
     justify-content: space-between;

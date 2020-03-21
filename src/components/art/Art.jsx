@@ -163,8 +163,10 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                         zipCode={true}
                         sameSite="None"
                         >
-                        <div>
-                          <h6 style={{color: 'white'}}>Purchases Unavailable — Test Mode</h6>
+                        <div className="printContainer">
+                          <h6 style={{color: 'white'}}>
+                            Prints Unavailable — Test Mode
+                          </h6>
                           <button className="commonBtn singleViewPriceButton">
                             Purchase Print
                           </button>
