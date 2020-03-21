@@ -10,7 +10,7 @@ import './styles/ArtList.css'
 const ArtList = ({ filterArtList, filteredTerm}) => {
   // Contexts
   const { artList } = useContext(CrudContext)
-  const { darkTheme, lightThemeStyles, darkThemeStyles } = useContext(ThemeContext)
+  const { plantTheme, crystalThemeStyles, plantThemeStyles } = useContext(ThemeContext)
 
   // Scroll to the top to animate artList
   useEffect(() => {
@@ -60,7 +60,7 @@ const ArtList = ({ filterArtList, filteredTerm}) => {
       id="artList"
       className={`ArtList ${filteredTerm !== 'Splash' ? 'artListPadding' : 'splashListPadding'}`}
       style={
-        darkTheme ? darkThemeStyles : lightThemeStyles
+        plantTheme ? plantThemeStyles : crystalThemeStyles
       }
     >
       <div

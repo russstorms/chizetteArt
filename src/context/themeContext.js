@@ -5,20 +5,20 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 export const ThemeContext = createContext()
 
 export const ThemeProvider = (props) => {
-  const [darkTheme, setDarkTheme] = useState(false)
+  const [plantTheme, setPlantTheme] = useState(false)
 
   const toggleChecked = () => {
-    setDarkTheme(prev => !prev)
+    setPlantTheme(prev => !prev)
   }
 
-  const lightThemeStyles = {
+  const crystalThemeStyles = {
     backgroundColor: '#FFFFFF',
     color: 'rgb(99, 95, 84)',
   }
 
-  const darkThemeStyles = {
-    backgroundColor: '#1D2831',
-    color: 'white',
+  const plantThemeStyles = {
+    backgroundColor: '#fff1e0',
+    color: '#007500',
   }
 
   const ThemeSwitch = (
@@ -26,12 +26,12 @@ export const ThemeProvider = (props) => {
       <FormControlLabel
         control={
           <Switch 
-            checked={darkTheme}
+            checked={plantTheme}
             onChange={toggleChecked}
             color="primary"
           />
         }
-        label="Night Theme"
+        label="Plant Theme"
       />
     </FormGroup>
   )
@@ -39,9 +39,9 @@ export const ThemeProvider = (props) => {
   return (
     <ThemeContext.Provider
       value={{
-        lightThemeStyles,
-        darkThemeStyles,
-        darkTheme,
+        crystalThemeStyles,
+        plantThemeStyles,
+        plantTheme,
         ThemeSwitch,
       }}
     >

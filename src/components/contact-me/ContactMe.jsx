@@ -10,14 +10,14 @@ import './styles/ContactMe.css'
 const Contact = () => {
   // Contexts
   const { token } = useContext(AdminContext)
-  const { ThemeSwitch, darkTheme, lightThemeStyles, darkThemeStyles } = useContext(ThemeContext)
+  const { ThemeSwitch, plantTheme, crystalThemeStyles, plantThemeStyles } = useContext(ThemeContext)
 
   return (
     <div
       className='Contact'
       id='contact'
       style={
-        darkTheme ? darkThemeStyles : lightThemeStyles
+        plantTheme ? plantThemeStyles : crystalThemeStyles
       }
     >
       <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">

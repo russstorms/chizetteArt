@@ -6,7 +6,7 @@ import './styles/Footer.css'
 
 const Footer = () => {
   // Contexts
-  const { darkTheme, lightThemeStyles, darkThemeStyles } = useContext(ThemeContext)
+  const { plantTheme, crystalThemeStyles, plantThemeStyles } = useContext(ThemeContext)
 
   return (
     <main className="Footer" id="Footer">
@@ -14,7 +14,7 @@ const Footer = () => {
         <h1
           className="chizetteArtFooter"
           style={
-            darkTheme ? darkThemeStyles : lightThemeStyles
+            plantTheme ? plantThemeStyles : crystalThemeStyles
           }
         >
             chizetteArt

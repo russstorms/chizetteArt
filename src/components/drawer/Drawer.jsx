@@ -30,14 +30,14 @@ const DrawerSideNav = ({ configureFilteredTerm, toggleContactMe, contactMe }) =>
 
   // Contexts
   const { logoutClick, token } = useContext(AdminContext)
-  const { darkTheme, lightThemeStyles, darkThemeStyles } = useContext(ThemeContext)
+  const { plantTheme, crystalThemeStyles, plantThemeStyles } = useContext(ThemeContext)
 
   return (
     <div className="Drawer">
       <div
         className="menuIconContainer"
         style={
-          darkTheme ? darkThemeStyles : lightThemeStyles
+          plantTheme ? plantThemeStyles : crystalThemeStyles
         }
       >
         <SortRoundedIcon

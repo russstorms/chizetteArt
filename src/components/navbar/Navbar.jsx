@@ -8,7 +8,7 @@ import './styles/Navbar.css'
 
 const Navbar = ({ toggleLoginForm, secretLogin }) => {
   // Contexts
-  const { darkTheme, lightThemeStyles, darkThemeStyles } = useContext(ThemeContext)
+  const { plantTheme, crystalThemeStyles, plantThemeStyles } = useContext(ThemeContext)
 
   // Admin — Login form
   secretLogin = (ev) => {
@@ -20,7 +20,7 @@ const Navbar = ({ toggleLoginForm, secretLogin }) => {
     <div
       className="Navbar"
       style={
-        darkTheme ? darkThemeStyles : lightThemeStyles
+        plantTheme ? plantThemeStyles : crystalThemeStyles
       }
     >
       <a className="anchorToHome" href="/">
