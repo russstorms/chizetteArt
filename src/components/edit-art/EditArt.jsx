@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import { CrudContext } from "../../context/crudContext"
 import { Modal, Backdrop, Fade, TextField } from '@material-ui/core'
 
@@ -14,10 +14,18 @@ const EditArt = ({ id, art }) => {
   const [url, setUrl] = useState(art.poster)
   // const [price, setPrice] = useState('')
 
-  const [open, setOpen] = useState(false)
+  useEffect(() => {
+    setTitle(art.title)
+    setYear(art.year)
+    setMedium(art.medium)
+    setUrl(art.poster)
+  }, [art])
 
   // Contexts
   const { editArt } = useContext(CrudContext)
+
+  // Modal
+  const [open, setOpen] = useState(false)
 
   const handleOpen = () => {
     setOpen(true)
@@ -42,7 +50,7 @@ const EditArt = ({ id, art }) => {
         className="commonBtn"
         onClick={handleOpen}
       >
-          Edit Art
+        Edit Art
       </button>
       <Modal
         aria-labelledby="transition-modal-title"
