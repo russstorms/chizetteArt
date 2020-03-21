@@ -6,7 +6,7 @@ import Art from '../art/Art'
 import 'animate.css/animate.min.css'
 import './styles/ArtList.css'
 
-const ArtList = ({ filterArtList, filteredTerm}) => {
+const ArtList = ({ filterArtList, filteredTerm }) => {
   // Contexts
   const { artList } = useContext(CrudContext)
 

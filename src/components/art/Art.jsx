@@ -133,7 +133,6 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                     alt={`${art.title}, ${art.year}, ${art.medium}`}
                     title={art.title}
                   />
-
                   <div className="artInfoContainer">
                     <div className="singleViewTitle">
                       <i>
