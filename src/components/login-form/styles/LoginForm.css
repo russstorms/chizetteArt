@@ -1,7 +1,18 @@
 .LoginForm {
   padding: 50px 20px;
-  margin: 130px auto 0 auto;
-  width: 80%;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 0;
+  margin: 0 auto;
+  background-image: linear-gradient(to bottom right, #4D493E 50%, #8d8981);
+  z-index: 50;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+}
+
+.loginTitle {
+  text-shadow: 2px 2px #FFFFFF;
 }
 
 .MuiOutlinedInput-root {
