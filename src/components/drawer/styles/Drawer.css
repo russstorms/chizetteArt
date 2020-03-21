@@ -1,7 +1,6 @@
 .menuIconContainer {
-  color: rgb(99, 95, 84);
   position: fixed;
-  padding: 5px 15px;
+  padding: 5px 0 0 10px;
   z-index: 1300;
   left: 0;
   top: 140px;

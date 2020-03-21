@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react'
 import { CrudContext } from "../../context/crudContext"
+import { ThemeContext } from "../../context/themeContext"
 import Art from '../art/Art'
 
 // Styles
@@ -9,6 +10,7 @@ import './styles/ArtList.css'
 const ArtList = ({ filterArtList, filteredTerm}) => {
   // Contexts
   const { artList } = useContext(CrudContext)
+  const { darkTheme, lightThemeStyles, darkThemeStyles } = useContext(ThemeContext)
 
   // Scroll to the top to animate artList
   useEffect(() => {
@@ -57,8 +59,13 @@ const ArtList = ({ filterArtList, filteredTerm}) => {
     <div
       id="artList"
       className={`ArtList ${filteredTerm !== 'Splash' ? 'artListPadding' : 'splashListPadding'}`}
+      style={
+        darkTheme ? darkThemeStyles : lightThemeStyles
+      }
     >
-      <div className="wrapper">
+      <div
+        className="wrapper"
+      >
         { alterColumns() }
       </div>
     </div>

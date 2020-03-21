@@ -30,11 +30,16 @@ const DrawerSideNav = ({ configureFilteredTerm, toggleContactMe, contactMe }) =>
 
   // Contexts
   const { logoutClick, token } = useContext(AdminContext)
-  const { checked } = useContext(ThemeContext)
+  const { darkTheme, lightThemeStyles, darkThemeStyles } = useContext(ThemeContext)
 
   return (
     <div className="Drawer">
-      <div className="menuIconContainer">
+      <div
+        className="menuIconContainer"
+        style={
+          darkTheme ? darkThemeStyles : lightThemeStyles
+        }
+      >
         <SortRoundedIcon
           className="menuIcon"
           onClick={toggleDrawer('left', !state.left)}

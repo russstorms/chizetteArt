@@ -10,14 +10,17 @@ import './styles/ContactMe.css'
 const Contact = () => {
   // Contexts
   const { token } = useContext(AdminContext)
-  const { ThemeSwitch } = useContext(ThemeContext)
+  const { ThemeSwitch, darkTheme, lightThemeStyles, darkThemeStyles } = useContext(ThemeContext)
 
   return (
-    <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
-      <div
-        className='Contact'
-        id='contact'
-      >
+    <div
+      className='Contact'
+      id='contact'
+      style={
+        darkTheme ? darkThemeStyles : lightThemeStyles
+      }
+    >
+      <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
         <div 
           className="contactContainer"
         >
@@ -60,14 +63,12 @@ const Contact = () => {
           </h5>
           {
             token !== '' &&
-            <>
-              <ComposeArt />
-              { ThemeSwitch }
-            </>
+            <ComposeArt />
           }
+          { ThemeSwitch }
         </div>
-      </div>
-    </ScrollAnimation>
+      </ScrollAnimation>
+    </div>
   )
 }
 

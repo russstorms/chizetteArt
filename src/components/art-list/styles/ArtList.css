@@ -1,9 +1,12 @@
+.ArtList {
+  z-index: -1;
+}
+
 .splashListPadding {
   padding-top: 900px;
 }
 
 .artListPadding {
-  margin-top: 10px;
   padding-top: 200px;
 }
 
@@ -55,4 +58,5 @@
 .wrapper {
   display: grid;
   grid-template-columns: 1fr;
+
 }

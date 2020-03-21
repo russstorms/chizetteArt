@@ -8,7 +8,7 @@ import './styles/Navbar.css'
 
 const Navbar = ({ toggleLoginForm, secretLogin }) => {
   // Contexts
-  const { checked } = useContext(ThemeContext)
+  const { darkTheme, lightThemeStyles, darkThemeStyles } = useContext(ThemeContext)
 
   // Admin — Login form
   secretLogin = (ev) => {
@@ -19,9 +19,9 @@ const Navbar = ({ toggleLoginForm, secretLogin }) => {
   return (
     <div
       className="Navbar"
-      style={{
-        backgroundColor: checked ? '#242424' : '#FFFFFF'
-      }}
+      style={
+        darkTheme ? darkThemeStyles : lightThemeStyles
+      }
     >
       <a className="anchorToHome" href="/">
         <img className="logo" src={logo} alt="logo"></img>

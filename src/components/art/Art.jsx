@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { AdminContext } from "../../context/adminContext"
 import { CrudContext } from "../../context/crudContext"
+import { ThemeContext } from "../../context/themeContext"
 import EditArt from '../edit-art/EditArt'
 import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
 import ScrollAnimation from 'react-animate-on-scroll'
@@ -20,6 +21,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
   // Contexts
   const { token } = useContext(AdminContext)
   const { deleteArt } = useContext(CrudContext)
+  const { darkTheme, lightThemeStyles, darkThemeStyles } = useContext(ThemeContext)
 
   // Check counter to ensure it isn't longer than array
   let counter = count >= artList.length ? 0 : count
@@ -193,9 +195,14 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
         <ScrollAnimation
           animateIn="fadeInDown"
           animateOut="fadeOutUp"
-          offset={125}
+          offset={130}
         >
-          <div className="artTitle">
+          <div
+            className="artTitle"
+            style={
+              darkTheme ? darkThemeStyles : lightThemeStyles
+            }
+          >
             <b>{art.title}</b>
           </div>
         </ScrollAnimation>
