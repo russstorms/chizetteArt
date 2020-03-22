@@ -25,6 +25,8 @@ const handleClose = (event, reason) => {
 }
 
 const Snackbar = () => {
+  const classes = useStyles();
+
   return (
     <div className={classes.root}>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
@@ -35,3 +37,4 @@ const Snackbar = () => {
     </div>
   )
 }
+

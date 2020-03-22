@@ -116,9 +116,13 @@ export function CrudProvider(props) {
       },
     })
     if (response.status !== 200) {
-      alert(`Unable to erase this masterpiece!`)
+      setMessage("res not OK")
+      setOpen(true)
+      setSeverity("warning")
     } else {
-      alert(`Crumbled up and thrown away!`)
+      setMessage("Fetch worked")
+      setOpen(true)
+      setSeverity("success")
     }
     setArtList([...artList])
   }
