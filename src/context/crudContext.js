@@ -1,4 +1,9 @@
-import React, { createContext, useState, useEffect, useContext } from "react"
+import React, {
+  createContext,
+  useState,
+  useEffect,
+  useContext 
+} from "react"
 import { AdminContext } from "./adminContext"
 
 import useFilteredTermState from '../components/hooks/useFilteredTermState'
@@ -14,6 +19,11 @@ export function CrudProvider(props) {
   const token = useContext(AdminContext)
 
   const [artList, setArtList] = useState([])
+
+  // Snackbar State
+  const [open, setOpen] = useState(false)
+  const [severity, setSeverity] = useState("info")
+  const [message, setMessage] = useState("")
 
   // Custom Hooks
   const {filteredTerm, filterArtList} = useFilteredTermState('All')
@@ -53,9 +63,13 @@ export function CrudProvider(props) {
       body: JSON.stringify(artBody)
     })
     if (response.status !== 200) {
-      alert(`Unable to create this masterpiece!`)
+      setMessage("res not OK")
+      setOpen(true)
+      setSeverity("warning")
     } else {
-      alert(`Art Created!`)
+      setMessage("Fetch worked")
+      setOpen(true)
+      setSeverity("success")
     }
     setArtList([artBody, ...artList])
   }
@@ -112,6 +126,9 @@ export function CrudProvider(props) {
   return (
     <CrudContext.Provider
       value={{
+        open,
+        severity,
+        message,
         artList,
         filteredTerm,
         postArt,
