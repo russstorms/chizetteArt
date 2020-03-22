@@ -131,6 +131,7 @@ export function CrudProvider(props) {
     <CrudContext.Provider
       value={{
         open,
+        setOpen,
         severity,
         message,
         artList,
