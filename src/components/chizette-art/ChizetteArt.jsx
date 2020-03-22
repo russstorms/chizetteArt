@@ -12,6 +12,7 @@ import Footer from '../footer/Footer'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { AdminProvider } from "../../context/adminContext"
 import { CrudProvider } from "../../context/crudContext"
+import { SnackbarProvider } from "../../context/snackBarContext"
 
 // Custom Hooks
 import useContactState from '../hooks/useContactState'
@@ -54,18 +55,20 @@ const ChizetteArt = () => {
             secretLogIn &&
             <LoginForm />
           }
-          <CrudProvider>
-            { filteredTerm === 'Splash' &&
-              <SplashList
-                configureFilteredTerm={configureFilteredTerm}
+          <SnackbarProvider>
+            <CrudProvider>
+              { filteredTerm === 'Splash' &&
+                <SplashList
+                  configureFilteredTerm={configureFilteredTerm}
+                />
+              }
+              <ArtList
+                filteredTerm={filteredTerm}
+                filterArtList={filterArtList}
               />
-            }
-            <ArtList
-              filteredTerm={filteredTerm}
-              filterArtList={filterArtList}
-            />
-            <Contact />
-          </CrudProvider>
+              <Contact />
+            </CrudProvider>
+          </SnackbarProvider>
         <Footer />
         <video
           className="crystalVid"

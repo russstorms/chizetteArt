@@ -1,12 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Snackbar from "@material-ui/core/Snackbar"
 import MuiAlert from "@material-ui/lab/Alert"
 import { makeStyles } from "@material-ui/core/styles"
-
-import { CrudContext } from "../../context/crudContext"
-
-// Contexts
-const { open, setOpen, severity, message } = useContext(CrudContext)
+import { SnackbarContext } from "../../context/snackBarContext"
 
 const Alert = (props) => {
   return <MuiAlert elevation={6} variant="filled" {...props} />
@@ -21,20 +17,14 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const handleClose = (event, reason) => {
-  if (reason === "clickaway") {
-    return
-  }
-
-  setOpen(false)
-}
-
-const Snackbar = () => {
-  const classes = useStyles();
+const CustomSnackbar = () => {
+  // Contexts
+  const { open, severity, message, handleClose } = useContext(SnackbarContext)
+  const classes = useStyles()
 
   return (
     <div className={classes.root}>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
         <Alert onClose={handleClose} severity={severity}>
           {message}
         </Alert>
@@ -42,4 +32,6 @@ const Snackbar = () => {
     </div>
   )
 }
+
+export default CustomSnackbar
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 import { CrudContext } from "../../context/crudContext"
 import Art from '../art/Art'
+import CustomSnackbar from '../snackbar/Snackbar'
 
 // Styles
 import 'animate.css/animate.min.css'
@@ -61,6 +62,7 @@ const ArtList = ({ filterArtList, filteredTerm }) => {
       <div className="wrapper">
         { alterColumns() }
       </div>
+      <CustomSnackbar />
     </div>
   )
 }
