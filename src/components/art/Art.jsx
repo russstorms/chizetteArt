@@ -2,7 +2,10 @@ import React, { useState, useContext } from 'react'
 import { AdminContext } from "../../context/adminContext"
 import { CrudContext } from "../../context/crudContext"
 import EditArt from '../edit-art/EditArt'
-import { Modal, Button, Backdrop, Fade} from '@material-ui/core'
+import { Modal, Backdrop, Fade} from '@material-ui/core'
+import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
+import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
 import ScrollAnimation from 'react-animate-on-scroll'
 import StripeCheckout from 'react-stripe-checkout'
 
@@ -162,7 +165,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                         billingAddress={true}
                         zipCode={true}
                         sameSite="None"
-                        >
+                      >
                         <div className="printContainer">
                           <h6 style={{color: 'white'}}>
                             Prints Unavailable — Test Mode
@@ -175,13 +178,27 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                     }
                   </div>
                   <div className="ctrlButtons">
-                    <div onClick={prevClick} className="prevButton">
-                      <i className="carouselArrow large material-icons icon animated fadeInLeft delay-1s">
-                        chevron_left
-                      </i>
+                    <div
+                      onClick={prevClick}
+                      className="prevButton animated fadeInLeft delay-1s"
+                    >
+                      <ArrowLeftIcon
+                        fontSize="large"
+                        style={{
+                          fontSize: '8em',
+                        }}
+                      />
                     </div>
-                    <div onClick={nextClick} className="nextButton">
-                      <i className="carouselArrow large material-icons icon animated fadeInRight delay-1s">chevron_right</i>
+                    <div
+                      onClick={nextClick}
+                      className="nextButton animated fadeInRight delay-1s"
+                    >
+                      <ArrowRightIcon
+                        fontSize="large"
+                        style={{
+                          fontSize: '8em',
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -209,17 +226,14 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
               id={id}
               art={art}
             />
-            <Button
-              id={art.id}
-              onClick={(ev) => removeArt(ev)}
-              className="waves-effect waves-light btn-flat delButton">
-                <i 
-                  id={art.id}
-                  className="large material-icons icon deleteIcon"
-                >
-                  delete
-                </i>
-            </Button>
+            <div className="deleteContainer">
+              <DeleteForeverIcon 
+                id={art.id}
+                onClick={(ev) => removeArt(ev)}
+                className="deleteIcon"
+                fontSize="large"
+              />
+            </div>
           </div>
         }
       </div>

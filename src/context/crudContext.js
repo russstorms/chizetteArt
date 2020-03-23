@@ -18,7 +18,7 @@ export const CrudContext = createContext()
 export function CrudProvider(props) {
   // Grab token from AdminContext
   const token = useContext(AdminContext)
-  // Contexts
+  // Context for Snackbar
   const {
     open,
     severity,
