@@ -1,5 +1,7 @@
 @media only screen and (min-width: 450px) {
-
+  .splashListPadding {
+    padding-top: calc(100vh + 220px);
+  }
 }
 
 @media only screen and (min-width: 500px) {
@@ -13,11 +15,11 @@
   }
   
   .viewJewelry {
-    top: 1380px;
+    top: 1540px;
   }
   
   .viewPhotography {
-    top: 2350px;
+    top: 2530px;
   }
 
 }
@@ -35,12 +37,12 @@
   }
   
   .viewJewelry {
-    top: 1420px;
+    top: 1620px;
     left: 100px;
   }
   
   .viewPhotography {
-    top: 2450px;
+    top: 2650px;
     left: 100px;
   }
 }
@@ -52,12 +54,12 @@
   }
   
   .viewJewelry {
-    top: 1450px;
+    top: 1650px;
     left: 100px;
   }
   
   .viewPhotography {
-    top: 2520px;
+    top: 2720px;
     left: 100px;
   }
 }
@@ -69,19 +71,27 @@
   }
   
   .viewJewelry {
-    top: 1490px;
+    top: 1690px;
     left: 160px;
   }
   
   .viewPhotography {
-    top: 2590px;
+    top: 2800px;
     left: 160px;
   }
 }
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
-  
+
+  .SplashList {
+    z-index: 1;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: calc(100vh + 135px);
+  }
+
   .viewArt {
     top: 0;
     left: calc(100% - 160px);
@@ -140,6 +150,10 @@
     width: 475px;
   }
 
+  .printContainer {
+    display: flex;
+  }
+
   .ctrlButtons {
     bottom: -10px;
     justify-content: space-between;
@@ -167,6 +181,17 @@
 }
 
 @media only screen and (min-width: 920px) {
+  .viewArt {
+    top: 20px;
+  }
+  
+  .viewJewelry {
+    top: 400px;
+  }
+  
+  .viewPhotography {
+    top: 660px;
+  }
 }
 
 /* Desktops */
@@ -234,7 +259,7 @@
   
   /* Art */
   .poster {
-    max-width: 270px;
+    max-width: 280px;
   }
 }
 

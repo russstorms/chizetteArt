@@ -1,5 +1,11 @@
-import React, { createContext, useState, useEffect, useContext } from "react"
+import React, {
+  createContext,
+  useState,
+  useEffect,
+  useContext 
+} from "react"
 import { AdminContext } from "./adminContext"
+import { SnackbarContext } from "./snackBarContext"
 
 import useFilteredTermState from '../components/hooks/useFilteredTermState'
 
@@ -12,8 +18,18 @@ export const CrudContext = createContext()
 export function CrudProvider(props) {
   // Grab token from AdminContext
   const token = useContext(AdminContext)
+  // Contexts
+  const {
+    open,
+    severity,
+    message, 
+    setOpen,
+    setSeverity,
+    setMessage, 
+  } = useContext(SnackbarContext)
 
   const [artList, setArtList] = useState([])
+
 
   // Custom Hooks
   const {filteredTerm, filterArtList} = useFilteredTermState('All')
@@ -53,9 +69,13 @@ export function CrudProvider(props) {
       body: JSON.stringify(artBody)
     })
     if (response.status !== 200) {
-      alert(`Unable to create this masterpiece!`)
+      setMessage("Unable to create art.")
+      setOpen(true)
+      setSeverity("error")
     } else {
-      alert(`Art Created!`)
+      setMessage("Art Created!")
+      setOpen(true)
+      setSeverity("success")
     }
     setArtList([artBody, ...artList])
   }
@@ -82,11 +102,14 @@ export function CrudProvider(props) {
       },
     })
     if (response.status !== 200) {
-      alert(`Unable to edit this masterpiece!`)
+      setMessage("Unable to edit this masterpiece!")
+      setOpen(true)
+      setSeverity("error")
     } else {
-      alert(`Edited this masterpiece!`)
+      setMessage("Edited this masterpiece!")
+      setOpen(true)
+      setSeverity("success")
     }
-    
     setArtList(newList)
   }
 
@@ -102,9 +125,13 @@ export function CrudProvider(props) {
       },
     })
     if (response.status !== 200) {
-      alert(`Unable to erase this masterpiece!`)
+      setMessage("Unable to delete art.")
+      setOpen(true)
+      setSeverity("error")
     } else {
-      alert(`Crumbled up and thrown away!`)
+      setMessage("Crumbled up and thrown away!")
+      setOpen(true)
+      setSeverity("success")
     }
     setArtList([...artList])
   }
@@ -112,6 +139,10 @@ export function CrudProvider(props) {
   return (
     <CrudContext.Provider
       value={{
+        open,
+        setOpen,
+        severity,
+        message,
         artList,
         filteredTerm,
         postArt,

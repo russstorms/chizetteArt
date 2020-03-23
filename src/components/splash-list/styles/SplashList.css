@@ -1,9 +1,9 @@
 .SplashList {
-  z-index: 1;
+  z-index: 0;
   height: auto;
   width: 100%;
   position: absolute;
-  top: calc(100vh + 135px);
+  top: calc(100vh + 155px);
 }
 
 .viewArt {
@@ -26,7 +26,7 @@
   animation: viewFilterColors 5s infinite;
   cursor: pointer;
   position: relative;
-  top: 1420px;
+  top: 1590px;
   left: 25px;
 }
 
@@ -38,7 +38,7 @@
   animation: viewFilterColors 5s infinite;
   cursor: pointer;
   position: relative;
-  top: 2020px;
+  top: 2500px;
   left: 25px;
 }
 

@@ -104,7 +104,7 @@ const EditArt = ({ id, art }) => {
                 defaultValue={medium}
                 onChange={e => setMedium(e.target.value)}
                 margin="normal"
-                label="Medium"
+                label="Medium ('Photograph', 'Jewelry', else Art)"
                 fullWidth
                 required
               />

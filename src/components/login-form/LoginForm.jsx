@@ -22,6 +22,7 @@ const LoginForm = () => {
 					setPassword('')
 				}}
 			>
+				<h4 className="formTitle loginTitle">Login</h4>
         <TextField
 					variant="outlined"
           value={username}
