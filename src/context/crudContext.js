@@ -10,8 +10,8 @@ import { SnackbarContext } from "./snackBarContext"
 import useFilteredTermState from '../components/hooks/useFilteredTermState'
 
 // Node API
-const API = process.env.REACT_APP_API
-// const API = 'http://localhost:3000'
+// const API = process.env.REACT_APP_API
+const API = 'http://localhost:3000'
 
 export const CrudContext = createContext()
 
@@ -114,23 +114,29 @@ export function CrudProvider(props) {
 
   // Admin — Delete art
   const deleteArt = async (id) => {
-    let response = await fetch(`${API}/chizetteart/${id}`, {
-      method: "DELETE",
-      mode: "cors",
-      headers: {
-        "Accept": "application/JSON",
-        "Content-Type": "application/json",
-        "token": token.token
-      },
-    })
-    if (response.status !== 200) {
+    try {
+      let response = await fetch(`${API}/chizetteart/${id}`, {
+        method: "DELETE",
+        mode: "cors",
+        headers: {
+          "Accept": "application/JSON",
+          "Content-Type": "application/json",
+          "token": token.token
+        },
+      })
+      if (response.ok) {
+        setMessage("Crumbled up and thrown away!")
+        setOpen(true)
+        setSeverity("success")
+      } else {
+        setMessage("Res not OK.")
+        setOpen(true)
+        setSeverity("warning")
+      }
+    } catch (err) {
       setMessage("Unable to delete art.")
       setOpen(true)
       setSeverity("error")
-    } else {
-      setMessage("Crumbled up and thrown away!")
-      setOpen(true)
-      setSeverity("success")
     }
     setArtList([...artList])
   }
