@@ -30,7 +30,6 @@ export function CrudProvider(props) {
 
   const [artList, setArtList] = useState([])
 
-
   // Custom Hooks
   const {filteredTerm, filterArtList} = useFilteredTermState('All')
 
