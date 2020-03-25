@@ -26,5 +26,7 @@ This website is for an artist to sell her prints:
 
 ![Admin Control](./readmeImages/adminControl.png)
 ![Admin Modal](./readmeImages/adminModal.png)
+
+## Custom Snackbars
 ![Admin Snackbar](./readmeImages/adminSnackbar.png)
 
