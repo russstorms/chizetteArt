@@ -125,3 +125,7 @@
     color: #FF0000;
     transition: all .5s ease-in-out;
   }
+
+  .deleteIcon * {
+    pointer-events: none
+  }
