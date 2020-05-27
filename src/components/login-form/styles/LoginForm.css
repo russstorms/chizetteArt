@@ -5,17 +5,16 @@
   right: 5%;
   bottom: 0;
   margin: 0 auto;
-  background-image: linear-gradient(to bottom right, #4D493E 50%, #8d8981);
+  background-image: linear-gradient(to bottom right, #4d493e 50%, #8d8981);
   z-index: 50;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 10px;
 }
 
 .loginTitle {
-  text-shadow: 2px 2px #FFFFFF;
+  text-shadow: 2px 2px #ffffff;
 }
 
 .MuiOutlinedInput-root {
   padding: 0 15px;
 }
-

@@ -1,10 +1,10 @@
 .MuiInputBase-root {
   color: black !important;
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
 }
 
 .CreateArtFormContainer {
-  background-image: url("https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg");
+  background-image: url('https://res.cloudinary.com/chizetteart/image/upload/c_scale,w_1300/v1552434625/chizetteArt%20-%20Compressed/amethyst.jpg');
   background-repeat: no-repeat;
   padding: 20px 50px;
 }
@@ -29,8 +29,8 @@
 
 .formTitle {
   text-align: center;
-  font-family: "Megrim";
-  letter-spacing: .1em;
+  font-family: 'Megrim';
+  letter-spacing: 0.1em;
   font-weight: bolder;
   color: rgb(138, 222, 248);
 }

@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Chizetteart from '../chizette-art/ChizetteArt'
+import React, { Component } from 'react';
+import Chizetteart from '../chizette-art/ChizetteArt';
 
 export default class App extends Component {
   render() {
@@ -7,6 +7,6 @@ export default class App extends Component {
       <main>
         <Chizetteart />
       </main>
-    )
+    );
   }
 }

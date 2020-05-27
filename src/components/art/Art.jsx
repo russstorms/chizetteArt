@@ -1,71 +1,71 @@
-import React, { useState, useContext } from 'react'
-import { AdminContext } from "../../context/adminContext"
-import { CrudContext } from "../../context/crudContext"
-import EditArt from '../edit-art/EditArt'
-import { Modal, Backdrop, Fade} from '@material-ui/core'
+import React, { useState, useContext } from 'react';
+import { AdminContext } from '../../context/adminContext';
+import { CrudContext } from '../../context/crudContext';
+import EditArt from '../edit-art/EditArt';
+import { Modal, Backdrop, Fade } from '@material-ui/core';
 import ArrowLeftIcon from '@material-ui/icons/ArrowLeft';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import DeleteForeverIcon from '@material-ui/icons/DeleteForever'
-import ScrollAnimation from 'react-animate-on-scroll'
-import StripeCheckout from 'react-stripe-checkout'
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import ScrollAnimation from 'react-animate-on-scroll';
+import StripeCheckout from 'react-stripe-checkout';
 
 // Styles
-import './styles/Art.css'
-import 'animate.css/animate.min.css'
+import './styles/Art.css';
+import 'animate.css/animate.min.css';
 
 // Stripe Test Key
-const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`
+const stripeKey = `pk_test_b8uyn2so9v4rOyipsgG5bYfB00kuYClQ0V`;
 
 const Art = ({ id, modalId, art, artList, filteredTerm }) => {
-  const [open, setOpen] = useState(false)
-  const [count, setCount] = useState(0)
+  const [open, setOpen] = useState(false);
+  const [count, setCount] = useState(0);
 
   // Contexts
-  const { token } = useContext(AdminContext)
-  const { deleteArt } = useContext(CrudContext)
+  const { token } = useContext(AdminContext);
+  const { deleteArt } = useContext(CrudContext);
 
   // Check counter to ensure it isn't longer than array
-  let counter = count >= artList.length ? 0 : count
+  let counter = count >= artList.length ? 0 : count;
 
   const handleOpen = () => {
-    setOpen(true)
-    setCount(modalId)
-  }
+    setOpen(true);
+    setCount(modalId);
+  };
 
   const handleClose = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   // Single view — Next click
   const nextClick = () => {
-    const trackArtPosters = count === artList.length - 1 ? 0 : count + 1
-    setCount(trackArtPosters)
-  }
+    const trackArtPosters = count === artList.length - 1 ? 0 : count + 1;
+    setCount(trackArtPosters);
+  };
 
   // Single view — Prev click
   const prevClick = () => {
-    const trackArtPosters = count === 0 ? artList.length - 1 : count - 1
-    setCount(trackArtPosters)
-  }
+    const trackArtPosters = count === 0 ? artList.length - 1 : count - 1;
+    setCount(trackArtPosters);
+  };
 
   // Admin — Delete art
   const removeArt = (ev) => {
-    ev.preventDefault()
-    return deleteArt(ev.target.id)
-  }
+    ev.preventDefault();
+    return deleteArt(ev.target.id);
+  };
 
   // TODO — Swap test key for live key
   const stripeBtn = async (token) => {
     // const API = process.env.REACT_APP_API
-    const API = 'http://localhost:3000'
-    const artList = artList[counter]
-    console.log('TOKEN>>>', token.card)
-    
+    const API = 'http://localhost:3000';
+    const artList = artList[counter];
+    console.log('TOKEN>>>', token.card);
+
     await fetch(`${API}/stripe`, {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${stripeKey}`,
-        'Accept': 'application/json',
+        Authorization: `Bearer ${stripeKey}`,
+        Accept: 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -75,49 +75,46 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
         artMedium: artList.medium,
         artYear: artList.year,
         art: artList.poster,
-        stripeToken: token.id
+        stripeToken: token.id,
       }),
     })
-    .then(response => response.json())
-      .then(charge => {
-        console.log('charge>>>', charge)
-      })
-  }
+      .then((response) => response.json())
+      .then((charge) => {
+        console.log('charge>>>', charge);
+      });
+  };
 
   // Logic to remove 'Purchase Print' button from Jewelry and Photos
   const handleArtWithoutPrintAndOtherMediums =
     //  Current Print of 'Gold + Blue' does not have proper resolution to sell
-    !artList[count].title.includes('Gold + Blue') 
-    && !artList[count].medium.includes('Jewelry') 
-    && !artList[count].medium.includes('Photo')
+    !artList[count].title.includes('Gold + Blue') &&
+    !artList[count].medium.includes('Jewelry') &&
+    !artList[count].medium.includes('Photo');
 
   return (
     // Art piece
-    <ScrollAnimation
-      animateIn="zoomInUp"
-      animateOut="fadeOut"
-    >
+    <ScrollAnimation animateIn="zoomInUp" animateOut="fadeOut">
       <div className="Art">
-        {filteredTerm === 'Splash' ? 
+        {filteredTerm === 'Splash' ? (
+          <img
+            className="poster"
+            src={art.poster}
+            alt={`${art.title}, ${art.year}, ${art.medium}`}
+            title={art.title}
+          />
+        ) : (
+          <div>
             <img
               className="poster"
-              src={art.poster} 
+              onClick={handleOpen}
+              src={art.poster}
               alt={`${art.title}, ${art.year}, ${art.medium}`}
               title={art.title}
             />
-          :
-          <div>
-              <img
-                className="poster"
-                onClick={handleOpen}
-                src={art.poster}
-                alt={`${art.title}, ${art.year}, ${art.medium}`}
-                title={art.title}
-              />
             <Modal
               aria-labelledby="transition-modal-title"
               aria-describedby="transition-modal-description"
-              className='modalStyle'
+              className="modalStyle"
               open={open}
               onClose={handleClose}
               closeAfterTransition
@@ -138,9 +135,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                   />
                   <div className="artInfoContainer">
                     <div className="singleViewTitle">
-                      <i>
-                        {artList[counter].title}
-                      </i>
+                      <i>{artList[counter].title}</i>
                       <span className="singleViewYear">
                         {artList[counter].year}
                       </span>
@@ -148,10 +143,12 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                     <div className="singleViewMedium animated fadeInRight delay-1s">
                       {artList[counter].medium}
                     </div>
-                    {handleArtWithoutPrintAndOtherMediums &&
-                      <div className="singleViewPrice">${artList[counter].price} USD</div> 
-                    }
-                    {handleArtWithoutPrintAndOtherMediums && 
+                    {handleArtWithoutPrintAndOtherMediums && (
+                      <div className="singleViewPrice">
+                        ${artList[counter].price} USD
+                      </div>
+                    )}
+                    {handleArtWithoutPrintAndOtherMediums && (
                       <StripeCheckout
                         token={stripeBtn}
                         stripeKey={stripeKey}
@@ -167,7 +164,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                         sameSite="None"
                       >
                         <div className="printContainer">
-                          <h6 style={{color: 'white'}}>
+                          <h6 style={{ color: 'white' }}>
                             Prints Unavailable — Test Mode
                           </h6>
                           <button className="commonBtn singleViewPriceButton">
@@ -175,7 +172,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                           </button>
                         </div>
                       </StripeCheckout>
-                    }
+                    )}
                   </div>
                   <div className="ctrlButtons">
                     <div
@@ -205,7 +202,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
               </Fade>
             </Modal>
           </div>
-        }
+        )}
 
         {/* Scrolling Art Title */}
         <ScrollAnimation
@@ -219,15 +216,11 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
         </ScrollAnimation>
 
         {/* ADMIN CONTROLS */}
-        {
-          token !== '' &&
+        {token !== '' && (
           <div>
-            <EditArt
-              id={id}
-              art={art}
-            />
+            <EditArt id={id} art={art} />
             <div className="deleteContainer">
-              <DeleteForeverIcon 
+              <DeleteForeverIcon
                 id={art.id}
                 onClick={(ev) => removeArt(ev)}
                 className="deleteIcon"
@@ -235,11 +228,10 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
               />
             </div>
           </div>
-        }
+        )}
       </div>
     </ScrollAnimation>
-  )
-}
+  );
+};
 
-export default Art
-
+export default Art;

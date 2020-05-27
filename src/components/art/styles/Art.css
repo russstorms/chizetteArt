@@ -1,19 +1,19 @@
 .Art {
   text-align: center;
   color: rgb(99, 95, 84);
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-size: 1.1em;
 }
 
 .artTitle {
   font-family: 'Montserrat';
-  letter-spacing: .3em;
+  letter-spacing: 0.3em;
   padding-bottom: 15px;
 }
 
 .poster {
   margin-bottom: 5%;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   max-width: 300px;
 }
 
@@ -25,7 +25,7 @@
 
 /* Single Art View */
 .posterSingleView {
-  box-shadow: 5px 5px 10px rgba(99, 95, 84, .8);
+  box-shadow: 5px 5px 10px rgba(99, 95, 84, 0.8);
   max-width: 300px;
   margin: 0 auto;
 }
@@ -45,12 +45,12 @@
   color: white;
   text-shadow: 2px 2px 2px rgb(99, 95, 84);
   user-select: none;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .nextButton:hover {
   color: rgb(138, 222, 248);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 .prevButton {
@@ -58,52 +58,56 @@
   color: white;
   text-shadow: 2px 2px 2px rgb(99, 95, 84);
   user-select: none;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .prevButton:hover {
   color: rgb(138, 222, 248);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 /* Art Info */
 .artInfoContainer {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2) 70%,
+    rgba(0, 0, 0, 0)
+  );
   width: 300px;
   padding: 5px 15px;
 }
-  .singleViewTitle {
-    color: white;
-    text-shadow: 1px 3px 3px rgba(99, 95, 84, .8);
-    letter-spacing: .1em;
-    animation: fadeInLeft .8s linear;
-  }
+.singleViewTitle {
+  color: white;
+  text-shadow: 1px 3px 3px rgba(99, 95, 84, 0.8);
+  letter-spacing: 0.1em;
+  animation: fadeInLeft 0.8s linear;
+}
 
-  .singleViewMedium {
-    color: white;
-    font-family: "Megrim";
-    font-weight: bold;
-    font-size: 1.1em;
-  }
+.singleViewMedium {
+  color: white;
+  font-family: 'Megrim';
+  font-weight: bold;
+  font-size: 1.1em;
+}
 
-  .singleViewYear {
-    color: white;
-    font-size: 1em;
-    padding-left: 10px;
-    display: inline-block;
-  }
+.singleViewYear {
+  color: white;
+  font-size: 1em;
+  padding-left: 10px;
+  display: inline-block;
+}
 
-  .singleViewPrice {
-    color: white;
-    font-weight: bold;
-    text-shadow: 1px 3px 3px rgba(99, 95, 84, .8);
-  }
+.singleViewPrice {
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 3px 3px rgba(99, 95, 84, 0.8);
+}
 
-  .singleViewPriceButton {
-    font-size: 1em;
-    margin: 5px;
-    z-index: 10;
-  }
+.singleViewPriceButton {
+  font-size: 1em;
+  margin: 5px;
+  z-index: 10;
+}
 
 /* Admin Controls */
 .modalStyle {
@@ -118,14 +122,14 @@
 }
 
 .deleteIcon {
-  color: #AF0000;
+  color: #af0000;
 }
-  .deleteIcon:hover {
-    cursor: pointer;
-    color: #FF0000;
-    transition: all .5s ease-in-out;
-  }
+.deleteIcon:hover {
+  cursor: pointer;
+  color: #ff0000;
+  transition: all 0.5s ease-in-out;
+}
 
-  .deleteIcon * {
-    pointer-events: none
-  }
+.deleteIcon * {
+  pointer-events: none;
+}

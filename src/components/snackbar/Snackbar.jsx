@@ -1,26 +1,26 @@
-import React, { useContext } from 'react'
-import Snackbar from "@material-ui/core/Snackbar"
-import MuiAlert from "@material-ui/lab/Alert"
-import { makeStyles } from "@material-ui/core/styles"
-import { SnackbarContext } from "../../context/snackBarContext"
+import React, { useContext } from 'react';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+import { makeStyles } from '@material-ui/core/styles';
+import { SnackbarContext } from '../../context/snackBarContext';
 
 const Alert = (props) => {
-  return <MuiAlert elevation={6} variant="filled" {...props} />
-}
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+};
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: "100%",
-    "& > * + *": {
-      marginTop: theme.spacing(2)
-    }
-  }
-}))
+    width: '100%',
+    '& > * + *': {
+      marginTop: theme.spacing(2),
+    },
+  },
+}));
 
 const CustomSnackbar = () => {
   // Contexts
-  const { open, severity, message, handleClose } = useContext(SnackbarContext)
-  const classes = useStyles()
+  const { open, severity, message, handleClose } = useContext(SnackbarContext);
+  const classes = useStyles();
 
   return (
     <div className={classes.root}>
@@ -30,8 +30,7 @@ const CustomSnackbar = () => {
         </Alert>
       </Snackbar>
     </div>
-  )
-}
+  );
+};
 
-export default CustomSnackbar
-
+export default CustomSnackbar;

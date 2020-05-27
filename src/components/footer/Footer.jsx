@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 // Styles
-import './styles/Footer.css'
+import './styles/Footer.css';
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
         <h6 className="copyRight">©2019</h6>
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

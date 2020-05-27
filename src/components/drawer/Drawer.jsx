@@ -1,34 +1,36 @@
-import React, { useState, useContext } from 'react'
-import { AdminContext } from "../../context/adminContext"
-import SortRoundedIcon from '@material-ui/icons/SortRounded'
-import {
-  Drawer,
-  List,
-  Divider,
-  ListItem
-} from '@material-ui/core'
+import React, { useState, useContext } from 'react';
+import { AdminContext } from '../../context/adminContext';
+import SortRoundedIcon from '@material-ui/icons/SortRounded';
+import { Drawer, List, Divider, ListItem } from '@material-ui/core';
 
 // Styles
-import './styles/Drawer.css'
+import './styles/Drawer.css';
 
-const DrawerSideNav = ({ configureFilteredTerm, toggleContactMe, contactMe }) => {
+const DrawerSideNav = ({
+  configureFilteredTerm,
+  toggleContactMe,
+  contactMe,
+}) => {
   const [state, setState] = useState({
-    left: false
-  })
+    left: false,
+  });
 
-  const toggleDrawer = (side, open) => event => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return
+  const toggleDrawer = (side, open) => (event) => {
+    if (
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return;
     }
 
     setState({
       ...state,
-      [side]: open 
-    })
-  }
+      [side]: open,
+    });
+  };
 
   // Contexts
-  const { logoutClick, token } = useContext(AdminContext)
+  const { logoutClick, token } = useContext(AdminContext);
 
   return (
     <div className="Drawer">
@@ -38,10 +40,7 @@ const DrawerSideNav = ({ configureFilteredTerm, toggleContactMe, contactMe }) =>
           onClick={toggleDrawer('left', !state.left)}
         />
       </div>
-      <Drawer
-        open={state.left}
-        onClose={toggleDrawer('left', false)}
-      >
+      <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
         <div
           className={'drawer'}
           role="presentation"
@@ -63,38 +62,35 @@ const DrawerSideNav = ({ configureFilteredTerm, toggleContactMe, contactMe }) =>
             </ListItem>
             <Divider />
 
-            <ListItem component="a" href="/"><span className="drawerTitle">Home</span></ListItem>
-            {!contactMe ?
+            <ListItem component="a" href="/">
+              <span className="drawerTitle">Home</span>
+            </ListItem>
+            {!contactMe ? (
               <ListItem onClick={toggleContactMe}>
                 <span>Contact Me</span>
               </ListItem>
-              : 
-              <ListItem component="a" href='/'>
+            ) : (
+              <ListItem component="a" href="/">
                 <span className="drawerIconContainer">
                   <i className="fas fa-angle-up"></i>
                 </span>
                 To Top
-              </ListItem>}
-            {token ? 
+              </ListItem>
+            )}
+            {token ? (
               <div>
-                <ListItem
-                  href='/'
-                  onClick={logoutClick}
-                >
+                <ListItem href="/" onClick={logoutClick}>
                   Logout
                 </ListItem>
               </div>
-              :
-              <h1 className="footerDrawer">
-                chizetteArt
-              </h1>
-            }
+            ) : (
+              <h1 className="footerDrawer">chizetteArt</h1>
+            )}
           </List>
         </div>
       </Drawer>
     </div>
-  )
-}
+  );
+};
 
-export default DrawerSideNav
-
+export default DrawerSideNav;

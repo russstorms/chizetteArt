@@ -5,7 +5,7 @@ body {
 
 .Navbar {
   text-align: left;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: fixed;
   right: 0;
   left: 0;
@@ -29,9 +29,9 @@ body {
   top: -66px;
   left: 115px;
   width: 230px;
-  letter-spacing: .25em;
+  letter-spacing: 0.25em;
   font-size: 2em;
-  font-family: "Megrim";
+  font-family: 'Megrim';
   color: rgb(99, 95, 84);
   text-shadow: 2px 2px 1px rgb(255, 255, 255);
   cursor: default;
@@ -46,7 +46,7 @@ body {
 /* Animation on Navbar Name */
 @keyframes shinyName {
   0% {
-    opacity: .2;
+    opacity: 0.2;
   }
 
   10% {
@@ -64,19 +64,19 @@ body {
 }
 
 .A {
-  animation: shinyName .1s infinite;
+  animation: shinyName 0.1s infinite;
   animation-delay: 1.8s;
   animation-duration: 7s;
 }
 
 .r {
-  animation: shinyName .1s infinite;
+  animation: shinyName 0.1s infinite;
   animation-delay: 1.9s;
   animation-duration: 7s;
 }
 
 .t {
-  animation: shinyName .1s infinite;
+  animation: shinyName 0.1s infinite;
   animation-delay: 2s;
   animation-duration: 7s;
 }

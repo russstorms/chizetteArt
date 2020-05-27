@@ -1,24 +1,23 @@
-import { useReducer } from "react"
+import { useReducer } from 'react';
 
 const init = (initialState) => {
-  return {initialState}
-}
+  return { initialState };
+};
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'form':
-      return { ...state, [action.field]: action.value }
+      return { ...state, [action.field]: action.value };
     case 'reset':
-      return init(action.payload)
+      return init(action.payload);
     default:
-      return
+      return;
   }
-}
+};
 
 const FormReducer = (initialState, reducer) => {
-  const [state, dispatch] = useReducer(initialState, reducer)
-  return [state, dispatch]
-}
+  const [state, dispatch] = useReducer(initialState, reducer);
+  return [state, dispatch];
+};
 
-export { FormReducer, reducer }
-
+export { FormReducer, reducer };

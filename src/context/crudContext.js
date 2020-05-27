@@ -1,50 +1,45 @@
-import React, {
-  createContext,
-  useState,
-  useEffect,
-  useContext 
-} from "react"
-import { AdminContext } from "./adminContext"
-import { SnackbarContext } from "./snackBarContext"
+import React, { createContext, useState, useEffect, useContext } from 'react';
+import { AdminContext } from './adminContext';
+import { SnackbarContext } from './snackBarContext';
 
-import useFilteredTermState from '../components/hooks/useFilteredTermState'
+import useFilteredTermState from '../components/hooks/useFilteredTermState';
 
 // Node API
-const API = process.env.REACT_APP_API
+const API = process.env.REACT_APP_API;
 // const API = 'http://localhost:3000'
 
-export const CrudContext = createContext()
+export const CrudContext = createContext();
 
 export function CrudProvider(props) {
   // Grab token from AdminContext
-  const token = useContext(AdminContext)
+  const token = useContext(AdminContext);
   // Context for Snackbar
   const {
     open,
     severity,
-    message, 
+    message,
     setOpen,
     setSeverity,
-    setMessage, 
-  } = useContext(SnackbarContext)
+    setMessage,
+  } = useContext(SnackbarContext);
 
-  const [artList, setArtList] = useState([])
+  const [artList, setArtList] = useState([]);
 
   // Custom Hooks
-  const {filteredTerm, filterArtList} = useFilteredTermState('All')
+  const { filteredTerm, filterArtList } = useFilteredTermState('All');
 
   // Get Art
   useEffect(() => {
     async function getArtList() {
       // Load the art collection
-      const artListJson = await fetch(`${API}/chizetteart`)
-      const artList = await artListJson.json()
+      const artListJson = await fetch(`${API}/chizetteart`);
+      const artList = await artListJson.json();
 
       // Filter artList and set to current state
-      setArtList(filterArtList(artList))
+      setArtList(filterArtList(artList));
     }
-    getArtList()
-  }, [filteredTerm])
+    getArtList();
+  }, [filteredTerm]);
 
   // Admin — Create new art
   const postArt = async (title, year, medium, url, price) => {
@@ -53,31 +48,31 @@ export function CrudProvider(props) {
       year: year,
       medium: medium,
       poster: url,
-      price: price
-    }
+      price: price,
+    };
     const response = await fetch(`${API}/chizetteart`, {
-      method: "POST",
-      mode: "cors",
-      cache: "no-cache",
-      credentials: "same-origin",
+      method: 'POST',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
       headers: {
-        "Accept": "application/JSON",
-        "Content-Type": "application/json",
-        "token": token.token
+        Accept: 'application/JSON',
+        'Content-Type': 'application/json',
+        token: token.token,
       },
-      body: JSON.stringify(artBody)
-    })
+      body: JSON.stringify(artBody),
+    });
     if (response.status !== 200) {
-      setMessage("Unable to create art.")
-      setOpen(true)
-      setSeverity("error")
+      setMessage('Unable to create art.');
+      setOpen(true);
+      setSeverity('error');
     } else {
-      setMessage("Art Created!")
-      setOpen(true)
-      setSeverity("success")
+      setMessage('Art Created!');
+      setOpen(true);
+      setSeverity('success');
     }
-    setArtList([artBody, ...artList])
-  }
+    setArtList([artBody, ...artList]);
+  };
 
   // Admin — Edit art
   const editArt = async (id, title, year, medium, url) => {
@@ -85,61 +80,63 @@ export function CrudProvider(props) {
       title: title,
       year: year,
       medium: medium,
-      poster: url
-    }
+      poster: url,
+    };
 
-    let newList = artList.map( art => (art.id === id) ? {id, ...artBody} : art )
+    let newList = artList.map((art) =>
+      art.id === id ? { id, ...artBody } : art
+    );
 
     let response = await fetch(`${API}/chizetteart/${id}`, {
-      method: "PUT",
-      mode: "cors",
+      method: 'PUT',
+      mode: 'cors',
       body: JSON.stringify(artBody),
       headers: {
-        "Accept": "application/JSON",
-        "Content-Type": "application/json",
-        "token": token.token
+        Accept: 'application/JSON',
+        'Content-Type': 'application/json',
+        token: token.token,
       },
-    })
+    });
     if (response.status !== 200) {
-      setMessage("Unable to edit this masterpiece!")
-      setOpen(true)
-      setSeverity("error")
+      setMessage('Unable to edit this masterpiece!');
+      setOpen(true);
+      setSeverity('error');
     } else {
-      setMessage("Edited this masterpiece!")
-      setOpen(true)
-      setSeverity("success")
+      setMessage('Edited this masterpiece!');
+      setOpen(true);
+      setSeverity('success');
     }
-    setArtList(newList)
-  }
+    setArtList(newList);
+  };
 
   // Admin — Delete art
   const deleteArt = async (id) => {
     try {
       let response = await fetch(`${API}/chizetteart/${id}`, {
-        method: "DELETE",
-        mode: "cors",
+        method: 'DELETE',
+        mode: 'cors',
         headers: {
-          "Accept": "application/JSON",
-          "Content-Type": "application/json",
-          "token": token.token
+          Accept: 'application/JSON',
+          'Content-Type': 'application/json',
+          token: token.token,
         },
-      })
+      });
       if (response.ok) {
-        setMessage("Crumbled up and thrown away!")
-        setOpen(true)
-        setSeverity("success")
+        setMessage('Crumbled up and thrown away!');
+        setOpen(true);
+        setSeverity('success');
       } else {
-        setMessage("Res not OK.")
-        setOpen(true)
-        setSeverity("warning")
+        setMessage('Res not OK.');
+        setOpen(true);
+        setSeverity('warning');
       }
     } catch (err) {
-      setMessage("Unable to delete art.")
-      setOpen(true)
-      setSeverity("error")
+      setMessage('Unable to delete art.');
+      setOpen(true);
+      setSeverity('error');
     }
-    setArtList([...artList])
-  }
+    setArtList([...artList]);
+  };
 
   return (
     <CrudContext.Provider
@@ -152,11 +149,10 @@ export function CrudProvider(props) {
         filteredTerm,
         postArt,
         editArt,
-        deleteArt
+        deleteArt,
       }}
     >
       {props.children}
     </CrudContext.Provider>
-  )
+  );
 }
-

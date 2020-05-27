@@ -9,38 +9,35 @@
   .splashListPadding {
     padding-top: calc(100vh + 100px);
   }
-  
+
   .viewArt {
     top: 0;
   }
-  
+
   .viewJewelry {
     top: 1540px;
   }
-  
+
   .viewPhotography {
     top: 2530px;
   }
-
 }
 
 @media only screen and (min-width: 550px) {
-
 }
 
 /* SplashList & Crystal */
 @media only screen and (min-width: 600px) {
-  
   .viewArt {
     top: 0;
     left: 100px;
   }
-  
+
   .viewJewelry {
     top: 1620px;
     left: 100px;
   }
-  
+
   .viewPhotography {
     top: 2650px;
     left: 100px;
@@ -52,12 +49,12 @@
     top: 0;
     left: 100px;
   }
-  
+
   .viewJewelry {
     top: 1650px;
     left: 100px;
   }
-  
+
   .viewPhotography {
     top: 2720px;
     left: 100px;
@@ -69,12 +66,12 @@
     top: 0;
     left: 160px;
   }
-  
+
   .viewJewelry {
     top: 1690px;
     left: 160px;
   }
-  
+
   .viewPhotography {
     top: 2800px;
     left: 160px;
@@ -83,7 +80,6 @@
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
-
   .SplashList {
     z-index: 1;
     height: auto;
@@ -96,12 +92,12 @@
     top: 0;
     left: calc(100% - 160px);
   }
-  
+
   .viewJewelry {
     top: 370px;
     left: calc(100% - 160px);
   }
-  
+
   .viewPhotography {
     top: 610px;
     left: calc(100% - 160px);
@@ -183,26 +179,26 @@
   .viewArt {
     top: 20px;
   }
-  
+
   .viewJewelry {
     top: 400px;
   }
-  
+
   .viewPhotography {
     top: 660px;
   }
 }
 
 /* Desktops */
-@media only screen and (min-width: 992px) {  
+@media only screen and (min-width: 992px) {
   .viewArt {
     top: 0;
   }
-  
+
   .viewJewelry {
     top: 390px;
   }
-  
+
   .viewPhotography {
     top: 660px;
   }
@@ -218,7 +214,7 @@
   .viewJewelry {
     top: 440px;
   }
-  
+
   .viewPhotography {
     top: 730px;
   }
@@ -237,7 +233,7 @@
   .viewJewelry {
     top: 450px;
   }
-  
+
   .viewPhotography {
     top: 760px;
   }
@@ -251,11 +247,11 @@
   .viewJewelry {
     top: 490px;
   }
-  
+
   .viewPhotography {
     top: 820px;
   }
-  
+
   /* Art */
   .poster {
     max-width: 280px;
@@ -266,21 +262,18 @@
 }
 
 @media only screen and (min-width: 1500px) {
-  
   .viewArt {
     top: 0;
   }
-  
+
   .viewJewelry {
     top: 510px;
   }
-  
+
   .viewPhotography {
     top: 860px;
   }
 }
 
 @media only screen and (min-width: 1500px) {
-  
 }
-

@@ -27,8 +27,8 @@
   padding: 15px 20px;
   text-align: center;
   color: rgb(99, 95, 84);
-  letter-spacing: .4em;
-  font-family: "Megrim";
+  letter-spacing: 0.4em;
+  font-family: 'Megrim';
   font-weight: bolder;
   font-size: 1.3em;
   animation: colorTitle 7s infinite;

@@ -8,7 +8,11 @@
   margin-top: 100px;
   height: auto;
   width: 100%;
-  background: radial-gradient(circle, rgba(119, 25, 155, 0.6) 30%, rgba(0 , 212, 255, 0.3) 90%);
+  background: radial-gradient(
+    circle,
+    rgba(119, 25, 155, 0.6) 30%,
+    rgba(0, 212, 255, 0.3) 90%
+  );
 }
 
 .bigLetter {
@@ -18,7 +22,7 @@
 
 .contact {
   padding-top: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-family: 'Montserrat';
   font-size: 1.2em;
   font-weight: bolder;
@@ -29,37 +33,37 @@
   justify-content: space-evenly;
 }
 
-  .instagram:hover {
-    color: rgb(138, 222, 248);
-  }
+.instagram:hover {
+  color: rgb(138, 222, 248);
+}
 
-  .instagramIcon {
-    color: #FFFFFF;
-    font-size: 3em;
-  }
-  .instagramIcon:hover {
-    color: rgb(138, 222, 248);
-    transition: color .5s;
-  }
+.instagramIcon {
+  color: #ffffff;
+  font-size: 3em;
+}
+.instagramIcon:hover {
+  color: rgb(138, 222, 248);
+  transition: color 0.5s;
+}
 
-  .email {
-    color: #FFFFFF;
-  }
+.email {
+  color: #ffffff;
+}
 
-  .email:hover {
-    color: rgb(138, 222, 248);
-  }
+.email:hover {
+  color: rgb(138, 222, 248);
+}
 
-  .emailIcon {
-    color: #FFFFFF;
-    font-size: 3em;
-  }
-  .emailIcon:hover {
-    color: rgb(138, 222, 248);
-    transition: color .5s;
-  }
+.emailIcon {
+  color: #ffffff;
+  font-size: 3em;
+}
+.emailIcon:hover {
+  color: rgb(138, 222, 248);
+  transition: color 0.5s;
+}
 
 .quote {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1em;
 }
