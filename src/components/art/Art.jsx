@@ -55,34 +55,34 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
   };
 
   // TODO — Swap test key for live key
-  const stripeBtn = async (token) => {
-    // const API = process.env.REACT_APP_API
-    const API = 'http://localhost:3000';
-    const artList = artList[counter];
-    console.log('TOKEN>>>', token.card);
+  // const stripeBtn = async (token) => {
+  //   // const API = process.env.REACT_APP_API
+  //   const API = 'http://localhost:3000';
+  //   const artList = artList[counter];
+  //   console.log('TOKEN>>>', token.card);
 
-    await fetch(`${API}/stripe`, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${stripeKey}`,
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        amount: artList.price * 100,
-        email: token.email,
-        artPiece: artList.title,
-        artMedium: artList.medium,
-        artYear: artList.year,
-        art: artList.poster,
-        stripeToken: token.id,
-      }),
-    })
-      .then((response) => response.json())
-      .then((charge) => {
-        console.log('charge>>>', charge);
-      });
-  };
+  //   await fetch(`${API}/stripe`, {
+  //     method: 'POST',
+  //     headers: {
+  //       Authorization: `Bearer ${stripeKey}`,
+  //       Accept: 'application/json',
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //       amount: artList.price * 100,
+  //       email: token.email,
+  //       artPiece: artList.title,
+  //       artMedium: artList.medium,
+  //       artYear: artList.year,
+  //       art: artList.poster,
+  //       stripeToken: token.id,
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((charge) => {
+  //       console.log('charge>>>', charge);
+  //     });
+  // };
 
   // Logic to remove 'Purchase Print' button from Jewelry and Photos
   const handleArtWithoutPrintAndOtherMediums =
