@@ -148,7 +148,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                         ${artList[counter].price} USD
                       </div>
                     )}
-                    {handleArtWithoutPrintAndOtherMediums && (
+                    {/* {handleArtWithoutPrintAndOtherMediums && (
                       <StripeCheckout
                         token={stripeBtn}
                         stripeKey={stripeKey}
@@ -172,7 +172,7 @@ const Art = ({ id, modalId, art, artList, filteredTerm }) => {
                           </button>
                         </div>
                       </StripeCheckout>
-                    )}
+                    )} */}
                   </div>
                   <div className="ctrlButtons">
                     <div
