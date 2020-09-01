@@ -6,7 +6,7 @@ import useFilteredTermState from '../components/hooks/useFilteredTermState';
 
 // Node API
 const API = process.env.REACT_APP_API;
-// const API = 'http://localhost:3000'
+// const API = 'http://localhost:3000';
 
 export const CrudContext = createContext();
 
